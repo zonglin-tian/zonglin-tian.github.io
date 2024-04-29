@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid_theme/fluid.png">
+  <link rel="icon" href="/img/fluid_theme/conan_b.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Temm">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="学习 Ubuntu 系统  入门操作与命令  ZSH 配置    Vim 编辑器使用与配置  Windows 高效工具  AutoHotkey 脚本使用  PowerShell 提升与配置  TotalCommander  Microsoft Edge 提升  Programmer Dvorak 键盘布局使用    技术学习  搭配个人博客  Hexo 与 GitHub Page  Flui">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Life record">
+<meta property="og:url" content="https://zonglin-tian.github.io/Life-Record/index.html">
+<meta property="og:site_name" content="Temm&#39;s Blog">
+<meta property="og:description" content="学习 Ubuntu 系统  入门操作与命令  ZSH 配置    Vim 编辑器使用与配置  Windows 高效工具  AutoHotkey 脚本使用  PowerShell 提升与配置  TotalCommander  Microsoft Edge 提升  Programmer Dvorak 键盘布局使用    技术学习  搭配个人博客  Hexo 与 GitHub Page  Flui">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-26T02:25:43.000Z">
+<meta property="article:modified_time" content="2023-07-26T08:50:33.097Z">
+<meta property="article:author" content="Temm">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Life record - Temm&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zonglin-tian.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/fluid_theme/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"TTUkpi4yPOFPvGdrwRvjUPy5-gzGzoHsz","app_key":"ysSAYFHFwtsVmtCrHzIPHVJg","server_url":"https://ttukpi4y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  <script src="https://zonglin-tian.github.io/live2d/autoload.js"></script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Half_Perfect</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/Groceries/" target="_self">
+                <i class="iconfont icon-pen"></i>
+                <span>杂谈</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/fluid_theme/lm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.5)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Life record"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <div class="markdown-body">
+
+<ul>
+<li><p><a href='#ubu'>学习 Ubuntu 系统</a></p>
+<ul>
+<li><p><a href='#basic'>入门操作与命令</a></p>
+</li>
+<li><p><a href='#zsh'>ZSH 配置</a></p>
+</li>
+</ul>
+</li>
+<li><p><a href='#vim'>Vim 编辑器使用与配置</a></p>
+</li>
+<li><p><a href='#win'>Windows 高效工具</a></p>
+<ul>
+<li><p><a href='#ahk'>AutoHotkey 脚本使用</a></p>
+</li>
+<li><p><a href='#pwsh'>PowerShell 提升与配置</a></p>
+</li>
+<li><p><a href='#tc'>TotalCommander</a></p>
+</li>
+<li><p><a href='#edge'>Microsoft Edge 提升</a></p>
+</li>
+<li><p><a href='#pdv'>Programmer Dvorak 键盘布局使用</a></p>
+</li>
+</ul>
+</li>
+<li><p><a href='#tech'>技术学习</a></p>
+<ul>
+<li><p><a href='#blog'>搭配个人博客</a></p>
+<ul>
+<li><p><a href='#hexo'>Hexo 与 GitHub Page</a></p>
+</li>
+<li><p><a href='#fluid'>Fluid 主题</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href='#hobby'>兴趣爱好</a></p>
+<ul>
+<li><p><a href='#ps'>PS</a></p>
+</li>
+<li><p><a href='#cc'>Card Colledge</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="学习-Ubuntu-系统"><a href="#学习-Ubuntu-系统" class="headerlink" title="学习 Ubuntu 系统"></a><span id='ubu'>学习 Ubuntu 系统</span></h1><h2 id="入门操作与命令"><a href="#入门操作与命令" class="headerlink" title="入门操作与命令"></a><span id='basic'>入门操作与命令</span></h2><h2 id="ZSH-配置"><a href="#ZSH-配置" class="headerlink" title="ZSH 配置"></a><span id='zsh'>ZSH 配置</span></h2><h1 id="Vim-编辑器使用与配置"><a href="#Vim-编辑器使用与配置" class="headerlink" title="Vim 编辑器使用与配置"></a><span id='vim'>Vim 编辑器使用与配置</span></h1><h1 id="Windows-高效工具"><a href="#Windows-高效工具" class="headerlink" title="Windows 高效工具"></a><span id='win'>Windows 高效工具</span></h1><h2 id="AutoHotkey-脚本使用"><a href="#AutoHotkey-脚本使用" class="headerlink" title="AutoHotkey 脚本使用"></a><span id='ahk'>AutoHotkey 脚本使用</span></h2><h2 id="PowerShell-提升与配置"><a href="#PowerShell-提升与配置" class="headerlink" title="PowerShell 提升与配置"></a><span id='pwsh'>PowerShell 提升与配置</span></h2><h2 id="TotalCommander"><a href="#TotalCommander" class="headerlink" title="TotalCommander"></a><span id='tc'>TotalCommander</span></h2><h2 id="Microsoft-Edge-提升"><a href="#Microsoft-Edge-提升" class="headerlink" title="Microsoft Edge 提升"></a><span id='edge'>Microsoft Edge 提升</span></h2><h2 id="Programmer-Dvorak-键盘布局使用"><a href="#Programmer-Dvorak-键盘布局使用" class="headerlink" title="Programmer Dvorak 键盘布局使用"></a><span id='pdv'>Programmer Dvorak 键盘布局使用</span></h2><h1 id="技术学习"><a href="#技术学习" class="headerlink" title="技术学习"></a><span id='tech'>技术学习</span></h1><h2 id="搭配个人博客"><a href="#搭配个人博客" class="headerlink" title="搭配个人博客"></a><span id='blog'>搭配个人博客</span></h2><h3 id="Hexo-与-GitHub-Page"><a href="#Hexo-与-GitHub-Page" class="headerlink" title="Hexo 与 GitHub Page"></a><span id='hexo'>Hexo 与 GitHub Page</span></h3><h3 id="Fluid-主题"><a href="#Fluid-主题" class="headerlink" title="Fluid 主题"></a><span id='fluid'>Fluid 主题</span></h3><h1 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a><span id='hobby'>兴趣爱好</span></h1><h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a><span id='ps'>PS</span></h2><h2 id="Card-Colledge"><a href="#Card-Colledge" class="headerlink" title="Card Colledge"></a><span id='cc'>Card Colledge</span></h2></div>
+
+
+  
+
+</article>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       Lifelong Learner  <a href="https://zonglin-tian.github.io/about" target="_self" rel="nofollow noopener"><span>Temm</span></a> <i class="iconfont icon-love"></i> <a href="https://zonglin-tian.github.io/archives" target="_self" rel="nofollow noopener"><span>Writing</span></a> Running Reading  <a href="https://zonglin-tian.github.io/2024/04/27/冥想与生活" target="_self" rel="nofollow noopener"><span>Meditation</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
