@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>2024 年打卡图</title>
+    <link href="/2024/05/02/2024-%E5%B9%B4%E6%89%93%E5%8D%A1%E5%9B%BE/"/>
+    <url>/2024/05/02/2024-%E5%B9%B4%E6%89%93%E5%8D%A1%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<script>function getVirtualData(year) {  const date = +echarts.time.parse(year + '-01-01');  const end = +echarts.time.parse(+year + 1 + '-01-01');  const dayTime = 3600 * 24 * 1000;  const data = [];  for (let time = date; time < end; time += dayTime) {    data.push([      echarts.time.format(time, '{yyyy}-{MM}-{dd}', false),      Math.round(Math.random())    ]);  }  return data;}function getVirtualValue(day_num) {  for (let time = 0; time < day_num; time += 1) {    data.push([      Math.round(Math.random()), Math.round(Math.random()), Math.round(Math.random()), Math.round(Math.random()), Math.round(Math.random()), Math.round(Math.random()), Math.round(Math.random())    ]);  }  return data;}</script><h1 id="5-月"><a href="#5-月" class="headerlink" title="5 月"></a>5 月</h1><div id="echarts8555" style="width: 85%;height:400px;margin: 0 auto"></div>    <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>    <script>            var eChartecharts8555 = echarts.init(document.getElementById('echarts8555'));            var optionecharts8555 = {  title: {    top: 'top',    text: "宗林, 加油呀!",    left: 'center',    textStyle:{      color:  "rgba(255, 255, 255, 1)"    }  },  tooltip: {    position: 'top'  },  visualMap: {    show: true,    showLabel: true,    categories: [0, 1],    calculable: true,    inRange: {        symbol: 'rect',        color: ['#ebedf0', '#239a3b']             },    itemWidth: 12,    itemHeight: 12,    orient: 'horizontal',    left: 'center',    bottom: 30,    textStyle: {      color: "rgba(39, 132, 175, 1)"      }  },  calendar: [    {      range: '2024',      cellSize: [13, 13],      splitLine: {        show: false      },      itemStyle: {        width: '1.88679%',        height: '15px',        color: '#EEEEEE',        borderColor: '#FFF',        borderWidth: 2      },      yearLabel: {        show: false      },      monthLabel: {      nameMap: 'cn',      fontWeight: 'lighter',      fontSize: 12,      color: "rgba(255, 255, 255, 1)"      },      dayLabel: {        show: true,        fontWeight: 'lighter',        nameMap: ['早','冥','阅','午','跑','写','晚'],        fontSize: 10,        color: "rgba(255, 255, 255, 1)"      }    }  ],  series: [    {      type: 'heatmap',      data: getVirtualValue(31)    }  ]}            eChartecharts8555.setOption(optionecharts8555);    </script>]]></content>
+    
+    
+    <categories>
+      
+      <category>自律</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo Fluid 博客常用配置</title>
     <link href="/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/"/>
     <url>/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
