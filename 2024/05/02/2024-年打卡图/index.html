@@ -110,7 +110,7 @@
 
 
 
-  <link rel="import" href="https://github.com/zonglin-tian/zonglin-tian.github.io/blob/main/statistics/get_up_echart.html" id="get_up"/>
+  <script src="https://zonglin-tian.github.io/live2d/autoload.js"></script>
 <meta name="generator" content="Hexo 7.1.1"></head>
 
 
@@ -261,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          213 字
+          253 字
         
       </span>
     
@@ -272,7 +272,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -357,11 +357,13 @@ function getVirtualValue(day_num) {
 }
 </script>
 
-<h1 id="5-月"><a href="#5-月" class="headerlink" title="5 月"></a>5 月</h1><div id="echarts6189" style="width: 85%;height:400px;margin: 0 auto"></div>
-    <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>
-    <script>
-            var eChartecharts6189 = echarts.init(document.getElementById('echarts6189'));
-            var optionecharts6189 = {
+<h1 id="5-月"><a href="#5-月" class="headerlink" title="5 月"></a>5 月</h1><div id="echarts6605" style="width: 400;height: 85%px;margin: 0 auto"></div>
+<script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts6605'));
+        // 指定图表的配置项和数据
+        var option = {
   title: {
     top: 'top',
     text: "宗林, 加油呀!",
@@ -430,8 +432,9 @@ function getVirtualValue(day_num) {
     }
   ]
 }
-            eChartecharts6189.setOption(optionecharts6189);
-    </script>
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
 
                 
               </div>
