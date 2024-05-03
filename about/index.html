@@ -17,15 +17,15 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Contents   学习经历 好好经营自己胜过一切 求圣    学习经历 2022.09-       : 北京师范大学人工智能学院在读博士研究生 2019.09-2022.06: 华中师范大学数学与统计学学院硕士研究生 2015.09-2019.06: 上海海事大学文理学院本科生  好好经营自己胜过一切早睡早起, 阅读, 写作, 冥想, 跑步, 总结计划                  &#x2F;&#x2F;">
+    <meta name="description" content="Contents   学习经历 好好经营自己胜过一切 求圣    学习经历 2022.09-       : 北京师范大学人工智能学院在读博士研究生 2019.09-2022.06: 华中师范大学数学与统计学学院硕士研究生 2015.09-2019.06: 上海海事大学文理学院本科生  好好经营自己胜过一切早睡早起, 阅读, 写作, 冥想, 跑步, 总结计划 求圣">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
 <meta property="og:url" content="https://zonglin-tian.github.io/about/index.html">
 <meta property="og:site_name" content="Temm&#39;s Blog">
-<meta property="og:description" content="Contents   学习经历 好好经营自己胜过一切 求圣    学习经历 2022.09-       : 北京师范大学人工智能学院在读博士研究生 2019.09-2022.06: 华中师范大学数学与统计学学院硕士研究生 2015.09-2019.06: 上海海事大学文理学院本科生  好好经营自己胜过一切早睡早起, 阅读, 写作, 冥想, 跑步, 总结计划                  &#x2F;&#x2F;">
+<meta property="og:description" content="Contents   学习经历 好好经营自己胜过一切 求圣    学习经历 2022.09-       : 北京师范大学人工智能学院在读博士研究生 2019.09-2022.06: 华中师范大学数学与统计学学院硕士研究生 2015.09-2019.06: 上海海事大学文理学院本科生  好好经营自己胜过一切早睡早起, 阅读, 写作, 冥想, 跑步, 总结计划 求圣">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-08T12:08:47.000Z">
-<meta property="article:modified_time" content="2024-05-03T00:49:55.692Z">
+<meta property="article:modified_time" content="2024-05-03T01:22:19.476Z">
 <meta property="article:author" content="Temm">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -308,161 +308,6 @@
 <li>2015.09-2019.06: 上海海事大学文理学院本科生</li>
 </ul>
 <h1 id="好好经营自己胜过一切"><a href="#好好经营自己胜过一切" class="headerlink" title="好好经营自己胜过一切"></a><a href="https://zonglin-tian.github.io/2024/05/02/%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5-%E5%B9%B4%E5%A4%8D%E4%B8%80%E5%B9%B4/">好好经营自己胜过一切</a></h1><p>早睡早起, 阅读, 写作, <a href="https://zonglin-tian.github.io/2024/04/27/%E5%86%A5%E6%83%B3%E4%B8%8E%E7%94%9F%E6%B4%BB/">冥想</a>, 跑步, 总结计划</p>
-<!--input file打开文件选择框，获取文件信息，并传参给readWorkbookFromLocalFile函数-->
-<form>
-    <input type="file" name="file" onchange="readWorkbookFromLocalFile(this.files[0])"/>
-</form>
-<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="main" style="width: 500px;height:350px;"></div>
-
-
-<script type="text/javascript">
-    // 读取本地excel文件
-    function readWorkbookFromLocalFile(file) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            var data = e.target.result;
-            var workbook = XLSX.read(data, {type: 'binary'});
-            // 处理excel文件
-            handle(workbook);
-        };
-        reader.readAsBinaryString(file);
-        //通过FileReader对象读取文件，利用js-xlsx转成json数据
-        //FileReader共有4种读取方法：
-        //1.readAsArrayBuffer(file)：将文件读取为ArrayBuffer。
-        //2.readAsBinaryString(file)：将文件读取为二进制字符串
-        //3.readAsDataURL(file)：将文件读取为Data URL
-        //4.readAsText(file, [encoding])：将文件读取为文本，encoding缺省值为'UTF-8'
-    }
- 
-    // 处理excel文件
-    var date1=[];
-    var date2=[];
-    function handle(workbook) {
-        // workbook.SheetNames[0] excel第一个sheet
-        var datas = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
-        var title=[];
-        if(datas.length > 0){
-            // 获取列名是汇总列名，避免某行某个字段没有值，会缺少字段
-            // 标题
- 
-            // 获取每行数据
-            first:
-                for(var index in datas){ // datas数组，index为索引
-                    second:
-                        for(var key in datas[index]){ // datas[index]对象,key为键
-                            if (-1 === title.indexOf(key)) {
-                                title.push(key);
- 
-                            }
-                        }
-                }
-            // 列名
-            console.log(title);
-            // 数据
-            console.log(datas);
- 
-            //时间转化，并把datas中数据分列
-            for(var i=0;i<datas.length;i++){
-                var a=datas[i].time*24;
-                var b=(a-parseInt(a))*60;
-                var c=(b-parseInt(b))*60;
-                date1[i]=parseInt(a).toString()+":"+parseInt(b).toString()+":"+parseInt(c).toString();
-                date2[i]=datas[i].sum;
-            }
- 
-            console.log(date1);
-            console.log(date2);
-            aaa();
-        }
- 
-    }
- 
-</script>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    function aaa()
-    {
-        var myChart = echarts.init(document.getElementById('main'));
- 
-        // 指定图表的配置项和数据
- 
-        option = {
-            tooltip: {
-                trigger: 'axis',
-                position: function (pt) {
-                    return [pt[0], '10%'];
-                }
-            },
-            title: {
-                left: 'center',
-                text: '大数据量面积图',
-            },
-            toolbox: {
-                feature: {
-                    dataZoom: {
-                        yAxisIndex: 'none'
-                    },
-                    restore: {},
-                    saveAsImage: {}
-                }
-            },
-            xAxis: {
-                type: 'category',
-                boundaryGap: false,
-                data: date1
-            },
-            yAxis: {
-                type: 'value',
-                boundaryGap: [0, '100%']
-            },
-            dataZoom: [{
-                type: 'inside',
-                start: 0,
-                end: 10
-            }, {
-                start: 0,
-                end: 10,
-                handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-                handleSize: '80%',
-                handleStyle: {
-                    color: '#fff',
-                    shadowBlur: 3,
-                    shadowColor: 'rgba(0, 0, 0, 0.6)',
-                    shadowOffsetX: 2,
-                    shadowOffsetY: 2
-                }
-            }],
-            series: [
-                {
-                    name: '人流量',
-                    type: 'line',
-                    smooth: false,
-                    symbol: 'none',
- 
-                    itemStyle: {
-                        color: 'rgb(255, 70, 131)'
-                    },
-                    areaStyle: {
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: 'rgb(255, 158, 68)'
-                        }, {
-                            offset: 1,
-                            color: 'rgb(255, 70, 131)'
-                        }])
-                    },
-                    data: date2
-                }
-            ]
-        };
- 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    }
- 
-</script>
-
 <h1 id="求圣"><a href="#求圣" class="headerlink" title="求圣"></a>求圣</h1>
   </div>
 
