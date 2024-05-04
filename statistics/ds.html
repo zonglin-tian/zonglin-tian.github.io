@@ -17,15 +17,15 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="折线图的绘制               &#x2F;&#x2F; 获取数据     d3.csv(&quot;2024_data.csv&quot;, function(error, csvdata){         if(error){             console.log(error);         }         else{             console.log(csvdata);">
+    <meta name="description" content="折线图的绘制           function getVirtualData(year) {     const date &#x3D; +echarts.time.parse(year + &#39;-01-01&#39;);     const end &#x3D; +echarts.time.parse(+year + 1 + &#39;-01-01&#39;);     console.log(date);     co">
 <meta property="og:type" content="website">
 <meta property="og:title" content="page.title">
 <meta property="og:url" content="https://zonglin-tian.github.io/statistics/ds.html">
 <meta property="og:site_name" content="Temm&#39;s Blog">
-<meta property="og:description" content="折线图的绘制               &#x2F;&#x2F; 获取数据     d3.csv(&quot;2024_data.csv&quot;, function(error, csvdata){         if(error){             console.log(error);         }         else{             console.log(csvdata);">
+<meta property="og:description" content="折线图的绘制           function getVirtualData(year) {     const date &#x3D; +echarts.time.parse(year + &#39;-01-01&#39;);     const end &#x3D; +echarts.time.parse(+year + 1 + &#39;-01-01&#39;);     console.log(date);     co">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-04T00:17:57.727Z">
-<meta property="article:modified_time" content="2024-05-04T00:17:57.727Z">
+<meta property="article:published_time" content="2024-05-04T01:59:16.221Z">
+<meta property="article:modified_time" content="2024-05-04T01:59:16.221Z">
 <meta property="article:author" content="Temm">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -271,56 +271,132 @@
 <body>
 <div id="main" style="height: 600px;width:900px;"></div>
 <script>
+function getVirtualData(year) {
+    const date = +echarts.time.parse(year + '-01-01');
+    const end = +echarts.time.parse(+year + 1 + '-01-01');
+    console.log(date);
+    console.log(end);
+    const dayTime = 3600 * 24 * 1000;
+    const data = [];
+    for (let time = date; time < end; time += dayTime) {
+               data.push([echarts.time.format(time, '{yyyy}-{MM}-{dd}', false),
+               Math.round(Math.random())]);
+    }
+    return data;
+}
+</script>
+
+<script>
+    data = getVirtualData('2024');
+    console.log(data);
     // 获取数据
     d3.csv("2024_data.csv", function(error, csvdata){
         if(error){
             console.log(error);
         }
         else{
-            console.log(csvdata);
-            var date_data = [];  //数组初始化
+            var date_data;  //数组初始化
             var meditation_data = [];
             var reading_data = [];
-            console.log(csvdata);
+            <!-- console.log(csvdata); -->
             for(var i=0; i < csvdata.length; i++){
-                date_data.push(csvdata[i]['date']);  //对象转数组
-                meditation_data.push(parseInt(csvdata[i]['meditation']));
-                reading_data.push(parseInt(csvdata[i]['reading']));
+                date_data = csvdata[i]['date'];  //对象转数组
+                console.log(date_data);
+                meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);
+                reading_data.push([date_data, parseInt(csvdata[i]['reading'])]);
                }
+            console.log(csvdata);            
+            console.log(meditation_data);
             var myChart = echarts.init(document.getElementById("main"));
             var option = {
-                legend: {}, // 在头部显示每个折线的名称和颜色
-                xAxis: [
-                  {
-                    type: 'category',
-                    data: date_data,
-                    axisPointer: {
-                      type: 'shadow'
+                visualMap: {
+                    showLabel: true,
+                    categories: [0, 1],
+                    calculable: true,
+                    inRange: {
+                        symbol: 'rect',
+                        color: ['#ebedf0', '#7bc96f']
+                    },
+                    itemWidth: 12,
+                    itemHeight: 12,
+                    orient: 'horizontal',
+                    left: 'center',
+                    bottom: 30,
+                    textStyle: {
+                    color: 'rgba(39, 132, 175, 1)'
                     }
-                  }
-                ],
-                yAxis: [
-                  {
-                    type: 'value',
-                  }
-                ],
-                series: [
-                  {
-                    name: 'meditation',
-                    type: 'line',
-                    data: meditation_data,
-                  },
-                  {
-                    name: 'reading',
-                    type: 'line',
-                    data: reading_data,
-                  }
-                ]
+                },
+                calendar: {
+                    range: '2024',
+                    cellSize: [13, 13],
+                    splitLine: {
+                        show: false
+                    },
+                    itemStyle: {
+                        width: '1.88679%',
+                        height: '15px',
+                        color: '#EEEEEE',
+                        borderColor: '#FFF',
+                    borderWidth: 2
+                    },
+                    yearLabel: {
+                        show: false
+                        },
+                    monthLabel: {
+                        nameMap: 'cn',
+                        fontWeight: 'lighter',
+                        fontSize: 12,
+                        color: 'rgba(255, 255, 255, 1)'
+                    },
+                    dayLabel: {
+                        show: true,
+                        formatter: '{start}  1st',
+                        fontWeight: 'lighter',
+                        nameMap: ['日', ' ', ' ', '三', ' ', ' ', '六'],
+                        fontSize: 12,
+                        color: 'rgba(255, 255, 255, 1)'
+                    }
+                },
+                series: [{
+                    type: 'heatmap',
+                    coordinateSystem: 'calendar',
+                    data: getVirtualData('2024')
+                }]
             };
+            <!-- var option = { -->
+            <!--     legend: {}, // 在头部显示每个折线的名称和颜色 -->
+            <!--     xAxis: [ -->
+            <!--       { -->
+            <!--         type: 'category', -->
+            <!--         data: date_data, -->
+            <!--         axisPointer: { -->
+            <!--           type: 'shadow' -->
+            <!--         } -->
+            <!--       } -->
+            <!--     ], -->
+            <!--     yAxis: [ -->
+            <!--       { -->
+            <!--         type: 'value', -->
+            <!--       } -->
+            <!--     ], -->
+            <!--     series: [ -->
+            <!--       { -->
+            <!--         name: 'meditation', -->
+            <!--         type: 'line', -->
+            <!--         data: meditation_data, -->
+            <!--       }, -->
+            <!--       { -->
+            <!--         name: 'reading', -->
+            <!--         type: 'line', -->
+            <!--         data: reading_data, -->
+            <!--       } -->
+            <!--     ] -->
+            <!-- }; -->
             myChart.setOption(option);
         }
     });
 </script>
+
 </body>
 </html>
 
