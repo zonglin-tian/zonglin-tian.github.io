@@ -16,24 +16,22 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hello Hexo">
+    <meta name="description" content="阅读, 体会不同人生">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Back to Hexo Blog">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/04/07/Back-to-Hexo-Blog/index.html">
+<meta property="og:title" content="Reading">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Reading/index.html">
 <meta property="og:site_name" content="Temm&#39;s Blog">
-<meta property="og:description" content="Hello Hexo">
+<meta property="og:description" content="阅读, 体会不同人生">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/hexo.png">
-<meta property="article:published_time" content="2024-04-07T02:14:49.000Z">
-<meta property="article:modified_time" content="2024-04-07T02:43:57.268Z">
+<meta property="article:published_time" content="2024-05-05T07:00:47.000Z">
+<meta property="article:modified_time" content="2024-05-05T07:11:52.459Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Groceries">
+<meta property="article:tag" content="Discipline">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/hexo.png">
   
   
   
-  <title>Back to Hexo Blog - Temm&#39;s Blog</title>
+  <title>Reading - Temm&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -240,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Back to Hexo Blog"></span>
+            <span id="subtitle" data-typed-text="Reading"></span>
           
         </div>
 
@@ -251,8 +249,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-07 10:14" pubdate>
-          2024年4月7日 上午
+        <time datetime="2024-05-05 15:00" pubdate>
+          2024年5月5日 下午
         </time>
       </span>
     
@@ -263,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          65 字
+          225 字
         
       </span>
     
@@ -274,7 +272,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -319,13 +317,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Back to Hexo Blog</h1>
+            <h1 id="seo-header">Reading</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
                     <!-- compatible with older versions-->
-                    最后更新于: 2024-04-07T10:43:57+08:00
+                    最后更新于: 2024-05-05T15:11:52+08:00
                   
                   
 
@@ -335,10 +333,111 @@
             
               <div class="markdown-body">
                 
-                <p style="text-indent:2em">
-时隔半年, 决定再次使用 Hexo 写博客, 之前一直用 CSDN, 但强迫症兼完美主义实在无法忍受其广告和弹窗 (尽管已经用了部分插件), 遂转向 Hexo, 即使可能会多费些时间
-</p>
+                <h1 id="2024-年打卡"><a href="#2024-年打卡" class="headerlink" title="2024 年打卡"></a>2024 年打卡</h1><!-- 绘制打卡图 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
+<div id="main" style="height:180px;width:900px;float:left;"></div>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+d3.csv("/statistics/2024_data.csv", function(error, csvdata){
+    if(error){
+        console.log(error);
+    }
+    else{
+        console.log(csvdata);
+        var date_data;
+        var reading_data = [];
+        for(var i=0; i < csvdata.length; i++){
+            date_data = csvdata[i]['date'];  //对象转数组
+            <!-- console.log(date_data); -->
+            reading_data.push([date_data, parseInt(csvdata[i]['reading'])]);
+           }
+        console.log(reading_data);
+        var myChart = echarts.init(document.getElementById("main"));
+        var option = {
+            title: {
+                top: 'top',
+                text: '阅读打卡图',
+                left: 'center',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            tooltip: {
+                padding: 10,
+                backgroundColor:'rgb(37,45,56)',
+                borderColor: '#777',
+                borderWidth: 1,
+                formatter: function (obj) {
+                var value = obj.value;
+                var num_meaning = ['😔', 'basic', 'double', 'extreme'];
+                return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>');
+                }
+            },
+            visualMap: {
+                type: "piecewise",
+                showLabel: false,
+                <!-- categories: ['relax', 'basic', 'double', 'extreme'], -->
+                categories: [0, 1, 2, 3],
+                inRange: {
+                    symbol: 'rect',
+                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127']
+                },
+                show: true,
+                itemWidth: 12,
+                itemHeight: 12,
+                orient: 'horizontal',
+                left: 35,
+                top: 15,
+                textStyle: {
+                color: 'rgba(39, 132, 175, 1)'
+                }
+            },
+            calendar: {
+                range: '2024',
+                cellSize: [13, 13],
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(105, 105, 105, 0.45)'
+                    }
+                },
+                itemStyle: {
+                    width: '1.88679%',
+                    height: '15px',
+                    color: '#EEEEEE',
+                    borderColor: '#FFF',
+                borderWidth: 2
+                },
+                yearLabel: {
+                    show: false
+                    },
+                monthLabel: {
+                    nameMap: 'EN',
+                    fontWeight: 'lighter',
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                },
+                dayLabel: {
+                    show: true,
+                    fontWeight: 'lighter',
+                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            series: [{
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                data: reading_data
+            }]
+        }
+    myChart.setOption(option);
+} // mathch else
+});
+</script>
+<!-- 绘制打卡图 -->
 
+<h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="从内耗到心流"><a href="#从内耗到心流" class="headerlink" title="从内耗到心流"></a>从内耗到心流</h2><h2 id="跑步圣经"><a href="#跑步圣经" class="headerlink" title="跑步圣经"></a>跑步圣经</h2>
                 
               </div>
             
@@ -371,7 +470,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Groceries/" class="print-no-link">#Groceries</a>
+        <a href="/tags/Discipline/" class="print-no-link">#Discipline</a>
       
     </div>
   
@@ -383,8 +482,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Back to Hexo Blog</div>
-      <div>https://zonglin-tian.github.io/2024/04/07/Back-to-Hexo-Blog/</div>
+      <div>Reading</div>
+      <div>https://zonglin-tian.github.io/2024/05/05/Reading/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +495,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月7日</div>
+          <div>2024年5月5日</div>
         </div>
       
       
@@ -423,29 +522,6 @@
 
 
 
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2024/04/07/Stay-Curious/" title="Stay Curious">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Stay Curious</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/" title="Install and Configure ZSH on Ubuntu_20.04">
-                        <span class="hidden-mobile">Install and Configure ZSH on Ubuntu_20.04</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
