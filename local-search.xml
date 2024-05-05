@@ -4,11 +4,86 @@
   
   
   <entry>
+    <title>Microsoft Edge 使用</title>
+    <link href="/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/"/>
+    <url>/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="F12-调试-HTML-代码"><a href="#F12-调试-HTML-代码" class="headerlink" title="F12 调试 HTML 代码"></a>F12 调试 HTML 代码</h1><ul><li><a href="https://blog.csdn.net/qq_42159062/article/details/105991720">开发工具使用</a></li><li></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Software</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 基础</title>
+    <link href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/"/>
+    <url>/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</url>
+    
+    <content type="html"><![CDATA[<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul><li>输出多个重复字符: <code>print(N*&#39;str&#39;)</code></li><li>手动停止程序运行: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> sys<br>sys.exit(<span class="hljs-string">&quot;stop_message&quot;</span>)<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python 库学习</title>
+    <link href="/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><ul><li><a href="https://pythonjishu.com/pandas-dataframe-to_excel/">Pandas 将数据写入 Excel</a></li><li>获取 <em>DataFrame</em> 的所有列名: <code>list(data_frame)</code> (sorted 返回有序)</li></ul><h1 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h1><ul><li><a href="https://blog.csdn.net/beautiful77moon/article/details/88877519#:~:text=%E5%9C%A8python%E4%B8%AD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20datetime%20%E6%9D%A5%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%A5%E6%9C%9F%EF%BC%8C%E4%BD%BF%E7%94%A8%E6%98%AF%E8%A6%81%E7%8E%B0%E5%AF%BC%E5%85%A5datetime%E5%BA%93%201%20%3E%3E%3E%20%20print%20(datetime.datetime.today()),(datetime.datetime.now())%204%202019%20-03-%2028%2020%3A%2034%3A%2011.377443">获取当前日期&#x2F;时间</a></li><li><a href="https://blog.csdn.net/Gabriel100yi/article/details/135251097#:~:text=%E8%A6%81%E8%AE%A1%E7%AE%97%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E6%98%AF%E4%B8%80%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9%EF%BC%8C%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20date%20%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%E3%80%82%20%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A%20%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E7%9A%84%E5%B9%B4%E4%BB%BD%EF%BC%9A%E4%BD%BF%E7%94%A8%20year%20%E5%B1%9E%E6%80%A7%E3%80%82%20%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E7%9A%84%E6%9C%88%E4%BB%BD%EF%BC%9A%E4%BD%BF%E7%94%A8,%E4%BD%BF%E7%94%A8%20date%20%E7%B1%BB%E7%9A%84%20timetuple()%20%E6%96%B9%E6%B3%95%E5%B0%86%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%B6%E9%97%B4%E5%85%83%E7%BB%84%E3%80%82%20%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E5%85%83%E7%BB%84%E4%B8%AD%E7%9A%84%20tm_yday%20%E5%B1%9E%E6%80%A7%E8%8E%B7%E5%8F%96%E4%B8%80%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9%E3%80%82">计算指定日期是一年中的第几天</a></li><li><a href="https://blog.csdn.net/weixin_40012554/article/details/108759160">计算日期差</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo Fluid 博客常用配置</title>
     <link href="/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/"/>
     <url>/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
     
-    <content type="html"><![CDATA[<h1 id="live2d-看板娘"><a href="#live2d-看板娘" class="headerlink" title="live2d 看板娘"></a>live2d 看板娘</h1><h2 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h2><h2 id="模型更新"><a href="#模型更新" class="headerlink" title="模型更新"></a>模型更新</h2><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a href="https://andytonglove.github.io/2022/09/08/%E5%8D%9A%E5%AE%A2live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E9%85%8D%E7%BD%AE%2f">Andytonglove. 博客live2d看板娘配置——fluid主题</a><br>[2] <a href="https://yzs020220.github.io/posts/41158/">没有秃头基因的燊. Hexo博客添加live2d看板娘-可换装，增删模型</a></p><h1 id="自定义页添加目录"><a href="#自定义页添加目录" class="headerlink" title="自定义页添加目录"></a>自定义页添加目录</h1><p>对于自定义页的 <em>.md</em> 文件自动添加目录, 添加步骤:</p><ol><li>全局安装 <a href="https://github.com/jonschlinkert/markdown-toc?tab=readme-ov-file"><strong>mardown-toc</strong></a> 包: <code>npm install -g markdown-toc</code></li><li>在需要添加目录的文件的对位位置使用代码: <code>&lt;!-- toc --&gt;</code></li><li>在终端输入命令: <code>mardown-toc -i file_name.md</code></li></ol><h1 id="插入-Echarts-动态图表"><a href="#插入-Echarts-动态图表" class="headerlink" title="插入 Echarts 动态图表"></a>插入 Echarts 动态图表</h1><ul><li><a href="https://github.com/D-Sketon/hexo-tag-echarts-new">GitHub 链接</a></li><li><a href="https://pxxyyz.com/posts/15698/">Fluid+ECharts. 秃头怪的自娱自乐</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="live2d-看板娘"><a href="#live2d-看板娘" class="headerlink" title="live2d 看板娘"></a>live2d 看板娘</h1><h2 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h2><h2 id="模型更新"><a href="#模型更新" class="headerlink" title="模型更新"></a>模型更新</h2><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a href="https://andytonglove.github.io/2022/09/08/%E5%8D%9A%E5%AE%A2live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E9%85%8D%E7%BD%AE%2f">Andytonglove. 博客live2d看板娘配置——fluid主题</a><br>[2] <a href="https://yzs020220.github.io/posts/41158/">没有秃头基因的燊. Hexo博客添加live2d看板娘-可换装，增删模型</a></p><h1 id="自定义页添加目录"><a href="#自定义页添加目录" class="headerlink" title="自定义页添加目录"></a>自定义页添加目录</h1><p>对于自定义页的 <em>.md</em> 文件自动添加目录, 添加步骤:</p><ol><li>全局安装 <a href="https://github.com/jonschlinkert/markdown-toc?tab=readme-ov-file"><strong>mardown-toc</strong></a> 包: <code>npm install -g markdown-toc</code></li><li>在需要添加目录的文件的对位位置使用代码: <code>&lt;!-- toc --&gt;</code></li><li>在终端输入命令: <code>mardown-toc -i file_name.md</code></li></ol><h1 id="插入-Echarts-动态图表"><a href="#插入-Echarts-动态图表" class="headerlink" title="插入 Echarts 动态图表"></a>插入 Echarts 动态图表</h1><ul><li><a href="https://github.com/D-Sketon/hexo-tag-echarts-new">GitHub 链接</a></li><li><a href="https://pxxyyz.com/posts/15698/">Fluid+ECharts. 秃头怪的自娱自乐</a></li><li><a href="https://glwhappen.github.io/post/js-echarts-csv/">js读取csv数据，并用Echarts展示. Happen</a></li><li><a href="https://echarts.apache.org/zh/option.html#title"><strong>ECHARTS 帮助文档</strong></a></li></ul>]]></content>
     
     
     
@@ -27,7 +102,7 @@
     <link href="/2024/04/27/%E5%86%A5%E6%83%B3%E4%B8%8E%E7%94%9F%E6%B4%BB/"/>
     <url>/2024/04/27/%E5%86%A5%E6%83%B3%E4%B8%8E%E7%94%9F%E6%B4%BB/</url>
     
-    <content type="html"><![CDATA[<h1 id="2024-年打卡图"><a href="#2024-年打卡图" class="headerlink" title="2024 年打卡图"></a>2024 年打卡图</h1><!-- 绘制打卡图 --><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script><div id="main" style="height:180px;width:900px;"></div><script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script><script>d3.csv("/statistics/2024_data.csv", function(error, csvdata){    if(error){        console.log(error);    }    else{        console.log(csvdata);        var date_data;        var meditation_data = [];        var reading_data = [];        for(var i=0; i < csvdata.length; i++){            date_data = csvdata[i]['date'];  //对象转数组            <!-- console.log(date_data); -->            meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->           }        console.log(meditation_data);        var myChart = echarts.init(document.getElementById("main"));        var option = {            title: {                top: 'top',                text: '冥想打卡图',                left: 'center',                textStyle: {                color: 'rgba(255, 255, 255, 1)'                }            },            tooltip: {                padding: 10,                backgroundColor: '#555',                borderColor: '#777',                borderWidth: 1,                formatter: function (obj) {                var value = obj.value;                return ('<div style="font-size: 14px;">' + value[0] + ': ' + value[1] + '</div>');                }            },            visualMap: {                showLabel: true,                categories: [0, 1],                calculable: true,                inRange: {                    symbol: 'rect',                    color: ['#ebedf0', '#7bc96f']                },                itemWidth: 12,                itemHeight: 12,                orient: 'horizontal',                left: 'center',                bottom: 0,                textStyle: {                color: 'rgba(39, 132, 175, 1)'                }            },            calendar: {                range: '2024',                cellSize: [13, 13],                splitLine: {                    show: false                },                itemStyle: {                    width: '1.88679%',                    height: '15px',                    color: '#EEEEEE',                    borderColor: '#FFF',                borderWidth: 2                },                yearLabel: {                    show: false                    },                monthLabel: {                    nameMap: 'cn',                    fontWeight: 'lighter',                    fontSize: 12,                    color: 'rgba(255, 255, 255, 1)'                },                dayLabel: {                    show: true,                    formatter: '{start}  1st',                    fontWeight: 'lighter',                    nameMap: ['日', ' ', ' ', '三', ' ', ' ', '六'],                    fontSize: 12,                    color: 'rgba(255, 255, 255, 1)'                }            },            series: [{                type: 'heatmap',                coordinateSystem: 'calendar',                data: meditation_data            }]        }    myChart.setOption(option);} // mathch else});</script><!-- 绘制打卡图 --><h1 id="课程学习"><a href="#课程学习" class="headerlink" title="课程学习"></a>课程学习</h1><h2 id="李冉在冥想"><a href="#李冉在冥想" class="headerlink" title="李冉在冥想"></a><a href="https://www.bilibili.com/video/BV1NM4y1d7aC?p=1">李冉在冥想</a></h2><h3 id="练习记录"><a href="#练习记录" class="headerlink" title="练习记录"></a>练习记录</h3><ul><li>第一遍<ul><li>始于 2024-02-27 结束于 2024-03-28</li></ul></li><li>第二遍<ul><li>始于 2024-03-29 结束于 2024-04-26</li><li>自主练习 D 重练</li></ul></li><li>第三遍<ul><li>始于 2024-04-27 结束于</li><li>从 D15 开始</li></ul></li></ul><h3 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h3><ul><li>书籍<ul><li>洞见</li><li>心湖上的倒影</li><li>意志力</li><li>万物有灵且美</li></ul></li><li>影视<ul><li>监视资本主义: 智能陷阱</li></ul></li><li>音频<ul><li>牛羊下山</li><li>RAGA</li></ul></li></ul><h3 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h3><ul><li>D17 对专注呼吸的锚点进行总结, 建议反复观看</li><li>自主练习 B 感觉不错, 可考虑作为后期日常练习材料</li><li>学生准备好时, 老师就会出现</li><li>冥想<ul><li>深到你无法衡量</li><li>近到你无法看见</li><li>俗到你无法相信</li><li>好到你无法接受</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="2024-年打卡"><a href="#2024-年打卡" class="headerlink" title="2024 年打卡"></a>2024 年打卡</h1><!-- 绘制打卡图 --><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script><div id="main" style="height:180px;width:900px;float:left;"></div><script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script><script>d3.csv("/statistics/2024_data.csv", function(error, csvdata){    if(error){        console.log(error);    }    else{        console.log(csvdata);        var date_data;        var meditation_data = [];        var reading_data = [];        for(var i=0; i < csvdata.length; i++){            date_data = csvdata[i]['date'];  //对象转数组            <!-- console.log(date_data); -->            meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->           }        console.log(meditation_data);        var myChart = echarts.init(document.getElementById("main"));        var option = {            title: {                top: 'top',                text: '冥想打卡图',                left: 'center',                textStyle: {                color: 'rgba(255, 255, 255, 1)'                }            },            tooltip: {                padding: 10,                backgroundColor:'rgb(37,45,56)',                borderColor: '#777',                borderWidth: 1,                formatter: function (obj) {                var value = obj.value;                return ('<div style="font-size: 14px;">' + value[0] + ': ' + value[1] + '</div>');                }            },            visualMap: {                type: "piecewise",                showLabel: false,                categories: [0, 1, 2],                inRange: {                    symbol: 'rect',                    color: ['#ebedf0', '#7bc96f', '#239a3b']                },                show: true,                itemWidth: 12,                itemHeight: 12,                orient: 'horizontal',                left: 35,                top: 15,                textStyle: {                color: 'rgba(39, 132, 175, 1)'                }            },            calendar: {                range: '2024',                cellSize: [13, 13],                splitLine: {                    show: true,                    lineStyle: {                        color: 'rgba(105, 105, 105, 0.45)'                    }                },                itemStyle: {                    width: '1.88679%',                    height: '15px',                    color: '#EEEEEE',                    borderColor: '#FFF',                borderWidth: 2                },                yearLabel: {                    show: false                    },                monthLabel: {                    nameMap: 'EN',                    fontWeight: 'lighter',                    fontSize: 12,                    color: 'rgba(255, 255, 255, 1)'                },                dayLabel: {                    show: true,                    fontWeight: 'lighter',                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],                    fontSize: 12,                    color: 'rgba(255, 255, 255, 1)'                }            },            series: [{                type: 'heatmap',                coordinateSystem: 'calendar',                data: meditation_data            }]        }    myChart.setOption(option);} // mathch else});</script><!-- 绘制打卡图 --><h1 id="课程学习"><a href="#课程学习" class="headerlink" title="课程学习"></a>课程学习</h1><h2 id="李冉在冥想"><a href="#李冉在冥想" class="headerlink" title="李冉在冥想"></a><a href="https://www.bilibili.com/video/BV1NM4y1d7aC?p=1">李冉在冥想</a></h2><h3 id="练习记录"><a href="#练习记录" class="headerlink" title="练习记录"></a>练习记录</h3><ul><li>第一遍<ul><li>始于 2024-02-27 结束于 2024-03-28</li></ul></li><li>第二遍<ul><li>始于 2024-03-29 结束于 2024-04-26</li><li>自主练习 D 重练</li></ul></li><li>第三遍<ul><li>始于 2024-04-27 结束于</li><li>从 D15 开始</li></ul></li></ul><h3 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h3><ul><li>书籍<ul><li>洞见</li><li>心湖上的倒影</li><li>意志力</li><li>万物有灵且美</li></ul></li><li>影视<ul><li>监视资本主义: 智能陷阱</li></ul></li><li>音频<ul><li>牛羊下山</li><li>RAGA</li></ul></li></ul><h3 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h3><ul><li>D17 对专注呼吸的锚点进行总结, 建议反复观看</li><li>自主练习 B 感觉不错, 可考虑作为后期日常练习材料</li><li>学生准备好时, 老师就会出现</li><li>冥想<ul><li>深到你无法衡量</li><li>近到你无法看见</li><li>俗到你无法相信</li><li>好到你无法接受</li></ul></li></ul>]]></content>
     
     
     <categories>
@@ -139,7 +214,7 @@
     
     <categories>
       
-      <category>Software Installation</category>
+      <category>Software</category>
       
     </categories>
     
