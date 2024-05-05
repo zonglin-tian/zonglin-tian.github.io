@@ -16,22 +16,21 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="冥想, 发现本质的自己">
+    <meta name="description" content="记录手机常用软件与配置, 方便快速换机或者备份数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冥想与生活">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/04/27/%E5%86%A5%E6%83%B3%E4%B8%8E%E7%94%9F%E6%B4%BB/index.html">
+<meta property="og:title" content="手机常用软件与个性化配置">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/%E6%89%8B%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Temm&#39;s Blog">
-<meta property="og:description" content="冥想, 发现本质的自己">
+<meta property="og:description" content="记录手机常用软件与配置, 方便快速换机或者备份数据">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-27T00:40:25.000Z">
-<meta property="article:modified_time" content="2024-05-05T12:58:17.773Z">
+<meta property="article:published_time" content="2024-05-05T10:50:02.000Z">
+<meta property="article:modified_time" content="2024-05-05T11:00:48.283Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Discipline">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>冥想与生活 - Temm&#39;s Blog</title>
+  <title>手机常用软件与个性化配置 - Temm&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -238,7 +237,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="冥想与生活"></span>
+            <span id="subtitle" data-typed-text="手机常用软件与个性化配置"></span>
           
         </div>
 
@@ -249,8 +248,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-27 08:40" pubdate>
-          2024年4月27日 早上
+        <time datetime="2024-05-05 18:50" pubdate>
+          2024年5月5日 晚上
         </time>
       </span>
     
@@ -261,7 +260,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          392 字
+          117 字
         
       </span>
     
@@ -272,7 +271,7 @@
         
         
         
-          4 分钟
+          1 分钟
         
       </span>
     
@@ -317,13 +316,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">冥想与生活</h1>
+            <h1 id="seo-header">手机常用软件与个性化配置</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
                     <!-- compatible with older versions-->
-                    最后更新于: 2024-05-05T20:58:17+08:00
+                    最后更新于: 2024-05-05T19:00:48+08:00
                   
                   
 
@@ -333,159 +332,36 @@
             
               <div class="markdown-body">
                 
-                <h1 id="2024-年打卡"><a href="#2024-年打卡" class="headerlink" title="2024 年打卡"></a>2024 年打卡</h1><!-- 绘制打卡图 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
-<!-- <div id="main" style="height:180px;width:900px;float:left;"></div> -->
-<div id="main" style="height:160%;width:100%;"></div>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-d3.csv("/statistics/2024_data.csv", function(error, csvdata){
-    if(error){
-        console.log(error);
-    }
-    else{
-        console.log(csvdata);
-        var date_data;
-        var meditation_data = [];
-        <!-- var reading_data = []; -->
-        for(var i=0; i < csvdata.length; i++){
-            date_data = csvdata[i]['date'];  //对象转数组
-            <!-- console.log(date_data); -->
-            meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);
-            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
-           }
-        console.log(meditation_data);
-        var myChart = echarts.init(document.getElementById("main"));
-        var option = {
-            title: {
-                top: 'top',
-                text: '冥想打卡图',
-                left: 'center',
-                textStyle: {
-                color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            tooltip: {
-                padding: 10,
-                backgroundColor:'rgb(37,45,56)',
-                borderColor: '#777',
-                borderWidth: 1,
-                formatter: function (obj) {
-                var value = obj.value;
-                var number_meaning = ['😔', 'basic', 'double'];
-                return ('<div style="font-size: 14px;">' + value[0] + ': ' + number_meaning[value[1]] + '</div>');
-                }
-            },
-            visualMap: {
-                type: "piecewise",
-                showLabel: false,
-                categories: [0, 1, 2],
-                inRange: {
-                    symbol: 'rect',
-                    color: ['#ebedf0', '#7bc96f', '#239a3b']
-                },
-                show: true,
-                itemWidth: 12,
-                itemHeight: 12,
-                orient: 'horizontal',
-                left: 35,
-                top: 15,
-                textStyle: {
-                color: 'rgba(39, 132, 175, 1)'
-                }
-            },
-            calendar: {
-                range: '2024',
-                <!-- cellSize: [13, 13], -->
-                cellSize: ['auto', 'auto'],
-                splitLine: {
-                    show: true,
-                    lineStyle: {
-                        color: 'rgba(105, 105, 105, 0.45)'
-                    }
-                },
-                itemStyle: {
-                    <!-- width: '1.88679%', -->
-                    <!-- height: '15px', -->
-                    color: '#EEEEEE',
-                    borderColor: '#FFF',
-                    borderWidth: 2
-                },
-                yearLabel: {
-                    show: false
-                    },
-                monthLabel: {
-                    nameMap: 'EN',
-                    fontWeight: 'lighter',
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                },
-                dayLabel: {
-                    show: true,
-                    fontWeight: 'lighter',
-                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            series: [{
-                type: 'heatmap',
-                coordinateSystem: 'calendar',
-                data: meditation_data
-            }]
-        }
-    myChart.setOption(option);
-    window.onresize = myChart.resize;
-} // mathch else
-});
-</script>
-<!-- 绘制打卡图 -->
-
-<h1 id="课程学习"><a href="#课程学习" class="headerlink" title="课程学习"></a>课程学习</h1><h2 id="李冉在冥想"><a href="#李冉在冥想" class="headerlink" title="李冉在冥想"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NM4y1d7aC?p=1">李冉在冥想</a></h2><h3 id="练习记录"><a href="#练习记录" class="headerlink" title="练习记录"></a>练习记录</h3><ul>
-<li>第一遍<ul>
-<li>始于 2024-02-27 结束于 2024-03-28</li>
+                <h1 id="必备软件"><a href="#必备软件" class="headerlink" title="必备软件"></a>必备软件</h1><ol>
+<li>微信阅读</li>
+<li>宜准跑步</li>
+<li>微信</li>
+<li>哔哩哔哩</li>
+<li>中国银行</li>
+<li>酷狗音乐</li>
+<li>支付宝</li>
+<li>淘宝</li>
+<li>高德地图</li>
+</ol>
+<h1 id="可选软件"><a href="#可选软件" class="headerlink" title="可选软件"></a>可选软件</h1><ul>
+<li>企业微信</li>
 </ul>
-</li>
-<li>第二遍<ul>
-<li>始于 2024-03-29 结束于 2024-04-26</li>
-<li>自主练习 D 重练</li>
+<h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul>
+<li>深色模式</li>
+<li>桌面图标整理</li>
 </ul>
-</li>
-<li>第三遍<ul>
-<li>始于 2024-04-27 结束于</li>
-<li>从 D15 开始</li>
+<h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><ul>
+<li>定时开关机</li>
+<li>通知提醒</li>
+<li>振动模式</li>
 </ul>
-</li>
+<h2 id="通讯配置"><a href="#通讯配置" class="headerlink" title="通讯配置"></a>通讯配置</h2><ul>
+<li>短信&#x2F;电话拦截</li>
 </ul>
-<h3 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h3><ul>
-<li>书籍<ul>
-<li>洞见</li>
-<li>心湖上的倒影</li>
-<li>意志力</li>
-<li>万物有灵且美</li>
-</ul>
-</li>
-<li>影视<ul>
-<li>监视资本主义: 智能陷阱</li>
-</ul>
-</li>
-<li>音频<ul>
-<li>牛羊下山</li>
-<li>RAGA</li>
-</ul>
-</li>
-</ul>
-<h3 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h3><ul>
-<li>D17 对专注呼吸的锚点进行总结, 建议反复观看</li>
-<li>自主练习 B 感觉不错, 可考虑作为后期日常练习材料</li>
-<li>学生准备好时, 老师就会出现</li>
-<li>冥想<ul>
-<li>深到你无法衡量</li>
-<li>近到你无法看见</li>
-<li>俗到你无法相信</li>
-<li>好到你无法接受</li>
-</ul>
-</li>
+<h2 id="百度输入法华为版"><a href="#百度输入法华为版" class="headerlink" title="百度输入法华为版"></a>百度输入法华为版</h2><ul>
+<li>界面基本设置 (26 键五笔)</li>
+<li><strong>修改短语同步</strong></li>
+<li><strong>dvp 皮肤</strong></li>
 </ul>
 
                 
@@ -517,13 +393,6 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Discipline/" class="print-no-link">#Discipline</a>
-      
-    </div>
-  
 </div>
 
 
@@ -532,8 +401,8 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>冥想与生活</div>
-      <div>https://zonglin-tian.github.io/2024/04/27/冥想与生活/</div>
+      <div>手机常用软件与个性化配置</div>
+      <div>https://zonglin-tian.github.io/2024/05/05/手机常用软件与个性化配置/</div>
     </div>
     <div class="license-meta">
       
@@ -545,7 +414,7 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月27日</div>
+          <div>2024年5月5日</div>
         </div>
       
       
@@ -573,9 +442,58 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/05/%E4%B8%8D%E4%BC%9A-Debug-%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E6%98%AF%E5%A5%BD%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98/" title="不会 Debug 的程序员不是好的程序员">
+                        <span class="hidden-mobile">不会 Debug 的程序员不是好的程序员</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'photon-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'zonglin-tian/blog_comments');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
 
           </article>
         </div>

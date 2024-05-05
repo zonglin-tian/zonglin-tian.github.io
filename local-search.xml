@@ -4,6 +4,50 @@
   
   
   <entry>
+    <title>手机常用软件与个性化配置</title>
+    <link href="/2024/05/05/%E6%89%8B%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    <url>/2024/05/05/%E6%89%8B%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="必备软件"><a href="#必备软件" class="headerlink" title="必备软件"></a>必备软件</h1><ol><li>微信阅读</li><li>宜准跑步</li><li>微信</li><li>哔哩哔哩</li><li>中国银行</li><li>酷狗音乐</li><li>支付宝</li><li>淘宝</li><li>高德地图</li></ol><h1 id="可选软件"><a href="#可选软件" class="headerlink" title="可选软件"></a>可选软件</h1><ul><li>企业微信</li></ul><h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul><li>深色模式</li><li>桌面图标整理</li></ul><h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><ul><li>定时开关机</li><li>通知提醒</li><li>振动模式</li></ul><h2 id="通讯配置"><a href="#通讯配置" class="headerlink" title="通讯配置"></a>通讯配置</h2><ul><li>短信&#x2F;电话拦截</li></ul><h2 id="百度输入法华为版"><a href="#百度输入法华为版" class="headerlink" title="百度输入法华为版"></a>百度输入法华为版</h2><ul><li>界面基本设置 (26 键五笔)</li><li><strong>修改短语同步</strong></li><li><strong>dvp 皮肤</strong></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>不会 Debug 的程序员不是好的程序员</title>
+    <link href="/2024/05/05/%E4%B8%8D%E4%BC%9A-Debug-%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E6%98%AF%E5%A5%BD%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    <url>/2024/05/05/%E4%B8%8D%E4%BC%9A-Debug-%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E6%98%AF%E5%A5%BD%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98/</url>
+    
+    <content type="html"><![CDATA[<div class="note note-success">            <p>记 2024 年五一假期间不出校游玩, 也没科研, 而是基本每天写 HTML “日历贡献图”</p>          </div><p style="text-indent:2em">一切起源于: 正向反馈对坚持非常重要. 4月到5月期间, 学院举办了一个关于 6 周运动打卡的活动. 而我在这学期开学后已经基本养成了每天跑步 35 分钟的习惯, 所以该活动对我来说不费吹灰之力, 纯送奖品. 活动参与过程中与预想中的基本一样, 非常简单, 但其中的一个打卡环节从小来说让我最近两个月跑步更有动力, 从大来说促成了我五一假的安排及该日志的诞生.</p><p style="text-indent:2em">由于我每天都是在健身房跑步机上跑步, 并用运动手表记录, 这涉及到和手机数据的一个同步. 同时, 我跑步的时候基本不带手机, 所以我的打卡做法是每隔一周同步一次数据, 然后打卡. 在这其中我发现, 当看着自己一周跑步 6 天, 跑步时间, 速度, 距离基本一致, 我感到非常的有成就感, 非常的开心, 尤其是在周五或者周六的时候会进行长跑, 其中的公里数让我颇为自豪. 打卡这一简单方式, 给我带来的这种感觉或是状态使我更加容易坚持每天按时运动, 同时学会合理调整自己的状态, 即不管今天的状态如何, 我都尽量维持自己的跑步时间, 速度和距离. 最近两个月, 我跑步的时候大都数情况下是非常开心的!</p><p style="text-indent:2em">另外一件与打卡类似的事, 我自己手写了一个月日历表, 统计每天冥想, 跑步和阅读的完成情况, 等到过一阵子 (尤其月末) 再看时, 一种和跑步打卡类似的感觉油然而生, 促使了我每天坚持冥想和阅读 (连续阅读天数达到了 50 天)</p><p>以上两件事都可以看作记录每天的成长点滴, 定期查看, 其中的 (正) 反馈将极大促进后续坚持</p><p>要想把成长点滴记录, 我觉得图表是最直观的, 于是我想到用类似 GitHub 个人首页的贡献图来记录自己每天的冥想, 阅读, 跑步等习惯 </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Groceries</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Microsoft Edge 使用</title>
     <link href="/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/"/>
     <url>/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/</url>
