@@ -11,10 +11,16 @@
     <content type="html"><![CDATA[<h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ul><li>查看系统版本: <code>lsb_release</code> (Linux Standard Base release)</li><li></li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>Ubuntu</category>
+      
+    </categories>
+    
     
     <tags>
       
-      <tag>Ubuntu</tag>
+      <tag>&lt;!-- - Ubuntu --&gt; - Writing</tag>
       
     </tags>
     
@@ -60,6 +66,8 @@
       
       <tag>Groceries</tag>
       
+      <tag>Writing</tag>
+      
     </tags>
     
   </entry>
@@ -76,6 +84,8 @@
     
     <categories>
       
+      <category>Windows</category>
+      
       <category>Software</category>
       
     </categories>
@@ -83,7 +93,7 @@
     
     <tags>
       
-      <tag>Windows</tag>
+      <tag>&lt;!-- - Edge --&gt; - Writing</tag>
       
     </tags>
     
@@ -219,6 +229,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Writing</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -241,31 +257,6 @@
     <tags>
       
       <tag>Groceries</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Install and Configure ZSH on Ubuntu_20.04</title>
-    <link href="/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/"/>
-    <url>/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Ubuntu 20.04 安装 ZSH, 并用 oh-my-zsh 进行主题与插件配置</p><h1 id="Install-ZSH-1"><a href="#Install-ZSH-1" class="headerlink" title="Install ZSH [1]"></a>Install ZSH <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Ubuntu 20.04 安装zsh](https://blog.csdn.net/dinofish/article/details/104452908)">[1]</span></a></sup></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看系统已安装的 shell</span><br><span class="hljs-built_in">cat</span> /etc/shells<br><span class="hljs-comment"># 查看当前使用的 shell</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHELL</span><br>sudo apt update<br>sudo apt upgrade  <span class="hljs-comment"># 可选</span><br>sudo apt install zsh<br>chsh -s /bin/zsh  <span class="hljs-comment"># 将 zsh 设置为默认 shell</span><br><span class="hljs-comment"># 注销或者重启后生效</span><br></code></pre></td></tr></table></figure><p>重新进入终端, 会自动进入 zsh 的配置界面, 可直接按 <code>q</code> 退出, 稍后用 <code>oh-my-zsh</code> 配置</p><h1 id="Install-oh-my-zsh"><a href="#Install-oh-my-zsh" class="headerlink" title="Install oh-my-zsh"></a>Install <a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install git  <span class="hljs-comment"># 安装 git</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span>  <span class="hljs-comment"># 该命令本质是先下载 install.sh 文件, 再运行安装</span><br><span class="hljs-comment"># 可以先下载 install.sh 文件到本地, 然后执行 sh install.sh</span><br></code></pre></td></tr></table></figure><p>如果无法安装, 多半因为上网没有使用魔法, 可如下更改 <a href="/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/install.sh" title="install.sh 文件">install.sh 文件</a> (或点击下载), 然后重新安装 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ZSH、oh-my-zsh安装教程及插件和主题推荐](https://zhaoliangcheng.blog.csdn.net/article/details/125106594?spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-18-125106594-blog-119146233.235^v38^pc_relevant_sort_base1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-18-125106594-blog-119146233.235^v38^pc_relevant_sort_base1&utm_relevant_index=19)">[3]</span></a></sup></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 找到对应位置进行替换 (本质: 从 gitee 上下载资源)</span><br><span class="hljs-comment"># Default settings</span><br><span class="hljs-comment"># REPO=$&#123;REPO:-ohmyzsh/ohmyzsh&#125;</span><br>REPO=<span class="hljs-variable">$&#123;REPO:-llyxz93/ohmyzsh&#125;</span><br><span class="hljs-comment"># REMOTE=$&#123;REMOTE:-https://github.com/$&#123;REPO&#125;.git&#125;</span><br>REMOTE=<span class="hljs-variable">$&#123;REMOTE:-https://gitee.com/<span class="hljs-variable">$&#123;REPO&#125;</span>.git&#125;</span><br></code></pre></td></tr></table></figure><h1 id="Configure-ZSH-by-oh-my-zsh"><a href="#Configure-ZSH-by-oh-my-zsh" class="headerlink" title="Configure ZSH by oh-my-zsh"></a>Configure ZSH by oh-my-zsh</h1><h2 id="系统基本插件"><a href="#系统基本插件" class="headerlink" title="系统基本插件"></a>系统基本插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$&#123;ZSH_CUSTOM&#125;</span>  <span class="hljs-comment"># 查看 ZSH_CUSTOM 的路径</span><br></code></pre></td></tr></table></figure><p>配置常用插件: pip, vi-mode, docker, extract</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim .zshrc<br><span class="hljs-comment"># 在 plugins = (git 后添加需要使用的插件)</span><br><span class="hljs-built_in">source</span> .zshrc<br></code></pre></td></tr></table></figure><h2 id="powerlevel10k-theme"><a href="#powerlevel10k-theme" class="headerlink" title="powerlevel10k theme"></a>powerlevel10k theme</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br>vim .zshrc<br><span class="hljs-comment"># 将 ZSH_THEME= 一行改为 ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</span><br><span class="hljs-built_in">exec</span> zsh  <span class="hljs-comment"># 重启 Zsh</span><br></code></pre></td></tr></table></figure><h2 id="安装扩展插件-2"><a href="#安装扩展插件-2" class="headerlink" title="安装扩展插件 [2]"></a>安装扩展插件 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[zsh+ohmyzsh 终端美化](https://blog.csdn.net/qq_44797987/article/details/115290048)">[2]</span></a></sup></h2><h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h3><p>记录之前输入过的所有命令, 并自动匹配可能想要输入的命令, 按 $\rightarrow$ 补全</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/xiaoqqya/zsh-autosuggestions.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh&#125;</span>/plugins/zsh-autosuggestions<br>vim .zshrc  <span class="hljs-comment"># 启用 zsh-autosuggestions 插件</span><br><span class="hljs-comment"># 在 plugins = (git 后添加 zsh-autosuggestions)</span><br></code></pre></td></tr></table></figure><h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><p>语法高亮</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/xiaoqqya/zsh-syntax-highlighting.git <span class="hljs-variable">$&#123;ZSH_CUSTOM&#125;</span>/plugins/zsh-syntax-highlighting<br>vim .zshrc  <span class="hljs-comment"># 启用 zsh-syntax-highlighting 插件</span><br><span class="hljs-comment"># 在 plugins = (git 后添加 zsh-syntax-highlighting)</span><br></code></pre></td></tr></table></figure><h3 id="conda-zsh-completion"><a href="#conda-zsh-completion" class="headerlink" title="conda-zsh-completion"></a>conda-zsh-completion</h3><p>conda 命令补全</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://gitee.com/xiaoqqya/conda-zsh-completion.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/conda-zsh-completion<br>vim .zshrc  <span class="hljs-comment"># 启用 conda-zsh-completion 插件</span><br><span class="hljs-comment"># 在 plugins = (git 后添加 conda-zsh-completion)</span><br></code></pre></td></tr></table></figure><h2 id="将原-bash-的一些配置移植到-zsh"><a href="#将原-bash-的一些配置移植到-zsh" class="headerlink" title="将原 bash 的一些配置移植到 zsh"></a>将原 bash 的一些配置移植到 zsh</h2><p>将 <code>~/.bashrc</code> 中部分自定义词句复制到 <code>~/.zshrc</code> 对应位置处, 可能有</p><ul><li>alias</li><li>conda</li><li>PATH</li></ul><h1 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h1><p>自定义 (或以非 root 用户) 安装 zsh <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux 以非root用户安装zsh&配置on my zsh](https://www.cnblogs.com/XiiX/p/14618799.html)">[4]</span></a></sup></p><ol><li>建立 zsh 程序的安装目录: <code>path_to_zsh/zsh</code></li><li>下载最新版本的 zsh: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># XXX 换成最新的版本号</span><br>wget https://sourceforge.net/projects/zsh/files/latest/download/zsh-XXX.tar.xz<br></code></pre></td></tr></table></figure></li><li>…</li></ol><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://blog.csdn.net/dinofish/article/details/104452908">Ubuntu 20.04 安装zsh</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://blog.csdn.net/qq_44797987/article/details/115290048">zsh+ohmyzsh 终端美化</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://zhaoliangcheng.blog.csdn.net/article/details/125106594?spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-18-125106594-blog-119146233.235%5Ev38%5Epc_relevant_sort_base1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-18-125106594-blog-119146233.235%5Ev38%5Epc_relevant_sort_base1&utm_relevant_index=19">ZSH、oh-my-zsh安装教程及插件和主题推荐</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://www.cnblogs.com/XiiX/p/14618799.html">Linux 以非root用户安装zsh&amp;配置on my zsh</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
-    
-    
-    <categories>
-      
-      <category>Software</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Ubuntu</tag>
       
     </tags>
     
