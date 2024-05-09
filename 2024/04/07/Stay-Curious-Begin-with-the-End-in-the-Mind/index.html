@@ -24,9 +24,9 @@
 <meta property="og:description" content="Stay curious to something...">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-07T11:45:09.000Z">
-<meta property="article:modified_time" content="2024-05-09T10:02:22.973Z">
+<meta property="article:modified_time" content="2024-05-09T13:07:13.866Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Writing">
+<meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -261,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          81 字
+          291 字
         
       </span>
     
@@ -272,7 +272,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -323,7 +323,7 @@
                 
                   
                     <!-- compatible with older versions-->
-                    最后更新于: 2024-05-09T18:02:22+08:00
+                    最后更新于: 2024-05-09T21:07:13+08:00
                   
                   
 
@@ -333,7 +333,114 @@
             
               <div class="markdown-body">
                 
-                <h1 id="学习-Ubuntu-系统"><a href="#学习-Ubuntu-系统" class="headerlink" title="学习 Ubuntu 系统"></a>学习 Ubuntu 系统</h1><h2 id="入门操作与命令"><a href="#入门操作与命令" class="headerlink" title="入门操作与命令"></a>入门操作与命令</h2><ul>
+                <h1 id="写作统计"><a href="#写作统计" class="headerlink" title="写作统计"></a>写作统计</h1><!-- 绘制打卡图 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
+<!-- <div id="main" style="height:180px;width:900px;float:left;"></div> -->
+<div id="main" style="height:160%;width:100%;"></div>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+d3.csv("/statistics/2024_data.csv", function(error, csvdata){
+    if(error){
+        console.log(error);
+    }
+    else{
+        console.log(csvdata);
+        var date_data;
+        var running_data = [];
+        <!-- var reading_data = []; -->
+        for(var i=0; i < csvdata.length; i++){
+            date_data = csvdata[i]['date'];  //对象转数组
+            <!-- console.log(date_data); -->
+            writing_data.push([date_data, parseInt(csvdata[i]['writing'])]);
+            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
+           }
+        console.log(writing_data);
+        var myChart = echarts.init(document.getElementById("main"));
+        var option = {
+            title: {
+                top: 'top',
+                text: '写作记录',
+                left: 'center',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            tooltip: {
+                padding: 10,
+                backgroundColor:'rgb(37,45,56)',
+                borderColor: '#777',
+                borderWidth: 1,
+                formatter: function (obj) {
+                var value = obj.value;
+                var num_meaning = ['😔', 'basic', 'one', 'more'];
+                return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>');
+                }
+            },
+            visualMap: {
+                type: "piecewise",
+                showLabel: false,
+                <!-- categories: ['relax', 'basic', 'double', 'extreme'], -->
+                categories: [0, 1, 2, 3],
+                inRange: {
+                    symbol: 'rect',
+                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127']
+                },
+                show: true,
+                itemWidth: 12,
+                itemHeight: 12,
+                orient: 'horizontal',
+                left: 35,
+                top: 15,
+                textStyle: {
+                color: 'rgba(39, 132, 175, 1)'
+                }
+            },
+            calendar: {
+                range: '2024',
+                <!-- cellSize: [13, 13], -->
+                cellSize: ['auto', 'auto'],                
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(105, 105, 105, 0.45)'
+                    }
+                },
+                itemStyle: {
+                    color: '#EEEEEE',
+                    borderColor: '#FFF',
+                borderWidth: 2
+                },
+                yearLabel: {
+                    show: false
+                    },
+                monthLabel: {
+                    nameMap: 'EN',
+                    fontWeight: 'lighter',
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                },
+                dayLabel: {
+                    show: true,
+                    fontWeight: 'lighter',
+                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            series: [{
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                data: writing_data
+            }]
+        }
+    myChart.setOption(option);
+    window.onresize = myChart.resize;
+} // mathch else
+});
+</script>
+
+
+<h1 id="学习-Ubuntu-系统"><a href="#学习-Ubuntu-系统" class="headerlink" title="学习 Ubuntu 系统"></a>学习 Ubuntu 系统</h1><h2 id="入门操作与命令"><a href="#入门操作与命令" class="headerlink" title="入门操作与命令"></a>入门操作与命令</h2><ul>
 <li><a href="/2024/05/06/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">Ubuntu 系统管理</a></li>
 <li><a href="/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">Ubuntu 文件操作</a></li>
 </ul>
@@ -382,7 +489,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Writing/" class="print-no-link">#Writing</a>
+        <a href="/tags/Writing/" class="print-no-link">#Writing...</a>
       
     </div>
   
