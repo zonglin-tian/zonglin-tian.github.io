@@ -27,5 +27,6 @@
   }
 
   update();
-  setInterval(update, 1000);
+  // setInterval(update, 1000);
+  setInterval(update, 43200000);  // 12 小时更新一次
 })();
