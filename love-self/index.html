@@ -16,25 +16,21 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var runnin">
+    <meta name="description" content="健康至上             早睡早起: 23:30&#x2F;6:00规律饮食, 不点外卖: 只吃八分饱, 每天一个苹果             外在美             每日规律护肤定期毛孔清洁&#x2F;敷面膜每餐两个菜: 一荤一素每天跑步&#x2F;健身             失衡调整             不带手机睡觉休息不带手机散步写博客&#x2F;日志">
 <meta property="og:type" content="website">
-<meta property="og:title" content="生命不息, 运动不止">
-<meta property="og:url" content="https://zonglin-tian.github.io/running/index.html">
+<meta property="og:title" content="从今天起, 好好爱自己">
+<meta property="og:url" content="https://zonglin-tian.github.io/love-self/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var runnin">
+<meta property="og:description" content="健康至上             早睡早起: 23:30&#x2F;6:00规律饮食, 不点外卖: 只吃八分饱, 每天一个苹果             外在美             每日规律护肤定期毛孔清洁&#x2F;敷面膜每餐两个菜: 一荤一素每天跑步&#x2F;健身             失衡调整             不带手机睡觉休息不带手机散步写博客&#x2F;日志">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/running/ai_six_acti/stage_1.jpg">
-<meta property="og:image" content="https://zonglin-tian.github.io/running/ai_six_acti/stage_2.jpg">
-<meta property="og:image" content="https://zonglin-tian.github.io/running/ai_six_acti/stage_3.jpg">
-<meta property="article:published_time" content="2024-05-16T06:05:13.000Z">
-<meta property="article:modified_time" content="2024-05-16T06:41:38.359Z">
+<meta property="article:published_time" content="2024-05-17T00:22:20.000Z">
+<meta property="article:modified_time" content="2024-05-17T02:12:48.569Z">
 <meta property="article:author" content="Temm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/running/ai_six_acti/stage_1.jpg">
   
   
   
-  <title>生命不息, 运动不止 - Temm&#39;s Zone</title>
+  <title>从今天起, 好好爱自己 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -241,7 +237,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="生命不息, 运动不止"></span>
+            <span id="subtitle" data-typed-text="从今天起, 好好爱自己"></span>
           
         </div>
 
@@ -271,126 +267,18 @@
 <article class="page-content">
   <div class="markdown-body">
 
-<!-- 绘制打卡图 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
-<!-- <div id="main" style="height:180px;width:900px;float:left;"></div> -->
-<div id="main" style="height:160%;width:100%;"></div>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-d3.csv("/statistics/2024_data.csv", function(error, csvdata){
-    if(error){
-        console.log(error);
-    }
-    else{
-        console.log(csvdata);
-        var date_data;
-        var running_data = [];
-        <!-- var reading_data = []; -->
-        for(var i=0; i < csvdata.length; i++){
-            date_data = csvdata[i]['date'];  //对象转数组
-            <!-- console.log(date_data); -->
-            running_data.push([date_data, parseInt(csvdata[i]['running'])]);
-            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
-           }
-        console.log(running_data);
-        var myChart = echarts.init(document.getElementById("main"));
-        var option = {
-            title: {
-                top: 'top',
-                text: '2024 跑步打卡图',
-                left: 'center',
-                textStyle: {
-                color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            tooltip: {
-                padding: 10,
-                backgroundColor:'rgb(37,45,56)',
-                borderColor: '#777',
-                borderWidth: 1,
-                formatter: function (obj) {
-                var value = obj.value;
-                var num_meaning = ['😔', 'basic', 'double', 'extreme'];
-                return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>');
-                }
-            },
-            visualMap: {
-                type: "piecewise",
-                showLabel: false,
-                <!-- categories: ['relax', 'basic', 'double', 'extreme'], -->
-                categories: [0, 1, 2, 3],
-                inRange: {
-                    symbol: 'rect',
-                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127']
-                },
-                show: true,
-                itemWidth: 12,
-                itemHeight: 12,
-                orient: 'horizontal',
-                left: 35,
-                top: 15,
-                textStyle: {
-                color: 'rgba(39, 132, 175, 1)'
-                }
-            },
-            calendar: {
-                range: '2024',
-                <!-- cellSize: [13, 13], -->
-                cellSize: ['auto', 'auto'],                
-                splitLine: {
-                    show: true,
-                    lineStyle: {
-                        color: 'rgba(105, 105, 105, 0.45)'
-                    }
-                },
-                itemStyle: {
-                    color: '#EEEEEE',
-                    borderColor: '#FFF',
-                borderWidth: 2
-                },
-                yearLabel: {
-                    show: false
-                    },
-                monthLabel: {
-                    nameMap: 'EN',
-                    fontWeight: 'lighter',
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                },
-                dayLabel: {
-                    show: true,
-                    fontWeight: 'lighter',
-                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            series: [{
-                type: 'heatmap',
-                coordinateSystem: 'calendar',
-                data: running_data
-            }]
-        }
-    myChart.setOption(option);
-    window.onresize = myChart.resize;
-} // mathch else
-});
-</script>
-<!-- 绘制打卡图 -->
+<h1 id="健康至上"><a href="#健康至上" class="headerlink" title="健康至上"></a>健康至上</h1><div class="note note-primary">
+            <ul><li>早睡早起: 23:30&#x2F;6:00</li><li>规律饮食, 不点外卖: 只吃八分饱, 每天一个苹果</li></ul>
+          </div>
 
-<h1 id="活动-经历"><a href="#活动-经历" class="headerlink" title="活动&#x2F;经历"></a>活动&#x2F;经历</h1><ul>
-<li>2024-4-3至2024-5-14 学院六周运动打卡活动: 跑步 36 天, 含一次半马
-    <div class="fold">
-      <div class="fold-title fold-success collapsed" data-toggle="collapse" href="#collapse-0054f2ad" role="button" aria-expanded="false" aria-controls="collapse-0054f2ad">
-        <div class="fold-arrow">▶</div>每两周打卡详情
-      </div>
-      <div class="fold-collapse collapse" id="collapse-0054f2ad">
-        <div class="fold-content">
-          <div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/running/ai_six_acti/stage_1.jpg" srcset="/img/fluid_theme/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/running/ai_six_acti/stage_2.jpg" srcset="/img/fluid_theme/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/running/ai_six_acti/stage_3.jpg" srcset="/img/fluid_theme/loading.gif" lazyload></div></div><div class="group-image-row"></div></div>
-        </div>
-      </div>
-    </div></li>
-</ul>
+<h1 id="外在美"><a href="#外在美" class="headerlink" title="外在美"></a>外在美</h1><div class="note note-secondary">
+            <ul><li>每日规律护肤</li><li>定期毛孔清洁&#x2F;敷面膜</li><li>每餐两个菜: 一荤一素</li><li>每天跑步&#x2F;健身</li></ul>
+          </div>
+
+<h1 id="失衡调整"><a href="#失衡调整" class="headerlink" title="失衡调整"></a>失衡调整</h1><div class="note note-danger">
+            <ul><li><strong>不带手机</strong>睡觉休息</li><li><strong>不带手机</strong>散步</li><li>写博客&#x2F;日志</li></ul>
+          </div>
+
 </div>
 
 
