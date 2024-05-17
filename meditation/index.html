@@ -16,25 +16,31 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="折线图的绘制                               window.date_data &#x3D; &quot;&quot;;     window.meditation_data &#x3D; [];     window.reading_data &#x3D; [];     d3.csv(&quot;2024_data.csv&quot;, function(error, csvdata){         if(erro">
+    <meta name="description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var medita">
 <meta property="og:type" content="website">
-<meta property="og:title" content="page.title">
-<meta property="og:url" content="https://zonglin-tian.github.io/statistics/ds.html">
+<meta property="og:title" content="冥想, 发现真实的自己">
+<meta property="og:url" content="https://zonglin-tian.github.io/meditation/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="折线图的绘制                               window.date_data &#x3D; &quot;&quot;;     window.meditation_data &#x3D; [];     window.reading_data &#x3D; [];     d3.csv(&quot;2024_data.csv&quot;, function(error, csvdata){         if(erro">
+<meta property="og:description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var medita">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-04T05:26:19.888Z">
-<meta property="article:modified_time" content="2024-05-04T05:26:19.888Z">
+<meta property="article:published_time" content="2024-05-17T05:58:41.000Z">
+<meta property="article:modified_time" content="2024-05-17T06:01:42.808Z">
 <meta property="article:author" content="Temm">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>page.title - Temm&#39;s Zone</title>
+  <title>冥想, 发现真实的自己 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -231,7 +237,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="page.title"></span>
+            <span id="subtitle" data-typed-text="冥想, 发现真实的自己"></span>
           
         </div>
 
@@ -259,145 +265,195 @@
                 
 
 <article class="page-content">
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>折线图的绘制</title>
-  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
-<body>
-<div id="main" style="height: 600px;width:900px;"></div>
-<!-- <script> -->
-<!-- function getVirtualData(year) { -->
-<!--     const date = +echarts.time.parse(year + '-01-01'); -->
-<!--     const end = +echarts.time.parse(+year + 1 + '-01-01'); -->
-<!--     console.log(date); -->
-<!--     console.log(end); -->
-<!--     const dayTime = 3600 * 24 * 1000; -->
-<!--     const data = []; -->
-<!--     for (let time = date; time < end; time += dayTime) { -->
-<!--                data.push([echarts.time.format(time, '{yyyy}-{MM}-{dd}', false), -->
-<!--                Math.round(Math.random())]); -->
-<!--     } -->
-<!--     return data; -->
-<!-- } -->
-<!-- </script> -->
+  <div class="markdown-body">
 
+<!-- 绘制打卡图 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.2/echarts.js"></script>
+<!-- <div id="main" style="height:180px;width:900px;float:left;"></div> -->
+<div id="main" style="height:160%;width:100%;"></div>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
-    window.date_data = "";
-    window.meditation_data = [];
-    window.reading_data = [];
-    d3.csv("2024_data.csv", function(error, csvdata){
-        if(error){
-            console.log(error);
-        }
-        else{
-            for(var i=0; i < csvdata.length; i++){
-                date_data = csvdata[i]['date'];  //对象转数组
-                meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);
-                reading_data.push([date_data, parseInt(csvdata[i]['reading'])]);
-               }
-        }
+d3.csv("/statistics/2024_data.csv", function(error, csvdata){
+    if(error){
+        console.log(error);
+    }
+    else{
+        console.log(csvdata);
+        var date_data;
+        var meditation_data = [];
+        <!-- var reading_data = []; -->
+        for(var i=0; i < csvdata.length; i++){
+            date_data = csvdata[i]['date'];  //对象转数组
+            <!-- console.log(date_data); -->
+            meditation_data.push([date_data, parseInt(csvdata[i]['meditation'])]);
+            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
+           }
         console.log(meditation_data);
-    console.log(meditation_data);
-    var myChart = echarts.init(document.getElementById("main"));
-    var option = {
-        visualMap: {
-            showLabel: true,
-            categories: [0, 1],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#7bc96f']
+        var myChart = echarts.init(document.getElementById("main"));
+        var option = {
+            title: {
+                top: 'top',
+                text: '2024 冥想打卡图',
+                left: 'center',
+                textStyle: {
+                color: 'rgba(255, 255, 255, 1)'
+                }
             },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 30,
-            textStyle: {
-            color: 'rgba(39, 132, 175, 1)'
-            }
-        },
-        calendar: {
-            range: '2024',
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
+            tooltip: {
+                padding: 10,
+                backgroundColor:'rgb(37,45,56)',
+                borderColor: '#777',
+                borderWidth: 1,
+                formatter: function (obj) {
+                var value = obj.value;
+                var number_meaning = ['😔', 'basic', 'double'];
+                return ('<div style="font-size: 14px;">' + value[0] + ': ' + number_meaning[value[1]] + '</div>');
+                }
             },
-            itemStyle: {
-                width: '1.88679%',
-                height: '15px',
-                color: '#EEEEEE',
-                borderColor: '#FFF',
-            borderWidth: 2
-            },
-            yearLabel: {
-                show: false
+            visualMap: {
+                type: "piecewise",
+                showLabel: false,
+                categories: [0, 1, 2],
+                inRange: {
+                    symbol: 'rect',
+                    color: ['#ebedf0', '#7bc96f', '#239a3b']
                 },
-            monthLabel: {
-                nameMap: 'cn',
-                fontWeight: 'lighter',
-                fontSize: 12,
-                color: 'rgba(255, 255, 255, 1)'
-            },
-            dayLabel: {
                 show: true,
-                formatter: '{start}  1st',
-                fontWeight: 'lighter',
-                nameMap: ['日', ' ', ' ', '三', ' ', ' ', '六'],
-                fontSize: 12,
-                color: 'rgba(255, 255, 255, 1)'
-            }
-        },
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            data: meditation_data
-        }]
-    };
-        <!-- var option = { -->
-        <!--     legend: {}, // 在头部显示每个折线的名称和颜色 -->
-        <!--     xAxis: [ -->
-        <!--       { -->
-        <!--         type: 'category', -->
-        <!--         data: date_data, -->
-        <!--         axisPointer: { -->
-        <!--           type: 'shadow' -->
-        <!--         } -->
-        <!--       } -->
-        <!--     ], -->
-        <!--     yAxis: [ -->
-        <!--       { -->
-        <!--         type: 'value', -->
-        <!--       } -->
-        <!--     ], -->
-        <!--     series: [ -->
-        <!--       { -->
-        <!--         name: 'meditation', -->
-        <!--         type: 'line', -->
-        <!--         data: meditation_data, -->
-        <!--       }, -->
-        <!--       { -->
-        <!--         name: 'reading', -->
-        <!--         type: 'line', -->
-        <!--         data: reading_data, -->
-        <!--       } -->
-        <!--     ] -->
-        <!-- }; -->
-myChart.setOption(option);
-        })
+                itemWidth: 12,
+                itemHeight: 12,
+                orient: 'horizontal',
+                left: 35,
+                top: 15,
+                textStyle: {
+                color: 'rgba(39, 132, 175, 1)'
+                }
+            },
+            calendar: {
+                range: '2024',
+                <!-- cellSize: [13, 13], -->
+                cellSize: ['auto', 'auto'],
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: 'rgba(105, 105, 105, 0.45)'
+                    }
+                },
+                itemStyle: {
+                    <!-- width: '1.88679%', -->
+                    <!-- height: '15px', -->
+                    color: '#EEEEEE',
+                    borderColor: '#FFF',
+                    borderWidth: 2
+                },
+                yearLabel: {
+                    show: false
+                    },
+                monthLabel: {
+                    nameMap: 'EN',
+                    fontWeight: 'lighter',
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                },
+                dayLabel: {
+                    show: true,
+                    fontWeight: 'lighter',
+                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
+                    fontSize: 12,
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
+            series: [{
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                data: meditation_data
+            }]
+        }
+    myChart.setOption(option);
+    window.onresize = myChart.resize;
+} // mathch else
+});
 </script>
+<!-- 绘制打卡图 -->
 
-</body>
-</html>
+<h1 id="课程学习"><a href="#课程学习" class="headerlink" title="课程学习"></a>课程学习</h1><h2 id="李冉在冥想"><a href="#李冉在冥想" class="headerlink" title="李冉在冥想"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NM4y1d7aC?p=1">李冉在冥想</a></h2><h3 id="练习记录"><a href="#练习记录" class="headerlink" title="练习记录"></a>练习记录</h3><ul>
+<li>第一遍<ul>
+<li>始于 2024-02-27 结束于 2024-03-28</li>
+</ul>
+</li>
+<li>第二遍<ul>
+<li>始于 2024-03-29 结束于 2024-04-26</li>
+<li>自主练习 D 重练</li>
+</ul>
+</li>
+<li>第三遍<ul>
+<li>始于 2024-04-27 结束于</li>
+<li>从 D15 开始</li>
+</ul>
+</li>
+</ul>
+<h3 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h3><ul>
+<li>书籍<ul>
+<li>洞见</li>
+<li>心湖上的倒影</li>
+<li>意志力</li>
+<li>万物有灵且美</li>
+</ul>
+</li>
+<li>影视<ul>
+<li>监视资本主义: 智能陷阱</li>
+</ul>
+</li>
+<li>音频<ul>
+<li>牛羊下山</li>
+<li>RAGA</li>
+</ul>
+</li>
+</ul>
+<h3 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h3><ul>
+<li>D9 学会被动, 避免条件反射</li>
+<li>D17 对专注呼吸的锚点进行总结, 建议反复观看</li>
+<li>自主练习 B 感觉不错, 可考虑作为后期日常练习材料</li>
+<li>学生准备好时, 老师就会出现</li>
+<li>冥想<ul>
+<li>深到你无法衡量</li>
+<li>近到你无法看见</li>
+<li>俗到你无法相信</li>
+<li>好到你无法接受</li>
+</ul>
+</li>
+</ul>
+</div>
 
 
   
 
 </article>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
 
 
 
@@ -533,6 +589,59 @@ myChart.setOption(option);
 
 
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script defer src="/js/leancloud.js" ></script>
 
