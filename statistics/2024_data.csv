@@ -138,8 +138,8 @@ date,week,get_up,meditation,reading,lunch_break,running,writing,thinking,night_r
 2024-05-16,Thursday,0,0,1,0,1,0,0,1
 2024-05-17,Friday,1,1,1,0,1,0,0,0
 2024-05-18,Saturday,1,1,1,0,0,0,0,0
-2024-05-19,Sunday,1,0,1,0,1,0,0,0
-2024-05-20,Monday,0,0,0,0,0,0,0,0
+2024-05-19,Sunday,1,0,1,0,3,0,0,0
+2024-05-20,Monday,0,0,1,0,0,0,0,1
 2024-05-21,Tuesday,0,0,0,0,0,0,0,0
 2024-05-22,Wednesday,0,0,0,0,0,0,0,0
 2024-05-23,Thursday,0,0,0,0,0,0,0,0
