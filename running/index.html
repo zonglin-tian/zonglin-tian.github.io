@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://zonglin-tian.github.io/running/car_half_mar/medal-doll.jpg">
 <meta property="og:image" content="https://zonglin-tian.github.io/running/car_half_mar/self.jpg">
 <meta property="article:published_time" content="2024-05-16T06:05:13.000Z">
-<meta property="article:modified_time" content="2024-05-21T04:32:49.842Z">
+<meta property="article:modified_time" content="2024-05-21T14:10:09.635Z">
 <meta property="article:author" content="Temm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://zonglin-tian.github.io/running/ai_six_acti/stage_1.jpg">
@@ -313,7 +313,7 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
                 borderWidth: 1,
                 formatter: function (obj) {
                 var value = obj.value;
-                var num_meaning = ['😔', 'basic', 'double', 'extreme'];
+                var num_meaning = ['😔', 'basic', 'double', 'extreme', 'others'];
                 return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>');
                 }
             },
@@ -321,10 +321,10 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
                 type: "piecewise",
                 showLabel: false,
                 <!-- categories: ['relax', 'basic', 'double', 'extreme'], -->
-                categories: [0, 1, 2, 3],
+                categories: [0, 1, 2, 3, 4],
                 inRange: {
                     symbol: 'rect',
-                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127']
+                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127', '#8b1fac']
                 },
                 show: true,
                 itemWidth: 12,

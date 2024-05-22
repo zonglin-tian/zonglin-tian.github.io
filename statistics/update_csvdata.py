@@ -75,6 +75,10 @@ elif input_str[0] == 'e':
     prefix_str = "\n超额完成, 宗林真棒!"
     index = [int(input_str[i]) for i in range(1, len(input_str))]
     default_value = 3
+elif input_str[0] == 'o':
+    prefix_str = "\n多样性打卡!"
+    index = [int(input_str[i]) for i in range(1, len(input_str))]
+    default_value = 4
 else:
     index = [int(input_str[i]) for i in range(len(input_str))]
 
