@@ -1,123 +1,79 @@
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #ccc;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
 }
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
+code.hljs {
+  padding: 3px 5px
 }
+/*
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #2d2d2d;
-}
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
+*/
+.hljs {
+  background: white;
+  color: black
 }
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #999;
+.hljs-comment,
+.hljs-quote {
+  color: #800
 }
-
-.token.punctuation {
-	color: #ccc;
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-title,
+.hljs-name {
+  color: #008
 }
-
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-	color: #e2777a;
+.hljs-variable,
+.hljs-template-variable {
+  color: #660
 }
-
-.token.function-name {
-	color: #6196cc;
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-regexp {
+  color: #080
 }
-
-.token.boolean,
-.token.number,
-.token.function {
-	color: #f08d49;
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-meta,
+.hljs-number,
+.hljs-link {
+  color: #066
 }
-
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-	color: #f8c555;
+.hljs-title,
+.hljs-doctag,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-params {
+  color: #606
 }
-
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-	color: #cc99cd;
+.hljs-attribute,
+.hljs-subst {
+  color: #000
 }
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-	color: #7ec699;
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic
 }
-
-.token.operator,
-.token.entity,
-.token.url {
-	color: #67cdcc;
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #9B703F
 }
-
-.token.important,
-.token.bold {
-	font-weight: bold;
+.hljs-addition {
+  background-color: #baeeba
 }
-.token.italic {
-	font-style: italic;
+.hljs-deletion {
+  background-color: #ffc8bd
 }
-
-.token.entity {
-	cursor: help;
+.hljs-doctag,
+.hljs-strong {
+  font-weight: bold
 }
-
-.token.inserted {
-	color: green;
+.hljs-emphasis {
+  font-style: italic
 }
-

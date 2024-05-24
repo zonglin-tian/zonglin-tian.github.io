@@ -18,14 +18,14 @@
   
     <meta name="description" content="PDV keyboard layout by AutoHotkey">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Programmer Dvorak Keyboard Layout Anywhere">
+<meta property="og:title" content="Programmer Dvorak Layout Anywhere">
 <meta property="og:url" content="https://zonglin-tian.github.io/2023/07/08/Programmer-Dvorak-Layout-Anywhere/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="PDV keyboard layout by AutoHotkey">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/dvp.png">
 <meta property="article:published_time" content="2023-07-08T01:31:10.000Z">
-<meta property="article:modified_time" content="2024-05-24T01:33:50.356Z">
+<meta property="article:modified_time" content="2024-05-24T02:36:05.857Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="AutoHotkey">
 <meta property="article:tag" content="Keyboard">
@@ -34,7 +34,7 @@
   
   
   
-  <title>Programmer Dvorak Keyboard Layout Anywhere - Temm&#39;s Zone</title>
+  <title>Programmer Dvorak Layout Anywhere - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -43,8 +43,6 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
@@ -243,7 +241,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Programmer Dvorak Keyboard Layout Anywhere"></span>
+            <span id="subtitle" data-typed-text="Programmer Dvorak Layout Anywhere"></span>
           
         </div>
 
@@ -266,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          347 字
+          395 字
         
       </span>
     
@@ -277,7 +275,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -322,12 +320,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Programmer Dvorak Keyboard Layout Anywhere</h1>
+            <h1 id="seo-header">Programmer Dvorak Layout Anywhere</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-05-24T09:33:50+08:00
+                    最后更新于: 2024-05-24T10:36:05+08:00
                   
                   
 
@@ -350,104 +348,39 @@
 </ol>
 <h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><h2 id="pdv"><a href="#pdv" class="headerlink" title="pdv"></a>pdv</h2><a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.ahk" title="pdv.ahk">pdv.ahk</a> 脚本涉及的主要语法为 AHK 软件的<a href="https://wyagd001.github.io/zh-cn/docs/misc/Remap.htm" title="" target="">重映射按键功能</a>, <a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.exe" title="pdv.exe">pdv.exe</a> 由其编译而得
 
-<figure><div class="code-wrapper"><pre class="line-numbers language-autohotkey" data-language="autohotkey"><div class="caption"><span>pdv.ahk</span></div><code class="language-autohotkey"><span class="token comment">; pdv.ahk</span>
 
-<span class="token comment">; basic</span>
-q<span class="token punctuation">:</span><span class="token punctuation">:</span>`;
-w<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">,</span>
-e<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">.</span>
-r<span class="token punctuation">:</span><span class="token punctuation">:</span>p
-t<span class="token punctuation">:</span><span class="token punctuation">:</span>y
-y<span class="token punctuation">:</span><span class="token punctuation">:</span>f
-u<span class="token punctuation">:</span><span class="token punctuation">:</span>g
-i<span class="token punctuation">:</span><span class="token punctuation">:</span>c
-o<span class="token punctuation">:</span><span class="token punctuation">:</span>r
-p<span class="token punctuation">:</span><span class="token punctuation">:</span>l
-<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>
+    <div class="fold">
+      <div class="fold-title fold-success collapsed" data-toggle="collapse" href="#collapse-8f7bdefe" role="button" aria-expanded="false" aria-controls="collapse-8f7bdefe">
+        <div class="fold-arrow">▶</div>pdv.ahk
+      </div>
+      <div class="fold-collapse collapse" id="collapse-8f7bdefe">
+        <div class="fold-content">
+          <figure class="highlight autohotkey"><figcaption><span>pdv.ahk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-comment">; pdv.ahk</span><br><br><span class="hljs-comment">; basic</span><br><span class="hljs-title">q::</span>`;<br><span class="hljs-title">w::</span>,<br><span class="hljs-title">e::</span>.<br><span class="hljs-title">r::</span>p<br><span class="hljs-title">t::</span>y<br><span class="hljs-title">y::</span>f<br><span class="hljs-title">u::</span>g<br><span class="hljs-title">i::</span>c<br><span class="hljs-title">o::</span>r<br><span class="hljs-title">p::</span>l<br><span class="hljs-title">[::</span>/<br><br><span class="hljs-title">]::</span>@<br><span class="hljs-title">+]::</span>Send +<span class="hljs-number">6</span><br><br><span class="hljs-comment">; \::\</span><br><span class="hljs-comment">; a::a</span><br><span class="hljs-title">s::</span>o<br><span class="hljs-title">d::</span>e<br><span class="hljs-title">f::</span>u<br><span class="hljs-title">g::</span>i<br><span class="hljs-title">h::</span>d<br><span class="hljs-title">j::</span>h<br><span class="hljs-title">k::</span>t<br><span class="hljs-title">l::</span>n<br>`;::s<br><span class="hljs-title">&#x27;::</span>-<br><span class="hljs-title">z::</span>&#x27;<br><span class="hljs-title">x::</span>q<br><span class="hljs-title">c::</span>j<br><span class="hljs-title">v::</span>k<br><span class="hljs-title">b::</span>x<br><span class="hljs-title">n::</span>b<br><span class="hljs-comment">; m::m</span><br><span class="hljs-title">,::</span>w<br><span class="hljs-title">.::</span>v<br><span class="hljs-title">/::</span>z<br><br><span class="hljs-comment">; number</span><br>`::$<br><span class="hljs-title">+`::</span>~<br><span class="hljs-number">1</span>::&amp;<br><span class="hljs-title">+1::</span>Send +<span class="hljs-number">5</span><br><span class="hljs-number">2</span>::[<br><span class="hljs-title">+2::</span>Send <span class="hljs-number">7</span><br><span class="hljs-number">3</span>::&#123;<br><span class="hljs-title">+3::</span>Send <span class="hljs-number">5</span><br><span class="hljs-number">4</span>::&#125;<br><span class="hljs-title">+4::</span>Send <span class="hljs-number">3</span><br><span class="hljs-number">5</span>::(<br><span class="hljs-title">+5::</span>Send <span class="hljs-number">1</span><br><span class="hljs-number">6</span>::=<br><span class="hljs-title">+6::</span>Send <span class="hljs-number">9</span><br><span class="hljs-number">7</span>::*<br><span class="hljs-title">+7::</span>Send <span class="hljs-number">0</span><br><span class="hljs-number">8</span>::)<br><span class="hljs-title">+8::</span>Send <span class="hljs-number">2</span><br><span class="hljs-number">9</span>::+<br><span class="hljs-title">+9::</span>Send <span class="hljs-number">4</span><br><span class="hljs-number">0</span>::]<br><span class="hljs-title">+0::</span>Send <span class="hljs-number">6</span><br><span class="hljs-title">-::</span>!<br><span class="hljs-title">+-::</span>Send <span class="hljs-number">8</span><br><span class="hljs-title">=::</span>#<br><span class="hljs-title">+=::</span>Send ``<br><br><span class="hljs-title">Numpad1::</span>Numpad7<br><span class="hljs-title">Numpad2::</span>Numpad8<br><span class="hljs-title">Numpad3::</span>Numpad9<br><span class="hljs-title">Numpad7::</span>Numpad1<br><span class="hljs-title">Numpad8::</span>Numpad2<br><span class="hljs-title">Numpad9::</span>Numpad3<br></code></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
 
-<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token punctuation">:</span>@
-<span class="token operator">+</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token operator">+</span><span class="token number">6</span>
-
-<span class="token comment">; \::\</span>
-<span class="token comment">; a::a</span>
-s<span class="token punctuation">:</span><span class="token punctuation">:</span>o
-d<span class="token punctuation">:</span><span class="token punctuation">:</span>e
-f<span class="token punctuation">:</span><span class="token punctuation">:</span>u
-g<span class="token punctuation">:</span><span class="token punctuation">:</span>i
-h<span class="token punctuation">:</span><span class="token punctuation">:</span>d
-j<span class="token punctuation">:</span><span class="token punctuation">:</span>h
-k<span class="token punctuation">:</span><span class="token punctuation">:</span>t
-l<span class="token punctuation">:</span><span class="token punctuation">:</span>n
-`;<span class="token punctuation">:</span><span class="token punctuation">:</span>s
-'<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span>
-z<span class="token punctuation">:</span><span class="token punctuation">:</span>'
-x<span class="token punctuation">:</span><span class="token punctuation">:</span>q
-c<span class="token punctuation">:</span><span class="token punctuation">:</span>j
-v<span class="token punctuation">:</span><span class="token punctuation">:</span>k
-b<span class="token punctuation">:</span><span class="token punctuation">:</span>x
-n<span class="token punctuation">:</span><span class="token punctuation">:</span>b
-<span class="token comment">; m::m</span>
-<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span>w
-<span class="token operator">.</span><span class="token punctuation">:</span><span class="token punctuation">:</span>v
-<span class="token operator">/</span><span class="token punctuation">:</span><span class="token punctuation">:</span>z
-
-<span class="token comment">; number</span>
-`<span class="token punctuation">:</span><span class="token punctuation">:</span>$
-<span class="token operator">+</span>`<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">~</span>
-<span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">&amp;</span>
-<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token operator">+</span><span class="token number">5</span>
-<span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">[</span>
-<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">7</span>
-<span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">&#123;</span>
-<span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">5</span>
-<span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">&#125;</span>
-<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">3</span>
-<span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">(</span>
-<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">1</span>
-<span class="token number">6</span><span class="token punctuation">:</span><span class="token operator">:=</span>
-<span class="token operator">+</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">9</span>
-<span class="token number">7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">*</span>
-<span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">0</span>
-<span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">)</span>
-<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">2</span>
-<span class="token number">9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">+</span>
-<span class="token operator">+</span><span class="token number">9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">4</span>
-<span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
-<span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">6</span>
-<span class="token operator">-</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">!</span>
-<span class="token operator">+</span><span class="token operator">-</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">8</span>
-<span class="token operator">=</span><span class="token punctuation">:</span><span class="token punctuation">:</span>#
-<span class="token operator">+=</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> ``
-
-<span class="token symbol">Numpad1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad7</span>
-<span class="token symbol">Numpad2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad8</span>
-<span class="token symbol">Numpad3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad9</span>
-<span class="token symbol">Numpad7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad1</span>
-<span class="token symbol">Numpad8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad2</span>
-<span class="token symbol">Numpad9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
-
-<h2 id="pdv-plus"><a href="#pdv-plus" class="headerlink" title="pdv_plus"></a>pdv_plus</h2><a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 为在 pdv.ahk 脚本后加入下述代码编译而得
-
-<figure><div class="code-wrapper"><pre class="line-numbers language-autohotkey" data-language="autohotkey"><div class="caption"><span>pdv_plus</span></div><code class="language-autohotkey"><span class="token comment">; pdv_plus</span>
-
-<span class="token comment">; LCtrl LAlt Esc CapsLock</span>
-<span class="token symbol">LAlt</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">LCtrl</span>
-<span class="token symbol">LCtrl</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">LAlt</span>
-<span class="token symbol">Esc</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">CapsLock</span>
-<span class="token symbol">CapsLock</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Esc</span>
-
-<span class="token comment">; Left Right Down Up</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> h<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Left</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> l<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Right</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> m<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Down</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> b<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Up</span>
-
-<span class="token comment">; Home End</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> u<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Home</span>
-<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> i<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">End</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<h2 id="pdv-plus"><a href="#pdv-plus" class="headerlink" title="pdv_plus"></a>pdv_plus</h2><a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 为在 <a href="#pdv">pdv.ahk</a> 脚本后加入下述代码编译而得
 
 
-<h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><p><img src="/img/dvp.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="DVP 布局图"></p>
+    <div class="fold">
+      <div class="fold-title fold-success collapsed" data-toggle="collapse" href="#collapse-dcdac752" role="button" aria-expanded="false" aria-controls="collapse-dcdac752">
+        <div class="fold-arrow">▶</div>pdv_plus
+      </div>
+      <div class="fold-collapse collapse" id="collapse-dcdac752">
+        <div class="fold-content">
+          <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-comment">; pdv_plus</span><br><br><span class="hljs-comment">; LCtrl LAlt Esc CapsLock</span><br><span class="hljs-title">LAlt::</span>LCtrl<br><span class="hljs-title">LCtrl::</span>LAlt<br><span class="hljs-title">Esc::</span>CapsLock<br><span class="hljs-title">CapsLock::</span>Esc<br><br><span class="hljs-comment">; Left Right Down Up</span><br><span class="hljs-title">RAlt &amp; h::</span>Send,&#123;Left&#125;<br><span class="hljs-title">RAlt &amp; l::</span>Send,&#123;Right&#125;<br><span class="hljs-title">RAlt &amp; m::</span>Send,&#123;Down&#125;<br><span class="hljs-title">RAlt &amp; b::</span>Send,&#123;Up&#125;<br><br><span class="hljs-comment">; Home End</span><br><span class="hljs-title">RAlt &amp; u::</span>Send,&#123;Home&#125;<br><span class="hljs-title">RAlt &amp; i::</span>Send,&#123;End&#125;<br></code></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+
+
+<h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><ul>
+<li>Windows 完全配置 pdv 键盘布局, 参考 <a target="_blank" rel="noopener" href="https://www.kaufmann.no/roland/dvorak/">pdv 主页</a></li>
+<li>pdv 键盘布局缩略图<p align="center">
+<img src="/img/dvp.png" srcset="/img/fluid_theme/loading.gif" lazyload height="100%" alt="PDV 布局图"/>
+</p></li>
+</ul>
 
                 
               </div>
@@ -495,7 +428,7 @@ n<span class="token punctuation">:</span><span class="token punctuation">:</span
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Programmer Dvorak Keyboard Layout Anywhere</div>
+      <div>Programmer Dvorak Layout Anywhere</div>
       <div>https://zonglin-tian.github.io/2023/07/08/Programmer-Dvorak-Layout-Anywhere/</div>
     </div>
     <div class="license-meta">
@@ -836,8 +769,6 @@ n<span class="token punctuation">:</span><span class="token punctuation">:</span
   });
 </script>
 
-
-  <script  src="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 

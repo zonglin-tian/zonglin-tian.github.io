@@ -1,6 +1,6 @@
 (function() {
   var tag_name = document.getElementsByClassName('print-no-link')[0].innerText;
-  console.log(tag_name);
+  // console.log(tag_name);
   if (tag_name.length === 0) { return; }
   var posts = document.getElementById('updated-time');
   // var posts = document.getElementsByClassName('post-content');

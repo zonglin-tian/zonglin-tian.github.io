@@ -270,22 +270,7 @@
 <li>PHP 版本 &gt;&#x3D; 5.2</li>
 <li>依赖 PHP 扩展：json</li>
 </ul>
-<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">│  model_list.json              // 模型列表
-│
-├─model                         // 模型路径
-│  └─GroupName                  // 模组分组
-│      └─ModelName              // 模型名称
-│
-├─add                           // 更新皮肤列表
-├─get                           // 获取模型配置
-├─rand                          // 随机切换模型
-├─rand_textures                 // 随机切换皮肤
-├─switch                        // 顺序切换模型
-├─switch_textures               // 顺序切换皮肤
-└─tools
-        modelList.php           // 列出模型列表
-        modelTextures.php       // 列出皮肤列表
-        name-to-lower.php       // 文件名格式化<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell">│  model_list.json              // 模型列表<br>│<br>├─model                         // 模型路径<br>│  └─GroupName                  // 模组分组<br>│      └─ModelName              // 模型名称<br>│<br>├─add                           // 更新皮肤列表<br>├─get                           // 获取模型配置<br>├─rand                          // 随机切换模型<br>├─rand_textures                 // 随机切换皮肤<br>├─switch                        // 顺序切换模型<br>├─switch_textures               // 顺序切换皮肤<br>└─tools<br>        modelList.php           // 列出模型列表<br>        modelTextures.php       // 列出皮肤列表<br>        name-to-lower.php       // 文件名格式化<br></code></pre></td></tr></table></figure>
 
 <h3 id="添加模型"><a href="#添加模型" class="headerlink" title="添加模型"></a>添加模型</h3><ul>
 <li>单模型 单皮肤 切换<ul>
@@ -294,69 +279,21 @@
 </ul>
 </li>
 </ul>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">│  index.json
-│  model.moc
-│  textures.cache       // 皮肤列表缓存，自动生成
-│
-├─motions
-│      idle_01.mtn
-│      idle_02.mtn
-│      idle_03.mtn
-│
-└─textures
-        default-costume.png
-        school-costume.png
-        winter-costume.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">│  index.json<br>│  model.moc<br>│  textures.cache       // 皮肤列表缓存，自动生成<br>│<br>├─motions<br>│      idle_01.mtn<br>│      idle_02.mtn<br>│      idle_03.mtn<br>│<br>└─textures<br>        default-costume.png<br>        school-costume.png<br>        winter-costume.png<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>单模型 多组皮肤 递归穷举<ul>
 <li>多组皮肤 组合模型、穷举组合</li>
 <li>皮肤文件夹按 <code>texture_XX</code> 命名</li>
-<li>添加 <code>textures_order.json</code> 列出组合<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">│  index.json
-│  model.moc
-│  textures.cache
-│  textures_order.json
-│
-├─motions
-│      idle_01.mtn
-│      idle_02.mtn
-│      idle_03.mtn
-│
-├─texture_00
-│      00.png
-│
-├─texture_01
-│      00.png
-│      01.png
-│      02.png
-│
-├─texture_02
-│      00.png
-│      01.png
-│      02.png
-│
-└─texture_03
-       00.png
-       01.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li>
+<li>添加 <code>textures_order.json</code> 列出组合<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs shell">│  index.json<br>│  model.moc<br>│  textures.cache<br>│  textures_order.json<br>│<br>├─motions<br>│      idle_01.mtn<br>│      idle_02.mtn<br>│      idle_03.mtn<br>│<br>├─texture_00<br>│      00.png<br>│<br>├─texture_01<br>│      00.png<br>│      01.png<br>│      02.png<br>│<br>├─texture_02<br>│      00.png<br>│      01.png<br>│      02.png<br>│<br>└─texture_03<br>       00.png<br>       01.png<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
 <p>textures_order.json</p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_01"</span><span class="token punctuation">,</span><span class="token string">"texture_02"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_03"</span><span class="token punctuation">]</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_01&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_03&quot;</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">]</span><br></code></pre></td></tr></table></figure>
 
 <p>textures.cache</p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/00.png"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/01.png"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/01.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/01.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/00.png"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/01.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/01.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/01.png"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/02.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/02.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/00.png"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span><span class="token string">"texture_00/00.png"</span><span class="token punctuation">,</span><span class="token string">"texture_01/02.png"</span><span class="token punctuation">,</span><span class="token string">"texture_02/02.png"</span><span class="token punctuation">,</span><span class="token string">"texture_03/01.png"</span><span class="token punctuation">]</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/00.png&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/01.png&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/01.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/01.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/00.png&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/01.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/01.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/01.png&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/02.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/02.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/00.png&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;texture_00/00.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_01/02.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_02/02.png&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;texture_03/01.png&quot;</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">]</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>同分组 多个模型 或 多个路径 切换<ul>
@@ -364,43 +301,10 @@
 </ul>
 </li>
 </ul>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">│
-├─model
-│  ├─Group1
-│  │  ├─Model1
-│  │  │      index.json
-│  │  │
-│  │  └─Model2
-│  │          index.json
-│  │
-│  ├─Group2
-│  │  └─Model1
-│  │          index.json
-│  │
-│  └─GroupName
-│     └─ModelName
-│          │  index.json
-│          │  model.moc
-│          │
-│          ├─motions
-│          └─textures
-│<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs shell">│<br>├─model<br>│  ├─Group1<br>│  │  ├─Model1<br>│  │  │      index.json<br>│  │  │<br>│  │  └─Model2<br>│  │          index.json<br>│  │<br>│  ├─Group2<br>│  │  └─Model1<br>│  │          index.json<br>│  │<br>│  └─GroupName<br>│     └─ModelName<br>│          │  index.json<br>│          │  model.moc<br>│          │<br>│          ├─motions<br>│          └─textures<br>│<br></code></pre></td></tr></table></figure>
 
 <p>model_list.json</p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-    <span class="token property">"models"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"GroupName/ModelName"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">[</span>
-            <span class="token string">"Group1/Model1"</span><span class="token punctuation">,</span>
-            <span class="token string">"Group1/Model2"</span><span class="token punctuation">,</span>
-            <span class="token string">"Group2/Model1"</span>
-        <span class="token punctuation">]</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"messages"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"Example 1"</span><span class="token punctuation">,</span>
-        <span class="token string">"Example 2"</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;models&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;GroupName/ModelName&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-punctuation">[</span><br>            <span class="hljs-string">&quot;Group1/Model1&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-string">&quot;Group1/Model2&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-string">&quot;Group2/Model1&quot;</span><br>        <span class="hljs-punctuation">]</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;messages&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;Example 1&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;Example 2&quot;</span><br>    <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="接口用法"><a href="#接口用法" class="headerlink" title="接口用法"></a>接口用法</h3><ul>
 <li><code>/add/</code> - 检测 新增皮肤 并更新 缓存列表</li>
