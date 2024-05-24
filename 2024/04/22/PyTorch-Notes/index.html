@@ -43,6 +43,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -335,9 +337,16 @@
               <div class="markdown-body">
                 
                 <h1 id="安装与验证"><a href="#安装与验证" class="headerlink" title="安装与验证"></a>安装与验证</h1><p>通过<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>指南安装, 如 CUDA 11.3 + PyTorch 1.12</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 视觉任务通常不需要安装 torchaudio 包</span><br>conda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 视觉任务通常不需要安装 torchaudio 包</span>
+conda <span class="token function">install</span> <span class="token assign-left variable">pytorch</span><span class="token operator">==</span><span class="token number">1.12</span>.0 <span class="token assign-left variable">torchvision</span><span class="token operator">==</span><span class="token number">0.13</span>.0 <span class="token assign-left variable">cudatoolkit</span><span class="token operator">=</span><span class="token number">11.3</span> <span class="token parameter variable">-c</span> pytorch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
 <p><strong>验证:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 验证 torch 是否正常安装</span><br>ipython  <span class="hljs-comment"># pip install ipython, ipython 比 python 输入更方便</span><br><span class="hljs-keyword">import</span> torch<br><span class="hljs-built_in">print</span>(torch.rand(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>))<br><br><span class="hljs-comment"># 验证是否支持 GPU 加速</span><br><span class="hljs-built_in">print</span>(torch.cuda.is_available())<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 验证 torch 是否正常安装</span>
+ipython  <span class="token comment"># pip install ipython, ipython 比 python 输入更方便</span>
+<span class="token keyword">import</span> torch
+<span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 验证是否支持 GPU 加速</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 
 <h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><h2 id="Tensors"><a href="#Tensors" class="headerlink" title="Tensors"></a>Tensors</h2><p><code>Tensors</code> 是一种特殊的数据结构, 与数组和矩阵非常相似, 在 PyTorch 中, <em>使用 Tensors 表示模型的输入和输出以及模型的参数</em></p>
@@ -354,10 +363,17 @@
 <li>total numbel of elments: <code>Tensor.numel()=torch.numel(tensor)</code></li>
 </ul>
 <h3 id="常见初始化操作"><a href="#常见初始化操作" class="headerlink" title="常见初始化操作"></a>常见初始化操作</h3><ul>
-<li>用 <code>tensor</code> 函数转化 python 序列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">data = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]<br>t_data = torch.tensor(data)<br></code></pre></td></tr></table></figure></li>
-<li>用 <code>from_numpy</code> 函数转化 NumPy 数组<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">np_array = np.array(data)<br>t_np = torch.from_numpy(np_array)<br></code></pre></td></tr></table></figure></li>
-<li>已知 <code>shape</code>, 利用特殊函数创建<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">shape = (<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)<br>t_ones = torch.ones(shape)<br>t_zeros = torch.zeros(shape)<br>t_rand = torch.rand(shape, dtype=torch.<span class="hljs-built_in">float</span>)  <span class="hljs-comment"># 指定数据类型</span><br></code></pre></td></tr></table></figure></li>
-<li>参考已知 Tensors, 利用 <code>*_like</code> 函数创建<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">t_ones = torch.ones_like(t_data)<br>t_zeros = torch.zeros_like(t_data)<br>t_rand = torch.rand_like(t_data, dtype=torch.<span class="hljs-built_in">float</span>)  <span class="hljs-comment"># 指定数据类型</span><br></code></pre></td></tr></table></figure></li>
+<li>用 <code>tensor</code> 函数转化 python 序列<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+t_data <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure></li>
+<li>用 <code>from_numpy</code> 函数转化 NumPy 数组<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">np_array <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+t_np <span class="token operator">=</span> torch<span class="token punctuation">.</span>from_numpy<span class="token punctuation">(</span>np_array<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure></li>
+<li>已知 <code>shape</code>, 利用特殊函数创建<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">shape <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+t_ones <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>shape<span class="token punctuation">)</span>
+t_zeros <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token punctuation">)</span>
+t_rand <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span>shape<span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span>  <span class="token comment"># 指定数据类型</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li>
+<li>参考已知 Tensors, 利用 <code>*_like</code> 函数创建<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">t_ones <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones_like<span class="token punctuation">(</span>t_data<span class="token punctuation">)</span>
+t_zeros <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>t_data<span class="token punctuation">)</span>
+t_rand <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand_like<span class="token punctuation">(</span>t_data<span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span>  <span class="token comment"># 指定数据类型</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div></figure></li>
 </ul>
 <h3 id="Tensor-创建函数"><a href="#Tensor-创建函数" class="headerlink" title="Tensor 创建函数"></a>Tensor 创建函数</h3><ul>
 <li>torch.empty(*size, dtype&#x3D;None): 创建未初始化的 Tensor</li>
@@ -385,13 +401,32 @@
 <li>torch.LongTensor(): 64 位整型</li>
 </ul>
 <p><strong>数据类型转化:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">tesor = torch.Tensor(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)  <span class="hljs-comment"># 随机生成 3*5 的 tensor</span><br><span class="hljs-comment"># 转成 long 类型</span><br>newtensor = tensor.long()<br><span class="hljs-comment"># 转成半精度浮点类型 (float16)</span><br>newtensor = tensor.half()<br><span class="hljs-comment"># 转成 int 类型</span><br>newtensor = tensor.<span class="hljs-built_in">int</span>()<br><span class="hljs-comment"># 转成 short 类型</span><br>newtensor = tensor.short()<br><span class="hljs-comment"># 转成 double 类型</span><br>newtensor = tensor.double()<br><span class="hljs-comment"># 转成 float 类型</span><br>newtensor = tensor.<span class="hljs-built_in">float</span>()<br><span class="hljs-comment"># 转成 char 类型</span><br>newtensor = tensor.char()<br><span class="hljs-comment"># 转成 byte 类型</span><br>newtensor = tensor.byte()<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">tesor <span class="token operator">=</span> torch<span class="token punctuation">.</span>Tensor<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment"># 随机生成 3*5 的 tensor</span>
+<span class="token comment"># 转成 long 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span><span class="token builtin">long</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成半精度浮点类型 (float16)</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span>half<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 int 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 short 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span>short<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 double 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span>double<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 float 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 char 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span>char<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 转成 byte 类型</span>
+newtensor <span class="token operator">=</span> tensor<span class="token punctuation">.</span>byte<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
 <li>Tensor.tolist(): return the tensor as a (nested) list. For scalars, a standard Python number is returned like <code>Tensor.item()</code> (only work for tensors with one element)</li>
 <li>Tensor.item(): return the value of this tensor as a standard Python number</li>
 <li>Tensor.numpy(): 将 Tensor 类型转变为 numpy 类型</li>
-<li>Tensor.to(*arg, **kwargs): change an existing tensor’s <code>torch.device</code> and <code>torch.dtype</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">tensor = torch.rand(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)<br>tensor.to(torch.float64)<br>cuda0 = torch.device(<span class="hljs-string">&#x27;cuda:0&#x27;</span>)<br>tensor.to(cuda0)<br></code></pre></td></tr></table></figure></li>
+<li>Tensor.to(*arg, **kwargs): change an existing tensor’s <code>torch.device</code> and <code>torch.dtype</code><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">tensor <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">.</span>to<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>float64<span class="token punctuation">)</span>
+cuda0 <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cuda:0'</span><span class="token punctuation">)</span>
+tensor<span class="token punctuation">.</span>to<span class="token punctuation">(</span>cuda0<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li>
 </ul>
 <h2 id="操作中参数-dim-的理解"><a href="#操作中参数-dim-的理解" class="headerlink" title="操作中参数 dim 的理解"></a>操作中参数 <code>dim</code> 的理解</h2><p><strong>The way to understand the “axis” in NumPy or “dim” in PyTorch is that it <em>collapses the specified axis. So when it collapses</em> the axis 0 (the row), it becomes just one row (column-wise)</strong></p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42782150/article/details/106862236">Yale曼陀罗. PyTorch学习笔记——Tensor张量的数据类型的转化、Tensor常见的数据类型、快速创建Tensor. CSDN</a><br>[2] <a target="_blank" rel="noopener" href="https://mathpretty.com/12065.html">王茂南. 理解 PyTorch 中维度的概念</a><br>[3] <a target="_blank" rel="noopener" href="https://towardsdatascience.com/understanding-dimensions-in-pytorch-6edf9972d3be">Boyan Barakov. Understanding dimensions in PyTorch</a></p>
@@ -882,6 +917,8 @@
   });
 </script>
 
+
+  <script  src="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 

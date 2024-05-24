@@ -16,16 +16,16 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="PDV layout by AutoHotkey">
+    <meta name="description" content="PDV keyboard layout by AutoHotkey">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dvorak Programmer Layout Anywhere">
-<meta property="og:url" content="https://zonglin-tian.github.io/2023/07/08/Dvorak-Programmer-Layout-Anywhere/index.html">
+<meta property="og:title" content="Programmer Dvorak Keyboard Layout Anywhere">
+<meta property="og:url" content="https://zonglin-tian.github.io/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="PDV layout by AutoHotkey">
+<meta property="og:description" content="PDV keyboard layout by AutoHotkey">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/dvp.png">
 <meta property="article:published_time" content="2023-07-08T01:31:10.000Z">
-<meta property="article:modified_time" content="2024-05-07T02:43:01.439Z">
+<meta property="article:modified_time" content="2024-05-24T01:33:50.356Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="AutoHotkey">
 <meta property="article:tag" content="Keyboard">
@@ -34,7 +34,7 @@
   
   
   
-  <title>Dvorak Programmer Layout Anywhere - Temm&#39;s Zone</title>
+  <title>Programmer Dvorak Keyboard Layout Anywhere - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -43,6 +43,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
@@ -241,7 +243,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Dvorak Programmer Layout Anywhere"></span>
+            <span id="subtitle" data-typed-text="Programmer Dvorak Keyboard Layout Anywhere"></span>
           
         </div>
 
@@ -264,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          25 字
+          347 字
         
       </span>
     
@@ -275,7 +277,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -320,12 +322,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Dvorak Programmer Layout Anywhere</h1>
+            <h1 id="seo-header">Programmer Dvorak Keyboard Layout Anywhere</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-05-07T10:43:01+08:00
+                    最后更新于: 2024-05-24T09:33:50+08:00
                   
                   
 
@@ -335,8 +337,116 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>利用 <strong>AutoHotkey</strong> 进行键位映射, 模拟 <em>Dvorak Programmer Layout</em></p>
-<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><p>下载 <a href="/2023/07/08/Dvorak-Programmer-Layout-Anywhere/dvp.exe" title="dvp.exe">dvp.exe</a> 至本地, 双击运行即可</p>
+                <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>&ensp;&ensp;&ensp;&ensp;<strong>只有极少数人使用 <a target="_blank" rel="noopener" href="https://www.kaufmann.no/roland/dvorak/">Programmer Dvorak (pdv) Keyboard Layout</a>.</strong> 某些情况下, 临时使用非自己电脑时, 若仍想使用 pdv 布局, 可利用 <a target="_blank" rel="noopener" href="https://wyagd001.github.io/zh-cn/docs/index.htm"><strong>AutoHotkey (AHK)</strong></a> 进行键位映射, 模拟 <em>Programmer Dvorak Keyboard Layout</em>. 对此, 提供三种现成解决方案(建议使用第一种):</p>
+<ol>
+<li>直接下载 <a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv.exe" title="pdv.exe">pdv.exe</a> 文件至本地, 双击运行即可</li>
+<li>若不仅想使用 pdv 布局, 还想使用<strong>最基础</strong>的键位映射, 可下载 <a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 至本地运行<ul>
+<li><code>LCtrl</code> 与 <code>LAlt</code> 交换, 方便 pdv 的复制与粘贴</li>
+<li><code>Esc</code> 与 <code>CapsLock</code> 交换, VIM 用户专享</li>
+<li><code>RAlt + b/m/h/l/u/i</code> 发送 <code>Up/Down/Left/Right/Home/End</code> 方向键, 最小化手在键盘上的移动</li>
+</ul>
+</li>
+<li>若目标电脑已安装 AHK 软件, <strong>还</strong>可下载 <a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv.ahk" title="pdv.ahk">pdv.ahk</a> 文件至本地运行, 并可对其进行自定义</li>
+</ol>
+<h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><h2 id="pdv"><a href="#pdv" class="headerlink" title="pdv"></a>pdv</h2><a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv.ahk" title="pdv.ahk">pdv.ahk</a> 脚本涉及的主要语法为 AHK 软件的<a href="https://wyagd001.github.io/zh-cn/docs/misc/Remap.htm" title="" target="">重映射按键功能</a>, <a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv.exe" title="pdv.exe">pdv.exe</a> 由其编译而得
+
+<figure><div class="code-wrapper"><pre class="line-numbers language-autohotkey" data-language="autohotkey"><div class="caption"><span>pdv.ahk</span></div><code class="language-autohotkey"><span class="token comment">; pdv.ahk</span>
+
+<span class="token comment">; basic</span>
+q<span class="token punctuation">:</span><span class="token punctuation">:</span>`;
+w<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">,</span>
+e<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">.</span>
+r<span class="token punctuation">:</span><span class="token punctuation">:</span>p
+t<span class="token punctuation">:</span><span class="token punctuation">:</span>y
+y<span class="token punctuation">:</span><span class="token punctuation">:</span>f
+u<span class="token punctuation">:</span><span class="token punctuation">:</span>g
+i<span class="token punctuation">:</span><span class="token punctuation">:</span>c
+o<span class="token punctuation">:</span><span class="token punctuation">:</span>r
+p<span class="token punctuation">:</span><span class="token punctuation">:</span>l
+<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">/</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token punctuation">:</span>@
+<span class="token operator">+</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token operator">+</span><span class="token number">6</span>
+
+<span class="token comment">; \::\</span>
+<span class="token comment">; a::a</span>
+s<span class="token punctuation">:</span><span class="token punctuation">:</span>o
+d<span class="token punctuation">:</span><span class="token punctuation">:</span>e
+f<span class="token punctuation">:</span><span class="token punctuation">:</span>u
+g<span class="token punctuation">:</span><span class="token punctuation">:</span>i
+h<span class="token punctuation">:</span><span class="token punctuation">:</span>d
+j<span class="token punctuation">:</span><span class="token punctuation">:</span>h
+k<span class="token punctuation">:</span><span class="token punctuation">:</span>t
+l<span class="token punctuation">:</span><span class="token punctuation">:</span>n
+`;<span class="token punctuation">:</span><span class="token punctuation">:</span>s
+'<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span>
+z<span class="token punctuation">:</span><span class="token punctuation">:</span>'
+x<span class="token punctuation">:</span><span class="token punctuation">:</span>q
+c<span class="token punctuation">:</span><span class="token punctuation">:</span>j
+v<span class="token punctuation">:</span><span class="token punctuation">:</span>k
+b<span class="token punctuation">:</span><span class="token punctuation">:</span>x
+n<span class="token punctuation">:</span><span class="token punctuation">:</span>b
+<span class="token comment">; m::m</span>
+<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span>w
+<span class="token operator">.</span><span class="token punctuation">:</span><span class="token punctuation">:</span>v
+<span class="token operator">/</span><span class="token punctuation">:</span><span class="token punctuation">:</span>z
+
+<span class="token comment">; number</span>
+`<span class="token punctuation">:</span><span class="token punctuation">:</span>$
+<span class="token operator">+</span>`<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">~</span>
+<span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">&amp;</span>
+<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token operator">+</span><span class="token number">5</span>
+<span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">[</span>
+<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">7</span>
+<span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">&#123;</span>
+<span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">5</span>
+<span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">&#125;</span>
+<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">3</span>
+<span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">(</span>
+<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">1</span>
+<span class="token number">6</span><span class="token punctuation">:</span><span class="token operator">:=</span>
+<span class="token operator">+</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">9</span>
+<span class="token number">7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">*</span>
+<span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">0</span>
+<span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">)</span>
+<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">2</span>
+<span class="token number">9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">+</span>
+<span class="token operator">+</span><span class="token number">9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">4</span>
+<span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">6</span>
+<span class="token operator">-</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">!</span>
+<span class="token operator">+</span><span class="token operator">-</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> <span class="token number">8</span>
+<span class="token operator">=</span><span class="token punctuation">:</span><span class="token punctuation">:</span>#
+<span class="token operator">+=</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token command selector">Send</span> ``
+
+<span class="token symbol">Numpad1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad7</span>
+<span class="token symbol">Numpad2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad8</span>
+<span class="token symbol">Numpad3</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad9</span>
+<span class="token symbol">Numpad7</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad1</span>
+<span class="token symbol">Numpad8</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad2</span>
+<span class="token symbol">Numpad9</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Numpad3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="pdv-plus"><a href="#pdv-plus" class="headerlink" title="pdv_plus"></a>pdv_plus</h2><a href="/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 为在 pdv.ahk 脚本后加入下述代码编译而得
+
+<figure><div class="code-wrapper"><pre class="line-numbers language-autohotkey" data-language="autohotkey"><div class="caption"><span>pdv_plus</span></div><code class="language-autohotkey"><span class="token comment">; pdv_plus</span>
+
+<span class="token comment">; LCtrl LAlt Esc CapsLock</span>
+<span class="token symbol">LAlt</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">LCtrl</span>
+<span class="token symbol">LCtrl</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">LAlt</span>
+<span class="token symbol">Esc</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">CapsLock</span>
+<span class="token symbol">CapsLock</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Esc</span>
+
+<span class="token comment">; Left Right Down Up</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> h<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Left</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> l<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Right</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> m<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Down</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> b<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Up</span>
+
+<span class="token comment">; Home End</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> u<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">Home</span>
+<span class="token symbol">RAlt</span> <span class="token operator">&amp;</span> i<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token symbol">End</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+
 <h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><p><img src="/img/dvp.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="DVP 布局图"></p>
 
                 
@@ -385,8 +495,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Dvorak Programmer Layout Anywhere</div>
-      <div>https://zonglin-tian.github.io/2023/07/08/Dvorak-Programmer-Layout-Anywhere/</div>
+      <div>Programmer Dvorak Keyboard Layout Anywhere</div>
+      <div>https://zonglin-tian.github.io/2023/07/08/Programmer-Dvorak-Keyboard-Layout-Anywhere/</div>
     </div>
     <div class="license-meta">
       
@@ -446,6 +556,38 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'photon-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'zonglin-tian/blog_comments');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
 
           </article>
         </div>
@@ -694,6 +836,8 @@
   });
 </script>
 
+
+  <script  src="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 

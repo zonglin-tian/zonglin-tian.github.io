@@ -42,6 +42,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -404,17 +406,71 @@
               <div class="markdown-body">
                 
                 <h1 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h1><ul>
-<li><code>tail -f filename</code>: 查看文件最尾部的内容, 并且不断刷新, <strong>特别适合查阅不断更新的日志文件</strong> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux tail 命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-tail.html)">[1]</span></a></sup><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tail 常用参数</span><br>- f: 循环读取 (Ctrl + C 停止显示)<br>- n: 显示尾部行数 (默认10行)<br></code></pre></td></tr></table></figure></li>
+<li><code>tail -f filename</code>: 查看文件最尾部的内容, 并且不断刷新, <strong>特别适合查阅不断更新的日志文件</strong> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux tail 命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-tail.html)">[1]</span></a></sup><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># tail 常用参数</span>
+- f: 循环读取 <span class="token punctuation">(</span>Ctrl + C 停止显示<span class="token punctuation">)</span>
+- n: 显示尾部行数 <span class="token punctuation">(</span>默认10行<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div></figure></li>
 </ul>
-<h1 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h1><h2 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title="tar.gz 文件"></a>tar.gz 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 通用参数说明</span><br>-v: 显示执行过程<br>-z: 通过 gzip 命令处理文件<br>-f: 指定备份文件<br><br><span class="hljs-comment"># 解压缩, -x 还原文件</span><br>tar -xvzf file.tar.gz<br><br><span class="hljs-comment"># 解压缩 tar.xz 文件</span><br>tar -xvf file.tar.xz<br><br><span class="hljs-comment"># 压缩并打包 -c 建立新的备份文件</span><br>tar -cvzf compact_file.tar.gz source_file<br><br><span class="hljs-comment"># 列出压缩文件内容, -t 列出备份文件内容</span><br>tar -tvzf file.tar.gz<br></code></pre></td></tr></table></figure>
+<h1 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h1><h2 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title="tar.gz 文件"></a>tar.gz 文件</h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 通用参数说明</span>
+-v: 显示执行过程
+-z: 通过 <span class="token function">gzip</span> 命令处理文件
+-f: 指定备份文件
 
-<h2 id="zip-文件"><a href="#zip-文件" class="headerlink" title="zip 文件"></a>zip 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># zip 压缩参数说明</span><br>r: 递归处理文件和文件夹<br>q: 不显示执行过程<br>v: 显示执行过程<br>d: 从压缩文件中删除指定文件<br><br><span class="hljs-comment"># 把 zip_folder 下所有文件和文件夹打包为当前目录下的 zip_file.zip</span><br>zip -qr zip_file.zip zip_folder<br><br><span class="hljs-comment">## 从压缩文件 zip_file.zip 中删除 delete_file</span><br>zip -dv zip_file.zip delete_file<br><br><br><span class="hljs-comment"># (可能要先安装 unzip)</span><br><span class="hljs-comment"># sudo apt install unzip</span><br><br><span class="hljs-comment"># 解压到当前目录</span><br>unzip file.zip<br><br><span class="hljs-comment"># 查看 zip 压缩包含的文件</span><br>unzip -l file.zip<br></code></pre></td></tr></table></figure>
+<span class="token comment"># 解压缩, -x 还原文件</span>
+<span class="token function">tar</span> <span class="token parameter variable">-xvzf</span> file.tar.gz
+
+<span class="token comment"># 解压缩 tar.xz 文件</span>
+<span class="token function">tar</span> <span class="token parameter variable">-xvf</span> file.tar.xz
+
+<span class="token comment"># 压缩并打包 -c 建立新的备份文件</span>
+<span class="token function">tar</span> <span class="token parameter variable">-cvzf</span> compact_file.tar.gz source_file
+
+<span class="token comment"># 列出压缩文件内容, -t 列出备份文件内容</span>
+<span class="token function">tar</span> <span class="token parameter variable">-tvzf</span> file.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="zip-文件"><a href="#zip-文件" class="headerlink" title="zip 文件"></a>zip 文件</h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># zip 压缩参数说明</span>
+r: 递归处理文件和文件夹
+q: 不显示执行过程
+v: 显示执行过程
+d: 从压缩文件中删除指定文件
+
+<span class="token comment"># 把 zip_folder 下所有文件和文件夹打包为当前目录下的 zip_file.zip</span>
+<span class="token function">zip</span> <span class="token parameter variable">-qr</span> zip_file.zip zip_folder
+
+<span class="token comment">## 从压缩文件 zip_file.zip 中删除 delete_file</span>
+<span class="token function">zip</span> <span class="token parameter variable">-dv</span> zip_file.zip delete_file
 
 
-<h1 id="文件复制-2-3"><a href="#文件复制-2-3" class="headerlink" title="文件复制 [2]-[3]"></a>文件复制 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux cp 命令. RUNOOB.COM](https://www.runoob.com/linux/linux-comm-cp.html)">[2]</span></a></sup><sup>-</sup><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu cp 命令](https://wenku.csdn.net/answer/c95a332c6633464794f5a97d5f18859c#:~:text=ubuntu%20cp命令%201%20-r：递归复制目录及其子目录和文件。%202%20-i：交互式复制，如果目标文件已经存在，则提示用户是否覆盖。,3%20-f：强制复制，覆盖目标文件而不提示用户。%204%20-v：显示详细的复制过程。%205%20-p：保留源文件的权限、所有权和时间戳%E3%80%82)">[3]</span></a></sup></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 复制多个文件 (夹) 到指定目录 (需要先创建) 下</span><br><span class="hljs-built_in">cp</span> -r souce_dir/ source_file object_dir/<br><span class="hljs-comment"># 不复制文件夹下特定文件到指定目录, 其余复制</span><br><span class="hljs-built_in">cd</span> source_dir<br><span class="hljs-built_in">cp</span> -r `<span class="hljs-built_in">ls</span> grep -v excluded | xargs` object_dir/<br><span class="hljs-comment"># 如果目标文件存在, 强制覆盖</span><br><span class="hljs-built_in">cp</span> -f source_file object_path<br><span class="hljs-comment"># 其它参数</span><br>-v: 显示复制的进度<br>-i: 交互式复制<br></code></pre></td></tr></table></figure>
+<span class="token comment"># (可能要先安装 unzip)</span>
+<span class="token comment"># sudo apt install unzip</span>
+
+<span class="token comment"># 解压到当前目录</span>
+<span class="token function">unzip</span> file.zip
+
+<span class="token comment"># 查看 zip 压缩包含的文件</span>
+<span class="token function">unzip</span> <span class="token parameter variable">-l</span> file.zip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 
-<h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 下载单个文件并保存在当前目录</span><br>wget file_url<br><span class="hljs-comment"># 下载单个文件并改名</span><br>wget -O new_name file_url<br>curl file_url -o new_name<br><span class="hljs-comment"># 示例</span><br><span class="hljs-built_in">mkdir</span> d2l-zh &amp;&amp; <span class="hljs-built_in">cd</span> d2l-zh<br>curl https://zh-v2.d2l.ai/d2l-zh-2.0.0.zip -o d2l-zh.zip<br>unzip d2l-zh.zip &amp;&amp; <span class="hljs-built_in">rm</span> d2l-zh.zip<br></code></pre></td></tr></table></figure>
+<h1 id="文件复制-2-3"><a href="#文件复制-2-3" class="headerlink" title="文件复制 [2]-[3]"></a>文件复制 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux cp 命令. RUNOOB.COM](https://www.runoob.com/linux/linux-comm-cp.html)">[2]</span></a></sup><sup>-</sup><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu cp 命令](https://wenku.csdn.net/answer/c95a332c6633464794f5a97d5f18859c#:~:text=ubuntu%20cp命令%201%20-r：递归复制目录及其子目录和文件。%202%20-i：交互式复制，如果目标文件已经存在，则提示用户是否覆盖。,3%20-f：强制复制，覆盖目标文件而不提示用户。%204%20-v：显示详细的复制过程。%205%20-p：保留源文件的权限、所有权和时间戳%E3%80%82)">[3]</span></a></sup></h1><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 复制多个文件 (夹) 到指定目录 (需要先创建) 下</span>
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> souce_dir/ source_file object_dir/
+<span class="token comment"># 不复制文件夹下特定文件到指定目录, 其余复制</span>
+<span class="token builtin class-name">cd</span> source_dir
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> <span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> <span class="token function">grep</span> <span class="token parameter variable">-v</span> excluded <span class="token operator">|</span> <span class="token function">xargs</span><span class="token variable">`</span></span> object_dir/
+<span class="token comment"># 如果目标文件存在, 强制覆盖</span>
+<span class="token function">cp</span> <span class="token parameter variable">-f</span> source_file object_path
+<span class="token comment"># 其它参数</span>
+-v: 显示复制的进度
+-i: 交互式复制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+
+<h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载单个文件并保存在当前目录</span>
+<span class="token function">wget</span> file_url
+<span class="token comment"># 下载单个文件并改名</span>
+<span class="token function">wget</span> <span class="token parameter variable">-O</span> new_name file_url
+<span class="token function">curl</span> file_url <span class="token parameter variable">-o</span> new_name
+<span class="token comment"># 示例</span>
+<span class="token function">mkdir</span> d2l-zh <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> d2l-zh
+<span class="token function">curl</span> https://zh-v2.d2l.ai/d2l-zh-2.0.0.zip <span class="token parameter variable">-o</span> d2l-zh.zip
+<span class="token function">unzip</span> d2l-zh.zip <span class="token operator">&amp;&amp;</span> <span class="token function">rm</span> d2l-zh.zip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 
 <h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><p>在两台服务器之间利用 <code>ssh</code> 传输文件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[星海. 两台Linux服务器之间传输文件的四种方法. 知乎](https://zhuanlan.zhihu.com/p/78133776)">[4]</span></a></sup></p>
@@ -423,18 +479,44 @@
 <h1 id="链接文件-5-6"><a href="#链接文件-5-6" class="headerlink" title="链接文件 [5]-[6]"></a>链接文件 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[weixin_34248118. linux查看硬链接对应的所有文件. CSDN](https://blog.csdn.net/weixin_34248118/article/details/89805804?spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-7-89805804-blog-37692587.235^v39^pc_relevant_anti_vip&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-7-89805804-blog-37692587.235^v39^pc_relevant_anti_vip)">[5]</span></a></sup><sup>-</sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[hongweigg. Linux中怎么看出文件是硬连接?. CSDN](https://blog.csdn.net/hongweigg/article/details/37692587)">[6]</span></a></sup></h1><ul>
 <li>链接文件分为硬链接和软链接, 硬链接相当于一个文件两个名称, 而<strong>软链接相当于创建快捷方式</strong>, 创建链接时建议使用<strong>绝对路径</strong></li>
 <li>可使用 <code>ll</code> 命令查看软链接, 其中带有 <strong>l</strong> 标识的为软链接, 并有明确的指向</li>
-<li><strong>文件夹没有硬链接, 只有软链接</strong>, 使用 <code>ll</code> 命令结果的第二列表示<strong>文件</strong>的硬链接数<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 为 file_name 建立硬链接</span><br><span class="hljs-built_in">ln</span> file_name ln_name<br><span class="hljs-comment"># 为 file_name 建立软链接</span><br><span class="hljs-built_in">ln</span> -s file_name ln_name<br></code></pre></td></tr></table></figure></li>
-<li>硬链接查看方式: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看文件的 inode</span><br><span class="hljs-built_in">ls</span> -il dir_name<br><span class="hljs-comment"># 查找所有 inode_index 的文件</span><br>find dir_name -inum inode_index<br></code></pre></td></tr></table></figure></li>
+<li><strong>文件夹没有硬链接, 只有软链接</strong>, 使用 <code>ll</code> 命令结果的第二列表示<strong>文件</strong>的硬链接数<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 为 file_name 建立硬链接</span>
+<span class="token function">ln</span> file_name ln_name
+<span class="token comment"># 为 file_name 建立软链接</span>
+<span class="token function">ln</span> <span class="token parameter variable">-s</span> file_name ln_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li>
+<li>硬链接查看方式: <figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看文件的 inode</span>
+<span class="token function">ls</span> <span class="token parameter variable">-il</span> dir_name
+<span class="token comment"># 查找所有 inode_index 的文件</span>
+<span class="token function">find</span> dir_name <span class="token parameter variable">-inum</span> inode_index<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li>
 </ul>
 <h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p><code>ls</code> 默认为 <code>ls =&#39;ls --color=auto&#39;</code>, 可通过 <code>alias ls</code> 查看, 其中 <em>–color&#x3D;auto</em> 表示以不同颜色显示不同类型的文件和目录: 目录为蓝色, 可执行文件为绿色, 常规文件为黑色, 符号链接为浅绿色<br>可通过 <code>ls -hl</code> 查看更为详细的信息, 其中第一列第一个字符若为 <em>-</em> 表示常规文件, <em>d</em> 表示目录, <em>l</em> 表示符号链接, 进一步添加 <code>-a</code> 选项查看隐藏文件 (以*.* 开头), 参数 <code>h</code> 表示使用易读的方式显示</p>
-<h2 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看压缩文件大小</span><br>ll  <span class="hljs-comment"># ls -hl</span><br><span class="hljs-comment"># 查看文件(夹)大小</span><br><span class="hljs-built_in">du</span> -sh file_name<br><span class="hljs-comment"># 查看当前目录下所有子文件(目录)的大小</span><br><span class="hljs-built_in">du</span> -ah --max-depth=1  <span class="hljs-comment"># a 参数表示显示所有文件的大小</span><br><span class="hljs-comment"># 查看当前目录及一级子目录的大小</span><br><span class="hljs-built_in">du</span> -h --max-depth=1<br><span class="hljs-comment"># 查看当前目录的大小</span><br><span class="hljs-built_in">du</span> -sh  <span class="hljs-comment"># du -h --max-depth=0</span><br></code></pre></td></tr></table></figure>
+<h2 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看压缩文件大小</span>
+ll  <span class="token comment"># ls -hl</span>
+<span class="token comment"># 查看文件(夹)大小</span>
+<span class="token function">du</span> <span class="token parameter variable">-sh</span> file_name
+<span class="token comment"># 查看当前目录下所有子文件(目录)的大小</span>
+<span class="token function">du</span> <span class="token parameter variable">-ah</span> --max-depth<span class="token operator">=</span><span class="token number">1</span>  <span class="token comment"># a 参数表示显示所有文件的大小</span>
+<span class="token comment"># 查看当前目录及一级子目录的大小</span>
+<span class="token function">du</span> <span class="token parameter variable">-h</span> --max-depth<span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment"># 查看当前目录的大小</span>
+<span class="token function">du</span> <span class="token parameter variable">-sh</span>  <span class="token comment"># du -h --max-depth=0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 <p><strong>服务器管理常用命令:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看当前目录下所以文件 (夹) 的大小, 并逆序排列</span><br>sudo <span class="hljs-built_in">du</span> -ah --max-depth=1 | <span class="hljs-built_in">sort</span> -rh<br><br><span class="hljs-comment"># 查看当前目录下所以一级和二级子目录的大小, 逆序输出前 20 条记录</span><br>sudo <span class="hljs-built_in">du</span> -h --max-depth=2 | <span class="hljs-built_in">sort</span> -rh | <span class="hljs-built_in">head</span> -n 20<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看当前目录下所以文件 (夹) 的大小, 并逆序排列</span>
+<span class="token function">sudo</span> <span class="token function">du</span> <span class="token parameter variable">-ah</span> --max-depth<span class="token operator">=</span><span class="token number">1</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-rh</span>
 
-<h2 id="磁盘空间-7"><a href="#磁盘空间-7" class="headerlink" title="磁盘空间 [7]"></a>磁盘空间 <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="[那记忆微凉. Ubuntu下查看文件、文件夹和磁盘空间的大小. CSDN](https://blog.csdn.net/BigData_Mining/article/details/88998472)">[7]</span></a></sup></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看系统磁盘使用信息</span><br><span class="hljs-built_in">df</span> -h  <span class="hljs-comment"># 文件系统 容量 已用 可用 已用% 挂载点</span><br></code></pre></td></tr></table></figure>
+<span class="token comment"># 查看当前目录下所以一级和二级子目录的大小, 逆序输出前 20 条记录</span>
+<span class="token function">sudo</span> <span class="token function">du</span> <span class="token parameter variable">-h</span> --max-depth<span class="token operator">=</span><span class="token number">2</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-rh</span> <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">20</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
-<h2 id="文件绝对路径-8"><a href="#文件绝对路径-8" class="headerlink" title="文件绝对路径 [8]"></a>文件绝对路径 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="[CSDN云计算. Linux 中如何获取文件的绝对路径. CSDN](https://blog.csdn.net/FL63Zv9Zou86950w/article/details/126945089#:~:text=我们可以在%20ls%20命令中使用环境变量PWD来显示文件和目录的绝对路径，如下：%20ls%20-ld%20%24PWD%2F*,使用上述命令，会得到如下输出：%20%24%20ls%20-ld%20%24PWD%20%2F%2a)">[8]</span></a></sup></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">realpath</span> file_dir_name<br><span class="hljs-built_in">realpath</span> -s file_dir_name  <span class="hljs-comment"># 显示符号连接的路径而不是源文件</span><br><span class="hljs-built_in">readlink</span> -f file_dir_name<br>find $(<span class="hljs-built_in">pwd</span>) -name file_dir_name<br>find $(<span class="hljs-built_in">pwd</span>) -name <span class="hljs-string">&quot;*.pdf&quot;</span>  <span class="hljs-comment"># 显示当前目录下所有 pdf 文件的绝对路径</span><br><span class="hljs-built_in">ls</span> -l <span class="hljs-variable">$PWD</span>/file_dir_name<br><span class="hljs-built_in">ls</span> -l <span class="hljs-variable">$PWD</span>/*<br></code></pre></td></tr></table></figure>
+<h2 id="磁盘空间-7"><a href="#磁盘空间-7" class="headerlink" title="磁盘空间 [7]"></a>磁盘空间 <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="[那记忆微凉. Ubuntu下查看文件、文件夹和磁盘空间的大小. CSDN](https://blog.csdn.net/BigData_Mining/article/details/88998472)">[7]</span></a></sup></h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看系统磁盘使用信息</span>
+<span class="token function">df</span> <span class="token parameter variable">-h</span>  <span class="token comment"># 文件系统 容量 已用 可用 已用% 挂载点</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="文件绝对路径-8"><a href="#文件绝对路径-8" class="headerlink" title="文件绝对路径 [8]"></a>文件绝对路径 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="[CSDN云计算. Linux 中如何获取文件的绝对路径. CSDN](https://blog.csdn.net/FL63Zv9Zou86950w/article/details/126945089#:~:text=我们可以在%20ls%20命令中使用环境变量PWD来显示文件和目录的绝对路径，如下：%20ls%20-ld%20%24PWD%2F*,使用上述命令，会得到如下输出：%20%24%20ls%20-ld%20%24PWD%20%2F%2a)">[8]</span></a></sup></h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">realpath file_dir_name
+realpath <span class="token parameter variable">-s</span> file_dir_name  <span class="token comment"># 显示符号连接的路径而不是源文件</span>
+readlink <span class="token parameter variable">-f</span> file_dir_name
+<span class="token function">find</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> <span class="token parameter variable">-name</span> file_dir_name
+<span class="token function">find</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> <span class="token parameter variable">-name</span> <span class="token string">"*.pdf"</span>  <span class="token comment"># 显示当前目录下所有 pdf 文件的绝对路径</span>
+<span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token environment constant">$PWD</span>/file_dir_name
+<span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token environment constant">$PWD</span>/*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 <h2 id="文件权限-chmod"><a href="#文件权限-chmod" class="headerlink" title="文件权限-chmod"></a>文件权限-chmod</h2><p><code>chmod</code> (change mode) 命令 <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux chmod命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-chmod.html)">[9]</span></a></sup> 控制用户对文件的权限<br>权限分三级: 文件所有者 (Owner), 用户组 (Group), 其它用户 (Other Users)</p>
 <p><img src="/img/ls-l_output.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="ls -l 输出示意图"></p>
@@ -448,9 +530,20 @@
 <li><code>chmod -R mode dir_name</code>: 为目录及其所有文件与子目录设置统一权限模式 <strong>mode</strong></li>
 </ul>
 <p><strong>实例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> go+rx folder_name <span class="hljs-comment"># 为 Group 和 Others 添加读和执行权限</span><br><span class="hljs-built_in">chmod</span> a+x file_name  <span class="hljs-comment"># 为所有用户添加执行权限</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">chmod</span> go+rx folder_name <span class="token comment"># 为 Group 和 Others 添加读和执行权限</span>
+<span class="token function">chmod</span> a+x file_name  <span class="token comment"># 为所有用户添加执行权限</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
 
-<h2 id="属性-lsattr"><a href="#属性-lsattr" class="headerlink" title="属性-lsattr"></a>属性-lsattr</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示文件属性</span><br>lsattr file_name<br><span class="hljs-comment"># 显示目录属性</span><br>lsattr -d dir_name<br><span class="hljs-comment"># 显示所有文件和目录的属性</span><br>lsattr -a dir_name<br><span class="hljs-comment"># 增加或减少文件 i(mmutable) 属性 (不可修改, 包括 root)</span><br>chattr +i file_name  <span class="hljs-comment"># 防止文件被修改, 尤其是 /etc 下的文件</span><br>chattr -i file_name<br><span class="hljs-comment"># 使文件只能增加数据, 而不能删除</span><br>chattr +a file_name<br></code></pre></td></tr></table></figure>
+<h2 id="属性-lsattr"><a href="#属性-lsattr" class="headerlink" title="属性-lsattr"></a>属性-lsattr</h2><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 显示文件属性</span>
+lsattr file_name
+<span class="token comment"># 显示目录属性</span>
+lsattr <span class="token parameter variable">-d</span> dir_name
+<span class="token comment"># 显示所有文件和目录的属性</span>
+lsattr <span class="token parameter variable">-a</span> dir_name
+<span class="token comment"># 增加或减少文件 i(mmutable) 属性 (不可修改, 包括 root)</span>
+chattr +i file_name  <span class="token comment"># 防止文件被修改, 尤其是 /etc 下的文件</span>
+chattr <span class="token parameter variable">-i</span> file_name
+<span class="token comment"># 使文件只能增加数据, 而不能删除</span>
+chattr +a file_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
 
 <div class="note note-info">
@@ -850,6 +943,8 @@
   });
 </script>
 
+
+  <script  src="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
