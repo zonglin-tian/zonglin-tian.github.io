@@ -77,7 +77,7 @@ elif input_str[0] == 'e':
     index = [int(input_str[i]) for i in range(1, len(input_str))]
     default_value = 3
 elif input_str[0] == 'o':
-    prefix_str = "\n多样性打卡!"
+    prefix_str = "\n多样性运动/网站完善!"
     index = [int(input_str[i]) for i in range(1, len(input_str))]
     default_value = 4
 else:
