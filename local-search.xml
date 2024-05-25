@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Pycharm 配置与技巧</title>
+    <link href="/2024/05/25/Pycharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/"/>
+    <url>/2024/05/25/Pycharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Pycharm-配置"><a href="#Pycharm-配置" class="headerlink" title="Pycharm 配置"></a>Pycharm 配置</h1><h1 id="Pycharm-技巧"><a href="#Pycharm-技巧" class="headerlink" title="Pycharm 技巧"></a>Pycharm 技巧</h1><h2 id="自定义代码折叠"><a href="#自定义代码折叠" class="headerlink" title="自定义代码折叠"></a>自定义代码折叠</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>Software</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Writing...</tag>
+      
+      <tag>Custom</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Win10 重装与初始配置</title>
     <link href="/2024/05/23/Win10-%E9%87%8D%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/"/>
     <url>/2024/05/23/Win10-%E9%87%8D%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</url>
@@ -83,7 +110,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div><h1 id="文字的力量"><a href="#文字的力量" class="headerlink" title="文字的力量"></a>文字的力量</h1>        <div id="aplayer-ryjNBcEU" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-ryjNBcEU");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div><h1 id="文字的力量"><a href="#文字的力量" class="headerlink" title="文字的力量"></a>文字的力量</h1>        <div id="aplayer-yWwuOIQk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-yWwuOIQk");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
