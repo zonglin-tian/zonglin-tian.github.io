@@ -18,11 +18,12 @@ split_str = ';'
 ###########################################################
 title_str = f"{sep_str}\n{current_date} 打卡: 0.早起  1.冥想  2.阅读  3.午休  4.跑步  5.写作  6.思考  7.晚休\n"
 des_str = f"{sep_str}\n输入说明: \n"
-basic_str = "- 输入序号即表示对应项\033[1m常规打卡\033[0m; \033[1m666 表示全勤\033[0m; 以 \033[1md/e\033[0m 开头的序号表示\033[1m双倍/超额\033[0m完成; \n"
+basic_str = "- 输入序号即表示对应项\033[1m常规打卡\033[0m; \033[1m666 表示全勤\033[0m; \n"
+run_write_str = "- 以 \033[1md/e\033[0m 开头的序号表示\033[1m双倍/超额\033[0m完成; 以 \033[1mo\033[0m 开头的序号表示\033[1m非跑步运动/写作之网站完善\033[0m; \n"
 empty_st = "- 空表示未打卡(不更改已有记录); \n"
 clear_str = "- c 表示重置为 0; \n"
 look_update_str = f"- u 开头紧跟日期[可选]加{split_str}后接上述输入表示对输入日期(默认为当天日期)进行操作, u 后无输入表示查询当天记录\n"
-prompt_str = title_str + des_str + empty_st + basic_str + clear_str + look_update_str
+prompt_str = title_str + des_str + empty_st + basic_str + run_write_str + clear_str + look_update_str
 
 input_str = input(prompt_str)
 print(sep_str)
