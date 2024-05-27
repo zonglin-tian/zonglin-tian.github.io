@@ -22,7 +22,7 @@
     // if(String(snum).length === 1 ){
     //   snum = "0" + snum;
     // }
-    document.getElementById("timeDate").innerHTML = "总运行&nbsp"+dnum+"&nbsp天";
+    document.getElementById("timeDate").innerHTML = '<a href="/music/" target="_blank" rel="nofollow noopener"><i class="iconfont icon-music"></i></a>' + '&ensp;总运行&nbsp' + dnum + '&nbsp天';
     // document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
   }
 
