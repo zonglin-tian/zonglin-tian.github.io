@@ -1,6 +1,9 @@
 (function() {
-  var tag_name = document.getElementsByClassName('print-no-link')[0].innerText;
+  // var tag_name = document.getElementsByClassName('print-no-link')[0].innerText;
+  var tag_list = document.getElementsByClassName('print-no-link');
   // console.log(tag_name);
+  if (tag_list.length === 0) { return; }
+  var tag_name = tag_list[0].innerText;
   if (tag_name.length === 0) { return; }
   var posts = document.getElementById('updated-time');
   // var posts = document.getElementsByClassName('post-content');
