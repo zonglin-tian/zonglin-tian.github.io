@@ -7,6 +7,18 @@
     now.setTime(now.getTime()+250);
     days = (now - start) / 1000 / 60 / 60 / 24;
     dnum = Math.floor(days);
+    // dnum = 730;
+    year_num = Math.floor(dnum / 365);
+    day_num = dnum % 365;
+    var run_str = '';
+    var year_day_sep = '';
+    if (year_num >= 1) {
+       run_str = run_str + year_num + '&nbsp;年';
+       year_day_sep = '&thinsp;';
+    }
+    if (day_num >= 1) {
+       run_str = run_str + year_day_sep + day_num + '&nbsp;天';
+    }
     // hours = (now - start) / 1000 / 60 / 60 - (24 * dnum);
     // hnum = Math.floor(hours);
     // if(String(hnum).length === 1 ){
@@ -22,7 +34,7 @@
     // if(String(snum).length === 1 ){
     //   snum = "0" + snum;
     // }
-    document.getElementById("timeDate").innerHTML = '<a href="/music/" target="_blank" rel="nofollow noopener"><i class="iconfont icon-music"></i></a>' + '&ensp;总运行&nbsp' + dnum + '&nbsp天';
+    document.getElementById("timeDate").innerHTML = '<a href="/music/" target="_blank" rel="nofollow noopener"><i class="iconfont icon-music"></i></a>' + '&ensp;运行&nbsp;' + run_str.trim();
     // document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
   }
 

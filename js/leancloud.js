@@ -2,6 +2,31 @@
 // eslint-disable-next-line no-console
 
 (function(window, document) {
+  // 数值转换
+  function unit_trans(Elestr, OutputId) {
+    // console.log(Elestr);
+    int_num = Number(Elestr);
+    // int_num = 11200;
+    if (int_num < 1000) {
+        str_trans = int_num.toString();
+    } else{
+        if (int_num >= 1000 && int_num <10000) {
+            int_num = Math.floor(int_num / 100);
+            unit = 'k';
+        } else{
+            int_num = Math.floor(int_num / 1000);
+            unit = 'k';
+        }
+        str_trans = (int_num / 10).toFixed(1)
+        if (str_trans.substring(str_trans.length - 1) === '0') {
+          str_trans = str_trans.substring(0, str_trans.length - 2);
+        }
+        str_trans = str_trans + unit;
+    }
+    // console.log(str_trans);
+    document.querySelector(OutputId).innerText = str_trans;
+  }
+
   // 查询存储的记录
   function getRecord(Counter, target) {
     return new Promise(function(resolve, reject) {
@@ -104,6 +129,9 @@
         var ele = document.querySelector('#leancloud-site-pv');
         if (ele) {
           ele.innerText = (record.time || 0) + (enableIncr ? 1 : 0);
+          // added by Temm
+          unit_trans(ele.innerText, '#leancloud-site-pv-trans')
+          // added by Temm
           pvCtn.style.display = 'inline';
         }
       });
@@ -119,6 +147,9 @@
         var ele = document.querySelector('#leancloud-site-uv');
         if (ele) {
           ele.innerText = (record.time || 0) + (incrUV ? 1 : 0);
+          // added by Temm
+          unit_trans(ele.innerText, '#leancloud-site-uv-trans')
+          // added by Temm
           uvCtn.style.display = 'inline';
         }
       });
