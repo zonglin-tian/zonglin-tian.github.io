@@ -17,6 +17,7 @@
        year_day_sep = '&thinsp;';
     }
     if (day_num >= 1) {
+       // run_str = run_str + year_day_sep + day_num + '&nbsp;天';
        run_str = run_str + year_day_sep + day_num + '&nbsp;<a href="/recent/">天</a>';
     }
     // hours = (now - start) / 1000 / 60 / 60 - (24 * dnum);
