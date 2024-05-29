@@ -24,7 +24,7 @@
 <meta property="og:description" content="时间表 5:50: 起床 6:35 前: 冥想 → 跑步 6:35-7:25: 洗漱 → 早餐 7:25 到实验室, 7:30 开始学习 7:30-11:25: 科研 11:25-12:00 中餐    12:00-12:30 内务&#x2F;生活 12:30-13:05 午休 13:25 到实验室, 13:30 开始学习 13:30-17:25: 科研 17:35-18:15: 跑步 18:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-29T03:08:13.000Z">
-<meta property="article:modified_time" content="2024-05-29T03:26:36.859Z">
+<meta property="article:modified_time" content="2024-05-29T07:56:29.612Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -323,6 +323,20 @@
 
 
   
+    
+      <p id="updated-time" class="note note-light" style="display: none">
+        
+          
+            最近更新于: 2024-05-29T15:56:29+08:00
+          
+          
+
+        
+      </p>
+      
+
+
+  
 
 </article>
 
@@ -481,6 +495,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
