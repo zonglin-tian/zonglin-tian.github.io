@@ -17,7 +17,7 @@
        year_day_sep = '&thinsp;';
     }
     if (day_num >= 1) {
-       run_str = run_str + year_day_sep + day_num + '&nbsp;天';
+       run_str = run_str + year_day_sep + day_num + '&nbsp;<a href="/recent/">天</a>';
     }
     // hours = (now - start) / 1000 / 60 / 60 - (24 * dnum);
     // hnum = Math.floor(hours);
@@ -28,8 +28,7 @@
     // mnum = Math.floor(minutes);
     // if(String(mnum).length === 1 ){
     //   mnum = "0" + mnum;
-    // }
-    // seconds = (now - start) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    // } // seconds = (now - start) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
     // snum = Math.round(seconds);
     // if(String(snum).length === 1 ){
     //   snum = "0" + snum;
