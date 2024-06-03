@@ -24,7 +24,7 @@
 <meta property="og:description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var medita">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-17T05:58:41.000Z">
-<meta property="article:modified_time" content="2024-05-29T07:30:52.701Z">
+<meta property="article:modified_time" content="2024-06-03T00:16:44.161Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -403,11 +403,44 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
 </ul>
 </li>
 <li>第三遍<ul>
-<li>始于 2024-04-27 结束于</li>
-<li>从 D15 开始</li>
+<li>始于 2024-04-27 结束于 2024-06-02</li>
+<li>D15-D21 → D8-D14 → D1-D7 → A-G</li>
+</ul>
+</li>
+<li>第四遍<ul>
+<li>始于 2024-06-03 结束于 </li>
+<li>挑选练习</li>
 </ul>
 </li>
 </ul>
+<h3 id="音频笔记"><a href="#音频笔记" class="headerlink" title="音频笔记"></a>音频笔记</h3><div style="width:auto;display:table;margin-left:auto;margin-right:auto">
+
+<table>
+<thead>
+<tr>
+<th>分集</th>
+<th align="center">主旨</th>
+<th align="right">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B</td>
+<td align="center">身体静止 → 感受呼吸 → 被动感受, 允许杂念</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>B</td>
+<td align="center">身体静止 → 感受呼吸 → 被动感受, 允许杂念</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>B</td>
+<td align="center">身体静止 → 感受呼吸 → 被动感受, 允许杂念</td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+</div>
+
 <h3 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h3><ul>
 <li>书籍<ul>
 <li>洞见</li>
@@ -444,11 +477,13 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
 
   
     
-      <p id="updated-time" class="note note-light" style="">
+      <p id="updated-time" class="note note-light" style="display: none">
         
           
-            最近更新于: 2024年5月29日 下午
+            最近更新于: 2024-06-03T08:16:44+08:00
           
+          
+
         
       </p>
       
@@ -613,6 +648,33 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
