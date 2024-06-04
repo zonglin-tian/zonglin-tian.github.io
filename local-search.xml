@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>所谓的科研能力到底要怎么培养?</title>
+    <link href="/2024/06/04/%E6%89%80%E8%B0%93%E7%9A%84%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E5%88%B0%E5%BA%95%E8%A6%81%E6%80%8E%E4%B9%88%E5%9F%B9%E5%85%BB/"/>
+    <url>/2024/06/04/%E6%89%80%E8%B0%93%E7%9A%84%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E5%88%B0%E5%BA%95%E8%A6%81%E6%80%8E%E4%B9%88%E5%9F%B9%E5%85%BB/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>最近两个周在写点光源逆向渲染的一个小论文, 发现用 (英) 文字表达自己的想法 “寸步难行”. 其中的原因可能有以下几点: </p><ul><li>对逆向渲染领域的基础知识 (尤其是一些原理和术语)</li><li>…</li></ul><p>这个事让我想到: 到底要怎样训练才能有针对性地培养这种科研写作能力? 或者从更高的角度来思考: 所谓的科研能力有哪些? 又要怎么培养?</p><h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Research</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Grocery</tag>
+      
+      <tag>Writing...</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WEEK 22 Writing For TIRPL</title>
     <link href="/2024/06/02/WEEK-22-Writing-For-TIRPL/"/>
     <url>/2024/06/02/WEEK-22-Writing-For-TIRPL/</url>
@@ -150,7 +177,7 @@
     <link href="/2024/05/16/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E5%BD%93%E5%B0%BD%E5%8A%9B%E5%8F%AA%E5%81%9A%E5%AF%B9%E8%87%AA%E5%B7%B1%E9%87%8D%E8%A6%81%E6%88%96%E8%80%85%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E4%BA%8B/"/>
     <url>/2024/05/16/%E4%BA%BA%E7%94%9F%E8%8B%A6%E7%9F%AD-%E5%BD%93%E5%B0%BD%E5%8A%9B%E5%8F%AA%E5%81%9A%E5%AF%B9%E8%87%AA%E5%B7%B1%E9%87%8D%E8%A6%81%E6%88%96%E8%80%85%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E4%BA%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-indent:2em">这学期开学将近一个月之后, 带同组一位硕士师弟做自己研究方向的一个小问题. 从现在来看, 时常感到: 在最无能为力的时候, 选择给人指导, 实在不明智. </p><p style="text-indent:2em">我自己是一个较真且完美主义的人, 对一件事要么不做, 做就要做到最好. 夸张点说: 对于我认真的事, 结果在我眼里只有 0 分和 100 分. 加之我又是一个宁可天下人负我, 不可我负天下人的老实人. 对于答应别人的事, 往往看得比自己的事重要. 所以, 在指导师弟的过程中, 自我感觉还算尽责, 该给的指导我都给了, 因为我对无人指导自己瞎学一通的体会实在太深了. 但这过程中, 我也深深地感受到自己无法兼顾自己的科研和对师弟的指导, 雪上加霜的是: 师弟研究的问题也不是我想做的科研问题 (说实话, 我觉得这个问题对博士来说没有多大研究的意义), 尽管该问题和我的研究方向相关甚至是我提出的. <b>于是, 在这种把精力放在了自己不感兴趣的事上, 却无法做好对自己重要且感兴趣的事上时, 我内心的熵极度增加, 导致了或多或少的内耗, 抑郁.</b></p><p style="text-indent:2em">就目前的情况来说, 只得继续在这样一种矛盾的状态中寻找一种平衡. 毕竟答应了别人的事, 就要努力做到. 尤其我这位师弟还非常好学, 很有干劲, 能力也很好 (可以说我提到过的点, 他都能完成), 我实在不能抹杀这样一种对科研或者做事的态度. 这种苦我硕士亲身体会过, 对人的负面影响非常大. </p><p style="text-indent:2em">那以后的人生的又该怎么办, 从这次或者说是以往的类似经历中, 提炼出下面几点经验: <div class="note note-primary">            <ul><li>不在能力不足或者自己生活一团乱麻时, <strong>轻易</strong>答应帮人或者给人指导</li><li>对于需要花费较长时间或者较多金钱的事, 不要轻易做决择, <strong>三思再三思</strong></li><li>人生苦短, 请尽可能<strong>只做对自己重要或者是自己感兴趣的事</strong></li></ul>          </div></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p style="text-indent:2em">这学期开学将近一个月之后, 带同组一位硕士师弟做自己研究方向的一个小问题. 从现在来看, 时常感到: 在最无能为力的时候, 选择给人指导, 实在不明智. </p><p style="text-indent:2em">我自己是一个较真且完美主义的人, 对一件事要么不做, 做就要做到最好. 夸张点说: 对于我认真的事, 结果在我眼里只有 0 分和 100 分. 加之我又是一个宁可天下人负我, 不可我负天下人的老实人. 对于答应别人的事, 往往看得比自己的事重要. 所以, 在指导师弟的过程中, 自我感觉还算尽责, 该给的指导我都给了, 因为我对无人指导自己瞎学一通的体会实在太深了. 但这过程中, 我也深深地感受到自己无法兼顾自己的科研和对师弟的指导, 雪上加霜的是: 师弟研究的问题也不是我想做的科研问题 (说实话, 我觉得这个问题对博士来说没有多大研究的意义), 尽管该问题和我的研究方向相关甚至是我提出的. <b>于是, 在这种把精力放在了自己不感兴趣的事上, 却无法做好对自己重要且感兴趣的事上时, 我内心的熵极度增加, 导致了或多或少的内耗, 抑郁.</b></p><p style="text-indent:2em">就目前的情况来说, 只得继续在这样一种矛盾的状态中寻找一种平衡. 毕竟答应了别人的事, 就要努力做到. 尤其我这位师弟还非常好学, 很有干劲, 能力也很好 (可以说我提到过的点, 他都能完成), 我实在不能抹杀这样一种对科研或者做事的态度. 这种苦我硕士亲身体会过, 对人的负面影响非常大. </p><p style="text-indent:2em">那以后的人生又该怎么办, 从这次或者说是以往的类似经历中, 提炼出下面几点经验: <div class="note note-primary">            <ul><li>不在能力不足或者自己生活一团乱麻时, <strong>轻易</strong>答应帮人或者给人指导</li><li>对于需要花费较长时间或者较多金钱的事, 不要轻易做决择, <strong>三思再三思</strong></li><li>人生苦短, 请尽可能<strong>只做对自己重要或者是自己感兴趣的事</strong></li></ul>          </div></p>]]></content>
     
     
     <categories>
@@ -200,7 +227,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-soUTvcEi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-soUTvcEi");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-yxGzhaGR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-yxGzhaGR");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
