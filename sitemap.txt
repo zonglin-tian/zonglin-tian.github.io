@@ -62,10 +62,10 @@ https://zonglin-tian.github.io/tags/Grocery/
 https://zonglin-tian.github.io/tags/WebDesign/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
-https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/PyCharm/
 https://zonglin-tian.github.io/tags/Custom/
+https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
 https://zonglin-tian.github.io/categories/Ubuntu/
