@@ -157,8 +157,8 @@ date,week,get_up,meditation,reading,lunch_break,running,writing,thinking,night_r
 2024-06-04,Tuesday,1,1,1,1,0,1,0,0
 2024-06-05,Wednesday,1,1,1,0,1,0,1,0
 2024-06-06,Thursday,1,1,1,0,0,0,0,0
-2024-06-07,Friday,0,0,0,0,0,0,0,0
-2024-06-08,Saturday,0,0,0,0,0,0,0,0
+2024-06-07,Friday,1,1,1,0,0,0,0,0
+2024-06-08,Saturday,1,0,1,0,1,0,0,1
 2024-06-09,Sunday,0,0,0,0,0,0,0,0
 2024-06-10,Monday,0,0,0,0,0,0,0,0
 2024-06-11,Tuesday,0,0,0,0,0,0,0,0
