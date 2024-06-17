@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zonglin-tian.github.io/meditation/index.html</loc>
+    
+    <lastmod>2024-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2024-06-17</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2024-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/meditation/index.html</loc>
     
     <lastmod>2024-06-11</lastmod>
     
@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -662,13 +662,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
-    <lastmod>2024-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/categories/Software/</loc>
     <lastmod>2024-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -677,6 +670,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <lastmod>2024-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
     <lastmod>2024-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
