@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/css/research-icon/iconfont.json
 https://zonglin-tian.github.io/meditation/index.html
 https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/
 https://zonglin-tian.github.io/running/index.html
@@ -14,7 +15,6 @@ https://zonglin-tian.github.io/music/index.html
 https://zonglin-tian.github.io/hexo-fluid/index.html
 https://zonglin-tian.github.io/reading/index.html
 https://zonglin-tian.github.io/grocery/index.html
-https://zonglin-tian.github.io/css/research-icon/iconfont.json
 https://zonglin-tian.github.io/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/
 https://zonglin-tian.github.io/2024/04/07/Back-to-Hexo-Blog/
 https://zonglin-tian.github.io/2024/05/05/%E4%B8%8D%E4%BC%9A-Debug-%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E6%98%AF%E5%A5%BD%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98/
@@ -71,8 +71,8 @@ https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
-https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Others/
+https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Coding/
 https://zonglin-tian.github.io/categories/Windows/
 https://zonglin-tian.github.io/categories/Software/

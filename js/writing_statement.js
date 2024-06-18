@@ -1,6 +1,6 @@
 (function() {
   var posts = document.getElementById('updated-time');
-  if (posts.innerHTML === '') { return; }
+  if (posts === null || posts.innerHTML === '') { return; }
   // if (posts.length === 0) { return; }
   
   var tag_list = document.getElementsByClassName('print-no-link');
