@@ -1,6 +1,6 @@
 @echo off
 REM 使用 UTF-8 编码保存日志文件
-REM chcp 65001 > nul
+chcp 65001 > nul
 
 REM 设置 hexo 博客路径
 set BLOG_DIR=T:\root\notes\geek_road
@@ -24,6 +24,6 @@ hexo clean && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
     pause
     exit /b %errorlevel%
 ) else (
-    echo BLOG 最近部署时间: %currentDate%/%timePart% > %LOG_FILE%
+    echo %currentDate%/%timePart% > %LOG_FILE%
 )
 
