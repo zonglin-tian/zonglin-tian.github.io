@@ -7,7 +7,7 @@ cd /d %BLOG_DIR%
 
 hexo clean && hexo generate && hexo deploy
 
-if %errorlevel% neq 1 (
+if %errorlevel% eq 0 (
     echo Failed to deploy to GitHub Pages
     pause
     exit /b %errorlevel%
