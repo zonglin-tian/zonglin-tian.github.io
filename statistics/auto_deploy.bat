@@ -1,21 +1,23 @@
 @echo off
-REM Ê¹ÓÃ UTF-8 ±àÂë±£´æÈÕÖ¾ÎÄ¼þ
-chcp 65001 > nul
+REM ä½¿ç”¨ UTF-8 ç¼–ç ä¿å­˜æ—¥å¿—æ–‡ä»¶
+REM chcp 65001 > nul
+REM è®¾ç½®æŽ§åˆ¶å°ç¼–ç ä¸º ANSI
+chcp 437 > nul
 
-REM ÉèÖÃ hexo ²©¿ÍÂ·¾¶
+REM è®¾ç½® hexo åšå®¢è·¯å¾„
 set BLOG_DIR=T:\root\notes\geek_road
-REM ÉèÖÃÈÕÖ¾ÎÄ¼þÂ·¾¶
+REM è®¾ç½®æ—¥å¿—æ–‡ä»¶è·¯å¾„
 set LOG_FILE=%BLOG_DIR%\source\statistics\ad_log.txt
 
-REM ½øÈë Hexo ÏîÄ¿Ä¿Â¼
+REM è¿›å…¥ Hexo é¡¹ç›®ç›®å½•
 cd /d %BLOG_DIR%
 
-REM »ñÈ¡ÏµÍ³ÈÕÆÚºÍÊ±¼ä
+REM èŽ·å–ç³»ç»Ÿæ—¥æœŸå’Œæ—¶é—´
 set currentDate=%date%
 set currentTime=%time%
-REM ¸ñÊ½µ÷Õû
+REM æ ¼å¼è°ƒæ•´
 
-REM Ê¹ÓÃ ,. ×÷Îª·Ö¸ô·û, »ñÈ¡Ê±ºÍ·Ö
+REM ä½¿ç”¨ ,. ä½œä¸ºåˆ†éš”ç¬¦, èŽ·å–æ—¶å’Œåˆ†
 for /F "tokens=1 delims=,. " %%A in ("%currentTime%") do set timePart=%%A
 
 
@@ -24,6 +26,6 @@ hexo clean && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
     pause
     exit /b %errorlevel%
 ) else (
-    echo %currentDate%/%timePart% > %LOG_FILE%
+    echo Blog æœ€åŽæ›´æ–°äºŽ: %currentDate%/%timePart% > %LOG_FILE%
 )
 
