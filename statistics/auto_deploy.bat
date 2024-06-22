@@ -5,9 +5,7 @@ set BLOG_DIR=T:\root\notes\geek_road
 REM 进入 Hexo 项目目录
 cd /d %BLOG_DIR%
 
-hexo clean && hexo generate && hexo deploy
-
-if %errorlevel% eq 0 (
+hexo clean && hexo generate && hexo deploy && if %errorlevel% neq 1 (
     echo Failed to deploy to GitHub Pages
     pause
     exit /b %errorlevel%
