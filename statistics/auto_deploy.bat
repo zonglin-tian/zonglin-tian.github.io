@@ -15,17 +15,15 @@ set currentDate=%date%
 set currentTime=%time%
 REM 格式调整
 
-REM 切割时间字符串, 使用空格作为分隔符, 获取第一部分(即时间部分)
-for /F "tokens=1 delims= " %%A in ("%currentTime%") do set timePart=%%A
+REM 使用 ,. 作为分隔符, 获取时和分
+for /F "tokens=1 delims=,. " %%A in ("%currentTime%") do set timePart=%%A
 
-REM 使用冒号作为分隔符, 获取时和分
-for /F "tokens=1,2 delims=:" %%B in ("%timePart%") do set timeCustom=%%B
 
 hexo clean && hexo generate && hexo deploy && if %errorlevel% neq 0 (
     echo Failed to deploy to GitHub Pages
     pause
     exit /b %errorlevel%
 ) else (
-    echo BLOG 最近部署时间: %timeCustom% %currentDate%/%timeCustom% > %LOG_FILE%
+    echo BLOG 最近部署时间: %timePart% %currentDate%/%timePart% > %LOG_FILE%
 )
 
