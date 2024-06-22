@@ -583,27 +583,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/AutoHotkey/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -619,6 +598,27 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Python/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -648,14 +648,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

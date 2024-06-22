@@ -5,7 +5,7 @@ set BLOG_DIR=T:\root\notes\geek_road
 REM 进入 Hexo 项目目录
 cd /d %BLOG_DIR%
 
-hexo clean --silent && hexo generate --silent && hexo deploy
+hexo clean && hexo generate && hexo deploy
 
 REM 提示完成
 echo Deployment complete!
