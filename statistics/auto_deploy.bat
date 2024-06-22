@@ -15,13 +15,13 @@ set currentDate=%date%
 set currentTime=%time%
 REM 格式调整
 
-REM 使用 ,. 作为分隔符, 获取时和分
+REM 使用 ,. 作为分隔符, 获取时分秒
 for /F "tokens=1 delims=,. " %%A in ("%currentTime%") do set timePart=%%A
 
 
-hexo clean && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
+hexo clean --silent && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
     echo Failed to deploy to GitHub Pages
-    pause
+    REM pause
     exit /b %errorlevel%
 ) else (
     echo %currentDate%/%timePart% > %LOG_FILE%
