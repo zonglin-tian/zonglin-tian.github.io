@@ -7,6 +7,12 @@ cd /d %BLOG_DIR%
 
 hexo clean && hexo generate && hexo deploy
 
+if %errorlevel% neq 0 (
+    echo Failed to deploy to GitHub Pages
+    pause
+    exit /b %errorlevel%
+)
+
 REM 提示完成
 echo Deployment complete!
 pause
