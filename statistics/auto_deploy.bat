@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 > nul
 REM 设置 hexo 博客路径
 set BLOG_DIR=T:\root\notes\geek_road
 REM 设置日志文件路径
