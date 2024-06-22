@@ -24,6 +24,6 @@ hexo clean && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
     pause
     exit /b %errorlevel%
 ) else (
-    echo %currentDate%/%timePart% > %LOG_FILE%
+    echo Blog 最后更新于: %currentDate%/%timePart% > %LOG_FILE%
 )
 
