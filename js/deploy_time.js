@@ -19,8 +19,13 @@ async function readTextFile(filePath) {
 // 调用函数并处理结果
 readTextFile('/statistics/ad_log.txt').then(content => {
     // debug 显示文件内容到控制台
-    console.log(content);
+    // console.log(content);
     // 将内容显示在  HTML 页面上
-    document.getElementById('updated-time').innerText = "最近部署于: " + content;
+    // document.getElementById('updated-time').innerText = "最近部署于: " + content;
+    var deploy_str = "最近部署于: " + content;
+    document.getElementById('run').title = deploy_str;
+    var posts = document.getElementById('deploy-time');
+    if (posts === null || posts.innerHTML === '') { return; }
+    posts.innerText = deploy_str;
 });
 

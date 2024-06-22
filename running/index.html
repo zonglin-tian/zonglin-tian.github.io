@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://zonglin-tian.github.io/running/car_half_mar/medal-doll.jpg">
 <meta property="og:image" content="https://zonglin-tian.github.io/running/car_half_mar/self.jpg">
 <meta property="article:published_time" content="2024-05-16T06:05:13.000Z">
-<meta property="article:modified_time" content="2024-06-16T23:33:18.649Z">
+<meta property="article:modified_time" content="2024-06-22T15:26:04.655Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -312,7 +312,7 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
             running_data.push([date_data, parseInt(csvdata[i]['running'])]);
             <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
            }
-        console.log(running_data);
+        <!-- console.log(running_data); -->
         var myChart = echarts.init(document.getElementById("main"));
         var option = {
             title: {
@@ -434,7 +434,7 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
       <p id="updated-time" class="note note-light" style="display: none">
         
           
-            最近更新于: 2024-06-17T07:33:18+08:00
+            最近更新于: 2024-06-22T23:26:04+08:00
           
           
 
@@ -442,6 +442,8 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
       </p>
       
 
+
+  
 
   
 
@@ -697,7 +699,7 @@ d3.csv("/statistics/2024_data.csv", function(error, csvdata){
 <script  src="/js/boot.js" ></script>
 
 
-  <script src="/js/writing_statement.js"></script>
+  <script src="/js/writing_statement.js"></script><script src="/js/deploy_time.js"></script>
 
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
