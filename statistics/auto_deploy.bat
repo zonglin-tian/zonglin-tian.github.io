@@ -24,6 +24,6 @@ hexo clean && hexo generate && hexo deploy && if %errorlevel% neq 0 (
     pause
     exit /b %errorlevel%
 ) else (
-    echo BLOG 最近部署时间: %timePart% %currentDate%/%timePart% > %LOG_FILE%
+    echo BLOG 最近部署时间: %currentDate%/%timePart% > %LOG_FILE%
 )
 
