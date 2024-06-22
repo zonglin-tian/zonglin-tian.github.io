@@ -1,6 +1,8 @@
 @echo off
 REM 使用 UTF-8 编码保存日志文件
-chcp 65001 > nul
+REM chcp 65001 > nul
+REM 设置控制台编码为 ANSI
+chcp 437 > nul
 
 REM 设置 hexo 博客路径
 set BLOG_DIR=T:\root\notes\geek_road
