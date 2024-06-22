@@ -16,15 +16,15 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="每日动态    2024-06-21 145 服务器配置全局 zsh 与 oh-my-zsh修改光度立体科普文档 2024-06-20 矿大集市 → 音乐歌词制作 → vim 插件之 subversive, abolish 文献阅读 + 1 2024-06-19 博客完善上&#x2F;下一篇文章自定义延迟满足结束 → 牧羊少年奇幻之旅开篇Writing of Blog: √ LaTeX 常用命">
+    <meta name="description" content="每日动态    2024-06-21 145 服务器配置全局 zsh 与 oh-my-zsh修改光度立体科普文档 2024-06-20 矿大集市 → 音乐歌词制作 → vim 插件之 subversive, abolish 文献阅读 + 1 2024-06-19 博客完善上&#x2F;下一篇文章自定义延迟满足结束 → 牧羊少年奇幻之旅开篇Writing of Blog: √ LaTeX">
 <meta property="og:type" content="website">
 <meta property="og:title" content="最近动态">
 <meta property="og:url" content="https://zonglin-tian.github.io/recent/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="每日动态    2024-06-21 145 服务器配置全局 zsh 与 oh-my-zsh修改光度立体科普文档 2024-06-20 矿大集市 → 音乐歌词制作 → vim 插件之 subversive, abolish 文献阅读 + 1 2024-06-19 博客完善上&#x2F;下一篇文章自定义延迟满足结束 → 牧羊少年奇幻之旅开篇Writing of Blog: √ LaTeX 常用命">
+<meta property="og:description" content="每日动态    2024-06-21 145 服务器配置全局 zsh 与 oh-my-zsh修改光度立体科普文档 2024-06-20 矿大集市 → 音乐歌词制作 → vim 插件之 subversive, abolish 文献阅读 + 1 2024-06-19 博客完善上&#x2F;下一篇文章自定义延迟满足结束 → 牧羊少年奇幻之旅开篇Writing of Blog: √ LaTeX">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-29T09:59:16.000Z">
-<meta property="article:modified_time" content="2024-06-22T00:31:56.155Z">
+<meta property="article:modified_time" content="2024-06-22T14:25:35.704Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,10 @@
                 
 
 <article class="page-content">
-  <div class="markdown-body">
+  <!-- 更新部署时间 -->
+<script src="/js/deploy_time.js"></script>
+
+<div class="markdown-body">
 
 <h1 id="每日动态"><a href="#每日动态" class="headerlink" title="每日动态"></a>每日动态</h1></div>
 
@@ -369,6 +372,18 @@
 
 
   
+    
+      <p id="updated-time" class="note note-light" style="display: none">
+        
+          
+            最近更新于: 2024-06-22T22:25:35+08:00
+          
+          
+
+        
+      </p>
+      
+
 
   
 
@@ -529,6 +544,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
