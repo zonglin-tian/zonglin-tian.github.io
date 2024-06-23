@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zonglin-tian.github.io/2024/06/23/%E5%9B%BD%E5%8D%8E%E5%AD%A6%E5%AD%90%E5%BD%93%E4%BB%A5%E5%A5%89%E7%8C%AE%E7%A4%BE%E4%BC%9A%E4%B8%BA%E7%BB%88%E7%94%9F%E8%BF%BD%E6%B1%82/</loc>
+    
+    <lastmod>2024-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/running/index.html</loc>
     
     <lastmod>2024-06-22</lastmod>
@@ -569,13 +578,6 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
-    <lastmod>2024-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
     <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -591,6 +593,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Keyboard/</loc>
+    <lastmod>2024-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
     <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -655,13 +664,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
-    <lastmod>2024-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
     <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -670,6 +672,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Software/</loc>
+    <lastmod>2024-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
     <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
