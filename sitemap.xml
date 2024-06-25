@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -425,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -470,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -479,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -650,14 +650,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
-    <lastmod>2024-06-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
     <lastmod>2024-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -671,7 +664,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
     <lastmod>2024-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
