@@ -16,24 +16,24 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="Python 学习笔记">
+    <meta name="description" content="SSH 常用命令与配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 基础">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="SSH (Secure Shell) 配置与命令">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="Python 学习笔记">
+<meta property="og:description" content="SSH 常用命令与配置">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/python_basic.jpg">
-<meta property="article:published_time" content="2024-05-05T02:47:45.000Z">
-<meta property="article:modified_time" content="2024-06-26T02:24:42.395Z">
+<meta property="og:image" content="https://zonglin-tian.github.io/img/ssh.png">
+<meta property="article:published_time" content="2024-06-26T00:05:37.000Z">
+<meta property="article:modified_time" content="2024-06-26T02:22:19.203Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/python_basic.jpg">
+<meta name="twitter:image" content="https://zonglin-tian.github.io/img/ssh.png">
   
   
   
-  <title>Python 基础 - Temm&#39;s Zone</title>
+  <title>SSH (Secure Shell) 配置与命令 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -256,7 +256,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python 基础"></span>
+            <span id="subtitle" data-typed-text="SSH (Secure Shell) 配置与命令"></span>
           
         </div>
 
@@ -267,8 +267,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-05 10:47" pubdate>
-          2024年5月5日 上午
+        <time datetime="2024-06-26 08:05" pubdate>
+          2024年6月26日 早上
         </time>
       </span>
     
@@ -279,7 +279,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          878 字
+          127 字
         
       </span>
     
@@ -290,7 +290,7 @@
         
         
         
-          5 分钟
+          1 分钟
         
       </span>
     
@@ -335,12 +335,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python 基础</h1>
+            <h1 id="seo-header">SSH (Secure Shell) 配置与命令</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-06-26T10:24:42+08:00
+                    最后更新于: 2024-06-26T10:22:19+08:00
                   
                   
 
@@ -350,78 +350,23 @@
             
               <div class="markdown-body">
                 
-                <h1 id="常用参考文档"><a href="#常用参考文档" class="headerlink" title="常用参考文档"></a>常用参考文档</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-tutorial.html">Python 菜鸟教程</a></li>
+                <h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><h2 id="登陆命令"><a href="#登陆命令" class="headerlink" title="登陆命令"></a>登陆命令</h2><ul>
+<li>登陆到远程主机: <code>ssh user@remote_host_ipORdomain</code></li>
+<li>登陆时指定 <code>bash</code> 配置文件: <code>ssh -t user@remote_host &#39;bash --rcfile /path/to/custom_.bashrc</code></li>
+<li>登陆时指定 <code>zsh</code> 配置文件: <code>ssh -t use@remote_host &#39;exec -l -c &quot;source /path/to/custom_.zshrc; zsh&quot;&#39;</code></li>
 </ul>
-<h1 id="常用-debug-控制台命令"><a href="#常用-debug-控制台命令" class="headerlink" title="常用 debug 控制台命令"></a>常用 debug 控制台命令</h1><ul>
-<li>查看 numpy 数组不为 0 的元素<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 返回非零元素的行索引与列索引</span><br>nonzero_indices = np.nonzero(array) <span class="hljs-comment"># 或者 np.where(array != 0) </span><br><span class="hljs-comment"># 获取不为零的元素</span><br>nonzero_elements= array(nonzero_indices)<br></code></pre></td></tr></table></figure></li>
-</ul>
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
-<li>输出多个重复字符: <code>print(N*&#39;str&#39;)</code></li>
-<li>手动停止程序运行: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> sys<br>sys.exit(<span class="hljs-string">&quot;stop_message&quot;</span>)<br></code></pre></td></tr></table></figure></li>
-<li>字符串 <code>format</code> 方法 and 格式化字符串 (f-string)<ul>
-<li>保留 pi 小数点后两位: <code>&quot;&#123;:.2f&#125;&quot;.format(pi)</code> 或 <code>f&#39;&#123;pi:.2f&#125;&#39;</code></li>
-<li>动态保留小数点后位数: <code>&quot;&#123;:.&#123;&#125;f&#125;&quot;.format(pi, precision)</code> <code>f&#39;&#123;pi:.&#123;precision&#125;f&#125;&#39;</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="内置类型"><a href="#内置类型" class="headerlink" title="内置类型"></a>内置类型</h1><h2 id="映射类型-–-dict"><a href="#映射类型-–-dict" class="headerlink" title="映射类型 – dict"></a>映射类型 – dict</h2><ul>
-<li><code>class dict(**kwargs), dict(mapping, **kwargs), dict(iterable, **kwargs)</code>: 返回一个字典, 基于可选的位置参数和可能为空的关键字参数集来初始化</li>
-<li><code>len(d)</code>: 返回字典 <em>d</em> 中的项数</li>
-<li><code>list(d)</code>: 返回字典 <em>d</em> 中使用的所有键的列表, 相当于 <code>list(d.keys())</code></li>
-<li><code>iter(d)</code>: 返回字典 <em>d</em> 中的键为元素的迭代器, 相当于 <code>iter(d.keys())</code></li>
-<li><code>d.keys()</code>: 返回字典键组成的一个新视图</li>
-<li><code>d.values()</code>: 返回字典值组成的一个新视图</li>
-<li><code>d.items()</code>: 返回字典项 <code>(键, 值)</code> 组成的元组视图</li>
-</ul>
-<div class="note note-warning">
-            <p><strong>字典视图对象</strong></p><p>由 <code>dict.keys(), dict.values() 和 dict.items()</code> 所返回的对象是 <em>视图对象</em>, 提供字典条目的一个动态视图, 当字典改变时, 视图也会改变. 字典视图可被迭代以产生对应的数据, 并支持成员检测</p>
-          </div>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>若没有特殊说有表示在 <code>~/.ssh/config</code> 文件中添加内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">Host custom_host_name  <span class="hljs-comment"># 别名</span><br>    HostName host_ip_or_dormain  <span class="hljs-comment"># 主机 IP 或者域名</span><br>    User username  <span class="hljs-comment"># 用户名</span><br>    Port port  <span class="hljs-comment"># 默认 22</span><br>    PreferredAuthentications publickey  <span class="hljs-comment"># 优先使用公钥认证</span><br>    IdentityFile ~/.ssh/id_rsa  <span class="hljs-comment"># 私钥文件路径</span><br>    RemoteCommand bash --rcfile /path/to/custom_bashrc  <span class="hljs-comment"># 登陆时执行命令</span><br></code></pre></td></tr></table></figure>
 
 
-<h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><ul>
-<li><code>isinstance(object, classinfo)</code><ul>
-<li>如果参数 <em>object</em> 是参数 <em>classinfo</em> 的实例或者其子类, 则返回 <code>True</code>, 否则返回 <code>False</code></li>
-<li>如果参数 <em>classinfo</em> 是类型对象元组, 那么 <em>object</em> 是其中任何一个类型的实例就返回 <code>True</code></li>
-</ul>
-</li>
-<li><code>str(object=&#39;&#39;)</code>: 返回 <em>object</em> 的字符串版本, 如果未提供 <em>object</em> 则返回空字符串</li>
-<li><code>var([object])</code>: 返回模块, 类, 实例或其它具有 <code>__dict__</code> 属性的对象的 <code>__dict__</code></li>
-<li><code>sorted(iterable, key=None, reverse=False)</code>: 根据 <em>iterable</em> 中的项返回一个新的已排序<em><strong>列表</strong></em><ul>
-<li>对字典执行 <code>list(d)</code>, 返回字典中所有键的<em>列表</em>, 按插入次序排列; 而操作 <code>sorted(d)</code> 返回字典中所有键的升序排列<em>列表</em></li>
-</ul>
-</li>
-<li><code>getattr(object, name[, default])</code>: 返回对象命名属性的值, 相当于 <code>object.name</code>, 其中 <em>name</em> 必须为字符串; 如果字符串是对象的属性之一, 则返回属性值, 若属性不存在, 则返回 <code>default</code> 值</li>
-<li><code>zip([iterable, ...])</code>: 创建一个聚合了来自每个可迭代对象中元素的<strong>元组</strong>迭代器, 其中第 <em>i</em> 个元组包含来自每个参数序列或可迭代序列对象的第 <em>i</em> 个元素</li>
-<li><code>all(iterable)</code>: 如果 <em>iterable</em> 的所有元素均为真值 (或为空), 则返回 <em>True</em>, 否则返回 <em>False</em></li>
-<li><code>any(iterable)</code>: 如果 <em>iterable</em> 的任一元素为真值, 则返回 <em>True</em>, 如果所有元素为假值或 <em>iterable</em> 为空, 则返回 <em>False</em></li>
-<li><code>map(function, iterable, ...)</code>: 返回一个将 <em>function</em> 应用于 <em>iterable</em> 中每一项并输出其结果的<strong>迭代器</strong></li>
-<li><code>tuple([iterable])</code>: 构造一个元组, 其中的项与 <em>iterable</em> 中的项具有相同的值与顺序<ul>
-<li><em>iterable</em> : 序列, 支持迭代的容器或其他<em>可迭代对象</em></li>
-</ul>
-</li>
-<li><code>super(Class, self)</code>: 返回一个代理对象, 将方法调用委托给 <em>Class</em> 的父类, 其中 <em>self</em> 可理解为 Class 的一个实例对象</li>
-</ul>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><ul>
-<li>
-    <div class="fold">
-      <div class="fold-title fold-successe collapsed" data-toggle="collapse" href="#collapse-6ae3e036" role="button" aria-expanded="false" aria-controls="collapse-6ae3e036">
-        <div class="fold-arrow">▶</div>将两个列表转化为字典
-      </div>
-      <div class="fold-collapse collapse" id="collapse-6ae3e036">
-        <div class="fold-content">
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">key_list = [k1, k2, ...]<br>value_list = [v1, v2, ...]<br>dict_from_list_by_dict = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">zip</span>(key_list, value_list))<br>dict_from_list_by_for = &#123;k: v <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(key_list, value_list)&#125;<br>dict_from_list_by_range = &#123;key_list[i]: value_list[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(key_list))&#125;<br><span class="hljs-comment"># &#123;k1: v1, k2: V2, ...&#125;</span><br></code></pre></td></tr></table></figure>
-        </div>
-      </div>
-    </div></li>
-</ul>
 
                 
               </div>
             
             <hr/>
             <div>
-              <div class="post-metas my-3">
+              
+                <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -433,7 +378,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  <a href="/categories/Others/" class="category-chain-item">Others</a>
   
   
 
@@ -448,20 +393,22 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Writing/" class="print-no-link">#Writing...</a>
       
     </div>
   
 </div>
 
+              
 
               
+                
   
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Python 基础</div>
-      <div>https://zonglin-tian.github.io/2024/05/05/Python-基础/</div>
+      <div>SSH (Secure Shell) 配置与命令</div>
+      <div>https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-配置与命令/</div>
     </div>
     <div class="license-meta">
       
@@ -473,7 +420,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年5月5日</div>
+          <div>2024年6月26日</div>
         </div>
       
       
@@ -499,24 +446,30 @@
   </div>
 
 
+              
+                    
+              
+              
+                
+                
+                
+              
 
               
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/" title="Microsoft Edge 使用">
+                      <a href="/2024/06/26/Miniconda-%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Miniconda 命令与配置">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Microsoft Edge 使用</span>
+                        <span class="hidden-mobile">Miniconda 命令与配置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/" title="Python 库学习">
-                        <span class="hidden-mobile">Python 库学习</span>
+                      <a href="/2024/06/23/%E5%9B%BD%E5%8D%8E%E5%AD%A6%E5%AD%90%E5%BD%93%E4%BB%A5%E5%A5%89%E7%8C%AE%E7%A4%BE%E4%BC%9A%E4%B8%BA%E7%BB%88%E7%94%9F%E8%BF%BD%E6%B1%82/" title="国华学子当以奉献社会为终生追求">
+                        <span class="hidden-mobile">国华学子当以奉献社会为终生追求</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
