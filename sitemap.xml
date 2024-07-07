@@ -632,14 +632,14 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
+    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
+    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -697,13 +697,6 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/categories/Ubuntu/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -712,6 +705,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
