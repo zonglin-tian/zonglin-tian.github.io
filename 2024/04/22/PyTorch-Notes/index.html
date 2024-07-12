@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/pytorch.png">
 <meta property="article:published_time" content="2024-04-22T14:11:34.000Z">
-<meta property="article:modified_time" content="2024-05-10T00:36:42.977Z">
+<meta property="article:modified_time" content="2024-07-12T15:35:35.882Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -340,7 +340,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-05-10T08:36:42+08:00
+                    最后更新于: 2024-07-12T23:35:35+08:00
                   
                   
 
@@ -355,7 +355,9 @@
 <p><strong>验证:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 验证 torch 是否正常安装</span><br>ipython  <span class="hljs-comment"># pip install ipython, ipython 比 python 输入更方便</span><br><span class="hljs-keyword">import</span> torch<br><span class="hljs-built_in">print</span>(torch.rand(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>))<br><br><span class="hljs-comment"># 验证是否支持 GPU 加速</span><br><span class="hljs-built_in">print</span>(torch.cuda.is_available())<br></code></pre></td></tr></table></figure>
 
-
+<h1 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h1><ul>
+<li><code>CUDA_VISIBLE_DEVICES</code>: 环境变量, 控制哪些 GPU 设备可用于 CUDA 程序 (可在程序运行时指定, 或者在程序中使用 <code>os.environ[&#39;CUDA_VISIBLE_DEVICES&#39;])</code> 定义)</li>
+</ul>
 <h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><h2 id="Tensors"><a href="#Tensors" class="headerlink" title="Tensors"></a>Tensors</h2><p><code>Tensors</code> 是一种特殊的数据结构, 与数组和矩阵非常相似, 在 PyTorch 中, <em>使用 Tensors 表示模型的输入和输出以及模型的参数</em></p>
 <ul>
 <li>Tensors 与 NumPy 中的 <code>ndarrays</code> 类似, 只是 Tensors 可以在 GPU 或其它硬件加速器上运行</li>
