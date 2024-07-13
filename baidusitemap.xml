@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2024-07-12</lastmod>
+    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2024-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2024-07-13</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/04/22/PyTorch-Notes/</loc>
-    <lastmod>2024-07-12</lastmod>
+    <lastmod>2024-07-13</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-07-12</lastmod>
   </url>
   <url>
@@ -51,10 +55,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/06/23/%E5%9B%BD%E5%8D%8E%E5%AD%A6%E5%AD%90%E5%BD%93%E4%BB%A5%E5%A5%89%E7%8C%AE%E7%A4%BE%E4%BC%9A%E4%B8%BA%E7%BB%88%E7%94%9F%E8%BF%BD%E6%B1%82/</loc>
     <lastmod>2024-06-23</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2024-06-19</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/06/16/WEEK-24-Come-on/</loc>
