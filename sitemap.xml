@@ -657,14 +657,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
+    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
     <lastmod>2024-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
+    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
     <lastmod>2024-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -685,13 +685,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Python/</loc>
-    <lastmod>2024-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
     <lastmod>2024-07-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -700,6 +693,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
+    <lastmod>2024-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/Python/</loc>
     <lastmod>2024-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
