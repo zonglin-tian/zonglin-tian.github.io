@@ -15,7 +15,7 @@
             unit = 'k';
         } else{
             int_num = Math.floor(int_num / 1000);
-            unit = 'k';
+            unit = 'w';
         }
         str_trans = (int_num / 10).toFixed(1)
         if (str_trans.substring(str_trans.length - 1) === '0') {
