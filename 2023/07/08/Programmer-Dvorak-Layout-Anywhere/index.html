@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/dvp.png">
 <meta property="article:published_time" content="2023-07-08T01:31:10.000Z">
-<meta property="article:modified_time" content="2024-05-24T14:41:02.090Z">
+<meta property="article:modified_time" content="2024-07-25T06:42:20.873Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="AutoHotkey">
 <meta property="article:tag" content="Keyboard">
@@ -273,6 +273,9 @@
         </time>
       </span>
     
+    <!-- added by Temm -->
+    
+    <!-- added by Temm -->
   </div>
 
   <div class="mt-1">
@@ -280,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          405 字
+          404 字
         
       </span>
     
@@ -341,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-05-24T22:41:02+08:00
+                    最后更新于: 2024-07-25T14:42:20+08:00
                   
                   
 
@@ -353,17 +356,16 @@
                 
                 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>&ensp;&ensp;&ensp;&ensp;<strong>只有极少数人使用 <a target="_blank" rel="noopener" href="https://www.kaufmann.no/roland/dvorak/">Programmer Dvorak (pdv) Keyboard Layout</a>.</strong> 某些情况下, 临时使用非自己电脑时, 若仍想使用 pdv 布局, 可利用 <a target="_blank" rel="noopener" href="https://wyagd001.github.io/zh-cn/docs/index.htm"><strong>AutoHotkey (AHK)</strong></a> 进行键位映射, 模拟 <em>Programmer Dvorak Keyboard Layout</em>. 对此, 提供三种现成解决方案(建议使用第二种):</p>
 <ol>
-<li>直接下载 <a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.exe" title="pdv.exe">pdv.exe</a> 文件至本地, 双击运行即可</li>
-<li>若不仅想使用 pdv 布局, 还想使用<strong>最基础</strong>的键位映射, 可下载 <a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 至本地运行<ul>
+<li>直接下载 <a href="/img/posts/Programmer-Dvorak-Layout-Anywhere/pdv.exe">pdv.exe</a> 文件至本地, 双击运行即可</li>
+<li>若不仅想使用 pdv 布局, 还想使用<strong>最基础</strong>的键位映射, 可下载 <a href="/img/posts/Programmer-Dvorak-Layout-Anywhere/pdv_plus.exe">pdv_plus.exe</a> 至本地运行<ul>
 <li><code>LCtrl</code> 与 <code>LAlt</code> 交换, 方便 pdv 的复制与粘贴</li>
 <li><code>Esc</code> 与 <code>CapsLock</code> 交换, VIM 用户专享</li>
 <li><code>RAlt + b/m/h/l/u/i</code> 发送 <code>Up/Down/Left/Right/Home/End</code> 方向键, 最小化手在键盘上的移动</li>
 </ul>
 </li>
-<li>若目标电脑已安装 AHK 软件, <strong>还</strong>可下载 <a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.ahk" title="pdv.ahk">pdv.ahk</a> 文件至本地运行, 并可对其进行自定义</li>
+<li>若目标电脑已安装 AHK 软件, <strong>还</strong>可下载 <a href="/img/posts/Programmer-Dvorak-Layout-Anywhere/pdv.ahk">pdv.ahk</a> 文件至本地运行, 并可对其进行自定义</li>
 </ol>
-<h1 id="Source-Codes"><a href="#Source-Codes" class="headerlink" title="Source Codes"></a>Source Codes</h1><h2 id="pdv"><a href="#pdv" class="headerlink" title="pdv"></a>pdv</h2><a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.ahk" title="pdv.ahk">pdv.ahk</a> 脚本涉及的主要语法为 AHK 软件的<a href="https://wyagd001.github.io/zh-cn/docs/misc/Remap.htm" title="" target="">重映射按键功能</a>, <a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv.exe" title="pdv.exe">pdv.exe</a> 由其编译而得
-
+<h1 id="Source-Codes"><a href="#Source-Codes" class="headerlink" title="Source Codes"></a>Source Codes</h1><h2 id="pdv"><a href="#pdv" class="headerlink" title="pdv"></a>pdv</h2><p><a href="/img/posts/Programmer-Dvorak-Layout-Anywhere/pdv.ahk">pdv.ahk</a> 脚本涉及的主要语法为 AHK 软件的<a target="_blank" rel="noopener" href="https://wyagd001.github.io/zh-cn/docs/misc/Remap.htm">重映射按键功能</a>, <a href="/img/posts/Programmer-Dvorak-Layout-Anywhere/pdv.exe">pdv.exe</a> 由其编译而得</p>
 
     <div class="fold">
       <div class="fold-title fold-success collapsed" data-toggle="collapse" href="#collapse-8f7bdefe" role="button" aria-expanded="false" aria-controls="collapse-8f7bdefe">
@@ -376,7 +378,7 @@
       </div>
     </div>
 
-<h2 id="pdv-plus"><a href="#pdv-plus" class="headerlink" title="pdv_plus"></a>pdv_plus</h2><a href="/2023/07/08/Programmer-Dvorak-Layout-Anywhere/pdv_plus.exe" title="pdv_plus.exe">pdv_plus.exe</a> 为在 <a href="#pdv">pdv.ahk</a> 脚本<span class="label label-warning"><b>最后</b></span>加入下述代码编译而得
+<h2 id="pdv-plus"><a href="#pdv-plus" class="headerlink" title="pdv_plus"></a>pdv_plus</h2> 为在 <a href="#pdv">pdv.ahk</a> 脚本<span class="label label-warning"><b>最后</b></span>加入下述代码编译而得
 
 
     <div class="fold">
