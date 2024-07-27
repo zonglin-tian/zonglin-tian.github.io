@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="Ubuntu 文件操作常用命令">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/ubuntu_file.png">
+<meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2024-05-10T00:01:48.561Z">
+<meta property="article:modified_time" content="2024-07-27T08:33:10.975Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/ubuntu_file.png">
+<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
   
   
   
@@ -413,7 +413,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-05-10T08:01:48+08:00
+                    最后更新于: 2024-07-27T16:33:10+08:00
                   
                   
 
@@ -457,9 +457,9 @@
 <h2 id="文件绝对路径-8"><a href="#文件绝对路径-8" class="headerlink" title="文件绝对路径 [8]"></a>文件绝对路径 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="[CSDN云计算. Linux 中如何获取文件的绝对路径. CSDN](https://blog.csdn.net/FL63Zv9Zou86950w/article/details/126945089#:~:text=我们可以在%20ls%20命令中使用环境变量PWD来显示文件和目录的绝对路径，如下：%20ls%20-ld%20%24PWD%2F*,使用上述命令，会得到如下输出：%20%24%20ls%20-ld%20%24PWD%20%2F%2a)">[8]</span></a></sup></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">realpath</span> file_dir_name<br><span class="hljs-built_in">realpath</span> -s file_dir_name  <span class="hljs-comment"># 显示符号连接的路径而不是源文件</span><br><span class="hljs-built_in">readlink</span> -f file_dir_name<br>find $(<span class="hljs-built_in">pwd</span>) -name file_dir_name<br>find $(<span class="hljs-built_in">pwd</span>) -name <span class="hljs-string">&quot;*.pdf&quot;</span>  <span class="hljs-comment"># 显示当前目录下所有 pdf 文件的绝对路径</span><br><span class="hljs-built_in">ls</span> -l <span class="hljs-variable">$PWD</span>/file_dir_name<br><span class="hljs-built_in">ls</span> -l <span class="hljs-variable">$PWD</span>/*<br></code></pre></td></tr></table></figure>
 
 <h2 id="文件权限-chmod"><a href="#文件权限-chmod" class="headerlink" title="文件权限-chmod"></a>文件权限-chmod</h2><p><code>chmod</code> (change mode) 命令 <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux chmod命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-chmod.html)">[9]</span></a></sup> 控制用户对文件的权限<br>权限分三级: 文件所有者 (Owner), 用户组 (Group), 其它用户 (Other Users)</p>
-<p><img src="/img/ls-l_output.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="ls -l 输出示意图"></p>
+<p><img src="/img/posts/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/ls-l_output.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="ls -l 输出示意图"></p>
 <p>只有文件所有者和超级用户可以修改文件或目录的权限, 可使用<strong>绝对模式 (八进制数字模式)</strong>, <strong>符号模式</strong>指定文件的权限</p>
-<p><img src="/img/authority.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="权限示意图"></p>
+<p><img src="/img/posts/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/authority.png" srcset="/img/fluid_theme/loading.gif" lazyload alt="权限示意图"></p>
 <p><strong>常用命令</strong></p>
 <ul>
 <li><code>chmod abc file_name</code>: abc 各为一个数字, 分别表示 User, Group 和 Others 的权限, <strong>r:4, w:2, x:1</strong></li>
