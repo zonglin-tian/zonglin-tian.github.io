@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://zonglin-tian.github.io/2024/05/06/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/2024/05/06/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</loc>
+    <loc>https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -533,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -542,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -641,14 +641,14 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
+    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
     <lastmod>2024-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
+    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
     <lastmod>2024-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -706,14 +706,14 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2024-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
     <lastmod>2024-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
