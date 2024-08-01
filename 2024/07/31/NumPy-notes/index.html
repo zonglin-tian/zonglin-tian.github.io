@@ -19,13 +19,13 @@
     <meta name="description" content="NumPy 学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NumPy notes">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/07/31/NumPy-notes/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/07/31/Numpy-notes/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="NumPy 学习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/numpy.png">
 <meta property="article:published_time" content="2024-07-31T13:31:06.000Z">
-<meta property="article:modified_time" content="2024-07-31T13:41:33.986Z">
+<meta property="article:modified_time" content="2024-08-01T03:25:29.081Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          49 字
+          180 字
         
       </span>
     
@@ -293,7 +293,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -343,7 +343,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-07-31T21:41:33+08:00
+                    最后更新于: 2024-08-01T11:25:29+08:00
                   
                   
 
@@ -368,7 +368,27 @@
 <h1 id="快速入门教程"><a href="#快速入门教程" class="headerlink" title="快速入门教程"></a>快速入门教程</h1><ul>
 <li>花式索引与索引技巧部分较难理解</li>
 </ul>
-<h1 id="NumPy-基础知识"><a href="#NumPy-基础知识" class="headerlink" title="NumPy 基础知识"></a>NumPy 基础知识</h1>
+<h1 id="NumPy-基础知识"><a href="#NumPy-基础知识" class="headerlink" title="NumPy 基础知识"></a>NumPy 基础知识</h1><h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><ul>
+<li>np.array: 将 Python 中 array-like 结构的数值转换为 ndarray</li>
+<li>np.zeros&#x2F;np.ones: 创建全 1&#x2F;0 ndarray</li>
+<li>np.arange&#x2F;np.linspace: 创建等间隔分布的 ndarray</li>
+</ul>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><ul>
+<li>数组索引返回的是原始数据的副本而不是切片获取的视图</li>
+<li>在程序中处理可变数量的索引<ul>
+<li>Python slice() 函数指定切片</li>
+<li>使用 Elipsis 指定省略号</li>
+</ul>
+</li>
+</ul>
+<h2 id="Brodcasting"><a href="#Brodcasting" class="headerlink" title="Brodcasting"></a>Brodcasting</h2><ul>
+<li>一般广播规则: 从最后一个轴的尺寸开始比较, 依次向前<ul>
+<li>尺寸相等</li>
+<li>其中一个是 1, 取大尺寸</li>
+</ul>
+</li>
+</ul>
+
                 
               </div>
             
@@ -420,7 +440,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>NumPy notes</div>
-      <div>https://zonglin-tian.github.io/2024/07/31/NumPy-notes/</div>
+      <div>https://zonglin-tian.github.io/2024/07/31/Numpy-notes/</div>
     </div>
     <div class="license-meta">
       
