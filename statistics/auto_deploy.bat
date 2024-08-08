@@ -1,7 +1,7 @@
 @echo off
 
 REM 使用 UTF-8 编码保存日志文件
-chcp 65001 > nul
+REM chcp 65001 > nul
 
 REM 设置 hexo 博客路径
 set BLOG_DIR=T:\root\notes\geek_road
@@ -27,7 +27,7 @@ set currentTime=%time%
 REM 格式调整
 
 REM 使用 ,. 作为分隔符, 获取日期
-for /F "tokens=2 delims=,. " %%A in ("%currentDate%") do set datePart=%%A
+for /F "tokens=1 delims=,. " %%A in ("%currentDate%") do set datePart=%%A
 
 REM 使用 ,. 作为分隔符, 获取时分秒
 for /F "tokens=1 delims=,. " %%A in ("%currentTime%") do set timePart=%%A
