@@ -30,8 +30,7 @@ REM 格式调整
 REM 使用 ,. 作为分隔符, 获取时分秒
 for /F "tokens=1 delims=,. " %%A in ("%currentTime%") do set timePart=%%A
 
-:: echo %currentDate%/%timePart% > %LOG_FILE%
-echo %currentDate% > %LOG_FILE%
+echo %currentDate%/%timePart% > %LOG_FILE%
 
 
 hexo clean --silent && hexo generate --silent && hexo deploy && if %errorlevel% neq 0 (
