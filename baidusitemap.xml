@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2024-08-10</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io/2024/08/08/%E4%BA%BA%E5%8A%9B%E6%9C%89%E6%97%B6%E8%80%8C%E7%A9%B7%E5%B0%BD/</loc>
     <lastmod>2024-08-08</lastmod>
   </url>
@@ -73,15 +77,7 @@
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-07-27</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/</loc>
-    <lastmod>2024-07-27</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
@@ -98,6 +94,10 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/05/25/PyCharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2024-07-27</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
