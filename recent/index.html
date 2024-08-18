@@ -24,7 +24,7 @@
 <meta property="og:description" content="求圣                const currentDayIndex &#x3D; new Date().getDate() - 1;     const currentMonthIndex &#x3D; new Date().getMonth() + 1;     const x_fixed &#x3D; Math.min(43* currentDayIndex - 300, 600);">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-29T09:59:16.000Z">
-<meta property="article:modified_time" content="2024-08-18T10:38:55.468Z">
+<meta property="article:modified_time" content="2024-08-18T13:54:39.442Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -341,7 +341,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-08-18T18:38:55+08:00
+                    最后更新于: 2024-08-18T21:54:39+08:00
                   
                   
 
@@ -367,7 +367,7 @@
     <!-- console.log(x_fixed); -->
     
     // 默认 CSV 文件位置
-    const csvFilePath = "/statistics/2024_principle.csv";
+    const csvFilePath = "/statistics/2024_principle_data.csv";
 
     d3.csv(csvFilePath, function(error, csvdata) {
         if (error) {
@@ -379,7 +379,7 @@
         const headers = d3.keys(csvdata[0]);
         <!-- console.log(headers); -->
         const categories = headers.filter(header => header !== 'date' && header != 'week');
-        const categories_zh = ['节', '缄', '秩', '决', '自', '俭', '勤', '诚', '正', '中', '理', '洁', '贞', '谦', 'Missed'];
+        const categories_zh = ['节', '缄', '秩', '决', '自', '俭', '勤', '诚', '正', '中', '理', '洁', '贞', '谦', 'Great', 'Missed'];
 
         const scatterData = [];
         const pieSeries = [];
