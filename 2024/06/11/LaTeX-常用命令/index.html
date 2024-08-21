@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2024-06-11T05:31:25.000Z">
-<meta property="article:modified_time" content="2024-07-27T08:12:23.188Z">
+<meta property="article:modified_time" content="2024-08-21T14:51:59.039Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          153 字
+          254 字
         
       </span>
     
@@ -293,7 +293,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -343,7 +343,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-07-27T16:12:23+08:00
+                    最后更新于: 2024-08-21T22:51:59+08:00
                   
                   
 
@@ -368,6 +368,24 @@
 </ul>
 <h2 id="将-pdf-文件转换为-eps-文件"><a href="#将-pdf-文件转换为-eps-文件" class="headerlink" title="将 .pdf 文件转换为 .eps 文件"></a>将 <code>.pdf</code> 文件转换为 <code>.eps</code> 文件</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs latex">pdftops -eps source.pdf target.eps<br><span class="hljs-comment">% .bat 文件批量转换</span><br><br></code></pre></td></tr></table></figure>
 
+<h1 id="changes-宏包添加批注"><a href="#changes-宏包添加批注" class="headerlink" title="changes 宏包添加批注"></a>changes 宏包添加批注</h1><ul>
+<li>导言区引用: <code>\usepackage&#123;changes&#125;</code>, 可选参数<ul>
+<li>commandnameprefix&#x3D;ifneeded</li>
+<li>defaultcolor&#x3D;orange</li>
+<li>authormarkup&#x3D;name</li>
+<li><strong>final: 编译时不显示批注</strong></li>
+</ul>
+</li>
+<li>定义作者: <code>\definechangesauthor[name=&#123;&#125;, corlor=]&#123;author_id&#125;</code></li>
+<li>列出所有修订: <code>\listofchanges</code></li>
+<li>正文批注<ul>
+<li>新增内容: <code>\added[id=, comment=&#123;&#125;]&#123;&#125;</code></li>
+<li>替换内容: <code>\replaced[id=, comment=&#123;&#125;]&#123;new_texts&#125;&#123;old_texts&#125;</code></li>
+<li>高亮内容: <code>\highlight[id=, comment=&#123;&#125;]&#123;&#125;</code></li>
+<li>批注: <code>\comment&#123;comment_text&#125;</code></li>
+</ul>
+</li>
+</ul>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/subtitle_/article/details/129392994">小林up. LaTex使用技巧15：LaTex命令行转换pdf和eps. CSDN</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/jeryjeryjery/article/details/88970357">liuwei1206. Texlive中jpg和pdf转成eps. CSDN</a></li>
