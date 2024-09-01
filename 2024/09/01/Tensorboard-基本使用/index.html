@@ -16,24 +16,24 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="Python 常用库使用笔记">
+    <meta name="description" content="Tensorboard 使用总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 库学习">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="Tensorboard 基本使用">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/09/01/Tensorboard-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="Python 常用库使用笔记">
+<meta property="og:description" content="Tensorboard 使用总结">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
-<meta property="article:published_time" content="2024-05-05T02:40:42.000Z">
-<meta property="article:modified_time" content="2024-09-01T12:12:00.957Z">
+<meta property="og:image" content="https://zonglin-tian.github.io/img/index/tensorboard.png">
+<meta property="article:published_time" content="2024-09-01T12:14:26.000Z">
+<meta property="article:modified_time" content="2024-09-01T12:27:20.713Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
+<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/tensorboard.png">
   
   
   
-  <title>Python 库学习 - Temm&#39;s Zone</title>
+  <title>Tensorboard 基本使用 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -256,7 +256,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python 库学习"></span>
+            <span id="subtitle" data-typed-text="Tensorboard 基本使用"></span>
           
         </div>
 
@@ -267,8 +267,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-05 10:40" pubdate>
-          2024年5月5日 上午
+        <time datetime="2024-09-01 20:14" pubdate>
+          2024年9月1日 晚上
         </time>
       </span>
     
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          449 字
+          386 字
         
       </span>
     
@@ -338,159 +338,63 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python 库学习</h1>
+            <h1 id="seo-header">Tensorboard 基本使用</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-09-01T20:12:00+08:00
+                    最后更新于: 2024-09-01T20:27:20+08:00
                   
                   
 
                 
               </p>
             
+            <!-- added by Temm -->
+            
             
               <div class="markdown-body">
                 
-                <h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://pythonjishu.com/pandas-dataframe-to_excel/">Pandas 将数据写入 Excel</a></li>
-<li>获取 <em>DataFrame</em> 的所有列名: <code>list(data_frame)</code> (sorted 返回有序)</li>
-</ul>
-<h1 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/beautiful77moon/article/details/88877519#:~:text=%E5%9C%A8python%E4%B8%AD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20datetime%20%E6%9D%A5%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%A5%E6%9C%9F%EF%BC%8C%E4%BD%BF%E7%94%A8%E6%98%AF%E8%A6%81%E7%8E%B0%E5%AF%BC%E5%85%A5datetime%E5%BA%93%201%20%3E%3E%3E%20%20print%20(datetime.datetime.today()),(datetime.datetime.now())%204%202019%20-03-%2028%2020%3A%2034%3A%2011.377443">获取当前日期&#x2F;时间</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Gabriel100yi/article/details/135251097#:~:text=%E8%A6%81%E8%AE%A1%E7%AE%97%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E6%98%AF%E4%B8%80%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9%EF%BC%8C%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20date%20%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%E3%80%82%20%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A%20%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E7%9A%84%E5%B9%B4%E4%BB%BD%EF%BC%9A%E4%BD%BF%E7%94%A8%20year%20%E5%B1%9E%E6%80%A7%E3%80%82%20%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F%E7%9A%84%E6%9C%88%E4%BB%BD%EF%BC%9A%E4%BD%BF%E7%94%A8,%E4%BD%BF%E7%94%A8%20date%20%E7%B1%BB%E7%9A%84%20timetuple()%20%E6%96%B9%E6%B3%95%E5%B0%86%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%97%B6%E9%97%B4%E5%85%83%E7%BB%84%E3%80%82%20%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E5%85%83%E7%BB%84%E4%B8%AD%E7%9A%84%20tm_yday%20%E5%B1%9E%E6%80%A7%E8%8E%B7%E5%8F%96%E4%B8%80%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9%E3%80%82">计算指定日期是一年中的第几天</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40012554/article/details/108759160">计算日期差</a></li>
-</ul>
-<h1 id="os"><a href="#os" class="headerlink" title="os"></a>os</h1><h2 id="os-path-–-路径操作"><a href="#os-path-–-路径操作" class="headerlink" title="os.path – 路径操作"></a>os.path – 路径操作</h2><ul>
-<li><code>os.path.split(*path*)</code>: 将路径 <em>path</em> 拆分为一对, 即 <code>(head, tail)</code>, 其中 <em>tail</em> 是路径的最后一部分, 而 <em>head</em> 以除最后一部分外的所有内容, tail 部分不会包含斜杠, head 末尾的斜杠会被去掉<ul>
-<li>如果 path 以斜杠结尾, 则 tail 为空</li>
-<li><code>os.path.join(head, tail) == path</code></li>
-<li><code>head == os.path.dirname(path)</code></li>
-<li><code>tail == os.path.basename(path)</code></li>
-</ul>
-</li>
-<li><code>os.path.dirname(path)</code>: 返回路径 path 的目录名称</li>
-<li><code>os.path.basename(path)</code>: 返回路径 path 的基本名称</li>
-<li><code>os.path.join(path, *paths)</code>: 智能地拼接一个或多个路径部分, 返回值是 <em>path</em> 和 <em>paths</em> 的所有成员的拼接, 其中每个非空部分后面都紧跟一个目录分隔符, 最后一个部分除外<ul>
-<li>如果最后一个部分为空, 则结果将以分隔符结尾</li>
-<li>如果某个部分为绝对路径, 则之前的所有部分会被 <strong>丢弃</strong>, 然后从绝对路径部分重新开始继续拼接</li>
-</ul>
-</li>
-<li><code>os.path.splitex(path)</code>: 将路径名称拆分为 <code>(root, ext)</code> 对, 使得 <code>root + ext = path</code>, 并且扩展名为空或以句点打头并最多只包含一个句点</li>
-<li><code>os.path.splitdrive(path)</code>: 将路径拆分为一对, 即 <code>(drive, tail)</code>, 使得 <code>drive + tial == path</code>, 其中 <em>drive</em> 是持载点或空字符串<ul>
-<li>如果路径 path 包含盘符, 则 drive 将包含冒号之前的所有内容包括冒号本身</li>
-</ul>
-</li>
-<li><code>os.path.exists(path)</code>: 如果 <em>path</em> 指向一个已存在的路径或已打开的文件描述符, 返回 <code>True</code></li>
-</ul>
-<h1 id="tqdm"><a href="#tqdm" class="headerlink" title="tqdm"></a>tqdm</h1><p>Python 进度条</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/420057177/answer/2268739686">python的tqdm可以调整进度条的颜色吗. 知乎</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/163613814">周兵. python进度条库tqdm详解. 知乎</a></li>
-</ul>
+                <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>在机器学习中, 要改进模型的某些参数, 通常需要对其进行衡量, Tensorboard 用于提供机器学习工作流程期间所需测量和呈现的工具, 能够跟踪实验指标, 呈现模型计算图, 将嵌入向量投影到较低维度的空间. </p>
+<p>Tensorboard 原本是 TensorFlow 的可视化工具, <strong>TensorboardX</strong> 是一个支持 PyTorch 的可视化工具, 而 PyTorch 官方的 <code>torch.utils.tensorboard</code> 是 PyTorch 与 Tensorboard 合作开发的</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install tensorboard  <span class="hljs-comment"># 依赖于 tensorboard</span><br>pip install tensorboardx<br></code></pre></td></tr></table></figure>
+<h1 id="Python-程序"><a href="#Python-程序" class="headerlink" title="Python 程序"></a>Python 程序</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> torch.utils.tensorboard <span class="hljs-keyword">import</span> SummaryWriter<br><span class="hljs-comment"># 或者 from tensorboardx import SummaryWritter</span><br>writer = SummaryWriter(log_dir=os.path.join(save_path, <span class="hljs-string">&#x27;log&#x27;</span>), comment=<span class="hljs-string">&quot;writter_comment&quot;</span>)<br>writer.add_type(tag_name, <span class="hljs-built_in">object</span>, iterations)<br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">type: </span><br><span class="hljs-string">	- scalar</span><br><span class="hljs-string">	- histogram</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="终端使用"><a href="#终端使用" class="headerlink" title="终端使用"></a>终端使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">tensorboard --logdir=<span class="hljs-string">&quot;path_log&quot;</span><br><span class="hljs-comment"># 在网页中打开: http://localhost:6060/</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="本地查看服务器-tensorboard-信息"><a href="#本地查看服务器-tensorboard-信息" class="headerlink" title="本地查看服务器 tensorboard 信息"></a>本地查看服务器 tensorboard 信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 本地终端输入</span><br><span class="hljs-comment"># ssh [-p port_num] -L local_num:localhost:6008 user_name@server_ip</span><br>ssh user_name@ip_server_ip -L local_num:localhost:6008<br><span class="hljs-comment"># ssh user_name@server_ip -L localhost:local_num:localhost:6008</span><br><span class="hljs-comment"># 进入远程服务器终端后, 输入</span><br>conda activate env_name<br>tensorboard --logdir=<span class="hljs-string">&quot;log_path&quot;</span> --port=6008<br><span class="hljs-comment"># 在本地浏览器输入: localhost:local_num 即可进入服务器 tensorboard 界面</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>建议: 远程服务器端口和本地端口保持一致, 可快速点击链接访问</strong></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_27155171/article/details/125337697">稚晖君的头号男粉. TensorboardX和Tensorboard的介绍及使用. CSDN</a><br>[2] <a target="_blank" rel="noopener" href="https://pytorchbook.cn/chapter4/4.2.2-tensorboardx/">PyTorch 中文手册. 使用Tensorboard在 PyTorch 中进行可视化</a><br>[3] <a target="_blank" rel="noopener" href="https://blog.csdn.net/HowieXue/article/details/105412155">HowieXue. 数据可视化：TensorboardX安装及使用（安装测试+实例演示）.CSDN</a><br>[4] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/471198169">deephub. TensorBoard最全使用教程：看这篇就够了. 知乎</a><br>[5] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41656402/article/details/131123121">柒AII. TensorBoard最全使用教程：看这篇就够了. CSDN</a><br>[6] <a target="_blank" rel="noopener" href="https://blog.csdn.net/NooahH/article/details/109739305">NooahH.【Pytorch】利用SSH查看远程服务器上的tensorboard可视化界面. CSDN</a></p>
 
                 
               </div>
             
             <hr/>
+            <!-- added by Temm -->
+            
+            <!-- added by Temm -->
             <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-    </div>
-  
-</div>
-
+              
 
               
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>Python 库学习</div>
-      <div>https://zonglin-tian.github.io/2024/05/05/Python-库学习/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>Temm</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年5月5日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
+                    
               
               
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
+                
+                
+                
               
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
 
               
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Python 基础</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" title="Hexo Fluid 博客常用配置">
-                        <span class="hidden-mobile">Hexo Fluid 博客常用配置</span>
+                      <a href="/discipline/hints/%E5%A7%8B%E4%BA%8E%E9%A1%94%E5%80%BC-%E7%BB%88%E4%BA%8E%E6%80%A7%E6%A0%BC/" title="始于顔值, 终于性格">
+                        <span class="hidden-mobile">始于顔值, 终于性格</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
