@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/windows.png">
 <meta property="article:published_time" content="2024-07-06T07:35:37.000Z">
-<meta property="article:modified_time" content="2024-07-27T08:12:23.219Z">
+<meta property="article:modified_time" content="2024-09-02T02:46:00.182Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.1k 字
         
       </span>
     
@@ -413,7 +413,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-07-27T16:12:23+08:00
+                    最后更新于: 2024-09-02T10:46:00+08:00
                   
                   
 
@@ -440,7 +440,7 @@
 <li>Win + E: 资源管理器</li>
 <li><strong>Win + D: 显示桌面</strong></li>
 <li>Win + ,: 临时速览桌面</li>
-<li>Win + V: 剪切板</li>
+<li><strong>Win + V: 剪切板</strong></li>
 <li><strong>Win +M: 最小化所有窗口</strong></li>
 <li>Win + Shift + M: 还原桌面上的最小化窗口</li>
 <li>Win + ;&#x2F;.: 打开表情符号面板</li>
@@ -467,25 +467,31 @@
 <li>(CMD 下) 查看 <code>forfiles</code> 帮助信息: <code>forfiles /?</code></li>
 <li>(CMD 下) 查看 <code>rmdir</code> 和 <code>del</code> 帮助信息: <code>help cmd</code></li>
 <li>创建 <code>.bat</code> 脚本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs commonlisp">@echo off<br>set del_dir=T:\root\Temp\AUTO_DEL <br>set day_ago=3<br><br>:: 删除三天以前的文件<br>ForFiles /p %del_dir% /s /d -%day_ago% /c &quot;cmd /c if @isdir==TRUE (rmdir /q /s @path) else (del /q @path)&quot; 2&gt;nul<br></code></pre></td></tr></table></figure></li>
-<li>创建定时任务, 使用 <code>SYSTEM</code> 帐户执行, <strong>实现隐藏 cmd 窗口</strong></li>
+<li>创建定时任务, 使用 <code>SYSTEM</code> 帐户执行, <strong>可实现隐藏 cmd 窗口</strong></li>
 </ul>
 <h2 id="SSH-服务"><a href="#SSH-服务" class="headerlink" title="SSH 服务"></a>SSH 服务</h2><ol>
 <li>首先在服务端电脑上安装 SSH 服务器: <code>设置</code> → <code>应用</code> → <code>可选功能</code> → <code>添加可选功能</code> →  <code>OpenSSH 服务器</code></li>
-<li>配置 SSH 服务器, 配置文件: <code>C:\ProgramData\ssh\sshd_config</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 可用密钥登陆</span><br>PubkeyAuthentication <span class="hljs-built_in">yes</span><br><span class="hljs-comment"># 对于标准用户</span><br>将客户端生成的公钥内容写入 C:\Users\username\.ssh\authorized_keys 文件<br><span class="hljs-comment"># 对于管理用户</span><br>将客户端生成的公钥内容写入 C:\ProgramData\ssh\administrators_authorized_keys 文件<br></code></pre></td></tr></table></figure></li>
+<li>配置 SSH 服务器, 配置文件: <code>C:\ProgramData\ssh\sshd_config</code> (更多配置参见 <a href="/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/">SSH (Secure Shell) 配置与命令</a>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 可用密钥登陆</span><br>PubkeyAuthentication <span class="hljs-built_in">yes</span><br><span class="hljs-comment"># 对于标准用户</span><br>将客户端生成的公钥内容写入 C:\Users\username\.ssh\authorized_keys 文件<br><span class="hljs-comment"># 对于管理用户</span><br>将客户端生成的公钥内容写入 C:\ProgramData\ssh\administrators_authorized_keys 文件<br></code></pre></td></tr></table></figure></li>
 <li>启动 SSH 服务<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 方法一: Win + R 打开运行窗口 → 输入 services.msc (或者直接在 Windows 搜索框输入 services) → 找到 OpenSSH SSH Server, 右键启动或者重新启动</span><br><span class="hljs-comment"># 方法二: 以管理员身份打开 WindowsTerminal, 运行命令 net [re]start sshd 即可启动 SSH 服务 (停止: net stop sshd)</span><br></code></pre></td></tr></table></figure></li>
 <li>在客户端电脑上安装 SSH <strong>客户端</strong>: 过程类似第一步</li>
-<li>在客户端生成私钥和公钥, 并将公钥内容复制到服务端电脑对应文件中, 参见第二步</li>
+<li>在客户端生成私钥和公钥, 并将公钥内容复制到服务端电脑对应文件中, 参见第 2 步</li>
 <li>打开 <code>WindowsTerminal</code>, 使用命令 <code>ssh user@ip_addr</code>, 根据提示使用密码或者密钥登陆</li>
 </ol>
-<h2 id="FTP-服务"><a href="#FTP-服务" class="headerlink" title="FTP 服务"></a>FTP 服务</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>师门有一台专门用于开组会的笔记本, 每次开组会或者组会上都要用 U 盘拷贝汇报文件, 感觉不太方便. 早些时候, 我利用 Windows 的 <em>nearby sharing</em> 功能, 每次都要打开&#x2F;关闭, 不仅速度较慢, 而且对传输距离有要求, 最终弃用了. 于是, 想到校园内大家同在一个大的局域网内, 可以利用 <em>Windows FTP</em> 服务. 即将开组会的笔记本作为服务器, 创建一个用户, 小组成员用该用户向服务器上传文件. </p>
-<p><em>2024-06-30 在师门笔记本上配置成功过, 但其中有些问题没有想清楚 (关于防火墙), 最后能成功感觉有点 “玄学”…所以, 仅将在此过程参考的几个文章标记一下, 方便后期查阅</em></p>
+<h2 id="FTP-服务"><a href="#FTP-服务" class="headerlink" title="FTP 服务"></a>FTP 服务</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>师门有一台专门用于开组会的笔记本, 每次开组会或者组会上都要用 U 盘拷贝汇报文件, 感觉不太方便. 早些时候, 我利用 Windows 的 <em>nearby sharing</em> 功能, 每次都要打开&#x2F;关闭, 不仅速度较慢, 而且对传输距离有要求, 最终弃用了. 于是, 想到校园内大家同在一个大的局域网内, 可以利用 <em>Windows FTP</em> 服务. 即将开组会的笔记本作为服务器, 创建一个用户, 小组成员通过该用户向服务器上传文件. </p>
+<p><em>2024-06-30 在师门笔记本上配置成功过, 但其中有些问题没有想清楚 (关于防火墙), 最后能成功感觉有点 “玄学”… 所以, 仅将在此过程参考的几个文章标记一下, 方便后期查阅</em></p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46081669/article/details/114037504">年轻秃了头. https://blog.csdn.net/weixin_46081669&#x2F;article&#x2F;details&#x2F;114037504. CSDN</a></li>
 <li><a href="Windows%E6%90%AD%E5%BB%BAFTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B"><em>翊墨</em>. https://blog.csdn.net/weixin_46081669&#x2F;article&#x2F;details&#x2F;114037504. CSDN</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Alex_81D/article/details/135296467">Alex_81D. 超详情的Windows搭建FTP服务器教程-（老奶奶来了也能搭好）.CSDN</a></li>
 </ul>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/schtasks">Windows Sever schtasks 命令</a><br>[2] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/widows/p/13328291.html">第八种格调的男人. Windows 配置定时任务 和任务无法执行原因分析. 博客园</a><br>[3] <a target="_blank" rel="noopener" href="https://blog.csdn.net/macwhirr123/article/details/105148443">tyasdxx. Windows forfiles命令删除N天前文件&amp;文件夹. CSDN</a><br>[4] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39188306/article/details/88689224">IT-Andy. windows执行计划任务 隐藏弹窗cmd命令解决办法. CSDN</a><br>[5] <a target="_blank" rel="noopener" href="https://blog.csdn.net/duke_ding2/article/details/135662761?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2~default~YuanLiJiHua~Position-3-135662761-blog-90080815.235%5Ev43%5Epc_blog_bottom_relevance_base7&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~YuanLiJiHua~Position-3-135662761-blog-90080815.235%5Ev43%5Epc_blog_bottom_relevance_base7&utm_relevant_index=4">蓝黑2020. Windows11开启SSH服务. CSDN</a><br>[6] <a target="_blank" rel="noopener" href="https://blog.csdn.net/pariese/article/details/111604340">Mr.亮先生. Windows 10 开启ssh服务. CSDN</a><br>[7] <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_keymanagement">OpenSSH for Windows 中基于密钥的身份验证. Microsoft.learn</a></p>
-<h1 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h1><h2 id="禁用-Win-开头的快捷捷"><a href="#禁用-Win-开头的快捷捷" class="headerlink" title="禁用 Win 开头的快捷捷"></a>禁用 Win 开头的快捷捷</h2><ol>
+<h1 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h1><h2 id="WindowsTermimal"><a href="#WindowsTermimal" class="headerlink" title="WindowsTermimal"></a>WindowsTermimal</h2><p>快速打开一个 WindowsTerminal 窗口, 并以特定目录为工作目录</p>
+<p><code>右键: 新建快键方式</code> → <code>输入命令: wt.exe -d &quot;path_to_dir&quot;</code> → <code>下一步</code> → <code>命名</code> → <code>完成</code></p>
+<ul>
+<li>移动到一个快速启动的目录 (<code>PATH</code> 变量的一个路径), 可用 <code>Win + R</code> 运行</li>
+<li>可右键属性, 自定义快键方式图标</li>
+</ul>
+<h2 id="禁用-Win-开头的快捷捷"><a href="#禁用-Win-开头的快捷捷" class="headerlink" title="禁用 Win 开头的快捷捷"></a>禁用 Win 开头的快捷捷</h2><ol>
 <li>打开注册表</li>
 <li>导航到 <code>Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</code></li>
 <li>右键 <code>Advanced</code>, 新建字符串值 <code>DisabledHotkeys</code></li>
