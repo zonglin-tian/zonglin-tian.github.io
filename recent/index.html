@@ -24,7 +24,7 @@
 <meta property="og:description" content="秩序始终前5 基本常规                  const currentDayIndex &#x3D; new Date().getDate() - 1;     const currentMonthIndex &#x3D; new Date().getMonth() + 1;     const x_fixed &#x3D; Math.max(100, Math.min(43* currentDayIndex -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-29T09:59:16.000Z">
-<meta property="article:modified_time" content="2024-09-03T23:41:23.987Z">
+<meta property="article:modified_time" content="2024-09-04T15:50:09.848Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.7k 字
+          2.8k 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          15 分钟
+          16 分钟
         
       </span>
     
@@ -341,7 +341,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-09-04T07:41:23+08:00
+                    最后更新于: 2024-09-04T23:50:09+08:00
                   
                   
 
@@ -382,6 +382,10 @@
         <!-- console.log(headers); -->
         const categories = headers.filter(header => header !== 'date' && header != 'week');
         const categories_zh = ['节', '缄', '秩', '决', '自', '俭', '勤', '诚', '正', '中', '理', '洁', '贞', '谦', 'Great', 'Missed'];
+        function shuffle_colors () {
+            const colors = ["#FF6347", "#FFA500", "#FFD700", "#32CD32", "#00CED1", "#4682B4", "#9370DB", "#FF69B4", "#FF1493", "#FF4500", "#DC143C", "#006400", "#00FF7F", "#FF7F50", "#87CEFA"]
+            return colors.sort(() => Math.random() - 0.5);
+        }
 
         const scatterData = [];
         const pieSeries = [];
@@ -397,7 +401,7 @@
             // 将每个日期的饼图数据分开
             const pieData = categories_zh.map((category, idx) => ({
                 name: category,
-                value: values[idx]
+                value: values[idx],
             })).filter(item => item.value > 0);
 
             if (pieData.length > 0) {
@@ -442,6 +446,7 @@
                     color: '#c4c6c9', // 默认文字颜色
                 }
             },
+            color: shuffle_colors(),
             grid: {
                 top: 10,
                 left: 10,
@@ -512,6 +517,8 @@
 <h1 id="每日动态"><a href="#每日动态" class="headerlink" title="每日动态"></a>每日动态</h1><div style="height: 750px; overflow-y:auto">
 
 <div class="timeline">
+<div class="timenode"><div class="meta"><p><p>2024-09-04[周三]</p>
+</p></div><div class="body"><ul><li>早上: 代码学习</li><li>下午: cover letter → 护肤 → 休息</li><li>晚上: 休息 → 跑步 → PyTorch Blog 笔记补充</li></ul><hr style="width:50%;margin-top:-1rem;margin-bottom:0.1rem"></hr><p>护肤途中, 坐地铁感觉特别疲惫, 不想学习, 何解?</p><hr style="width:50%;margin-top:-1rem;margin-bottom:0.1rem"></hr><ul><li>秩序: ❎按时用餐 (最近下午特别饿?)</li><li>缄默: ❎在背后对人评头论足</li></ul></div></div>
 <div class="timenode"><div class="meta"><p><p>2024-09-03[周二]</p>
 </p></div><div class="body"><ul><li>早上: 代码学习&#x2F;实践</li><li>下午: 代码学习&#x2F;实践 → cviu 投稿系统</li><li>晚上: 代码学习&#x2F;实践 → 健身 → cover letter 撰写&#x2F; Monica Ai 使用</li></ul></div></div>
 <div class="timenode"><div class="meta"><p><p>2024-09-02[周一]</p>

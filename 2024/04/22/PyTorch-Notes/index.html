@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/pytorch.png">
 <meta property="article:published_time" content="2024-04-22T14:11:34.000Z">
-<meta property="article:modified_time" content="2024-07-27T08:12:23.219Z">
+<meta property="article:modified_time" content="2024-09-04T15:32:28.559Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.7k 字
         
       </span>
     
@@ -293,7 +293,7 @@
         
         
         
-          8 分钟
+          10 分钟
         
       </span>
     
@@ -331,6 +331,94 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Coding"
+        id="heading-cddcade0405954c4325ee1fb11e3dc0e" role="tab" data-toggle="collapse" href="#collapse-cddcade0405954c4325ee1fb11e3dc0e"
+        aria-expanded="true"
+      >
+        Coding
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-cddcade0405954c4325ee1fb11e3dc0e"
+           role="tabpanel" aria-labelledby="heading-cddcade0405954c4325ee1fb11e3dc0e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/07/31/Numpy-notes/" title="NumPy notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">NumPy notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/22/PyTorch-Notes/" title="PyTorch Notes"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">PyTorch Notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/" title="Python 库学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 库学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/09/01/Tensorboard-notes/" title="Tensorboard notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Tensorboard notes</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -343,7 +431,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-07-27T16:12:23+08:00
+                    最后更新于: 2024-09-04T23:32:28+08:00
                   
                   
 
@@ -376,7 +464,7 @@
 </ul>
 <h3 id="常见初始化操作"><a href="#常见初始化操作" class="headerlink" title="常见初始化操作"></a>常见初始化操作</h3><ul>
 <li>用 <code>tensor</code> 函数转化 python 序列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">data = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]<br>t_data = torch.tensor(data)<br></code></pre></td></tr></table></figure></li>
-<li>用 <code>from_numpy</code> 函数转化 NumPy 数组<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">np_array = np.array(data)<br>t_np = torch.from_numpy(np_array)<br></code></pre></td></tr></table></figure></li>
+<li>用 <code>from_numpy/tensor</code> 函数转化 NumPy 数组<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">np_array = np.array(data)<br>t_np = torch.from_numpy(np_array)<br><span class="hljs-comment"># 不共享内存</span><br>t_np = torch.tensor(np_array)<br><span class="hljs-comment"># 将 tensor 转化为 NumPy 数组</span><br>np_t = tensor_var.numpy()<br></code></pre></td></tr></table></figure></li>
 <li>已知 <code>shape</code>, 利用特殊函数创建<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">shape = (<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)<br>t_ones = torch.ones(shape)<br>t_zeros = torch.zeros(shape)<br>t_rand = torch.rand(shape, dtype=torch.<span class="hljs-built_in">float</span>)  <span class="hljs-comment"># 指定数据类型</span><br></code></pre></td></tr></table></figure></li>
 <li>参考已知 Tensors, 利用 <code>*_like</code> 函数创建<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">t_ones = torch.ones_like(t_data)<br>t_zeros = torch.zeros_like(t_data)<br>t_rand = torch.rand_like(t_data, dtype=torch.<span class="hljs-built_in">float</span>)  <span class="hljs-comment"># 指定数据类型</span><br></code></pre></td></tr></table></figure></li>
 </ul>
@@ -494,7 +582,34 @@
 </li>
 <li></li>
 </ul>
-<h1 id="Auto-Differentiation-with-torch-autograd"><a href="#Auto-Differentiation-with-torch-autograd" class="headerlink" title="Auto Differentiation with torch.autograd"></a>Auto Differentiation with <code>torch.autograd</code></h1><p>By default, all tensors with <code>requires_grad=True</code> are tracking their computational history and support gradient computation. However, there are some cases when we do not need to do that, for example, when we have thained the model and just want to apply it to some input data, i.e. we only want to <em>forward</em> computations through the network. We can stop tracking computations by surrounding our computiation code with <code>torch.no_grad()</code> block<br>Another way to achieve the same result is to use the <code>detach()</code> method on the tensor<br>There are reasons you might want to disable gradient tracking:</p>
+<h1 id="Auto-Differentiation-with-torch-autograd"><a href="#Auto-Differentiation-with-torch-autograd" class="headerlink" title="Auto Differentiation with torch.autograd"></a>Auto Differentiation with <code>torch.autograd</code></h1><h2 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h2><ul>
+<li>是否可以求导: <code>requires_grad</code> <div class="note note-warning">
+            <p>自定义叶子节点默认为 <code>False</code>, 非叶子节点默认为 <code>True</code>, 神经网络参数默认为 <code>True</code>. 判断哪些节点是 <code>True/False</code> 的一个原则: 从需要求导的叶子节点到 loss 节点之间是一条可求导的通路</p>
+          </div>
+两种指定方式: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.tensor(<span class="hljs-number">1.</span>).requires_grad_()<br>x = torch.tensor(<span class="hljs-number">1.</span>, requires_grad=<span class="hljs-literal">True</span>)<br></code></pre></td></tr></table></figure></li>
+<li>运算名称: <code>grad_fn</code></li>
+<li>是否为叶子节点: <code>is_leaf</code></li>
+<li>导数值: <code>grad</code></li>
+</ul>
+<h2 id="梯度求解两种方式"><a href="#梯度求解两种方式" class="headerlink" title="梯度求解两种方式"></a>梯度求解两种方式</h2><h3 id="backward"><a href="#backward" class="headerlink" title="backward()"></a>backward()</h3><p>只计算满足下面条件 Tensor 的梯度 (grad)</p>
+<ul>
+<li>叶子节点</li>
+<li>requires_grad &#x3D; True</li>
+<li>依赖该 Tensor 的所有 Tensor 的 <code>requires_grad=True</code></li>
+</ul>
+<p>backward() 默认为累加梯度, 当多次求导或进行求解高阶导数时, 需要手动将前一次的梯度清零</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pyhton">x.grad.zero_()<br># 在神经网络中<br>optimizer.zero_grad()<br></code></pre></td></tr></table></figure>
+
+<h3 id="autograd-grad"><a href="#autograd-grad" class="headerlink" title="autograd.grad()"></a>autograd.grad()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">grad = torch.autograd.grad(outputs=y, inputs=x)[<span class="hljs-number">0</span>]  <span class="hljs-comment"># 取第一个元素</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="重要参数"><a href="#重要参数" class="headerlink" title="重要参数"></a>重要参数</h3><ul>
+<li><code>retain_graph</code>: 当需要计算多个变量的梯度时, 需要设置为 True (调用 autograd.grad&#x2F;backward 后梯度图默认会释放)</li>
+<li><code>create_graph</code>: 当需要利用得到的梯度计算高阶梯度是, 需要设置为 True, 即保留当前梯度的计算方式</li>
+</ul>
+<h2 id="向量求导"><a href="#向量求导" class="headerlink" title="向量求导"></a>向量求导</h2><p><strong>通常情况下, 只能标量对标量, 标量对向量求梯度</strong>. 若是需要向量求梯度, 需要先转化为标量 (而<strong>求和</strong>对分别求导没有影响). 可用代码: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">y.<span class="hljs-built_in">sum</span>().backward()<br>y.backword(torch.ones_like(y))<br><br>grad_x = torch.autograd.grad(outputs=y.<span class="hljs-built_in">sum</span>(), inputs=x)[<span class="hljs-number">0</span>]<br>grad_x = torch.autograd.grad(outputs=y, inputs=x, grad_outputs=torch.ones_like(y))[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure>
+
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><p>By default, all tensors with <code>requires_grad=True</code> are tracking their computational history and support gradient computation. However, there are some cases when we do not need to do that, for example, when we have thained the model and just want to apply it to some input data, i.e. we only want to <em>forward</em> computations through the network. We can stop tracking computations by surrounding our computiation code with <code>torch.no_grad()</code> block<br>Another way to achieve the same result is to use the <code>detach()</code> method on the tensor<br>There are reasons you might want to disable gradient tracking:</p>
 <ul>
 <li>To mark some parameters in your neural network as <strong>frozen parameters</strong>.</li>
 <li>To <strong>speed up computations</strong> when you are only doing forward pass, because computations on tensors that do not track gardients would be more efficient</li>
@@ -511,6 +626,9 @@
 <li>using the chain rule, propagates all the way to the leaf tensors</li>
 </ul>
 <p>For a vector functon, a gradient of function to parameters is given by <strong>Jacobian matrix</strong>. Instead of computing the Jacobian matrix itself, PyTorch allows you to compute <strong>Jacobian Product</strong> $v^T\cdot J$ for a given input column tensor $v$. This achieved by calling <code>backward</code> with $v$ as an argument. The size of $v$ should be the same as the size of the vector function.</p>
+<h2 id="References-1"><a href="#References-1" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/279758736#:~:text=PyTorc">撒旦-cc. 一文解释 PyTorch求导相关 (backward, autograd.grad). 知乎</a></li>
+</ul>
 
                 
               </div>
