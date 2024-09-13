@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zonglin-tian.github.io/2024/09/12/%E7%94%A8%E4%B8%80%E7%94%9F%E5%AD%A6%E4%B9%A0%E9%97%AD%E5%98%B4/</loc>
+    
+    <lastmod>2024-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/2024/09/07/%E4%BD%A0%E6%A0%B9%E6%9C%AC%E7%94%A8%E5%92%8C%E5%88%AB%E4%BA%BA%E6%AF%94-%E5%AE%9E%E8%B7%B5/</loc>
     
     <lastmod>2024-09-10</lastmod>
@@ -542,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -551,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -668,7 +677,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -677,7 +686,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -697,7 +706,7 @@
 
   <url>
     <loc>https://zonglin-tian.github.io/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -705,63 +714,63 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Python/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/AutoHotkey/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Keyboard/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Vim/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -770,49 +779,49 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Life/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Research/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Ubuntu/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Windows/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Software/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
-    <lastmod>2024-09-11</lastmod>
+    <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
