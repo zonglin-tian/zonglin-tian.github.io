@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/2024/09/24/TMUX-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4/
 https://zonglin-tian.github.io/2024/09/23/%E6%97%A2%E7%84%B6%E5%BF%83%E6%9C%89%E6%89%80%E6%83%B3-%E9%82%A3%E5%B0%B1%E5%8A%AA%E5%8A%9B%E5%B0%9D%E8%AF%95/
 https://zonglin-tian.github.io/running/index.html
 https://zonglin-tian.github.io/2024/09/07/%E4%BD%A0%E6%A0%B9%E6%9C%AC%E7%94%A8%E5%92%8C%E5%88%AB%E4%BA%BA%E6%AF%94-%E5%AE%9E%E8%B7%B5/
@@ -28,8 +29,8 @@ https://zonglin-tian.github.io/2024/07/27/%E9%97%BB%E9%81%93%E6%9C%89%E5%85%88%E
 https://zonglin-tian.github.io/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/
 https://zonglin-tian.github.io/2024/04/07/Back-to-Hexo-Blog/
 https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/
-https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
 https://zonglin-tian.github.io/2024/06/11/Visio-%E5%AD%A6%E4%B9%A0%E7%A7%AF%E7%B4%AF/
+https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
 https://zonglin-tian.github.io/2024/05/23/Win10-%E9%87%8D%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/
 https://zonglin-tian.github.io/2024/07/12/Computer-Graphics-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/
 https://zonglin-tian.github.io/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/
@@ -62,15 +63,15 @@ https://zonglin-tian.github.io/live2d/live2d_api/model/chino/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/README.html
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/waifu-tips.json
 https://zonglin-tian.github.io/live2d/package.json
@@ -89,8 +90,8 @@ https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
 https://zonglin-tian.github.io/categories/Research/
-https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Others/
+https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Windows/
-https://zonglin-tian.github.io/categories/Software/
 https://zonglin-tian.github.io/categories/Coding/
+https://zonglin-tian.github.io/categories/Software/
