@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>TMUX 进程守护</title>
-    <link href="/2024/09/24/TMUX-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4/"/>
-    <url>/2024/09/24/TMUX-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4/</url>
+    <title>Ubuntu 利器</title>
+    <link href="/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/"/>
+    <url>/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="最常用命令"><a href="#最常用命令" class="headerlink" title="最常用命令"></a>最常用命令</h1>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="TMUX"><a href="#TMUX" class="headerlink" title="TMUX"></a>TMUX</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Tmux 用于分离终端与会话, 终端窗口关闭后, 会话仍在后台运行 (即进程守护)</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install tmux<br></code></pre></td></tr></table></figure><h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ul><li><strong>核心</strong>: session (会话) → window (窗口) → pane (面板)</li><li>前缀键 (prefix): <code>Ctrl + b</code></li><li>启动 (新建会话): <code>tmux</code> (左侧为窗口信息: 编号与名称, 右则为系统信息)</li><li>后台运行 (分离会话): <code>tmux deatach</code> 或 <code>prfix + d</code></li><li>查看会话: <code>tmux ls</code> 或 <code>tmux list-session</code></li><li>进入会话: <code>tmux a -t session_id</code></li><li>退出 (关闭) 会话: <code>exit</code> 或 <code>Ctrl + d</code> (会话外可使用 <code>tmux kill-session -t session_id</code>)</li><li>查看帮助: <code>prefix + ?</code> (按下 <code>ESC</code> 或 <code>q</code> 退出)</li></ul><h1 id="Asciinema"><a href="#Asciinema" class="headerlink" title="Asciinema"></a>Asciinema</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>用于录制和分享终端会话, 可以将命令行操作录制为 ASCII 视频格式, 方便记录和分享终端操作过程</p><p><em>单词理解</em>: ASCII  + Cinema → Asciinema (ASCII 电影, 即以 ASCII 字符形式记录和展示的终端操作过程)</p><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install asciinema<br></code></pre></td></tr></table></figure><h2 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 开始录制 (rec) 终端的输入与输出 (exit 结束录制)</span><br>asciinema rec /path_to_file/file_name.cast<br><span class="hljs-comment"># 即时显示 (cat) 录制的所有内容</span><br>asciinema <span class="hljs-built_in">cat</span> /path_to_file/file_name.cast<br></code></pre></td></tr></table></figure><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li>[1] <a href="https://zhuanlan.zhihu.com/p/261744578">chengco. asciinema:终端操作录制神器. 知乎</a></li></ul>]]></content>
     
     
     <categories>
@@ -814,7 +814,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-zxXJvnEl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-zxXJvnEl");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-RPAtojhn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-RPAtojhn");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
@@ -963,9 +963,9 @@
     
     <categories>
       
-      <category>Windows</category>
-      
       <category>Software</category>
+      
+      <category>Windows</category>
       
     </categories>
     
