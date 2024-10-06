@@ -107,9 +107,11 @@ def update_principle(excel_path):
     current_date = datetime.date.today()
     data = pd.read_excel(io=excel_path + ".xlsx")
     column_names = list(data)
+    last_num_days = 274
     ###########################################################
 
-    title_str = f"{sep_str}\n{current_date} 求圣: \na.节制  b.缄默  c.秩序  d.决心  e.自信  f.节俭  g.勤奋  h.诚信 i.正义 j.中庸 k.理智 l.清洁 m.贞洁 n.谦卑\n"
+    # title_str = f"{sep_str}\n{current_date} 求圣: \na.节制  b.缄默  c.秩序  d.决心  e.自信  f.节俭  g.勤奋  h.诚信 i.正义 j.中庸 k.理智 l.清洁 m.贞洁 n.谦卑\n"
+    title_str = f"{sep_str}\n{current_date} 求圣: \na.节制  b.缄默  c.秩序  d.勤奋 e.主线  f.贞洁  g.稳定\n"
     des_str = f"{sep_str}\n输入说明: \n"
     basic_str = "- 输入字母即表示对应项\033[1m失守\033[0m; \033[1m666 表示全坚守\033[0m; \n"
     repeated_str = "- 以 \033[1m2\033[0m 开头的字母表示\033[1m重复\033[0m失守; 以 \033[1m3\033[0m 开头的序号表示\033[1m多次失守\033[0m; \n"
@@ -139,7 +141,7 @@ def update_principle(excel_path):
             look_flag = True
 
     ###########################################################
-    day_of_year = current_date.timetuple().tm_yday
+    day_of_year = current_date.timetuple().tm_yday - last_num_days
 
     current_day_data = data.iloc[day_of_year - 1, :]
     prompt_str = f"{current_day_data.iloc[0].strftime('%Y-%m-%d')}: "
@@ -202,5 +204,6 @@ if __name__ == '__main__':
     update_life_data(file_name)
     print(sep_str)    
     print(sep_str)    
-    file_name = "T:/root/notes/geek_road/source/statistics/2024_principle_data"
+    # file_name = "T:/root/notes/geek_road/source/statistics/2024_principle_data"
+    file_name = "T:/root/notes/geek_road/source/statistics/2024_Oct_principle_data"
     update_principle(file_name)
