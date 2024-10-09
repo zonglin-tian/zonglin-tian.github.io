@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Typing</title>
+    <link href="/typing/"/>
+    <url>/typing/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h1><ol start="0"><li>电脑安装<strong>金山打字通</strong>软件</li><li>打开软件 → <code>新手入门</code> (打字常识和字母键位部分非常重要)</li><li><code>英文打字</code> → 直接进行 <code>文章练习</code> (<strong>最为重要</strong>)</li><li><code>拼音打字</code> → <code>词组练习</code> or <code>文章练习</code></li><li><em>五笔打字</em></li></ol><h1 id="练习记录"><a href="#练习记录" class="headerlink" title="练习记录"></a>练习记录</h1><h2 id="五笔单字"><a href="#五笔单字" class="headerlink" title="五笔单字"></a>五笔单字</h2><ul><li>2024-10-04 (一级简码综合 1)</li></ul><h2 id="英文文章"><a href="#英文文章" class="headerlink" title="英文文章"></a>英文文章</h2><ul><li>2024-10-04 (The road to modern English)</li></ul><h1 id="最佳速度"><a href="#最佳速度" class="headerlink" title="最佳速度"></a>最佳速度</h1><ul><li>英文文章: 199 字&#x2F;分 (2024-10-04)</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Others</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>书法</title>
     <link href="/handwriting/"/>
     <url>/handwriting/</url>
@@ -831,7 +850,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-CktnlKaA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-CktnlKaA");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-qDUwBtBf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-qDUwBtBf");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
