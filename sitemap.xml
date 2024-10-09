@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/2024/07/12/Computer-Graphics-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://zonglin-tian.github.io/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/</loc>
+    <loc>https://zonglin-tian.github.io/2024/07/12/Computer-Graphics-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -569,15 +569,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
-    
-    <lastmod>2024-04-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
@@ -587,7 +578,16 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json</loc>
+    
+    <lastmod>2024-04-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -605,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -738,13 +738,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
-    <lastmod>2024-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
     <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -752,21 +745,14 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
+    <lastmod>2024-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/tags/Python/</loc>
-    <lastmod>2024-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
-    <lastmod>2024-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
     <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -781,6 +767,20 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/tags/Keyboard/</loc>
+    <lastmod>2024-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
+    <lastmod>2024-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
     <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -803,14 +803,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Ubuntu/</loc>
     <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Ubuntu/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
