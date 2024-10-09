@@ -24,7 +24,7 @@
 <meta property="og:description" content="秩序始终前5 基本常规                  const currentDayIndex &#x3D; new Date().getDate() - 1;     const currentMonthIndex &#x3D; new Date().getMonth() + 1;     const x_fixed &#x3D; Math.max(100, Math.min(43* currentDayIndex -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-29T09:59:16.000Z">
-<meta property="article:modified_time" content="2024-10-09T02:51:38.616Z">
+<meta property="article:modified_time" content="2024-10-09T02:57:53.598Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -342,7 +342,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-10-09T10:51:38+08:00
+                    最后更新于: 2024-10-09T10:57:53+08:00
                   
                   
 
@@ -507,11 +507,26 @@
         // 获取滚动容器
         const scrollContainer = document.getElementById('scroll-principle');
 
+        // 恢复滚动位置
+        const savedScrollLeft = localStorage.getItem('scrollLeft');
+        const savedScrollTop = localStorage.getItem('scrollTop');
+
+        if (savedScrollLeft) {
+            scrollContainer.scrollLeft = parseInt(savedScrollLeft, 100);
+        }
+        if (savedScrollTop) {
+            scrollContainer.scrollTop = parseInt(savedScrollTop, 150);
+        }
+
         // 设置默认的滚动位置
         // 比如设置滚动条位置为水平中央
         myChart.on('finished', function() {
             scrollContainer.scrollLeft = x_fixed;
             scrollContainer.scrollTop = 350;
+
+            // 保存当前滚动位置
+            localStorage.setItem('scrollLeft', scrollContainer.scrollLeft);
+            localStorage.setItem('scrollTop', scrollContainer.scrollTop);
             });
         });
         <!-- window.onresize = myChart.resize; -->
