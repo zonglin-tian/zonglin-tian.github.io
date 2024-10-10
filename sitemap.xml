@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zonglin-tian.github.io/meditation/index.html</loc>
+    
+    <lastmod>2024-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/2024/10/10/CUDA-Toolkit-of-Conda-and-Local/</loc>
     
     <lastmod>2024-10-10</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://zonglin-tian.github.io/2024/06/26/Miniconda-%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2024-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/meditation/index.html</loc>
-    
-    <lastmod>2024-10-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -605,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -614,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -704,7 +704,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -713,7 +713,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
