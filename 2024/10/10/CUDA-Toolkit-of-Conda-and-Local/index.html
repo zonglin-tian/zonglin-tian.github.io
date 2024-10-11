@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/cuda.png">
 <meta property="article:published_time" content="2024-10-10T06:28:47.000Z">
-<meta property="article:modified_time" content="2024-10-10T07:32:10.388Z">
+<meta property="article:modified_time" content="2024-10-11T07:28:15.114Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-10-10T15:32:10+08:00
+                    最后更新于: 2024-10-11T15:28:15+08:00
                   
                   
 
@@ -371,7 +371,7 @@
 <li>1 的版本号必须<strong>不小于</strong> 2 和 3 的版本号</li>
 </ul>
 <h1 id="多版本-cuda-切换"><a href="#多版本-cuda-切换" class="headerlink" title="多版本 cuda 切换"></a>多版本 cuda 切换</h1><p>当 2 和 3 同时存在或者第 2 种情况下安装有多个版本的 CUDA Toolkit, 代码运行时, 需要根据实际情况指定默认的 cuda 版本. </p>
-<p><strong>查看当前 默认的 cuda:</strong> <code>which nvcc</code> 输出的向上两级目录</p>
+<p><strong>查看当前默认的 cuda:</strong> <code>which nvcc</code> 输出的向上两级目录</p>
 <ul>
 <li>例 1: 假设 2 和 3 同时并存, 指定 2 中的 cuda 作为默认 cuda 版本 (默认好像是这样; 倒是<em><strong>如何指定 3 中的 cuda 为默认值是个问题?</strong></em>)</li>
 <li>例 2: 假设 2 中同时存在多个版本 cuda, 指定特定版本号的 cuda 为默认值 (若例 1 需要指定, 与此相同)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 假设新安装的 cuda 路径为 /usr/local/cuda-12.1</span><br><span class="hljs-comment"># 在 .bashrc 或者 .zshrc 文件中定义或者修改和 cuda 相关的环境变量</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/cuda-12.1/bin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:<span class="hljs-variable">$LD_LIBRARY_PATH</span><br><span class="hljs-comment"># 当只是临时指定, 可直接在终端输入</span><br><span class="hljs-comment"># 保存退出</span><br><span class="hljs-built_in">source</span> .bashrc <span class="hljs-comment"># source .zshrc</span><br><span class="hljs-comment"># 验证是否设置正确</span><br><span class="hljs-built_in">which</span> nvcc  <span class="hljs-comment"># 输出结果应为 /usr/local/cuda-12.1/bin/nvcc</span><br></code></pre></td></tr></table></figure></li>
