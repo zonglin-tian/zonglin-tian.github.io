@@ -25,9 +25,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/cuda.png">
 <meta property="article:published_time" content="2024-10-10T06:28:47.000Z">
-<meta property="article:modified_time" content="2024-10-11T07:28:15.114Z">
+<meta property="article:modified_time" content="2024-10-25T00:15:29.729Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Writing...">
+<meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/cuda.png">
   
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          516 字
+          1.3k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          3 分钟
+          7 分钟
         
       </span>
     
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-10-11T15:28:15+08:00
+                    最后更新于: 2024-10-25T08:15:29+08:00
                   
                   
 
@@ -370,14 +370,51 @@
 <li>1 必须存在, 2 与 3 可同时存在也可只含其一</li>
 <li>1 的版本号必须<strong>不小于</strong> 2 和 3 的版本号</li>
 </ul>
-<h1 id="多版本-cuda-切换"><a href="#多版本-cuda-切换" class="headerlink" title="多版本 cuda 切换"></a>多版本 cuda 切换</h1><p>当 2 和 3 同时存在或者第 2 种情况下安装有多个版本的 CUDA Toolkit, 代码运行时, 需要根据实际情况指定默认的 cuda 版本. </p>
+<h1 id="CUDA-自定义安装"><a href="#CUDA-自定义安装" class="headerlink" title="CUDA 自定义安装"></a>CUDA 自定义安装</h1><ul>
+<li><p>通过 <code>nvidia-smi</code> 查看当前显卡驱动版本 (若没有安装, 可在后续安装 CUDA Toolkit 时选中 <code>Driver</code> 进行安装)</p>
+</li>
+<li><p>到<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">官网</a>下载对应版本的 CUDA Toolkit (向下兼容). 以 ubuntu 20.04 安装 12.4.0 为例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Linux → x86_64 → Ubuntu → 20.04 → runfile (local) → 查看下方的 Installation Instructions</span><br>wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run<br><span class="hljs-comment"># 当想自定义安装位置在个人工作目录下时, 命令可不以 sudo 开头</span><br>sudo sh cuda_12.4.0_550.54.14_linux.run<br></code></pre></td></tr></table></figure></li>
+<li><p><span class="emp-style red">安装关键之处</span></p>
+<ol>
+<li>通常不需勾选安装&#x2F;更新显卡驱动 (若要勾选, 前面的命令应以 <code>sudo</code> 开头)</li>
+<li>对于深度学习, 一般只需勾选第二个 <code>CUDA Toolkit</code>, 后面的不需要  <div style="text-align: center;">
+  <img src="/img/posts/CUDA-Toolkit-of-Conda-and-Local/cuda_install.png" srcset="/img/fluid_theme/loading.gif" lazyload style="zoom:80%">
+  </div></li>
+<li><strong>点击 <code>Options</code> → <code>Toolkit Options</code> 可自定义 CUDA 安装位置</strong> (最后的 <code>Library install path</code> 通常不需要管)</li>
+<li>一切定义好之后, 点击 <code>Install</code></li>
+<li>安装完成后会有相关提示, 可复制其中的<strong>路径</strong>, 方便后面定义环境变量</li>
+</ol>
+</li>
+<li><p>定义相关环境变量, 写入 <code>.bashrc</code> 或者 <code>.zshrc</code> 文件中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 对于自定义 cuda 安装位置, 必不可少</span><br><span class="hljs-comment"># 以 cuda-12.4 为例, 语句中的路径需要替换为前面安装完成时的输出路径</span><br><span class="hljs-built_in">export</span> CUDA_HOME=/usr/local/cuda-12.4/<br><span class="hljs-built_in">export</span> PATH=/usr/local/cuda-12.4/bin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64:<span class="hljs-variable">$LD_LIBRARY_PATH</span><br></code></pre></td></tr></table></figure></li>
+<li><p>验证</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># nvcc 有定义或者路径正确</span><br><span class="hljs-built_in">which</span> nvcc  <span class="hljs-comment"># 输出的前缀应以安装的 cuda 的路径为前缀</span><br>nvcc -V  <span class="hljs-comment"># 输出应为安装的 cuda 版本</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="多版本-CUDA-切换"><a href="#多版本-CUDA-切换" class="headerlink" title="多版本 CUDA 切换"></a>多版本 CUDA 切换</h1><p>当 2 和 3 同时存在或者第 2 种情况下安装有多个版本的 CUDA Toolkit, 代码运行时, 需要根据实际情况指定默认的 cuda 版本. </p>
 <p><strong>查看当前默认的 cuda:</strong> <code>which nvcc</code> 输出的向上两级目录</p>
 <ul>
-<li>例 1: 假设 2 和 3 同时并存, 指定 2 中的 cuda 作为默认 cuda 版本 (默认好像是这样; 倒是<em><strong>如何指定 3 中的 cuda 为默认值是个问题?</strong></em>)</li>
-<li>例 2: 假设 2 中同时存在多个版本 cuda, 指定特定版本号的 cuda 为默认值 (若例 1 需要指定, 与此相同)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 假设新安装的 cuda 路径为 /usr/local/cuda-12.1</span><br><span class="hljs-comment"># 在 .bashrc 或者 .zshrc 文件中定义或者修改和 cuda 相关的环境变量</span><br><span class="hljs-built_in">export</span> PATH=/usr/local/cuda-12.1/bin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:<span class="hljs-variable">$LD_LIBRARY_PATH</span><br><span class="hljs-comment"># 当只是临时指定, 可直接在终端输入</span><br><span class="hljs-comment"># 保存退出</span><br><span class="hljs-built_in">source</span> .bashrc <span class="hljs-comment"># source .zshrc</span><br><span class="hljs-comment"># 验证是否设置正确</span><br><span class="hljs-built_in">which</span> nvcc  <span class="hljs-comment"># 输出结果应为 /usr/local/cuda-12.1/bin/nvcc</span><br></code></pre></td></tr></table></figure></li>
+<li>例 1: 假设 2 和 3 同时并存, 默认使用 3 中的 cuda, <em><strong>如何指定 2 中的 cuda 为默认值是个问题?</strong></em><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 查看 PyTorch 编译时 cuda 的版本</span><br><span class="hljs-keyword">import</span> torch<br><span class="hljs-comment"># torch.__version__</span><br><span class="hljs-comment"># torch.cuda.is_available()</span><br>torch.version.cuda<br><span class="hljs-comment"># 查看 PyTorch 运行时调用的 cuda 版本</span><br><span class="hljs-keyword">import</span> torch.utils.cpp_extension<br>torch.utils.cpp_extension.CUDA_HOME<br></code></pre></td></tr></table></figure></li>
+<li>例 2: 假设 2 中同时存在多个版本 cuda, 指定特定版本号的 cuda 为默认值 (<em><strong>对基于 Tensorflow 的任务可能较常遇到</strong></em>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 假设安装的 cuda 都在 /usr/local/ 下, 有 cuda-12.1, cuda-12.4</span><br><span class="hljs-comment"># 在 .bashrc 或者 .zshrc 文件中定义或者修改和 cuda 相关的环境变量</span><br><br><span class="hljs-comment"># 定义 CUDA_VERSION 这个变量使得后续更改更优雅</span><br><span class="hljs-comment"># 完全可以不用定义, 之后的更改使用完全显示的路径即可</span><br><span class="hljs-built_in">export</span> CUDA_VERSION=12.4<br><span class="hljs-built_in">export</span> CUDA_HOME=/usr/local/cuda-<span class="hljs-variable">$CUDA_VERSION</span>/<br><span class="hljs-built_in">export</span> PATH=/usr/local/cuda-<span class="hljs-variable">$CUDA_VERSION</span>/bin:<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-<span class="hljs-variable">$CUDA_VERSION</span>/lib64:<span class="hljs-variable">$LD_LIBRARY_PATH</span><br><span class="hljs-comment"># 当只是临时指定, 可直接在终端输入</span><br><span class="hljs-comment"># 保存退出</span><br><span class="hljs-built_in">source</span> .bashrc <span class="hljs-comment"># source .zshrc</span><br><span class="hljs-comment"># 验证是否设置正确</span><br><span class="hljs-built_in">which</span> nvcc  <span class="hljs-comment"># 输出结果应为 /usr/local/cuda-12.4/bin/nvcc</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h1 id="cuDNN"><a href="#cuDNN" class="headerlink" title="cuDNN"></a>cuDNN</h1><p>cuDNN 是针对深度神经网络中的基础操作而设计基于 GPU 的加速库, 前面 3 会自动安装相应的 cuDNN, 当只是 2 存在时, 需要额外安装 cuDNN 并对相关文件复制&#x2F;移动</p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/bird11111/article/details/105746686">一颗牙牙. 下载各版本cuda，下载以前版本的cuda. CSDN</a><br>[2] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yhjoker/p/10972795.html"><strong>yhjoker. Pytorch 使用不同版本的 cuda. 博客园</strong></a><br>[3] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/91334380"><strong>marsggbo. 显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？知乎</strong></a><br>[4] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42406643/article/details/109545766">tomorrow″. 理清GPU、CUDA、CUDA Toolkit、cuDNN关系以及下载安装. CSDN</a></p>
+<div class="note note-warning">
+            <p><strong>个人理解:</strong></p><ol><li>基于 PyTorch 的深度学习任务, 按照<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>提供的命令进行安装即可, <strong>不需要</strong>额外安装 CUDA Toolkit 与 cuDNN</li><li>基于 Tensorflow 的深度学习任务需要根据要安装的 <a target="_blank" rel="noopener" href="https://tensorflow.google.cn/install/source#linux"><strong>Tensorflow 版本</strong></a>来安装相应版本的 CUDA Toolki 与 cuDNN, 并通常涉及到<a href="/2024/10/10/CUDA-Toolkit-of-Conda-and-Local/#%E5%A4%9A%E7%89%88%E6%9C%AC-cuda-%E5%88%87%E6%8D%A2"><strong>多版本 CUDA 切换</strong></a></li></ol>
+          </div>
+
+<p><span style="font-size:15pt;font-weight:bold;color:red">Steps:</span> </p>
+<ul>
+<li>安装显卡驱动与 CUDA Toolkit (假设都为 12.4)</li>
+<li>到<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">官网</a>下载对应的 cuDNN 版本 (比如 v8.9.7) → <code>Local Installer for Linux x86_64 (Tar)</code> → 上传到服务器</li>
+<li>解压缩上面的 <code>.tar.xz</code> 文件并复制相关文件到对应的 CUDA 目录下. 以 <code>/usr/local/cuda-12.4/</code> 为例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 解压缩</span><br>tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz<br><span class="hljs-built_in">cd</span> cudnn-linux-x86_64-8.9.7.29_cuda12-archive<br><span class="hljs-comment"># 复制文件</span><br>sudo <span class="hljs-built_in">cp</span> include/cudnn*.h /usr/local/cuda-12.4/include<br>sudo <span class="hljs-built_in">cp</span> lib/libcudnn* /usr/local/cuda-12.4/lib64<br><span class="hljs-comment"># 为所有用户添加写权限 (可选, 通常都具有写的权限)</span><br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/include/cudnn*.h<br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/lib64/libcudnn*<br><span class="hljs-comment"># 查看 cuDNN 信息</span><br><span class="hljs-built_in">cat</span> /usr/local/cuda-12.4/include/cudnn_version.h | grep CUDNN_MAJOR -A 2<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><ul>
+<li>ubuntu 安装 Tensorflow<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51302496/article/details/137185657">配置Tensorflow使用CUDA进行GPU加速(超详细教程)</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/bird11111/article/details/105746686">一颗牙牙. 下载各版本cuda，下载以前版本的cuda. CSDN</a><br>[2] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yhjoker/p/10972795.html"><strong>yhjoker. Pytorch 使用不同版本的 cuda. 博客园</strong></a><br>[3] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/91334380"><strong>marsggbo. 显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？知乎</strong></a><br>[4] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42406643/article/details/109545766">tomorrow″. 理清GPU、CUDA、CUDA Toolkit、cuDNN关系以及下载安装. CSDN</a><br>[5] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37926734/article/details/123033286">嵌入式技术. Ubuntu20.04下CUDA、cuDNN的详细安装与配置过程（图文）.CSDN</a><br>[6] <a target="_blank" rel="noopener" href="https://blog.csdn.net/AI_BING_/article/details/129316768?ops_request_misc=&request_id=&biz_id=102&utm_term=%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8Bpytorch%E7%94%A8%E7%9A%84cuda%E7%89%88%E6%9C%AC&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-129316768.142%5Ev73%5Einsert_down3,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&spm=1018.2226.3001.4187">我是好人BING. 如何正确查看pytorch运行时真正调用的cuda版本. CSDN</a></p>
 
                 
               </div>
@@ -411,13 +448,6 @@
 
     </div>
   
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Writing/" class="print-no-link">#Writing...</a>
-      
-    </div>
   
 </div>
 
