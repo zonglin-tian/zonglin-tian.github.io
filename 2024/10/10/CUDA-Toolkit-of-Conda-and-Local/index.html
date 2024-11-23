@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/cuda.png">
 <meta property="article:published_time" content="2024-10-10T06:28:47.000Z">
-<meta property="article:modified_time" content="2024-10-25T00:15:29.729Z">
+<meta property="article:modified_time" content="2024-11-23T14:47:21.213Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,7 +294,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-10-25T08:15:29+08:00
+                    最后更新于: 2024-11-23T22:47:21+08:00
                   
                   
 
@@ -406,7 +406,17 @@
 <ul>
 <li>安装显卡驱动与 CUDA Toolkit (假设都为 12.4)</li>
 <li>到<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">官网</a>下载对应的 cuDNN 版本 (比如 v8.9.7) → <code>Local Installer for Linux x86_64 (Tar)</code> → 上传到服务器</li>
-<li>解压缩上面的 <code>.tar.xz</code> 文件并复制相关文件到对应的 CUDA 目录下. 以 <code>/usr/local/cuda-12.4/</code> 为例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 解压缩</span><br>tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz<br><span class="hljs-built_in">cd</span> cudnn-linux-x86_64-8.9.7.29_cuda12-archive<br><span class="hljs-comment"># 复制文件</span><br>sudo <span class="hljs-built_in">cp</span> include/cudnn*.h /usr/local/cuda-12.4/include<br>sudo <span class="hljs-built_in">cp</span> lib/libcudnn* /usr/local/cuda-12.4/lib64<br><span class="hljs-comment"># 为所有用户添加写权限 (可选, 通常都具有写的权限)</span><br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/include/cudnn*.h<br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/lib64/libcudnn*<br><span class="hljs-comment"># 查看 cuDNN 信息</span><br><span class="hljs-built_in">cat</span> /usr/local/cuda-12.4/include/cudnn_version.h | grep CUDNN_MAJOR -A 2<br></code></pre></td></tr></table></figure></li>
+<li>解压缩上面的 <code>.tar.xz</code> 文件并复制相关文件到对应的 CUDA 目录下. 以 <code>/usr/local/cuda-12.4/</code> 为例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 解压缩</span><br>tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz<br><span class="hljs-built_in">cd</span> cudnn-linux-x86_64-8.9.7.29_cuda12-archive<br><span class="hljs-comment"># 复制文件</span><br>sudo <span class="hljs-built_in">cp</span> include/cudnn*.h /usr/local/cuda-12.4/include<br>sudo <span class="hljs-built_in">cp</span> lib/libcudnn* /usr/local/cuda-12.4/lib64<br><span class="hljs-comment"># 为所有用户添加读权限 (可选, 通常都具有读的权限)</span><br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/include/cudnn*.h<br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/lib64/libcudnn*<br><span class="hljs-comment"># 查看 cuDNN 信息</span><br><span class="hljs-built_in">cat</span> /usr/local/cuda-12.4/include/cudnn_version.h | grep CUDNN_MAJOR -A 2<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="Ubuntu-显卡驱动更新"><a href="#Ubuntu-显卡驱动更新" class="headerlink" title="Ubuntu 显卡驱动更新"></a>Ubuntu 显卡驱动更新</h1><ul>
+<li><p>基本命令 (sudo 运行)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt update<br>apt install software-properties-common  <span class="hljs-comment"># 为了使用 add-apt-repository 命令</span><br>apt install ubuntu-drivers-common  <span class="hljs-comment"># 为了使用 ubuntu-drivers 命令</span><br><span class="hljs-comment"># 添加 NVIDIA PPA</span><br>add-apt-repository ppa:graphics-drivers/ppa<br>apt update<br><span class="hljs-comment"># 查找可用的 NVIDIA 驱动驱动程序</span><br>apt search nvidia-driver<br>apt install nvidia-driver-&lt;version&gt;<br><span class="hljs-comment"># 重启计算机</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>PyTorch 无法使用 (<code>CUDA unknown error</code>)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43428139/article/details/133498358">白帽子续命指南. RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environme… .CSDN</a></li>
+</ul>
+</li>
 </ul>
 <h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><ul>
 <li>ubuntu 安装 Tensorflow<ul>
