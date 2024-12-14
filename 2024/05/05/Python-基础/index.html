@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_basic.jpg">
 <meta property="article:published_time" content="2024-05-05T02:47:45.000Z">
-<meta property="article:modified_time" content="2024-11-21T08:23:00.299Z">
+<meta property="article:modified_time" content="2024-12-14T02:44:22.070Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1.3k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -450,7 +450,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-11-21T16:23:00+08:00
+                    最后更新于: 2024-12-14T10:44:22+08:00
                   
                   
 
@@ -471,6 +471,21 @@
 <li>使用首字母缩写</li>
 <li>保留单词词干</li>
 <li>蛇形命名法</li>
+</ul>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>以类型注解的方式解释变量, 参考注释: </p>
+<ul>
+<li>基本类型: int, float, bool, tensor, ndarray</li>
+<li><code>list[int|str]</code>: 元素为 int 或 str 类型的列表</li>
+<li><code>dict[str,int]</code>: 键为 str 类型, 值为 int 类型的字典</li>
+<li><code>tuple[int, str]</code>: 第一个值为 int 类型, 第二个值为 str 类型的元组</li>
+<li><code>tuple[int, ...]</code>: 所有元素为 int 类型的元组</li>
+<li><code>Iterable[int]</code>: 所有元素为 int 类型的可迭代对象</li>
+<li><code>Sequence[T]</code>: 所有元素为 T 类型的序列</li>
+<li><code>Mapping[str,int]</code>: 从 str 类型到 int 类型的映射</li>
+</ul>
+<p>参考:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mypy.readthedocs.io/en/stable/builtin_types.html">mypy document</a></li>
 </ul>
 <h1 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h1><h2 id="日志文件记录"><a href="#日志文件记录" class="headerlink" title="日志文件记录"></a>日志文件记录</h2><ul>
 <li>将程序的运行 (标准与错误) 输出显示到终端并保存到文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># $(command) 表示将 command 的输出插入到当前命令中 (命令替换, 相当于 &quot;复合变量&quot; 值的引用)</span><br><span class="hljs-comment"># date +Format 是 date 命令的格式化输出, 用 _ 分隔日期和时间部分</span><br>python exp_runner.py 2&gt;&amp;1 | <span class="hljs-built_in">tee</span> <span class="hljs-string">&quot;/path_to_log/log_<span class="hljs-subst">$(date +&#x27;%H_%M%S_%m%d_%y&#x27;)</span>.txt&quot;</span><br><br></code></pre></td></tr></table></figure></li>
