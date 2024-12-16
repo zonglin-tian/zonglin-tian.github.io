@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2024-06-11T05:31:25.000Z">
-<meta property="article:modified_time" content="2024-09-01T12:08:35.026Z">
+<meta property="article:modified_time" content="2024-12-16T01:53:25.520Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          322 字
+          544 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-09-01T20:08:35+08:00
+                    最后更新于: 2024-12-16T09:53:25+08:00
                   
                   
 
@@ -354,17 +354,40 @@
             
               <div class="markdown-body">
                 
-                <h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><h2 id="基本符号"><a href="#基本符号" class="headerlink" title="基本符号"></a>基本符号</h2><ul>
+                <h1 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h1><h2 id="高亮与颜色"><a href="#高亮与颜色" class="headerlink" title="高亮与颜色"></a>高亮与颜色</h2><p><strong>使用宏包: xcolor</strong></p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-params">#</span> 颜色<br><span class="hljs-keyword">\textcolor</span>&#123;red&#125;&#123;colored<span class="hljs-built_in">_</span>text&#125;<br><span class="hljs-keyword">\textcolor</span>&#123;gray&#125;&#123;colored<span class="hljs-built_in">_</span>text&#125;<br><span class="hljs-keyword">\color</span>&#123;blue&#125; colored<span class="hljs-built_in">_</span>text<br><br><span class="hljs-params">#</span> 高亮<br><span class="hljs-keyword">\colorbox</span>&#123;green&#125;&#123;<span class="hljs-keyword">\color</span>&#123;<span class="hljs-keyword">\black</span>&#125; black text with green background&#125;<br><span class="hljs-keyword">\fcolorbox</span>&#123;red&#125;&#123;yellow&#125;&#123;yellow background with red frame&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="数学字体加粗"><a href="#数学字体加粗" class="headerlink" title="数学字体加粗"></a>数学字体加粗</h2><ul>
+<li><code>\textbf</code>: 文本环境加粗, 没有斜体且无法对希腊字母加粗</li>
+<li><code>\mathbf</code>: 效果同 <code>\textbf</code></li>
+<li><code>\boldmath</code>: 加粗且有斜体效果, 依赖 <em>amsmath</em> 宏包</li>
+<li><code>\boldsymbol</code>: 加粗有斜体效果, 并对希腊字母有效, 依赖 <em>amsmath</em> 宏包</li>
+</ul>
+<p><strong>在数学环境中, 推荐使用 宏包 bm 的 <code>\bm</code> 命令</strong> . 对于 <em>xelatex</em> 的情形, 若 <code>\bm</code> 报错, 尝试:</p>
+<ul>
+<li><code>\symbfit</code>: 加粗与斜体</li>
+<li><code>\symbf</code>: 加粗无斜体</li>
+<li><code>\mathbfcal</code>: 加粗的 <code>\mathcal</code> 字体</li>
+</ul>
+<h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2><ul>
+<li><code>\boxed</code></li>
+</ul>
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><h2 id="基本符号"><a href="#基本符号" class="headerlink" title="基本符号"></a>基本符号</h2><ul>
 <li>乘号 $\times$: <code>\times</code></li>
 <li>星号 $\ast$: <code>\ast</code></li>
 <li>点乘 $\cdot$: <code>\cdot</code></li>
 <li>约等于 $\approx$: <code>\approx</code></li>
+<li>梯度 $\nabla$: <code>\nabla</code></li>
+<li>箭头: 双向 <code>\leftrightarrow</code></li>
 </ul>
 <h2 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;equation&#125;<br>    sgn<span class="hljs-keyword">\left</span>(x<span class="hljs-keyword">\right</span>)=<span class="hljs-keyword">\left</span><span class="hljs-keyword">\&#123;</span><br>        <span class="hljs-keyword">\begin</span>&#123;array&#125;&#123;ll&#125;  <span class="hljs-comment">% 每一列均左对齐</span><br>            1, <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\quad</span> x&gt;0 <span class="hljs-keyword">\\</span><br>            0, <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\quad</span> x=0 <span class="hljs-keyword">\\</span><br>            -1, <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\quad</span> x&lt;0 <span class="hljs-keyword">\\</span><br>        <span class="hljs-keyword">\end</span>&#123;array&#125;<br>    <span class="hljs-keyword">\right</span>.<br><span class="hljs-keyword">\end</span>&#123;equation&#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="调整公式字体大小"><a href="#调整公式字体大小" class="headerlink" title="调整公式字体大小"></a>调整公式字体大小</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;small&#125;<br><span class="hljs-comment">% normalsize &gt; large &gt; Large &gt; huge &gt; Huge &gt; small &gt; footnotesize &gt; scriptsize &gt; tiny</span><br><span class="hljs-keyword">\begin</span>&#123;equation&#125;<br>...<br><span class="hljs-keyword">\end</span>&#123;equation&#125;<br><span class="hljs-keyword">\end</span>&#123;small&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><ul>
 <li>自定义括号大小: <code>\big, \Big, \bigg, \Bigg</code></li>
+</ul>
+<h1 id="自定义命令"><a href="#自定义命令" class="headerlink" title="自定义命令"></a>自定义命令</h1><ul>
+<li><em>et al.</em><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\DeclareRobustCommand</span>&#123;<span class="hljs-keyword">\etal</span>&#125;&#123;<span class="hljs-keyword">\textit</span>&#123;et al.&#125;&#125;<br></code></pre></td></tr></table></figure></li>
+<li>图片以 Fig. 为引用前缀<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\figref</span>&#125;[1]&#123;Fig.~<span class="hljs-keyword">\ref</span>&#123;<span class="hljs-params">#1</span>&#125;&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
 <li>TexLive</li>
