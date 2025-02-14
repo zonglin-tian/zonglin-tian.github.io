@@ -16,15 +16,15 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_life_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var w">
+    <meta name="description" content="Ubuntu 入门操作与命令 ZSH 配置 Bash 配置  软件使用 Vim PyCharm Autohotkey M">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Writing">
 <meta property="og:url" content="https://zonglin-tian.github.io/writing/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="d3.csv(&quot;&#x2F;statistics&#x2F;2024_life_data.csv&quot;, function(error, csvdata){     if(error){         console.log(error);     }     else{         console.log(csvdata);         var date_data;         var w">
+<meta property="og:description" content="Ubuntu 入门操作与命令 ZSH 配置 Bash 配置  软件使用 Vim PyCharm Autohotkey M">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-07T11:45:09.000Z">
-<meta property="article:modified_time" content="2025-02-13T02:09:52.150Z">
+<meta property="article:modified_time" content="2025-02-14T02:16:38.173Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -281,7 +281,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          302 字
+          51 字
         
       </span>
     
@@ -292,7 +292,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -342,7 +342,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-02-13T10:09:52+08:00
+                    最后更新于: 2025-02-14T10:16:38+08:00
                   
                   
 
@@ -354,124 +354,125 @@
             
               <div class="markdown-body">
                 
-                <!-- 绘制打卡图 -->
-<script src="/js/echarts.js"></script>
-<!-- <div id="main" style="height:180px;width:900px;float:left;"></div> -->
-<div id="scroll-writing" style="width:auto;height:190px;overflow-x:auto;overflow-y:auto;">
-<div id="writing" style="height:180px;width:900px;"></div>
-</div>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-d3.csv("/statistics/2024_life_data.csv", function(error, csvdata){
-    if(error){
-        console.log(error);
-    }
-    else{
-        console.log(csvdata);
-        var date_data;
-        var writing_data = [];
-        <!-- var reading_data = []; -->
-        for(var i=0; i < csvdata.length; i++){
-            date_data = csvdata[i]['date'];  //对象转数组
-            <!-- console.log(date_data); -->
-            writing_data.push([date_data, parseInt(csvdata[i]['writing'])]);
-            <!-- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -->
-           }
-        console.log(writing_data);
-        var myChart = echarts.init(document.getElementById("writing"));
-        var option = {
-            title: {
-                top: 'top',
-                text: '2025 写作记录',
-                left: 'center',
-                textStyle: {
-                color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            tooltip: {
-                padding: 10,
-                backgroundColor:'rgb(37,45,56)',
-                borderColor: '#777',
-                borderWidth: 1,
-                formatter: function (obj) {
-                var value = obj.value;
-                var num_meaning = ['😔', 'basic', 'one', 'more', 'website'];
-                return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>');
-                }
-            },
-            visualMap: {
-                type: "piecewise",
-                showLabel: false,
-                categories: [0, 1, 2, 3, 4],
-                inRange: {
-                    symbol: 'rect',
-                    color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127', '#8b1fac']
-                },
-                show: true,
-                itemWidth: 12,
-                itemHeight: 12,
-                orient: 'horizontal',
-                left: 35,
-                top: 15,
-                textStyle: {
-                color: 'rgba(39, 132, 175, 1)'
-                }
-            },
-            calendar: {
-                range: '2024',
-                <!-- cellSize: [13, 13], -->
-                cellSize: ['auto', 'auto'],                
-                splitLine: {
-                    show: true,
-                    lineStyle: {
-                        color: 'rgba(105, 105, 105, 0.45)'
-                    }
-                },
-                itemStyle: {
-                    color: '#EEEEEE',
-                    borderColor: '#FFF',
-                borderWidth: 2
-                },
-                yearLabel: {
-                    show: false
-                    },
-                monthLabel: {
-                    nameMap: 'EN',
-                    fontWeight: 'lighter',
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                },
-                dayLabel: {
-                    show: true,
-                    fontWeight: 'lighter',
-                    nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'],
-                    fontSize: 12,
-                    color: 'rgba(255, 255, 255, 1)'
-                }
-            },
-            series: [{
-                type: 'heatmap',
-                coordinateSystem: 'calendar',
-                data: writing_data
-            }]
-        }
-    myChart.setOption(option);
-    document.addEventListener('DOMContentLoaded', function() {
-    // 获取滚动容器
-    const scrollContainer = document.getElementById('scroll-writing');
-    // 设置默认的滚动位置
-    // 比如设置滚动条位置为水平中央
-    scrollContainer.scrollLeft = 500;
-    <!-- window.onresize = myChart.resize; -->
-    });    
-} // mathch else
-});
-</script>
+                <!-- <!-1- 绘制打卡图 -1-> -->
+<!-- <script src="/js/echarts.js"></script> -->
+<!-- <!-1- <div id="main" style="height:180px;width:900px;float:left;"></div> -1-> -->
+<!-- <div id="scroll-writing" style="width:auto;height:190px;overflow-x:auto;overflow-y:auto;"> -->
+<!-- <div id="writing" style="height:180px;width:900px;"></div> -->
+<!-- </div> -->
+<!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+<!-- <script> -->
+<!-- d3.csv("/statistics/2024_life_data.csv", function(error, csvdata){ -->
+<!--     if(error){ -->
+<!--         console.log(error); -->
+<!--     } -->
+<!--     else{ -->
+<!--         console.log(csvdata); -->
+<!--         var date_data; -->
+<!--         var writing_data = []; -->
+<!--         <!-1- var reading_data = []; -1-> -->
+<!--         for(var i=0; i < csvdata.length; i++){ -->
+<!--             date_data = csvdata[i]['date'];  //对象转数组 -->
+<!--             <!-1- console.log(date_data); -1-> -->
+<!--             writing_data.push([date_data, parseInt(csvdata[i]['writing'])]); -->
+<!--             <!-1- reading_data.push([date_data, parseInt(csvdata[i]['reading'])]); -1-> -->
+<!--            } -->
+<!--         console.log(writing_data); -->
+<!--         var myChart = echarts.init(document.getElementById("writing")); -->
+<!--         var option = { -->
+<!--             title: { -->
+<!--                 top: 'top', -->
+<!--                 text: '2025 写作记录', -->
+<!--                 left: 'center', -->
+<!--                 textStyle: { -->
+<!--                 color: 'rgba(255, 255, 255, 1)' -->
+<!--                 } -->
+<!--             }, -->
+<!--             tooltip: { -->
+<!--                 padding: 10, -->
+<!--                 backgroundColor:'rgb(37,45,56)', -->
+<!--                 borderColor: '#777', -->
+<!--                 borderWidth: 1, -->
+<!--                 formatter: function (obj) { -->
+<!--                 var value = obj.value; -->
+<!--                 var num_meaning = ['😔', 'basic', 'one', 'more', 'website']; -->
+<!--                 return ('<div style="font-size: 14px;">' + value[0] + ': ' + num_meaning[value[1]] + '</div>'); -->
+<!--                 } -->
+<!--             }, -->
+<!--             visualMap: { -->
+<!--                 type: "piecewise", -->
+<!--                 showLabel: false, -->
+<!--                 categories: [0, 1, 2, 3, 4], -->
+<!--                 inRange: { -->
+<!--                     symbol: 'rect', -->
+<!--                     color: ['#ebedf0', '#7bc96f', '#239a3b', '#196127', '#8b1fac'] -->
+<!--                 }, -->
+<!--                 show: true, -->
+<!--                 itemWidth: 12, -->
+<!--                 itemHeight: 12, -->
+<!--                 orient: 'horizontal', -->
+<!--                 left: 35, -->
+<!--                 top: 15, -->
+<!--                 textStyle: { -->
+<!--                 color: 'rgba(39, 132, 175, 1)' -->
+<!--                 } -->
+<!--             }, -->
+<!--             calendar: { -->
+<!--                 range: '2024', -->
+<!--                 <!-1- cellSize: [13, 13], -1-> -->
+<!--                 cellSize: ['auto', 'auto'], -->                
+<!--                 splitLine: { -->
+<!--                     show: true, -->
+<!--                     lineStyle: { -->
+<!--                         color: 'rgba(105, 105, 105, 0.45)' -->
+<!--                     } -->
+<!--                 }, -->
+<!--                 itemStyle: { -->
+<!--                     color: '#EEEEEE', -->
+<!--                     borderColor: '#FFF', -->
+<!--                 borderWidth: 2 -->
+<!--                 }, -->
+<!--                 yearLabel: { -->
+<!--                     show: false -->
+<!--                     }, -->
+<!--                 monthLabel: { -->
+<!--                     nameMap: 'EN', -->
+<!--                     fontWeight: 'lighter', -->
+<!--                     fontSize: 12, -->
+<!--                     color: 'rgba(255, 255, 255, 1)' -->
+<!--                 }, -->
+<!--                 dayLabel: { -->
+<!--                     show: true, -->
+<!--                     fontWeight: 'lighter', -->
+<!--                     nameMap: ['Sun', ' ', ' ', 'Wed', ' ', ' ', 'Sat'], -->
+<!--                     fontSize: 12, -->
+<!--                     color: 'rgba(255, 255, 255, 1)' -->
+<!--                 } -->
+<!--             }, -->
+<!--             series: [{ -->
+<!--                 type: 'heatmap', -->
+<!--                 coordinateSystem: 'calendar', -->
+<!--                 data: writing_data -->
+<!--             }] -->
+<!--         } -->
+<!--     myChart.setOption(option); -->
+<!--     document.addEventListener('DOMContentLoaded', function() { -->
+<!--     // 获取滚动容器 -->
+<!--     const scrollContainer = document.getElementById('scroll-writing'); -->
+<!--     // 设置默认的滚动位置 -->
+<!--     // 比如设置滚动条位置为水平中央 -->
+<!--     scrollContainer.scrollLeft = 500; -->
+<!--     <!-1- window.onresize = myChart.resize; -1-> -->
+<!--     }); -->    
+<!-- } // mathch else -->
+<!-- }); -->
+<!-- </script> -->
 
 
-<hr>
+<!-- <hr> -->
 
-<p style="text-align:center;"><span style="font-size:24pt;font-weight:bold">终身学习</span></p>
+<!-- <p style="text-align:center;"><span style="font-size:24pt;font-weight:bold">终身学习</span></p> -->
+
 
 <h1 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h1><ul>
 <li>入门操作与命令</li>
@@ -657,7 +658,7 @@ d3.csv("/statistics/2024_life_data.csv", function(error, csvdata){
     <div class="footer-inner">
   
     <div class="footer-content">
-       <div> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <a href="/hexo-fluid/" target="_self" rel="nofollow noopener"><i class="iconfont icon-love"></i></a> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="/magic/" target="_self" rel="nofollow noopener"><i class="iconfont icon-cards"></i></a>&nbsp;<span>Magic</span> </div> <div> <i class="iconfont icon-ai250"></i> <a href="/inspiring/" target="_self" rel="nofollow noopener">W</a><a href="/writing/" target="_self" rel="nofollow noopener"><span>riting</span></a> <a href="/reading/" target="_self" rel="nofollow noopener"><span>Reading</span></a> <a href="/running/" target="_self" rel="nofollow noopener"><span>Running</span></a> <a href="/meditation/" target="_self" rel="nofollow noopener"><span>Meditati</span></a><a href="/discipline/" target="_self" rel="nofollow noopener"><span>o</span></a><span>n</span> <i class="iconfont icon-shiwutubiao-07"></i> </div> 
+       <div> <a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <a href="/hexo-fluid/" target="_self" rel="nofollow noopener"><i class="iconfont icon-love"></i></a> <a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#脚注" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="/magic/" target="_self" rel="nofollow noopener"><i class="iconfont icon-cards"></i></a>&nbsp;<span>Magic</span> </div> <div> <i class="iconfont icon-ai250"></i> <a href="/inspiring/" target="_self" rel="nofollow noopener">W</a><a href="/writing/" target="_self" rel="nofollow noopener"><span>riting</span></a> <a href="/reading/" target="_self" rel="nofollow noopener"><span>Reading</span></a> <a href="/running/" target="_self" rel="nofollow noopener"><span>Running</span></a> <a href="/meditation/" target="_self" rel="nofollow noopener"><span>Meditati</span></a><a href="/discipline/" target="_self" rel="nofollow noopener"><span>o</span></a><span>n</span> <i class="iconfont icon-shiwutubiao-07"></i> </div> 
     </div>
   
   
