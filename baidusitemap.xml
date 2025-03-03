@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io/2025/03/03/Word-%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2025-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2025-03-03</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io/2025/02/20/%E4%B8%93%E4%B8%9A%E5%8D%95%E8%AF%8D%E4%B8%8E%E6%9C%AF%E8%AF%AD/</loc>
     <lastmod>2025-02-20</lastmod>
   </url>
@@ -31,10 +39,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2024-12-16</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/</loc>
@@ -181,11 +185,11 @@
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/05/25/PyCharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://zonglin-tian.github.io/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://zonglin-tian.github.io/2024/05/25/PyCharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
