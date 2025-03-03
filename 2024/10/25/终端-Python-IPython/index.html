@@ -1,0 +1,1012 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid_theme/fluid.png">
+  <link rel="icon" href="/img/fluid_theme/conan_b.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Temm">
+  <meta name="keywords" content="奋斗 自律 完美主义">
+  
+    <meta name="description" content="IPython 终端操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终端 Python: IPython">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/10/25/%E7%BB%88%E7%AB%AF-Python-IPython/index.html">
+<meta property="og:site_name" content="Temm&#39;s Zone">
+<meta property="og:description" content="IPython 终端操作">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zonglin-tian.github.io/img/index/ipython.png">
+<meta property="article:published_time" content="2024-10-25T02:39:33.000Z">
+<meta property="article:modified_time" content="2024-12-31T07:39:21.466Z">
+<meta property="article:author" content="Temm">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/ipython.png">
+  
+  
+  
+  <title>终端 Python: IPython - Temm&#39;s Zone</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/research-icon/iconfont.css">
+<link rel="stylesheet" href="/css/writing/writing_style.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zonglin-tian.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/fluid_theme/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"TTUkpi4yPOFPvGdrwRvjUPy5-gzGzoHsz","app_key":"ysSAYFHFwtsVmtCrHzIPHVJg","server_url":"https://ttukpi4y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  <script src="/live2d/autoload.js"></script><link rel="stylesheet" href="/css/custom-tag/timeline.css"><meta name="google-site-verification" content="e8wFrBN9eGE2sBgp38s16D-NZxnwfcFMtpKqItkj5T4"/>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Half_Perfect</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-fenlei1"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/grocery/" target="_self">
+                <i class="iconfont icon-wodesuibi"></i>
+                <span>随笔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/research/" target="_self">
+                <i class="iconfont icon-boshimao-F"></i>
+                <span>科研</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/fluid_theme/lm.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.5)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="终端 Python: IPython"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-25 10:39" pubdate>
+          2024年10月25日 上午
+        </time>
+      </span>
+    
+    <!-- added by Temm -->
+    
+    <!-- added by Temm -->
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          849 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Coding"
+        id="heading-cddcade0405954c4325ee1fb11e3dc0e" role="tab" data-toggle="collapse" href="#collapse-cddcade0405954c4325ee1fb11e3dc0e"
+        aria-expanded="true"
+      >
+        Coding
+        <span class="list-group-count">(7)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-cddcade0405954c4325ee1fb11e3dc0e"
+           role="tabpanel" aria-labelledby="heading-cddcade0405954c4325ee1fb11e3dc0e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/07/31/Numpy-notes/" title="NumPy notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">NumPy notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/04/22/PyTorch-Notes/" title="PyTorch Notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PyTorch Notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/" title="Python 库学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 库学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/" title="Shell 脚本"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Shell 脚本</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/09/01/Tensorboard-notes/" title="Tensorboard notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Tensorboard notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/10/25/%E7%BB%88%E7%AB%AF-Python-IPython/" title="终端 Python: IPython"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">终端 Python: IPython</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">终端 Python: IPython</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    最后更新于: 2024-12-31T15:39:21+08:00
+                  
+                  
+
+                
+              </p>
+            
+            <!-- added by Temm -->
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>IPython 提供了一个丰富的工具包, 可以最大限度以交互方式使用 Python, 主要由两部分组成:</p>
+<ul>
+<li>交互式 Python shell</li>
+<li>一个 Jupyter 内核</li>
+</ul>
+<h1 id="历史输入与输出"><a href="#历史输入与输出" class="headerlink" title="历史输入与输出"></a>历史输入与输出</h1><ul>
+<li>hist: 查看历史输入, <code>-n</code> 则额外显示输入序号</li>
+<li>_: 查看最近的一个<em>输出</em>结果</li>
+<li>_n: 查看指定序号 n 的输出结果</li>
+<li>_i: 查看最近的一个输入</li>
+<li>_iN: 查看指定序号的输入</li>
+</ul>
+<h1 id="内省-内视功能"><a href="#内省-内视功能" class="headerlink" title="内省 (内视功能)"></a>内省 (内视功能)</h1><ul>
+<li>object? 或者 ?object: 显示对象的一些通用信息</li>
+<li>object?? 或者 ??object: 显示对象详细信息, 对于类或者函数, 将会显示源码</li>
+<li>numpy.*load*?: 显示所有包含 load 的 numpy 函数</li>
+<li>numpy.*sort?: 显示所有以 sort 结尾的 numpy 函数</li>
+</ul>
+<h1 id="魔术命令"><a href="#魔术命令" class="headerlink" title="魔术命令"></a>魔术命令</h1><p>Magic command 是常规 Python 代码的增强版, 通常由 <code>IPython</code> 的内核提供, 以 <code>%</code> 字符为前缀, 一共有两种魔术命令: </p>
+<ul>
+<li>% 前缀: 命令在一行代码上运行</li>
+<li>%% 前缀: 命令在整个单元格上运行</li>
+</ul>
+<p><strong>默认情况下, 魔术命令总是以 % 分号开头, 但这不是必须的, 也可以直接使用不带 % 的魔术命令, 这称之为 <code>自动魔术命令 (automagic)</code></strong>. 当使用自动魔术命令时, 不能出现和魔术命令同名的变量, 否则显示的是变量. <strong>可以使用 <code>%automagic</code> 来切换是否开启自动魔术命令</strong></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>quickref: 显示 ipython 的快速参考</li>
+<li><strong>lsmagic: 列出所有魔术命令</strong></li>
+<li><strong>mc? 或者 ?mc: 显示魔术命令的帮助信息</strong></li>
+<li>magic: 列出所有魔术命令的详细信息</li>
+<li><strong>run file.py: 运行脚本</strong></li>
+<li><strong>pycat file.py: 显示脚本内容</strong></li>
+<li>writefile file.py: 将内容写入脚本 (-a 表示追加)</li>
+<li>paste: 运行粘贴板上的代码</li>
+<li><strong>查看变量</strong><ul>
+<li>who: 依次显示所有变量的名称</li>
+<li>whols: 以列表的形式显示所有变量的名称</li>
+<li>whos: 显示所有变量的详细信息</li>
+</ul>
+</li>
+<li><strong>变量删除</strong><ul>
+<li>xdel var_name 或者 del var_name: 删除变量 var_name</li>
+<li>resest: 删除交互命名空间中所有变量</li>
+</ul>
+</li>
+<li><strong>调试</strong><ul>
+<li>debug: 运行代码出现问题后, 使用此命令将回溯到代码异常处, 并进入调试模式</li>
+<li>pdb: 运行代码出现问题时, 将自动进入调试模式</li>
+</ul>
+</li>
+</ul>
+<h1 id="系统命令"><a href="#系统命令" class="headerlink" title="系统命令"></a>系统命令</h1><p>以 <code>!</code> 开头的命令可直接在 Python 环境中执行操作系统中 shell 命令</p>
+<ul>
+<li>!cmd: 打开 CMD</li>
+<li>!pwd: 当前目录</li>
+<li>!echo $HOME: 查看环境变量 $HOME</li>
+<li>!python train.py: 运行 python 程序</li>
+</ul>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul>
+<li>向前查找以当前输入的文本开头的历史命令: <code>Ctrl + P</code></li>
+<li>向后查找以当前输入的文本开头的历史命令: <code>Ctrl + N</code></li>
+<li>从剪贴板粘贴文本: <code>Ctrl + Shift + V</code></li>
+<li>将光标移至行首: <code>Ctrl + A</code></li>
+<li>将光标移至行尾: <code>Ctrl + E</code></li>
+<li>删除从光标开始至行尾的文本: <code>Ctrl + K</code></li>
+<li>删除光标以前的所有文本: <code>Ctrl + U</code></li>
+<li>清屏: <code>Ctrl + L</code></li>
+<li>移动一个字符: <code>Ctrl + B/F</code></li>
+</ul>
+<h1 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h1><h2 id="给系统-shell-命令定义一个别名作为魔术命令"><a href="#给系统-shell-命令定义一个别名作为魔术命令" class="headerlink" title="给系统 shell 命令定义一个别名作为魔术命令"></a>给系统 shell 命令定义一个别名作为魔术命令</h2><h2 id="给文件目录定义一个书签-快速访问"><a href="#给文件目录定义一个书签-快速访问" class="headerlink" title="给文件目录定义一个书签, 快速访问"></a>给文件目录定义一个书签, 快速访问</h2><h2 id="以-Vim-模式输入命令"><a href="#以-Vim-模式输入命令" class="headerlink" title="以 Vim 模式输入命令"></a>以 Vim 模式输入命令</h2><ul>
+<li>临时配置: 在 IPython 内输入: <code>%config TerminalInteractiveShell.editing_mode = &#39;vi&#39;</code></li>
+<li>查询当前输入模式: <code>%config TerminalInteractiveShell.editing_mode</code></li>
+<li>永久配置: 编辑或者创建位于 <code>~/.ipython/profile_default/</code> 目录下的  <code>ipython_config.py</code> 文件, 添加下列行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">c.TerminalInteractiveShell.editing_mode = <span class="hljs-string">&#x27;vi&#x27;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_27825451/article/details/84320859?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-84320859-blog-53086766.235%5Ev39%5Epc_relevant_yljh&spm=1001.2101.3001.4242.2&utm_relevant_index=2">LoveMIss-Y. 史上最详细、最完全的ipython使用教程，Python使用者必备！——ipython系列之一. CSDN</a><br>[2] <a target="_blank" rel="noopener" href="https://ipython.readthedocs.io/en/stable/">IPython. Document</a><br>[3] <a target="_blank" rel="noopener" href="https://marketsplash.com/tutorials/ipython/ipython-vim-mode/#:~:text=Setting%20Up%20IPython%20Vim%20Mode%201%20IPython%20Installation,...%205%20Checking%20Your%20Vim%20Mode%20Status%20">How To Use IPython Vim Mode Effectively</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <!-- added by Temm -->
+            
+            <!-- added by Temm -->
+            <div>
+              
+                <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+    </div>
+  
+</div>
+
+              
+
+              
+                
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>终端 Python: IPython</div>
+      <div>https://zonglin-tian.github.io/2024/10/25/终端-Python-IPython/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Temm</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+              
+                    
+              
+              
+                
+                
+                
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                      <a href="/2024/11/28/Hello-Docker/" title="Hello Docker">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello Docker</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                      <a href="/discipline/hints/%E5%AE%8C%E7%BE%8E%E6%B7%A1%E7%84%B6-%E5%A4%B1%E6%84%8F%E5%9D%A6%E7%84%B6/" title="完美淡然, 缺憾坦然">
+                        <span class="hidden-mobile">完美淡然, 缺憾坦然</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'photon-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'zonglin-tian/blog_comments');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <div> <a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <a href="/hexo-fluid/" target="_self" rel="nofollow noopener"><i class="iconfont icon-love"></i></a> <a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#脚注" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <a href="/magic/" target="_self" rel="nofollow noopener"><i class="iconfont icon-cards"></i></a>&nbsp;<span>Magic</span> </div> <div> <i class="iconfont icon-ai250"></i> <a href="/inspiring/" target="_self" rel="nofollow noopener">W</a><a href="/writing/" target="_self" rel="nofollow noopener"><span>riting</span></a> <a href="/reading/" target="_self" rel="nofollow noopener"><span>Reading</span></a> <a href="/running/" target="_self" rel="nofollow noopener"><span>Running</span></a> <a href="/meditation/" target="_self" rel="nofollow noopener"><span>Meditati</span></a><a href="/discipline/" target="_self" rel="nofollow noopener"><span>o</span></a><span>n</span> <i class="iconfont icon-shiwutubiao-07"></i> </div> 
+    </div>
+  
+  
+    <div style="display:block" class="statistics">
+  <span id="timeDate">运行天数...</span>
+  <script src="/js/web_run_time.js"></script>
+
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        访问 
+        <span id="leancloud-site-pv" style="display: none"></span>
+        <span id="leancloud-site-pv-trans">转化的 pv 数...</span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        访客 
+        <span id="leancloud-site-uv" style="display: none"></span>
+        <span id="leancloud-site-uv-trans">转化的 uv 数...</span>
+        <a href="/soul-mate/" target="_self" rel="nofollow noopener"> 人</a>&ensp;<i class="iconfont icon-lianaikongjian"></i>
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  <script src="/js/writing_statement.js"></script><script src="/js/deploy_time.js"></script>
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

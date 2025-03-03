@@ -1,0 +1,20 @@
+.emp-style {
+    color: green; /* 默认绿色 */
+    font-weight: bold; /* 默认字体加粗 */
+}
+.emp-style.normal {
+    font-weight: normal; /* 正常字体 */
+}
+
+.emp-style.blue {
+    color: blue; /* 蓝色字体 */
+}
+
+.emp-style.red {
+    color: red; /* 红色字体 */
+}
+
+.emp-style.yellow {
+    color: yellow; /* 黄色字体 */
+}
+
