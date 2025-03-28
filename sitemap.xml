@@ -668,7 +668,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -677,7 +677,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -767,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -776,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -882,6 +882,13 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -890,13 +897,6 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Software/</loc>
-    <lastmod>2025-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
