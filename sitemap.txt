@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
 https://zonglin-tian.github.io/2025/03/14/%E6%AF%8F%E5%A4%A9%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%AA%E6%80%9D%E7%BB%B4/
 https://zonglin-tian.github.io/2024/06/11/LaTeX-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/
 https://zonglin-tian.github.io/2024/07/27/%E7%A7%91%E7%A0%94%E6%8A%80%E8%83%BD%E4%B8%8E%E8%B5%84%E6%BA%90/
@@ -18,7 +19,6 @@ https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4
 https://zonglin-tian.github.io/2024/09/01/Tensorboard-notes/
 https://zonglin-tian.github.io/2024/11/28/Hello-Docker/
 https://zonglin-tian.github.io/2024/05/06/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/
-https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
 https://zonglin-tian.github.io/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/
 https://zonglin-tian.github.io/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/
 https://zonglin-tian.github.io/2024/10/14/%E5%BF%83%E7%90%86%E8%BE%85%E5%AF%BC/
@@ -72,8 +72,8 @@ https://zonglin-tian.github.io/live2d/live2d_api/README.html
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
