@@ -18,14 +18,14 @@
   
     <meta name="description" content="Python 常用库使用笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 库学习">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="Python 库管理与使用">
+<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="Python 常用库使用笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
 <meta property="article:published_time" content="2024-05-05T02:40:42.000Z">
-<meta property="article:modified_time" content="2024-09-04T01:40:46.286Z">
+<meta property="article:modified_time" content="2025-03-31T00:28:01.163Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
   
   
   
-  <title>Python 库学习 - Temm&#39;s Zone</title>
+  <title>Python 库管理与使用 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -257,7 +257,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python 库学习"></span>
+            <span id="subtitle" data-typed-text="Python 库管理与使用"></span>
           
         </div>
 
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          449 字
+          559 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -393,10 +393,10 @@
     
       
       
-        <a href="/2024/05/05/Python-%E5%BA%93%E5%AD%A6%E4%B9%A0/" title="Python 库学习"
+        <a href="/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Python 库管理与使用"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">Python 库学习</span>
+          <span class="category-post">Python 库管理与使用</span>
         </a>
       
     
@@ -445,12 +445,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python 库学习</h1>
+            <h1 id="seo-header">Python 库管理与使用</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-09-04T09:40:46+08:00
+                    最后更新于: 2025-03-31T08:28:01+08:00
                   
                   
 
@@ -460,7 +460,19 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><ul>
+                <h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><p>Python 包管理器, 用于安装和管理不属于 Python 标准库的其它库与依赖</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>配置文件位置<ul>
+<li>Windows: <code>C:\Users\temm\AppData\Roaming\pip.ini</code></li>
+</ul>
+</li>
+<li>使用清华源<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[global]</span><br><span class="hljs-comment"># 超时时间</span><br><span class="hljs-attr">timeout</span> = <span class="hljs-number">6000</span><br><span class="hljs-comment"># 使用单一镜像源, 仅在必要时添加 extra-index-url</span><br><span class="hljs-attr">index-url</span> = https://pypi.tuna.tsinghua.edu.cn/simple<br><span class="hljs-comment"># 包缓存位置</span><br><span class="hljs-attr">cache-dir</span> = H:\APP_files\pip\cache<br><br><span class="hljs-section">[install]</span><br><span class="hljs-attr">trusted-host</span> = pypi.tuna.tsinghua.edu.cn<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>查看配置: <code>pip config show</code></li>
+<li>清理缓存: <code>pip cache purge</code></li>
+</ul>
+<h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://pythonjishu.com/pandas-dataframe-to_excel/">Pandas 将数据写入 Excel</a></li>
 <li>获取 <em>DataFrame</em> 的所有列名: <code>list(data_frame)</code> (sorted 返回有序)</li>
 </ul>
@@ -541,8 +553,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Python 库学习</div>
-      <div>https://zonglin-tian.github.io/2024/05/05/Python-库学习/</div>
+      <div>Python 库管理与使用</div>
+      <div>https://zonglin-tian.github.io/2024/05/05/Python-库管理与使用/</div>
     </div>
     <div class="license-meta">
       
