@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/
 https://zonglin-tian.github.io/2024/06/26/Miniconda-%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE/
 https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/
 https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/
@@ -22,7 +23,6 @@ https://zonglin-tian.github.io/2024/06/27/%E5%BD%93%E4%BD%A0%E6%83%B3%E8%A6%81%E
 https://zonglin-tian.github.io/2025/02/13/Git-GitBash-GitHub/
 https://zonglin-tian.github.io/2025/01/07/Windows-Terminal/
 https://zonglin-tian.github.io/2024/10/25/%E7%BB%88%E7%AB%AF-Python-IPython/
-https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/
 https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/
 https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/
 https://zonglin-tian.github.io/2024/09/01/Tensorboard-notes/
@@ -75,8 +75,8 @@ https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajam
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
@@ -91,9 +91,9 @@ https://zonglin-tian.github.io/tags/Grocery/
 https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/WebDesign/
 https://zonglin-tian.github.io/tags/Typesetting/
+https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
-https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/PyCharm/
 https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Vim/
