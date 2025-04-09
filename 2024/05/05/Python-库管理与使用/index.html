@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
 <meta property="article:published_time" content="2024-05-05T02:40:42.000Z">
-<meta property="article:modified_time" content="2025-03-31T00:28:01.163Z">
+<meta property="article:modified_time" content="2025-04-09T01:34:07.383Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          559 字
+          666 字
         
       </span>
     
@@ -450,7 +450,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-03-31T08:28:01+08:00
+                    最后更新于: 2025-04-09T09:34:07+08:00
                   
                   
 
@@ -467,10 +467,35 @@
 </ul>
 </li>
 <li>使用清华源<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[global]</span><br><span class="hljs-comment"># 超时时间</span><br><span class="hljs-attr">timeout</span> = <span class="hljs-number">6000</span><br><span class="hljs-comment"># 使用单一镜像源, 仅在必要时添加 extra-index-url</span><br><span class="hljs-attr">index-url</span> = https://pypi.tuna.tsinghua.edu.cn/simple<br><span class="hljs-comment"># 包缓存位置</span><br><span class="hljs-attr">cache-dir</span> = H:\APP_files\pip\cache<br><br><span class="hljs-section">[install]</span><br><span class="hljs-attr">trusted-host</span> = pypi.tuna.tsinghua.edu.cn<br></code></pre></td></tr></table></figure></li>
+<li>终端命令永久配置<ul>
+<li>使用清华源: <code>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
 <li>查看配置: <code>pip config show</code></li>
-<li>清理缓存: <code>pip cache purge</code></li>
+<li><strong>清理缓存: <code>pip cache purge</code></strong></li>
+<li>帮助<ul>
+<li>总: <code>pip --help</code></li>
+<li>特定: <code>pip install --help</code></li>
+</ul>
+</li>
+<li>指定镜像加速安装: <code>pip install pkg_name -i source_url</code><ul>
+<li>使用清华源: <code>pip install pkg_name -i https://pypi.tuna.tsinghua.edu.cn/simple</code></li>
+</ul>
+</li>
+<li>升级包: <code>pip install -U/--upgrade pkg_name</code><ul>
+<li>升级 pip: <code>pip install -U pip</code></li>
+</ul>
+</li>
+<li>查看所有已安装的包: <code>pip list</code></li>
+<li>查看某个包的详细信息: <code>pip show pkg_name</code></li>
+<li><strong>搜索包: <code>pip search pkg_name</code></strong></li>
+<li><strong>导出和安装信赖</strong><ul>
+<li>导出: <code>pip freeze &gt; requirements.txt</code></li>
+<li>安装: <code>pip install -r requirements.txt</code></li>
+</ul>
+</li>
 </ul>
 <h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://pythonjishu.com/pandas-dataframe-to_excel/">Pandas 将数据写入 Excel</a></li>
