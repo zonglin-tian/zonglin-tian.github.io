@@ -45,7 +45,7 @@ function tag_cloud_custom(options) {
     const size = getFontSize(tag_count);
     const color = getColor(tag_count);
     const tag_name = tag.name.charAt(0).toUpperCase() + tag.name.slice(1);
-    return `<a href="/discipline/${tag_name.toLowerCase()}" style="font-size: ${size}${unit}; color: ${color};">${tag_name}</a>`;
+    return `<a href="/mood/${tag_name.toLowerCase()}" style="font-size: ${size}${unit}; color: ${color};">${tag_name}</a>`;
   }).join(' ');
 }
 
