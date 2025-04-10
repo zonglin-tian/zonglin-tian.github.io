@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_basic.jpg">
 <meta property="article:published_time" content="2024-05-05T02:47:45.000Z">
-<meta property="article:modified_time" content="2025-04-09T03:23:49.448Z">
+<meta property="article:modified_time" content="2025-04-10T00:46:23.020Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.5k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -450,7 +450,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-04-09T11:23:49+08:00
+                    最后更新于: 2025-04-10T08:46:23+08:00
                   
                   
 
@@ -488,7 +488,7 @@
 <li><a target="_blank" rel="noopener" href="https://mypy.readthedocs.io/en/stable/builtin_types.html">mypy document</a></li>
 </ul>
 <h1 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h1><h2 id="日志文件记录"><a href="#日志文件记录" class="headerlink" title="日志文件记录"></a>日志文件记录</h2><ul>
-<li>将程序的运行 (标准与错误) 输出显示到终端并保存到文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># $(command) 表示将 command 的输出插入到当前命令中 (命令替换, 相当于 &quot;复合变量&quot; 值的引用)</span><br><span class="hljs-comment"># date +Format 是 date 命令的格式化输出, 用 _ 分隔日期和时间部分</span><br>python exp_runner.py 2&gt;&amp;1 | <span class="hljs-built_in">tee</span> <span class="hljs-string">&quot;/path_to_log/log_<span class="hljs-subst">$(date +&#x27;%H%M%_%m%d_%y&#x27;)</span>.txt&quot;</span><br><br></code></pre></td></tr></table></figure></li>
+<li>将程序的运行 (标准与错误) 输出显示到终端并保存到文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># $(command) 表示将 command 的输出插入到当前命令中 (命令替换, 相当于 &quot;复合变量&quot; 值的引用)</span><br><span class="hljs-comment"># date +Format 是 date 命令的格式化输出, 用 _ 分隔日期和时间部分</span><br>python exp_runner.py 2&gt;&amp;1 | <span class="hljs-built_in">tee</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/path_to_log/log_<span class="hljs-subst">$(date +&#x27;%H%M_%m%d_%y&#x27;)</span>.txt&quot;</span><br><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><ul>
 <li>查看 numpy 数组不为 0 的元素<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 返回非零元素的行索引与列索引</span><br>nonzero_indices = np.nonzero(array) <span class="hljs-comment"># 或者 np.where(array != 0) </span><br><span class="hljs-comment"># 获取不为零的元素</span><br>nonzero_elements= array(nonzero_indices)<br></code></pre></td></tr></table></figure></li>
@@ -504,10 +504,20 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-comment"># 可能引发异常的代码块</span><br>    <span class="hljs-comment"># 可能会抛出异常的语句</span><br><span class="hljs-keyword">except</span> Exception1 <span class="hljs-keyword">as</span> e1:<br>    <span class="hljs-comment"># 处理 Exception1 类型的异常</span><br>    <span class="hljs-comment"># 可以访问异常对象 e1 的信息</span><br><span class="hljs-keyword">except</span> Exception2 <span class="hljs-keyword">as</span> e2:<br>    <span class="hljs-comment"># 处理 Exception2 类型的异常</span><br>    <span class="hljs-comment"># 可以访问异常对象 e2 的信息</span><br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-comment"># 可选的 else 块，在没有异常时执行</span><br><span class="hljs-keyword">finally</span>:<br>    <span class="hljs-comment"># 可选的 finally 块，无论是否发生异常都会执行</span><br></code></pre></td></tr></table></figure>
 
 
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="模块与包"><a href="#模块与包" class="headerlink" title="模块与包"></a>模块与包</h2><h3 id="包的导入"><a href="#包的导入" class="headerlink" title="包的导入"></a>包的导入</h3><ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="模块与包"><a href="#模块与包" class="headerlink" title="模块与包"></a>模块与包</h2><h3 id="包的导入"><a href="#包的导入" class="headerlink" title="包的导入"></a>包的导入</h3><p><strong><code>sys.path</code> 是一个 Python 列表, 包含了 Python 释器在导入模块时搜索的路径顺序. 当在 Python 中执行 <code>import</code> 语句时, 解释器会按照 <code>sys.path</code> 中的路径顺序查找要导入的模块</strong></p>
+<ul>
 <li>相对导入: 同目录或者子目录直接导入, 跨目录使用前导点 <code>..</code></li>
 <li><code>sys.path.append(extra_path)</code></li>
-<li>设定环境变量 <code>PAYTHONPATH=$PAYTHONPATH:extra_path</code></li>
+<li>设定环境变量 <code>export PAYTHONPATH=&quot;extra_path:$PAYTHONPATH&quot;</code> </li>
+<li>临时调试子目录下的程序 (导入包)<ul>
+<li>修改原文件  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br>sys.path.append(<span class="hljs-string">&quot;./..&quot;</span>)<br><span class="hljs-comment"># 或者在原导入包前加 ..</span><br><span class="hljs-keyword">from</span> ..sud_dir_B <span class="hljs-keyword">import</span> fun<br></code></pre></td></tr></table></figure></li>
+<li>不修改原文件<ul>
+<li>以模块方式运行脚本 (自动添加当前目录到 <code>sys.path</code>): <code>python -m sud_dir.main</code> (注意不需要 <em>.py</em> 结尾)</li>
+<li>临时添加包查找路径:<code>PYTHONPATH=&quot;./:$PYTHONPATH&quot; python sub_dir/main.py</code> (注意是<strong>空格</strong>分隔命令)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
 <li>输出多个重复字符: <code>print(N*&#39;str&#39;)</code></li>
@@ -558,10 +568,10 @@
 <h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><ul>
 <li>
     <div class="fold">
-      <div class="fold-title fold-successe collapsed" data-toggle="collapse" href="#collapse-05eef982" role="button" aria-expanded="false" aria-controls="collapse-05eef982">
+      <div class="fold-title fold-successe collapsed" data-toggle="collapse" href="#collapse-90469042" role="button" aria-expanded="false" aria-controls="collapse-90469042">
         <div class="fold-arrow">▶</div>将两个列表转化为字典
       </div>
-      <div class="fold-collapse collapse" id="collapse-05eef982">
+      <div class="fold-collapse collapse" id="collapse-90469042">
         <div class="fold-content">
           <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">key_list = [k1, k2, ...]<br>value_list = [v1, v2, ...]<br>dict_from_list_by_dict = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">zip</span>(key_list, value_list))<br>dict_from_list_by_for = &#123;k: v <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(key_list, value_list)&#125;<br>dict_from_list_by_range = &#123;key_list[i]: value_list[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(key_list))&#125;<br><span class="hljs-comment"># &#123;k1: v1, k2: V2, ...&#125;</span><br></code></pre></td></tr></table></figure>
         </div>
