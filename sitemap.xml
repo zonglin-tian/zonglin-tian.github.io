@@ -882,6 +882,13 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -890,13 +897,6 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Software/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
