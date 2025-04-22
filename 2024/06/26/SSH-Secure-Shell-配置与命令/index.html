@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ssh.png">
 <meta property="article:published_time" content="2024-06-26T00:05:37.000Z">
-<meta property="article:modified_time" content="2025-04-21T08:54:18.950Z">
+<meta property="article:modified_time" content="2025-04-22T05:12:47.404Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          288 字
+          346 字
         
       </span>
     
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-04-21T16:54:18+08:00
+                    最后更新于: 2025-04-22T13:12:47+08:00
                   
                   
 
@@ -360,12 +360,19 @@
 <li>重置密码短语: <code>ssh-keygen -p -f ~/.ssh/id_rsa</code> (<code>id_rsa</code> 根据具体情况替换)</li>
 </ul>
 <h2 id="登陆命令"><a href="#登陆命令" class="headerlink" title="登陆命令"></a>登陆命令</h2><ul>
+<li>登陆参数一般顺序<ol>
+<li>连接选项: <code>-i</code>, <code>-p</code>, <code>-J</code>, <code>-L</code></li>
+<li>交互选项: <code>-t</code> <code>-T</code></li>
+<li>目标主机: <code>user@host</code></li>
+<li>远程命令: <code>exec zsh -l</code></li>
+</ol>
+</li>
 <li>登陆到远程主机: <code>ssh user@remote_host_ipORdomain</code></li>
 <li>登陆时指定 <code>bash</code> 配置文件: <code>ssh -t user@remote_host &#39;bash --rcfile /path/to/custom_.bashrc</code></li>
 <li>登陆时指定 <code>zsh</code> 配置文件: <code>ssh -t use@remote_host &#39;exec -l -c &quot;source /path/to/custom_.zshrc; zsh&quot;&#39;</code></li>
 </ul>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>若没有特殊说明表示在 <code>~/.ssh/config</code> 文件中添加内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">Host custom_host_name  <span class="hljs-comment"># 别名</span><br>    HostName host_ip_or_dormain  <span class="hljs-comment"># 主机 IP 或者域名</span><br>    User username  <span class="hljs-comment"># 用户名</span><br>    Port port  <span class="hljs-comment"># 默认 22</span><br>    PreferredAuthentications publickey  <span class="hljs-comment"># 优先使用公钥认证</span><br>    IdentityFile ~/.ssh/id_rsa  <span class="hljs-comment"># 私钥文件路径</span><br>    RemoteCommand bash --rcfile /path/to/custom_bashrc  <span class="hljs-comment"># 登陆时执行命令</span><br>    ProxyJump jump-host  <span class="hljs-comment"># 跳板机</span><br><br>Host jump-host<br>...<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash">Host custom_host_name  <span class="hljs-comment"># 别名</span><br>    HostName host_ip_or_dormain  <span class="hljs-comment"># 主机 IP 或者域名</span><br>    User username  <span class="hljs-comment"># 用户名</span><br>    Port port  <span class="hljs-comment"># 默认 22</span><br>    PreferredAuthentications publickey  <span class="hljs-comment"># 优先使用公钥认证</span><br>    IdentityFile ~/.ssh/id_rsa  <span class="hljs-comment"># 私钥文件路径</span><br>    RemoteCommand bash --rcfile /path/to/custom_bashrc  <span class="hljs-comment"># 登陆时执行命令</span><br>    ProxyJump jump-host  <span class="hljs-comment"># 跳板机</span><br>    ProxyCommand ssh -q jump-host <span class="hljs-string">&quot;ip=<span class="hljs-subst">$(~/Temp/read_ip.sh %n | tr -d &#x27;\n&#x27;)</span>; ssh -W <span class="hljs-variable">$ip</span>:22 localhost&quot;</span>  <span class="hljs-comment"># 仍然跳板机</span><br><br><br>Host jump-host<br>...<br></code></pre></td></tr></table></figure>
 <h2 id="密钥管理-SSH-Agent-身份验证代理"><a href="#密钥管理-SSH-Agent-身份验证代理" class="headerlink" title="密钥管理 SSH-Agent (身份验证代理)"></a>密钥管理 SSH-Agent (身份验证代理)</h2><p>安全便利的管理 SSH 密钥: 私钥存储在内存中而不是在文件系统中; 登陆时自动提供身份验证, 无需每次都输入密钥的短语</p>
 <ul>
 <li>启动&#x2F;停止<ul>
