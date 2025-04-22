@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io/2025/01/07/Windows-Terminal/</loc>
+    <lastmod>2025-04-22</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2025-04-22</lastmod>
   </url>
@@ -111,10 +115,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2025/02/13/Git-GitBash-GitHub/</loc>
     <lastmod>2025-02-13</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2025/01/07/Windows-Terminal/</loc>
-    <lastmod>2025-01-07</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/</loc>
