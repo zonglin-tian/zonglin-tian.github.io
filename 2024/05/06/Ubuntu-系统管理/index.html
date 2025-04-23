@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-04-12T02:21:02.722Z">
+<meta property="article:modified_time" content="2025-04-23T07:00:37.353Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -432,7 +432,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-04-12T10:21:02+08:00
+                    最后更新于: 2025-04-23T15:00:37+08:00
                   
                   
 
@@ -531,6 +531,15 @@
 <li>基本软件: <code>zip, git, vim, tree, wget</code></li>
 <li>安装 Minniconda</li>
 <li>安装 CUDA 与 cuDNN</li>
+</ul>
+<h2 id="容器连接"><a href="#容器连接" class="headerlink" title="容器连接"></a>容器连接</h2><ul>
+<li><strong>以 <code>admin</code> 为跳板机, 本地电脑 “一键” 连接到容器: <code>ssh -J aic_admin user@container_ip</code></strong>. <em>结合 <code>.ps1, .sh</code> 脚本与 <code>ProxyCommand</code> 配置可根据容器名称自动解析容器 IP, 连接到对应容器, 可参考 <a href="/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/#%E8%B7%B3%E6%9D%BF%E6%9C%BA">SSH 跳板机</a></em></li>
+<li>以 <code>admin</code> 为跳板机, 将<strong>本地电脑</strong>端口 (<code>local_port</code>) 转发到容器: <code>ssh -L local_port:container_ip:port aic_admin</code><ul>
+<li>当 <code>port</code> 为 22 时, 本地电脑通过 <code>ssh -p local_port@localhostl</code> 直接进入容器</li>
+<li>当 <code>port</code> 为 6006 时, 本地电脑可在浏览器中输入 <code>http://localhost:6006</code> 访问到容器的 <code>http://localhost:6006/</code> 服务, 常用于 <strong>tensorboard</strong></li>
+</ul>
+</li>
+<li>在<strong>容器内部</strong>进行远程端口转发, <code>ssh -R 2222:localhost:22 local_user@local_ip</code>, 本地电脑从转发端口进入容器: <code>ssh -p 2222 container_user@localhost</code></li>
 </ul>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/Dontla/article/details/133911043">Dontla. linux watch命令（定期执行命令，实时显示输出结果）.CSDN</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wbourne/p/16485712.html">王bourne. 多人共用一个Linux用户, 实现Bash配置文件独立. 博客园</a>
