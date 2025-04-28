@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ssh.png">
 <meta property="article:published_time" content="2024-06-26T00:05:37.000Z">
-<meta property="article:modified_time" content="2025-04-23T07:06:35.446Z">
+<meta property="article:modified_time" content="2025-04-23T14:51:39.514Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,7 +294,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -344,7 +344,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-04-23T15:06:35+08:00
+                    最后更新于: 2025-04-23T22:51:39+08:00
                   
                   
 
@@ -390,7 +390,7 @@
 <li>登陆时指定 <code>bash</code> 配置文件: <code>ssh -t user@remote_host &#39;bash --rcfile /path/to/custom_.bashrc</code></li>
 <li>登陆时指定 <code>zsh</code> 配置文件: <code>ssh -t use@remote_host &#39;exec -l -c &quot;source /path/to/custom_.zshrc; zsh&quot;&#39;</code></li>
 <li>后台建立本地端口转发 (最小开销): <code>ssh -f -N -L 2222:localhost:22 user@host-name</code></li>
-<li><span class="emp-style green">通过跳板机登陆 docker 容器: <code>ssh -J jump_host target_user@target_ip</code></span></li>
+<li><span class="emp-style green">通过跳板机登陆 docker 容器: <code>ssh -J jump-host target_user@target_ip</code></span></li>
 </ul>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>若没有特殊说明表示在 <code>~/.ssh/config</code> 文件中添加内容</p>
 <h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul>
@@ -413,10 +413,10 @@
 </ul>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash">Host custom_host_name  <span class="hljs-comment"># 别名</span><br>    HostName host_ip_or_dormain  <span class="hljs-comment"># 主机 IP 或者域名</span><br>    User username  <span class="hljs-comment"># 用户名</span><br>    Port port  <span class="hljs-comment"># 默认 22</span><br>    PreferredAuthentications publickey  <span class="hljs-comment"># 优先使用公钥认证</span><br>    IdentityFile ~/.ssh/id_rsa  <span class="hljs-comment"># 私钥文件路径</span><br>    RemoteCommand bash --rcfile /path/to/custom_bashrc  <span class="hljs-comment"># 登陆时执行命令</span><br>    ProxyJump jump-host  <span class="hljs-comment"># 跳板机</span><br>    ProxyCommand ssh -q jump-host <span class="hljs-string">&quot;ip=<span class="hljs-subst">$(~/Temp/read_ip.sh %n | tr -d &#x27;\n&#x27;)</span>; ssh -W <span class="hljs-variable">$ip</span>:22 localhost&quot;</span>  <span class="hljs-comment"># 仍然跳板机</span><br><br>Host jump-host<br>...<br><br></code></pre></td></tr></table></figure>
 
-<h2 id="跳板机"><a href="#跳板机" class="headerlink" title="跳板机"></a>跳板机</h2><p>基本目标: 本地电脑通过跳板机 (Bastion Host) 连接 “外网” 电脑<br><strong>注:</strong> 下文所有标识 <code>jump_host</code> 表示跳板机, 若没有在 <code>~/.ssh/config</code> 中定义, 需要显示指定 <code>jump_host</code> 的连接方式, 通常包括用户名, 主机名&#x2F;ip, 端口, 密钥文件</p>
+<h2 id="跳板机"><a href="#跳板机" class="headerlink" title="跳板机"></a>跳板机</h2><p>基本目标: 本地电脑通过跳板机 (Bastion Host) 连接 “外网” 电脑<br><strong>注:</strong> 下文所有标识 <code>jump-host</code> 表示跳板机, 若没有在 <code>~/.ssh/config</code> 中定义, 需要显示指定 <code>jump-host</code> 的连接方式, 通常包括用户名, 主机名&#x2F;ip, 端口, 密钥文件</p>
 <ul>
-<li><code>-J</code> or <code>ProxyJump</code> 选项: <code>ssh -J jump_host target_user@target_ip</code></li>
-<li><code>-W</code> + <code>ProxyCommand</code> 组合: <code>ssh -o &quot;ProxyCommand=ssh -W %h:%p jump_host&quot; target_user@target_ip</code></li>
+<li><code>-J</code> or <code>ProxyJump</code> 选项: <code>ssh -J jump-host target_user@target_ip</code></li>
+<li><code>-W</code> + <code>ProxyCommand</code> 组合: <code>ssh -o &quot;ProxyCommand=ssh -W %h:%p jump-host&quot; target_user@target_ip</code></li>
 </ul>
 <p><span class="emp-style green">应用: 通过跳板机动态透明转发, 连接容器</span></p>
 <ul>
@@ -431,7 +431,7 @@
 </ul>
 <h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><p>基本目标: 通过端口映射, 本地电脑可以访问 “外网” 电脑 (服务)</p>
 <ul>
-<li><p><code>-L</code>: 本地端口转发到远程主机, 从而通过本地工具 (浏览器) 访问本地端口访问远程主机的服务, 命令格式 <span class="emp-style red"><code>ssh -L local_port:target_host:target_port jump_host</code></span></p>
+<li><p><code>-L</code>: 本地端口转发到远程主机, 从而通过本地工具 (浏览器) 访问本地端口访问远程主机的服务, 命令格式 <span class="emp-style red"><code>ssh -L local_port:target_host:target_port jump-host</code></span></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在本地电脑上操作</span><br>ssh -L 2222:target-host:22 jump-host<br>ssh -p 2222 target_user@localhost<br></code></pre></td></tr></table></figure>
 </li>
 <li><p><code>-R</code>: 远程主机端口转发到本地, 从而在远程主机的端口访问本地电脑的服务</p>
