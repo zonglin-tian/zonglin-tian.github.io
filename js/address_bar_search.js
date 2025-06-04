@@ -8,13 +8,12 @@ if (window.location.pathname === '/search') {
         searchModal._config.backdrop = 'false';
         searchModal.show();
         searchModal._element.addEventListener('shown.bs.modal', function () {
-            const searchInput = document.getElementById('local - search - input');
+            const searchInput = document.getElementById('local-search-input');
             if (searchInput) {
                 searchInput.value = searchQuery;
                 const inputEvent = new Event('input', { bubbles: true });
                 searchInput.dispatchEvent(inputEvent);
             }
         });
-        return; // 阻止后续代码执行（防止浏览器继续处理 /search 请求）
     }
 }
