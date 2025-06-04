@@ -11,22 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('popstate', function () {
             console.log('popstate 事件触发'); // 添加调试输出
             const searchModal = new bootstrap.Modal(document.getElementById('modalSearch'));
-            searchModal._config.backdrop = 'false';
             searchModal.show();
-            searchModal._element.addEventListener('shown.bs.modal', function () {
-                console.log('shown.bs.modal 事件触发'); // 添加调试输出
-                const searchInput = document.getElementById('local-search-input');
-                if (searchInput) {
-                    console.log('获取到搜索输入框，设置值为:', searchQuery); // 添加调试输出
-                    searchInput.value = searchQuery;
-                    const inputEvent = new Event('input', { bubbles: true });
-                    searchInput.dispatchEvent(inputEvent);
-                    console.log('触发 input 事件'); // 添加调试输出
-                }
-            });
+            const searchInput = document.getElementById('local-search-input');
+            if (searchInput) {
+                console.log('获取到搜索输入框，设置值为:', searchQuery); // 添加调试输出
+                searchInput.value = searchQuery;
+                const inputEvent = new Event('input', { bubbles: true });
+                searchInput.dispatchEvent(inputEvent);
+                console.log('触发 input 事件'); // 添加调试输出
+            }
         });
         // 手动触发 popstate 事件（因为 history.replaceState 不会自动触发）
         console.log('手动触发 popstate 事件'); // 添加调试输出
         window.dispatchEvent(new PopStateEvent('popstate'));
     }
 });
+
