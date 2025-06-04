@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+// 检查当前 URL 是否包含 /search
+if (window.location.pathname === '/search') {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('q');
     if (searchQuery) {
-        // 使用 history.replaceState 重定向到首页，不留下 /search 的历史记录
-        history.replaceState(null, null, '/');
+        history.replaceState(null, null, '/'); // 重定向到首页
         const searchModal = new bootstrap.Modal(document.getElementById('modalSearch'));
         searchModal._config.backdrop = 'false';
         searchModal.show();
@@ -15,5 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 searchInput.dispatchEvent(inputEvent);
             }
         });
+        return; // 阻止后续代码执行（防止浏览器继续处理 /search 请求）
     }
-});
+}
