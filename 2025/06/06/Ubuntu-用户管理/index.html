@@ -16,24 +16,24 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="Shell 脚本语法">
+    <meta name="description" content="用户管理常用命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell 脚本">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/index.html">
+<meta property="og:title" content="Ubuntu 用户管理">
+<meta property="og:url" content="https://zonglin-tian.github.io/2025/06/06/Ubuntu-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="Shell 脚本语法">
+<meta property="og:description" content="用户管理常用命令">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/index/shell_scripts.png">
-<meta property="article:published_time" content="2024-12-04T01:57:31.000Z">
-<meta property="article:modified_time" content="2025-05-19T01:42:16.494Z">
+<meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_user.png">
+<meta property="article:published_time" content="2025-06-06T06:47:25.000Z">
+<meta property="article:modified_time" content="2025-06-06T10:25:24.858Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/shell_scripts.png">
+<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/ubuntu_user.png">
   
   
   
-  <title>Shell 脚本 - Temm&#39;s Zone</title>
+  <title>Ubuntu 用户管理 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -257,7 +257,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Shell 脚本"></span>
+            <span id="subtitle" data-typed-text="Ubuntu 用户管理"></span>
           
         </div>
 
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-04 09:57" pubdate>
-          2024年12月4日 上午
+        <time datetime="2025-06-06 14:47" pubdate>
+          2025年6月6日 下午
         </time>
       </span>
     
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          168 字
+          12 字
         
       </span>
     
@@ -377,7 +377,7 @@
       
         <a href="/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/" title="Shell 脚本"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">Shell 脚本</span>
         </a>
       
@@ -413,7 +413,7 @@
       
         <a href="/2025/06/06/Ubuntu-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="Ubuntu 用户管理"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Ubuntu 用户管理</span>
         </a>
       
@@ -445,52 +445,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Shell 脚本</h1>
+            <h1 id="seo-header">Ubuntu 用户管理</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-05-19T09:42:16+08:00
+                    最后更新于: 2025-06-06T18:25:24+08:00
                   
                   
 
                 
               </p>
             
-            <!-- added by Temm -->
-            
             
               <div class="markdown-body">
                 
-                <h1 id="Hints"><a href="#Hints" class="headerlink" title="Hints"></a>Hints</h1><ul>
-<li>空格: 赋值语句 <code>=</code> 两边不能有空格, 测试语句 <code>[]</code>内必须有空格分隔</li>
-<li>引号<ul>
-<li><p>变量, 命令替换, 含空格&#x2F;特殊字符的字符串 (文件名) 必须加引号</p>
-<ul>
-<li>默认用双引号 <code>&quot;&quot;</code> (防止空格&#x2F;特殊字符问题): 变量扩展, 支持转义字符</li>
-<li>不需要变量扩展时单引号 <code>&#39;</code> (正则表达式): <strong>静态字符</strong>, 完全原样输出</li>
-</ul>
-</li>
-<li><p><code>test</code> 或 <code>[]</code> 条件判断中变量比较必须加引号</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ul>
-<li>变量引用: <code>value=&quot;$Var_name&quot;</code></li>
-</ul>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/452686607">Soler索莱尔HO. 一文掌握shell脚本的基本语法. 知乎</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/u012294618/article/details/78427864">Pikachu5808. 释伴：Linux 上的 Shebang 符号(#!). CSDN</a></p>
-
+                <h1 id="高频命令"><a href="#高频命令" class="headerlink" title="高频命令"></a>高频命令</h1><h1 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h1><h1 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h1>
                 
               </div>
             
             <hr/>
-            <!-- added by Temm -->
-            
-            <!-- added by Temm -->
             <div>
-              
-                <div class="post-metas my-3">
+              <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -503,16 +479,6 @@
       <span class="category-chain">
         
   <a href="/categories/Ubuntu/" class="category-chain-item">Ubuntu</a>
-  
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
   
   
 
@@ -533,16 +499,14 @@
   
 </div>
 
-              
 
               
-                
   
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Shell 脚本</div>
-      <div>https://zonglin-tian.github.io/2024/12/04/Shell-脚本/</div>
+      <div>Ubuntu 用户管理</div>
+      <div>https://zonglin-tian.github.io/2025/06/06/Ubuntu-用户管理/</div>
     </div>
     <div class="license-meta">
       
@@ -554,7 +518,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年12月4日</div>
+          <div>2025年6月6日</div>
         </div>
       
       
@@ -580,30 +544,18 @@
   </div>
 
 
-              
-                    
-              
-              
-                
-                
-                
-              
 
               
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                      <a href="/2025/01/07/Windows-Terminal/" title="Windows Terminal">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows Terminal</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                      <a href="/2024/11/28/Hello-Docker/" title="Hello Docker">
-                        <span class="hidden-mobile">Hello Docker</span>
+                    
+                      <a href="/2025/05/01/Ubuntu-%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" title="Ubuntu 文本处理">
+                        <span class="hidden-mobile">Ubuntu 文本处理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
