@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//ssh/</loc>
+    <lastmod>2025-06-15</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//latex/</loc>
     <lastmod>2025-06-15</lastmod>
   </url>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</loc>
     <lastmod>2025-06-08</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2025-06-03</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2025/03/03/Word-%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
