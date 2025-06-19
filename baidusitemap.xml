@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//vim/</loc>
+    <lastmod>2025-06-19</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//pdv/</loc>
     <lastmod>2025-06-16</lastmod>
   </url>
@@ -43,10 +47,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2025-05-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/09/Vim-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2025-04-25</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2025/01/07/Windows-Terminal/</loc>
