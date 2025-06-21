@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>常用文件格式</title>
+    <link href="/format/"/>
+    <url>/format/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p><code>JSON</code> (JavaScript Object Notation): 轻量级数据交换格式, 具有简洁, 易读的文本结构 (<code>.json</code>)</p><h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><ul><li>键值对: 数据以 <code>key: value</code>的形式存储, 键必须是<strong>双引号包裹的字符串</strong></li><li>值的数据类型<ul><li>字符串: <code>&quot;name&quot;: &quot;Temm&quot;</code></li><li>数字: <code>&quot;Age&quot;: 3</code></li><li>布尔值: <code>&quot;is_student&quot;: true</code></li><li>空值: <code>&quot;address&quot;: null</code></li><li>对象 (嵌套): <code>&quot;university&quot;: &#123;&quot;name&quot;: &quot;BNU&quot;&#125;</code></li><li>数组: <code>&quot;scores&quot;: [90, 85, 77]</code></li></ul></li></ul><h2 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h2><ul><li>根元素必须是对象 <code>&#123;&#125;</code> 或数组 <code>[]</code></li><li>引号必须用双引号: 单引号或无引号无效</li><li>逗号分隔: 键值对之间用逗号分隔, 但<strong>末尾不能有逗号</strong></li><li>无注释: 不支持标准注释 <code>//</code>, <code>/**/</code> </li><li>在线校验: <a href="https://jsonlint.com/">JSONLint</a></li></ul><h2 id="衍生格式"><a href="#衍生格式" class="headerlink" title="衍生格式"></a>衍生格式</h2><h3 id="JSONC-JSON-with-Comments"><a href="#JSONC-JSON-with-Comments" class="headerlink" title="JSONC (JSON with Comments)"></a>JSONC (JSON with Comments)</h3><ul><li>扩展名: <code>.jsonc</code></li><li>特点:<ul><li>支持 <code>//</code> 单行注释和 <code>/**/</code> 多行注释</li><li>保留 JSON 的严格数据结构, 仅增加注释功能</li></ul></li></ul><h3 id="JSON5-更人性化的-JSON"><a href="#JSON5-更人性化的-JSON" class="headerlink" title="JSON5 (更人性化的 JSON)"></a>JSON5 (更人性化的 JSON)</h3><ul><li>扩展名: <code>.json5</code></li><li>特点:<ul><li>支持注释, 尾随逗号, 单引号字符串, 无引号键名, 十六进制数字等</li><li>目标是更易手写和维护</li><li><a href="https://json5.org/">官方库</a></li></ul></li></ul><h3 id="JSONL-JSON-Lines"><a href="#JSONL-JSON-Lines" class="headerlink" title="JSONL (JSON Lines)"></a>JSONL (JSON Lines)</h3><ul><li>扩展名: <code>.jsonl</code></li><li>特点: <ul><li>每行是一个独立的 JSON 对象, 适合流式处理或日志文件</li><li><strong>无需根数组或对象包裹</strong></li></ul></li></ul><h1 id="YAML-yml-yaml"><a href="#YAML-yml-yaml" class="headerlink" title="YAML (.yml&#x2F;.yaml)"></a>YAML (.yml&#x2F;.yaml)</h1><h1 id="INI-ini"><a href="#INI-ini" class="headerlink" title="INI (.ini)"></a>INI (.ini)</h1><h1 id="CSV-csv"><a href="#CSV-csv" class="headerlink" title="CSV (.csv)"></a>CSV (.csv)</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Others</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Writing...</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Debugging...</title>
     <link href="/debug/"/>
     <url>/debug/</url>
@@ -1156,7 +1181,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-DUUZAlSg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-DUUZAlSg");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-laPHANJP" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-laPHANJP");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
