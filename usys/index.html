@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-06-19T04:22:09.067Z">
+<meta property="article:modified_time" content="2025-06-22T12:33:59.875Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          2.6k 字
         
       </span>
     
@@ -450,7 +450,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-06-19T12:22:09+08:00
+                    最后更新于: 2025-06-22T20:33:59+08:00
                   
                   
 
@@ -621,6 +621,10 @@
 <li>基本软件: <code>zip, git, vim, tree, wget</code></li>
 <li>安装 Minniconda</li>
 <li>安装 CUDA 与 cuDNN</li>
+<li>额外包: <ul>
+<li><code>binutils</code>: <code>strings</code> 提取二进制文件中的可打印字符串</li>
+</ul>
+</li>
 </ul>
 <h2 id="容器连接"><a href="#容器连接" class="headerlink" title="容器连接"></a>容器连接</h2><ul>
 <li><strong>以 <code>admin</code> 为跳板机, 本地电脑 “一键” 连接到容器: <code>ssh -J aic_admin user@container_ip</code></strong>. <em>结合 <code>.ps1, .sh</code> 脚本与 <code>ProxyCommand</code> 配置可根据容器名称自动解析容器 IP, 连接到对应容器, 可参考 <a href="/2024/06/26/SSH-Secure-Shell-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/#%E8%B7%B3%E6%9D%BF%E6%9C%BA">SSH 跳板机</a></em></li>
