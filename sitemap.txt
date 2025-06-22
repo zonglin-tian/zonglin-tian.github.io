@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/tensorboard/
 https://zonglin-tian.github.io/conda/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/format/
@@ -33,7 +34,6 @@ https://zonglin-tian.github.io/2025/02/20/%E4%B8%93%E4%B8%9A%E5%8D%95%E8%AF%8D%E
 https://zonglin-tian.github.io/2024/06/27/%E5%BD%93%E4%BD%A0%E6%83%B3%E8%A6%81%E6%9F%90%E7%A7%8D%E4%B8%9C%E8%A5%BF%E6%97%B6-%E6%95%B4%E4%B8%AA%E5%AE%87%E5%AE%99%E4%BC%9A%E5%90%88%E5%8A%9B%E5%8A%A9%E4%BD%A0%E5%AE%9E%E7%8E%B0%E6%84%BF%E6%9C%9B/
 https://zonglin-tian.github.io/2025/02/13/Git-GitBash-GitHub/
 https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/
-https://zonglin-tian.github.io/2024/09/01/Tensorboard-notes/
 https://zonglin-tian.github.io/2024/11/28/Hello-Docker/
 https://zonglin-tian.github.io/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/
 https://zonglin-tian.github.io/2024/10/14/%E5%BF%83%E7%90%86%E8%BE%85%E5%AF%BC/
@@ -81,8 +81,8 @@ https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajam
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/waifu-tips.json
@@ -102,8 +102,8 @@ https://zonglin-tian.github.io/tags/PyCharm/
 https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
-https://zonglin-tian.github.io/categories/Research/
 https://zonglin-tian.github.io/categories/Others/
+https://zonglin-tian.github.io/categories/Research/
 https://zonglin-tian.github.io/categories/Coding/
 https://zonglin-tian.github.io/categories/Software/
 https://zonglin-tian.github.io/categories/Ubuntu/

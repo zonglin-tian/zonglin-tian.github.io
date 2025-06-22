@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zonglin-tian.github.io/tensorboard/</loc>
+    
+    <lastmod>2025-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/conda/</loc>
     
     <lastmod>2025-06-22</lastmod>
@@ -311,15 +320,6 @@
     <loc>https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/</loc>
     
     <lastmod>2024-12-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/09/01/Tensorboard-notes/</loc>
-    
-    <lastmod>2024-11-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -749,7 +749,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -758,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -918,14 +918,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2025-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2025-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
