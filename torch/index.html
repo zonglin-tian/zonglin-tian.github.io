@@ -19,13 +19,13 @@
     <meta name="description" content="Pytorch study notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyTorch Notes">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/04/22/PyTorch-Notes/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/torch/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="Pytorch study notes">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/pytorch.png">
 <meta property="article:published_time" content="2024-04-22T14:11:34.000Z">
-<meta property="article:modified_time" content="2025-03-30T23:34:25.444Z">
+<meta property="article:modified_time" content="2025-06-23T03:21:45.919Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          2k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          10 分钟
+          11 分钟
         
       </span>
     
@@ -384,7 +384,7 @@
     
       
       
-        <a href="/2024/04/22/PyTorch-Notes/" title="PyTorch Notes"
+        <a href="/torch/" title="PyTorch Notes"
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">PyTorch Notes</span>
@@ -459,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-03-31T07:34:25+08:00
+                    最后更新于: 2025-06-23T11:21:45+08:00
                   
                   
 
@@ -477,6 +477,16 @@
 <h1 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h1><ul>
 <li><code>CUDA_VISIBLE_DEVICES</code>: 环境变量, 控制哪些 GPU 设备可用于 CUDA 程序 (可在程序运行时指定, 或者在程序中使用 <code>os.environ[&#39;CUDA_VISIBLE_DEVICES&#39;])</code> 定义)</li>
 </ul>
+<h1 id="torch-device"><a href="#torch-device" class="headerlink" title="torch.device"></a>torch.device</h1><ul>
+<li><code>torch.cuda.device_count()</code>: 获取可用 GPU 数量</li>
+<li><code>torch.cuda.set_device(int/torch.device/str)</code>: 设置默认 GPU</li>
+<li><code>torch.cuda.current_device()</code>: 查看当前设备</li>
+<li><code>device = torch.device(&#39;cuda&#39;)</code>: 默认 GPU (当前设备)</li>
+<li><code>device = torch.device(&#39;cuda:1&#39;)</code>: 指定 GPU (设备 1)</li>
+<li><code>device = torch.device(&#39;cpu&#39;)</code>: CPU 设备</li>
+<li><code>device = torch.device(&#39;cuda&#39; if torch.cuda.is_available() else &#39;cpu&#39;)</code>: 自动选择设备</li>
+</ul>
+<p><strong>注: 在 PyTorch 中需要保持所有张量和模型在同一设备上</strong></p>
 <h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><h2 id="Tensors"><a href="#Tensors" class="headerlink" title="Tensors"></a>Tensors</h2><p><code>Tensors</code> 是一种特殊的数据结构, 与数组和矩阵非常相似, 在 PyTorch 中, <em>使用 Tensors 表示模型的输入和输出以及模型的参数</em></p>
 <ul>
 <li>Tensors 与 NumPy 中的 <code>ndarrays</code> 类似, 只是 Tensors 可以在 GPU 或其它硬件加速器上运行</li>
@@ -525,9 +535,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">tesor = torch.Tensor(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)  <span class="hljs-comment"># 随机生成 3*5 的 tensor</span><br><span class="hljs-comment"># 转成 long 类型</span><br>newtensor = tensor.long()<br><span class="hljs-comment"># 转成半精度浮点类型 (float16)</span><br>newtensor = tensor.half()<br><span class="hljs-comment"># 转成 int 类型</span><br>newtensor = tensor.<span class="hljs-built_in">int</span>()<br><span class="hljs-comment"># 转成 short 类型</span><br>newtensor = tensor.short()<br><span class="hljs-comment"># 转成 double 类型</span><br>newtensor = tensor.double()<br><span class="hljs-comment"># 转成 float 类型</span><br>newtensor = tensor.<span class="hljs-built_in">float</span>()<br><span class="hljs-comment"># 转成 char 类型</span><br>newtensor = tensor.char()<br><span class="hljs-comment"># 转成 byte 类型</span><br>newtensor = tensor.byte()<br></code></pre></td></tr></table></figure>
 
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>Tensor.item(): 从包含<strong>单个元素的张量</strong>中提取该元素的 Python 数值</li>
+<li>Tensor.cpu(): 将张量从 GPU 移动到 CPU, 通常与 <code>.numpy()</code> 一起使用</li>
+<li>Tensor.cuda(device&#x3D;None): 将张量从 CPU 移动到当前 GPU 设备 (默认) 或指定的设备, <code>device</code> 可选值为 <code>int/torch.device</code></li>
 <li>Tensor.tolist(): return the tensor as a (nested) list. For scalars, a standard Python number is returned like <code>Tensor.item()</code> (only work for tensors with one element)</li>
-<li>Tensor.item(): return the value of this tensor as a standard Python number</li>
-<li>Tensor.numpy(): 将 Tensor 类型转变为 numpy 类型</li>
+<li>Tensor.numpy(): 将 Tensor 类型转变为 numpy 类型 (需要张量在 <code>cpu</code> 上)</li>
 <li>Tensor.to(*arg, **kwargs): change an existing tensor’s <code>torch.device</code> and <code>torch.dtype</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">tensor = torch.rand(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)<br>tensor.to(torch.float64)<br>cuda0 = torch.device(<span class="hljs-string">&#x27;cuda:0&#x27;</span>)<br>tensor.to(cuda0)<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="操作中参数-dim-的理解"><a href="#操作中参数-dim-的理解" class="headerlink" title="操作中参数 dim 的理解"></a>操作中参数 <code>dim</code> 的理解</h2><p><strong>The way to understand the “axis” in NumPy or “dim” in PyTorch is that it <em>collapses the specified axis. So when it collapses</em> the axis 0 (the row), it becomes just one row (column-wise)</strong></p>
@@ -711,7 +723,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>PyTorch Notes</div>
-      <div>https://zonglin-tian.github.io/2024/04/22/PyTorch-Notes/</div>
+      <div>https://zonglin-tian.github.io/torch/</div>
     </div>
     <div class="license-meta">
       

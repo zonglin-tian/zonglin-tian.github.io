@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/debug.png">
 <meta property="article:published_time" content="2025-06-12T05:14:55.000Z">
-<meta property="article:modified_time" content="2025-06-19T04:22:49.005Z">
+<meta property="article:modified_time" content="2025-06-23T03:27:48.017Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          27 字
+          221 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -332,6 +332,121 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Coding"
+        id="heading-cddcade0405954c4325ee1fb11e3dc0e" role="tab" data-toggle="collapse" href="#collapse-cddcade0405954c4325ee1fb11e3dc0e"
+        aria-expanded="true"
+      >
+        Coding
+        <span class="list-group-count">(8)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-cddcade0405954c4325ee1fb11e3dc0e"
+           role="tabpanel" aria-labelledby="heading-cddcade0405954c4325ee1fb11e3dc0e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/debug/" title="Debugging..."
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Debugging...</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/31/Numpy-notes/" title="NumPy notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">NumPy notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/torch/" title="PyTorch Notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">PyTorch Notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Python 库管理与使用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 库管理与使用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/" title="Shell 脚本"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Shell 脚本</span>
+        </a>
+      
+    
+      
+      
+        <a href="/tensorboard/" title="Tensorboard notes"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Tensorboard notes</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/10/25/Terminal-Python-IPython/" title="终端 Python: IPython"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">终端 Python: IPython</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -344,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-06-19T12:22:49+08:00
+                    最后更新于: 2025-06-23T11:27:48+08:00
                   
                   
 
@@ -358,7 +473,29 @@
             <p>Troubleshooting any problem without the error log is like driving with your eyes closed. (在没有错误日志的情况下诊断任何问题无异于闭眼开车)</p>
           </div>
 
-<h1 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h1><h2 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h2>
+<h1 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h1><ul>
+<li>解决办法:<ul>
+<li>数据归一化</li>
+<li>限制数据范围: <code>torch.clamp()</code></li>
+<li>降低学习率或添加梯度裁剪 (<code>torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=specified_value)</code>)</li>
+</ul>
+</li>
+<li>调试命令: <strong><code>torch.isnan()</code>, <code>torch.where()</code></strong><ul>
+<li>自动检测反向传播过程中梯度是否存在 <code>NaN</code> 或 <code>inf</code>, 当检测到异常时会打印出该异常的原始前向传播操作并抛出 <em>RuntimeError</em><ul>
+<li><strong>局部 (精细调试): <code>with torch.autograd.detect_anomaly(check_nan=True):</code></strong></li>
+<li>全局: <code>torch.autograd.set_detect_anomaly(check_nan=True)</code></li>
+</ul>
+</li>
+<li>检查是否含有 <code>NaN</code>: <code>torch.isnan(tensor).any()</code></li>
+<li>统计 <code>NaN</code> 的数量: <code>torch.isnan(tensor).sum().item()</code></li>
+<li>定位 <code>NaN</code> 的位置: <code>torch.where(torch.isnan(tensor))</code></li>
+<li>替换 <code>NaN</code> 为特定值: <code>torch.nan_to_num(tensor, nan=specified_value)</code></li>
+<li>过滤非 <code>NaN</code> 值: <code>valid_values = tensor[~torch.isnan(tensor)]</code></li>
+<li>检查梯度中的 <code>NaN</code>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> name, param <span class="hljs-keyword">in</span> model.named_parameters():<br>    <span class="hljs-keyword">if</span> param.grad <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> torch.isnan(param.grad).<span class="hljs-built_in">any</span>():<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;梯度 NaN 出现在参数: <span class="hljs-subst">&#123;name&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
                 
               </div>
             
