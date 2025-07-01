@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zonglin-tian.github.io//usys/</loc>
+    <loc>https://zonglin-tian.github.io//utext/</loc>
     <lastmod>2025-07-01</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io//file/</loc>
+    <loc>https://zonglin-tian.github.io//ufile/</loc>
+    <lastmod>2025-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//usys/</loc>
     <lastmod>2025-07-01</lastmod>
   </url>
   <url>
@@ -34,10 +38,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//typing/</loc>
-    <lastmod>2025-06-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//text/</loc>
     <lastmod>2025-06-19</lastmod>
   </url>
   <url>
