@@ -803,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -812,7 +812,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/demo/demo.html</loc>
+    <loc>https://zonglin-tian.github.io/live2d/demo/login.html</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -918,14 +918,14 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
     <lastmod>2025-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2025-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
