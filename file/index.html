@@ -19,13 +19,13 @@
     <meta name="description" content="Ubuntu 文件操作常用命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 文件操作">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/file/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="Ubuntu 文件操作常用命令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2024-11-22T08:35:01.634Z">
+<meta property="article:modified_time" content="2025-07-01T05:46:44.219Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.6k 字
         
       </span>
     
@@ -393,7 +393,7 @@
     
       
       
-        <a href="/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" title="Ubuntu 文件操作"
+        <a href="/file/" title="Ubuntu 文件操作"
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">Ubuntu 文件操作</span>
@@ -450,7 +450,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2024-11-22T16:35:01+08:00
+                    最后更新于: 2025-07-01T13:46:44+08:00
                   
                   
 
@@ -461,8 +461,10 @@
               <div class="markdown-body">
                 
                 <h1 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h1><ul>
-<li><code>tail -f filename</code>: 查看文件最尾部的内容, 并且不断刷新, <strong>特别适合查阅不断更新的日志文件</strong> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux tail 命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-tail.html)">[1]</span></a></sup><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tail 常用参数</span><br>- f: 循环读取 (Ctrl + C 停止显示)<br>- n: 显示尾部行数 (默认10行)<br></code></pre></td></tr></table></figure></li>
+<li><code>tail -f filename</code>: 查看文件最尾部的内容, 并且不断刷新, <strong>特别适合查阅不断更新的日志文件</strong> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux tail 命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-tail.html)">[1]</span></a></sup></li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tail 常用参数</span><br>- f: 循环读取 (Ctrl + C 停止显示)<br>- n: 显示尾部行数 (默认10行)<br></code></pre></td></tr></table></figure>
+
 <h1 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h1><h2 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title="tar.gz 文件"></a>tar.gz 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 通用参数说明</span><br>-v: 显示执行过程<br>-z: 通过 gzip 命令处理文件<br>-f: 指定备份文件<br><br><span class="hljs-comment"># 解压缩, -x 还原文件</span><br>tar -xvzf file.tar.gz<br><br><span class="hljs-comment"># 解压缩 tar.xz 文件</span><br>tar -xvf file.tar.xz<br><br><span class="hljs-comment"># 压缩并打包 -c 建立新的备份文件</span><br>tar -cvzf compact_file.tar.gz source_file<br><br><span class="hljs-comment"># 列出压缩文件内容, -t 列出备份文件内容</span><br>tar -tvzf file.tar.gz<br></code></pre></td></tr></table></figure>
 
 <h2 id="zip-文件"><a href="#zip-文件" class="headerlink" title="zip 文件"></a>zip 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># zip 压缩参数说明</span><br>r: 递归处理文件和文件夹<br>q: 不显示执行过程<br>v: 显示执行过程<br>d: 从压缩文件中删除指定文件<br><br><span class="hljs-comment"># 把 zip_folder 下所有文件和文件夹打包为当前目录下的 zip_file.zip</span><br>zip -qr zip_file.zip zip_folder<br><br><span class="hljs-comment">## 从压缩文件 zip_file.zip 中删除 delete_file</span><br>zip -dv zip_file.zip delete_file<br><br><br><span class="hljs-comment"># (可能要先安装 unzip)</span><br><span class="hljs-comment"># sudo apt install unzip</span><br><br><span class="hljs-comment"># 解压到当前目录</span><br>unzip file.zip<br><br><span class="hljs-comment"># 查看 zip 压缩包含的文件</span><br>unzip -l file.zip<br></code></pre></td></tr></table></figure>
@@ -471,10 +473,17 @@
 
 <h1 id="文件复制-2-3"><a href="#文件复制-2-3" class="headerlink" title="文件复制 [2]-[3]"></a>文件复制 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux cp 命令. RUNOOB.COM](https://www.runoob.com/linux/linux-comm-cp.html)">[2]</span></a></sup><sup>-</sup><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu cp 命令](https://wenku.csdn.net/answer/c95a332c6633464794f5a97d5f18859c#:~:text=ubuntu%20cp命令%201%20-r：递归复制目录及其子目录和文件。%202%20-i：交互式复制，如果目标文件已经存在，则提示用户是否覆盖。,3%20-f：强制复制，覆盖目标文件而不提示用户。%204%20-v：显示详细的复制过程。%205%20-p：保留源文件的权限、所有权和时间戳%E3%80%82)">[3]</span></a></sup></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 复制多个文件 (夹) 到指定目录 (需要先创建) 下</span><br><span class="hljs-built_in">cp</span> -r souce_dir/ source_file object_dir/<br><span class="hljs-comment"># 不复制文件夹下特定文件到指定目录, 其余复制</span><br><span class="hljs-built_in">cd</span> source_dir<br><span class="hljs-built_in">cp</span> -r `<span class="hljs-built_in">ls</span> grep -v excluded | xargs` object_dir/<br><span class="hljs-comment"># 如果目标文件存在, 强制覆盖</span><br><span class="hljs-built_in">cp</span> -f source_file object_path<br><span class="hljs-comment"># 其它参数</span><br>-v: 显示复制的进度<br>-i: 交互式复制<br></code></pre></td></tr></table></figure>
 
-
-<h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 下载单个文件并保存在当前目录</span><br>wget file_url<br><span class="hljs-comment"># 下载单个文件并改名</span><br>wget -O new_name file_url<br>curl file_url -o new_name<br><span class="hljs-comment"># 示例</span><br><span class="hljs-built_in">mkdir</span> d2l-zh &amp;&amp; <span class="hljs-built_in">cd</span> d2l-zh<br>curl https://zh-v2.d2l.ai/d2l-zh-2.0.0.zip -o d2l-zh.zip<br>unzip d2l-zh.zip &amp;&amp; <span class="hljs-built_in">rm</span> d2l-zh.zip<br></code></pre></td></tr></table></figure>
-
-
+<h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><h2 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h2><p>强大的命令行下载工具, 支持 HTTP, HTTPS 和 FTP 协议, 支持断点续传, 能够递归下载整个网站</p>
+<p>命令形式: <code>wget [选项] [URL]</code></p>
+<p>选项: </p>
+<ul>
+<li><code>-c</code>: 断点续传, 继续下载部分下载的文件</li>
+<li><code>-b</code>: 后台下载</li>
+<li><code>-q</code>: 安静模式 (不显示输出信息)</li>
+<li><code>-O filename</code>: 指定下载文件的保存名称 </li>
+<li><code>-P directory</code>: 指定下载文件的保存目录</li>
+<li><code>-r</code>: 递归下载</li>
+</ul>
 <h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><p>在两台服务器之间利用 <code>ssh</code> 传输文件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[星海. 两台Linux服务器之间传输文件的四种方法. 知乎](https://zhuanlan.zhihu.com/p/78133776)">[4]</span></a></sup></p>
 <h2 id="scp-secure-copy-命令"><a href="#scp-secure-copy-命令" class="headerlink" title="scp (secure copy) 命令"></a>scp (secure copy) 命令</h2><p><strong>命令格式:</strong> <code>scp 参数 用户名@IP:源文件路径 用户名@IP:目标路径</code> , <strong>-r</strong> 传输文件夹, <strong>-v</strong>, 显示传输详情</p>
 <h2 id="rsync-remote-synchronization-命令"><a href="#rsync-remote-synchronization-命令" class="headerlink" title="rsync (remote synchronization) 命令"></a>rsync (remote synchronization) 命令</h2><p><strong>命令格式同 scp</strong>, <em>但可以多一个 <code>--exclude relative_path</code> 参数, 支持排除目录</em>, 例如命令<br><code>rsync -r --exclude  test/exculde user_name@IP:/path/test ./ </code></p>
@@ -562,7 +571,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Ubuntu 文件操作</div>
-      <div>https://zonglin-tian.github.io/2024/04/19/Ubuntu-文件操作/</div>
+      <div>https://zonglin-tian.github.io/file/</div>
     </div>
     <div class="license-meta">
       

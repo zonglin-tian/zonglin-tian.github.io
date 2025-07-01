@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zonglin-tian.github.io//usys/</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//file/</loc>
+    <lastmod>2025-07-01</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/07/06/Windows-%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
@@ -155,10 +159,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/11/28/Hello-Docker/</loc>
     <lastmod>2024-11-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/04/19/Ubuntu-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2024-11-22</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/14/%E5%BF%83%E7%90%86%E8%BE%85%E5%AF%BC/</loc>
