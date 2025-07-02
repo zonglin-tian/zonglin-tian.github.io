@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2025-07-02T09:25:09.148Z">
+<meta property="article:modified_time" content="2025-07-02T13:26:31.689Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          1.6k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          10 分钟
+          9 分钟
         
       </span>
     
@@ -352,7 +352,7 @@
         aria-expanded="true"
       >
         Ubuntu
-        <span class="list-group-count">(7)</span>
+        <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -427,6 +427,15 @@
         </a>
       
     
+      
+      
+        <a href="/regex/" title="正则表达式与通配符"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">正则表达式与通配符</span>
+        </a>
+      
+    
   </div>
 
         
@@ -450,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-02T17:25:09+08:00
+                    最后更新于: 2025-07-02T21:26:31+08:00
                   
                   
 
@@ -460,32 +469,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p><strong>通配符 (Wildcards)</strong> 主要用于快速匹配<em><strong>文件名</strong></em>或<em><strong>目录名</strong></em>的特殊字符</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>区分大小写</li>
-<li><code>*</code> 不匹配以 <code>.</code> 开头的隐藏文件 (需显式指定 <code>.*</code>)</li>
-<li>通配符<strong>不需要加引号</strong>, 加引号表示禁用通配符, 即为普通字符</li>
-</ul>
-<h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><ul>
-<li><code>*</code>: 任意数量 (包括零个) 的任意字符<ul>
-<li><code>*.txt</code>: 所有 <code>.txt</code> 文件</li>
-</ul>
-</li>
-<li><code>?</code>: 单个任意字符<ul>
-<li><code>file?.log</code>: <code>file1.log</code>, <code>file2.log</code></li>
-</ul>
-</li>
-<li><code>[]</code>: 括号内任意<strong>一个</strong>字符或范围<ul>
-<li><code>[0-9]</code>, <code>[a-z]</code>, <code>[abc]</code></li>
-<li>扩展: <code>[^/!]</code> (取反)</li>
-</ul>
-</li>
-<li><code>&#123;&#125;</code>: <strong>生成组合</strong> (非匹配, 用于展开)<ul>
-<li><code>&#123;start..end&#125;</code>, <code>&#123;a,b,c&#125;</code> <strong>(不含空格)</strong></li>
-</ul>
-</li>
-</ul>
-<h1 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h1><ul>
+                <h1 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h1><ul>
 <li><code>tail -f filename</code>: 查看文件最尾部的内容, 并且不断刷新, <strong>特别适合查阅不断更新的日志文件</strong> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Linux tail 命令. 菜鸟教程](https://www.runoob.com/linux/linux-comm-tail.html)">[1]</span></a></sup></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tail 常用参数</span><br>- f: 循环读取 (Ctrl + C 停止显示)<br>- n: 显示尾部行数 (默认10行)<br></code></pre></td></tr></table></figure>
