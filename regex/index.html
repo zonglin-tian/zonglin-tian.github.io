@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/regex.png">
 <meta property="article:published_time" content="2025-07-02T13:01:42.000Z">
-<meta property="article:modified_time" content="2025-07-02T14:20:49.482Z">
+<meta property="article:modified_time" content="2025-07-03T09:35:21.071Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          647 字
+          813 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -459,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-02T22:20:49+08:00
+                    最后更新于: 2025-07-03T17:35:21+08:00
                   
                   
 
@@ -469,7 +469,30 @@
             
               <div class="markdown-body">
                 
-                <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>正则表达式 (Regular Expressions)</strong> 用于<strong>文本内容匹配</strong> (如搜索, 替换字符串), 常见于 <code>grep</code>, <code>sed</code>, <code>awk</code>, <code>vim</code> 等命令</p>
+                <h1 id="Shell-引号解析"><a href="#Shell-引号解析" class="headerlink" title="Shell 引号解析"></a>Shell 引号解析</h1><p><strong>理解:</strong></p>
+<ul>
+<li>单引号: 完全不管, 原样输出<ul>
+<li><strong>固定</strong>正则表达式</li>
+</ul>
+</li>
+<li>双引号: 稍微加工, 变量展示, 扩展 <code>$</code>, <code>`</code>, <strong><code>\</code> 转义字符 (<code>$`&quot;\</code>)</strong>, <code>$()</code> , 保护特殊字符 (<code>空格*?单引号</code>)<ul>
+<li>含<strong>变量</strong>的正则表达式</li>
+</ul>
+</li>
+<li>不加引号 (<strong>Shell 截胡</strong>): 过度加工, 替换变量, 拆分空格, 将特殊字符 (<code>*?</code>) 当成通配符匹配文件<ul>
+<li><code>[[ &quot;string&quot; =~ regex  ]]</code> 右侧的 <code>regex</code> 不能加引号, 否则正则符号 (<code>.*</code>) 会变成普通字符</li>
+<li>通配符, 重定向, 管道符</li>
+</ul>
+</li>
+</ul>
+<p><strong>口决:</strong></p>
+<ul>
+<li>有变量? 用双引号</li>
+<li><strong>没变量? 用单引号</strong></li>
+<li><code>[[ =~ ]]</code> 条件测试? 变量别加引号</li>
+<li><strong>永远别完全不加引号</strong></li>
+</ul>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>正则表达式 (Regular Expressions)</strong> 用于<strong>文本内容匹配</strong> (如搜索, 替换字符串), 常见于 <code>grep</code>, <code>sed</code>, <code>awk</code>, <code>vim</code> 等命令</p>
 <h2 id="基础正则-BRE"><a href="#基础正则-BRE" class="headerlink" title="基础正则 (BRE)"></a>基础正则 (BRE)</h2><ul>
 <li>需转义特殊字符: <code>&#123;</code>, <code>&#125;</code>, <code>+</code></li>
 <li><code>.</code>: 任意单个字符</li>
