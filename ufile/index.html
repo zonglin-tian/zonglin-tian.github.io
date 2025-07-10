@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2025-07-02T13:26:31.689Z">
+<meta property="article:modified_time" content="2025-07-10T00:14:11.684Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -352,7 +352,7 @@
         aria-expanded="true"
       >
         Ubuntu
-        <span class="list-group-count">(8)</span>
+        <span class="list-group-count">(9)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -420,6 +420,15 @@
     
       
       
+        <a href="/udisk/" title="Ubuntu 磁盘管理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 磁盘管理</span>
+        </a>
+      
+    
+      
+      
         <a href="/usys/" title="Ubuntu 系统管理"
            class="list-group-item list-group-item-action
            ">
@@ -459,7 +468,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-02T21:26:31+08:00
+                    最后更新于: 2025-07-10T08:14:11+08:00
                   
                   
 
@@ -495,7 +504,14 @@
 </ul>
 <h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><p>在两台服务器之间利用 <code>ssh</code> 传输文件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[星海. 两台Linux服务器之间传输文件的四种方法. 知乎](https://zhuanlan.zhihu.com/p/78133776)">[4]</span></a></sup></p>
 <h2 id="scp-secure-copy-命令"><a href="#scp-secure-copy-命令" class="headerlink" title="scp (secure copy) 命令"></a>scp (secure copy) 命令</h2><p><strong>命令格式:</strong> <code>scp 参数 用户名@IP:源文件路径 用户名@IP:目标路径</code> , <strong>-r</strong> 传输文件夹, <strong>-v</strong>, 显示传输详情</p>
-<h2 id="rsync-remote-synchronization-命令"><a href="#rsync-remote-synchronization-命令" class="headerlink" title="rsync (remote synchronization) 命令"></a>rsync (remote synchronization) 命令</h2><p><strong>命令格式同 scp</strong>, <em>但可以多一个 <code>--exclude relative_path</code> 参数, 支持排除目录</em>, 例如命令<br><code>rsync -r --exclude  test/exculde user_name@IP:/path/test ./ </code></p>
+<h2 id="rsync-remote-synchronization-命令"><a href="#rsync-remote-synchronization-命令" class="headerlink" title="rsync (remote synchronization) 命令"></a>rsync (remote synchronization) 命令</h2><p><strong>命令格式同 scp</strong>, <em>但可以多一个 <code>--exclude relative_path</code> 参数, 支持排除目录</em>, 例如命令<br><code>rsync -r --exclude test/exculde user_name@IP:/path/test ./ </code></p>
+<ul>
+<li><code>-v</code>: 同步文件 (详情)</li>
+<li><code>--partial</code>: 断点续传</li>
+<li><code>--progress</code>: 传输进度</li>
+<li><code>-a</code>: 归档模式, 递归复制, 保持符号链接, 权限, 时间戳等</li>
+<li><code>-z</code>: 压缩传输</li>
+</ul>
 <h1 id="链接文件-5-6"><a href="#链接文件-5-6" class="headerlink" title="链接文件 [5]-[6]"></a>链接文件 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[weixin_34248118. linux查看硬链接对应的所有文件. CSDN](https://blog.csdn.net/weixin_34248118/article/details/89805804?spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-7-89805804-blog-37692587.235^v39^pc_relevant_anti_vip&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-7-89805804-blog-37692587.235^v39^pc_relevant_anti_vip)">[5]</span></a></sup><sup>-</sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[hongweigg. Linux中怎么看出文件是硬连接?. CSDN](https://blog.csdn.net/hongweigg/article/details/37692587)">[6]</span></a></sup></h1><ul>
 <li>链接文件分为硬链接和软链接, 硬链接相当于一个文件两个名称, 而<strong>软链接相当于创建快捷方式</strong>, 创建链接时建议使用<strong>绝对路径</strong></li>
 <li>可使用 <code>ll</code> 命令查看软链接, 其中带有 <strong>l</strong> 标识的为软链接, 并有明确的指向</li>
