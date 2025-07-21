@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2025-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2025-07-21</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//regex/</loc>
     <lastmod>2025-07-18</lastmod>
   </url>
@@ -87,14 +95,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/08/02/%E7%BB%99%E6%9E%81%E8%87%B4%E6%88%B4%E4%B8%8A%E7%90%86%E6%99%BA%E7%9A%84%E6%9E%B7%E9%94%81/</loc>
     <lastmod>2025-04-14</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2025-04-12</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2025-04-12</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</loc>
