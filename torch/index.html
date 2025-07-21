@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/pytorch.png">
 <meta property="article:published_time" content="2024-04-22T14:11:34.000Z">
-<meta property="article:modified_time" content="2025-06-23T03:21:45.919Z">
+<meta property="article:modified_time" content="2025-07-21T14:04:00.222Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.1k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          11 分钟
+          12 分钟
         
       </span>
     
@@ -393,7 +393,7 @@
     
       
       
-        <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础"
+        <a href="/pbsc/" title="Python 基础"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Python 基础</span>
@@ -402,10 +402,10 @@
     
       
       
-        <a href="/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Python 库管理与使用"
+        <a href="/plib/" title="Python 常用库"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Python 库管理与使用</span>
+          <span class="category-post">Python 常用库</span>
         </a>
       
     
@@ -459,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-06-23T11:21:45+08:00
+                    最后更新于: 2025-07-21T22:04:00+08:00
                   
                   
 
@@ -469,15 +469,14 @@
             
               <div class="markdown-body">
                 
-                <h1 id="安装与验证"><a href="#安装与验证" class="headerlink" title="安装与验证"></a>安装与验证</h1><p>通过<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>指南安装, 如 CUDA 11.3 + PyTorch 1.12</p>
+                <h1 id="使用之前"><a href="#使用之前" class="headerlink" title="使用之前"></a>使用之前</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>指南安装, 如 CUDA 11.3 + PyTorch 1.12</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 视觉任务通常不需要安装 torchaudio 包</span><br>conda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch<br></code></pre></td></tr></table></figure>
-<p><strong>验证:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 验证 torch 是否正常安装</span><br>ipython  <span class="hljs-comment"># pip install ipython, ipython 比 python 输入更方便</span><br><span class="hljs-keyword">import</span> torch<br><span class="hljs-built_in">print</span>(torch.rand(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>))<br><br><span class="hljs-comment"># 验证是否支持 GPU 加速</span><br><span class="hljs-built_in">print</span>(torch.cuda.is_available())<br></code></pre></td></tr></table></figure>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 验证 torch 是否正常安装</span><br>ipython  <span class="hljs-comment"># pip install ipython, ipython 比 python 输入更方便</span><br><span class="hljs-keyword">import</span> torch<br><span class="hljs-built_in">print</span>(torch.rand(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>))<br><br><span class="hljs-comment"># 验证是否支持 GPU 加速</span><br><span class="hljs-built_in">print</span>(torch.cuda.is_available())<br></code></pre></td></tr></table></figure>
 
-<h1 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h1><ul>
+<h2 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h2><ul>
 <li><code>CUDA_VISIBLE_DEVICES</code>: 环境变量, 控制哪些 GPU 设备可用于 CUDA 程序 (可在程序运行时指定, 或者在程序中使用 <code>os.environ[&#39;CUDA_VISIBLE_DEVICES&#39;])</code> 定义)</li>
 </ul>
-<h1 id="torch-device"><a href="#torch-device" class="headerlink" title="torch.device"></a>torch.device</h1><ul>
+<h1 id="设备-torch-device"><a href="#设备-torch-device" class="headerlink" title="设备 torch.device"></a>设备 <code>torch.device</code></h1><ul>
 <li><code>torch.cuda.device_count()</code>: 获取可用 GPU 数量</li>
 <li><code>torch.cuda.set_device(int/torch.device/str)</code>: 设置默认 GPU</li>
 <li><code>torch.cuda.current_device()</code>: 查看当前设备</li>
@@ -487,6 +486,35 @@
 <li><code>device = torch.device(&#39;cuda&#39; if torch.cuda.is_available() else &#39;cpu&#39;)</code>: 自动选择设备</li>
 </ul>
 <p><strong>注: 在 PyTorch 中需要保持所有张量和模型在同一设备上</strong></p>
+<h1 id="模型-优化器保存与加载"><a href="#模型-优化器保存与加载" class="headerlink" title="模型&#x2F;优化器保存与加载"></a>模型&#x2F;优化器保存与加载</h1><h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 单独保存</span><br>torch.save(target.state_dict(), ckpt_path)<br><span class="hljs-comment"># 合并保存</span><br>checkpoint = &#123;<br>    <span class="hljs-string">&#x27;model&#x27;</span>: net.state_dict(),<br>    <span class="hljs-string">&#x27;optimizer&#x27;</span>: optimizer.state_dict(), <br>    <span class="hljs-string">&#x27;iteration&#x27;</span>: <span class="hljs-number">30000</span><br>&#125;<br>torch.save(checkponit, ckpt_name.pth)<br></code></pre></td></tr></table></figure>
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">state_dict = torch.load(ckpt_path)<br>target.load_state_dict(state_dict)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40522801/article/details/106563354">宁静致远*. Pytorch：模型的保存与加载. CSDN</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82038049">鑫鑫淼淼焱焱. PyTorch | 保存和加载模型. 知乎</a></li>
+</ul>
+<h1 id="优化器-torch-optim-Optimizer"><a href="#优化器-torch-optim-Optimizer" class="headerlink" title="优化器 torch.optim.Optimizer"></a>优化器 <code>torch.optim.Optimizer</code></h1><ul>
+<li><code>param_groups</code>: 返回优化器管理的所有参数组, 为一个字典列表, 每个字典包含<ul>
+<li><code>params</code>: 要优化的参数张量</li>
+<li><code>lr</code>: 学习率</li>
+<li><code>eps</code>: 数值稳定性项</li>
+</ul>
+</li>
+<li><code>state</code>: 返回优化状态, 为一个字典, 包含<ul>
+<li><code>step</code>: 当前迭代次数</li>
+</ul>
+</li>
+</ul>
+<h1 id="torchvision"><a href="#torchvision" class="headerlink" title="torchvision"></a>torchvision</h1><h2 id="utils"><a href="#utils" class="headerlink" title="utils"></a>utils</h2><ul>
+<li><code>save_image(tensor, file_path)</code>: 将 tensor (N, H, W) 保存为图像</li>
+<li>make_grid(tensor, nrow&#x3D;8, padding&#x3D;2, normalize&#x3D;False, range&#x3D;None, sacle_each&#x3D;False, pad_value&#x3D;0): make a grid of images<ul>
+<li>tensor [B, C, H, W]</li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/generated/torchvision.utils.make_grid.html">torchvision.utils.make_grid</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="io"><a href="#io" class="headerlink" title="io"></a>io</h2><ul>
+<li><code>read_image(file_path)</code>: 读取图片</li>
+</ul>
 <h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><h2 id="Tensors"><a href="#Tensors" class="headerlink" title="Tensors"></a>Tensors</h2><p><code>Tensors</code> 是一种特殊的数据结构, 与数组和矩阵非常相似, 在 PyTorch 中, <em>使用 Tensors 表示模型的输入和输出以及模型的参数</em></p>
 <ul>
 <li>Tensors 与 NumPy 中的 <code>ndarrays</code> 类似, 只是 Tensors 可以在 GPU 或其它硬件加速器上运行</li>
@@ -578,18 +606,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 获取 train_data_loader 的某个 batch</span><br>batch = <span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(train_data_loader))<br>target_batch_index = <span class="hljs-number">3</span><br><span class="hljs-keyword">for</span> idx, batch <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(train_data_loader):<br>    <span class="hljs-keyword">if</span> idx == target_batch_index:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Batch Index:&quot;</span>, idx)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Batch Data:&quot;</span>, batch)<br></code></pre></td></tr></table></figure>
 
 <h2 id="copy-与-detach"><a href="#copy-与-detach" class="headerlink" title="copy 与 detach"></a>copy 与 detach</h2><p>When we wan to graph some of our tensors. We may have a tensor that requires gradient tracking, but you want a (shallow) copy that does not. This is because <code>matplotlib</code> expects a NumPy array as input, and the implict conversion from a PyTorch tensor to a NumPy array is <strong>not enabled for tensors with <code>requires_grad=True</code></strong>. Making a <code>detached copy</code> lets us move forward.</p>
-<h2 id="模型加载与保存"><a href="#模型加载与保存" class="headerlink" title="模型加载与保存"></a>模型加载与保存</h2><ul>
-<li>torch.save()</li>
-<li>torch.load()<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40522801/article/details/106563354">宁静致远*. Pytorch：模型的保存与加载. CSDN</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/82038049">鑫鑫淼淼焱焱. PyTorch | 保存和加载模型. 知乎</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="Optimizer"><a href="#Optimizer" class="headerlink" title="Optimizer"></a>Optimizer</h2><h3 id="TORCH-OPTIM"><a href="#TORCH-OPTIM" class="headerlink" title="TORCH.OPTIM"></a><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/optim.html">TORCH.OPTIM</a></h3><ul>
-<li>返回优化器管理的所有参数组: <code>optim.param_groups: List[Dict[str, Union[List[nn.Parameters], float, bool, int]]]</code></li>
-</ul>
-<h3 id="学习率"><a href="#学习率" class="headerlink" title="学习率"></a>学习率</h3><ul>
+<h2 id="学习率"><a href="#学习率" class="headerlink" title="学习率"></a>学习率</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qyhaill/article/details/103043637?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-2-103043637-blog-109841612.235%5Ev38%5Epc_relevant_sort_base1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-2-103043637-blog-109841612.235%5Ev38%5Epc_relevant_sort_base1&utm_relevant_index=3">八块腹肌怎么练. torch.optim.lr_scheduler：调整学习率. CSDN</a></li>
 </ul>
 <h2 id="nn"><a href="#nn" class="headerlink" title="nn"></a>nn</h2><ul>
@@ -621,14 +638,6 @@
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38252409/article/details/134965424">torch.distributed.init_process_group()详细说明</a></li>
 </ul>
 </li>
-</ul>
-<h1 id="torchvision"><a href="#torchvision" class="headerlink" title="torchvision"></a>torchvision</h1><h2 id="utils"><a href="#utils" class="headerlink" title="utils"></a>utils</h2><ul>
-<li>make_grid(tensor, nrow&#x3D;8, padding&#x3D;2, normalize&#x3D;False, range&#x3D;None, sacle_each&#x3D;False, pad_value&#x3D;0): make a grid of images<ul>
-<li>tensor [B, C, H, W]</li>
-<li><a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/generated/torchvision.utils.make_grid.html">torchvision.utils.make_grid</a></li>
-</ul>
-</li>
-<li></li>
 </ul>
 <h1 id="Auto-Differentiation-with-torch-autograd"><a href="#Auto-Differentiation-with-torch-autograd" class="headerlink" title="Auto Differentiation with torch.autograd"></a>Auto Differentiation with <code>torch.autograd</code></h1><h2 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h2><ul>
 <li>是否可以求导: <code>requires_grad</code> <div class="note note-warning">

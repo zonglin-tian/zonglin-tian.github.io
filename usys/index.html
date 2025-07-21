@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-07-10T11:46:04.309Z">
+<meta property="article:modified_time" content="2025-07-21T13:23:32.869Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          2.8k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          15 分钟
+          16 分钟
         
       </span>
     
@@ -468,7 +468,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-10T19:46:04+08:00
+                    最后更新于: 2025-07-21T21:23:32+08:00
                   
                   
 
@@ -609,6 +609,30 @@
 <li><strong>安装 <code>zh_CN.utf8</code> 字符集 (简体中文语言包): <code>sudo apt install language-pack-zh-hans</code></strong></li>
 <li>生成 <code>zh_CN.utf8</code> 语言环境 (可选, 先通过 <code>locale -a</code> 验证) <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更改系统语言环境生成列表</span><br>sudo vim /etc/locale.gen<br><span class="hljs-comment">## 将 zh_CN.UTF-8 UTF-8 注释掉</span><br><span class="hljs-comment">## 终端生成</span><br>sudo locale-gen<br><br><span class="hljs-comment"># 终端直接生成</span><br>sudo locale-gen zh_CN.UTF-8<br><br><span class="hljs-comment"># 生成的语言环境位置</span><br><span class="hljs-built_in">ls</span> /usr/lib/locale/<br></code></pre></td></tr></table></figure></li>
 <li><strong>切换 <code>zh_CN.utf8</code> 语言环境 (<code>locale</code> 验证)</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 用户级配置 (推荐)</span><br>vim ~/.zshrc<br><span class="hljs-built_in">export</span> LANG=zh_CN.UTF-8<br><span class="hljs-built_in">export</span> LANGUAGE=zh_CN:zh<br><span class="hljs-built_in">export</span> LC_ALL=zh_CN.UTF-8<br><span class="hljs-comment">## 立即生效</span><br><span class="hljs-built_in">source</span> ~/.zshrc<br><br><span class="hljs-comment"># 系统级 locale 默认配置文件</span><br>sudo vim /etc/default/locale<br><span class="hljs-comment">## 添加或者修改如下内容</span><br>LANG=zh_CN.UTF-8  <span class="hljs-comment"># 最主要</span><br>LANGUAGE=zh_CN:zh<br>LC_ALL=zh_CN.UTF-8<br><span class="hljs-comment">## 或者在终端通过下面的命令修改</span><br>sudo update-locale LANG=zh_CN.UTF-8 LANGUAGE=zh_CN:zh LC_ALL=zh_CN.UTF-8<br><span class="hljs-comment">## 生效</span><br><span class="hljs-built_in">source</span> /etc/default/locale<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h1><h2 id="cron-定时任务"><a href="#cron-定时任务" class="headerlink" title="cron 定时任务"></a><code>cron</code> 定时任务</h2><ul>
+<li><code>crontab -e</code>: 编辑当前用户的 cron 任务, 文件保存在 <code>/var/spool/cron/crontabs/USER_NAME</code> 目录下 (不要直接编辑源文件, 以免格式或权限错误)</li>
+<li><code>crontab -l</code>: 查看当前用户的 cron 任务</li>
+<li>内容格式: 5 个时间段<strong>空格</strong>命令<ul>
+<li>5 个时间段: <code>* * * * *</code><ul>
+<li>分钟 (0-59)</li>
+<li>小时 (0-23)</li>
+<li>日 (1-31)</li>
+<li>月 (1-12)</li>
+<li>星期 (0-7)</li>
+</ul>
+</li>
+<li><code>*</code> 表示<strong>每</strong></li>
+<li><code>*/n</code> (斜杠 + 数字): 每隔 n 个单位执行一次</li>
+<li><code>,</code>: 多个离散值</li>
+<li><code>-</code>: 范围</li>
+<li><code>#</code>: 注释</li>
+</ul>
+</li>
+<li>实例<ul>
+<li><code>0 6 */3 * * find $HOME/Temp/auto_delete -mindepth 1 -mtime +3 -print -exec rm -rf &#123;&#125; \; &gt; $HOME/Temp/auto_delete/delete_$(date +\%Y\%m\%d).log 2&gt;&amp;1</code>: 每隔三天, 早上 6 点删除三天前的文件及目录并将删除的文件与目录路径写入日志文件 (<code>-print</code>) (<code>HOME</code> 变量要么使用绝对路径, 要么在顶部定义 <code>HOME=...</code>)</li>
+</ul>
+</li>
 </ul>
 <h1 id="apt-dpkg-软件包安装与管理"><a href="#apt-dpkg-软件包安装与管理" class="headerlink" title="apt | dpkg 软件包安装与管理"></a>apt | dpkg 软件包安装与管理</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
 <li><code>apt update</code>: 更新软件包列表</li>

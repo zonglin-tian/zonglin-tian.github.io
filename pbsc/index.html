@@ -19,13 +19,13 @@
     <meta name="description" content="Python 学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 基础">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/05/Python-%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/pbsc/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="Python 学习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_basic.jpg">
 <meta property="article:published_time" content="2024-05-05T02:47:45.000Z">
-<meta property="article:modified_time" content="2025-07-21T07:54:06.283Z">
+<meta property="article:modified_time" content="2025-07-21T13:25:40.523Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3k 字
+          3.2k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          17 分钟
+          18 分钟
         
       </span>
     
@@ -393,7 +393,7 @@
     
       
       
-        <a href="/2024/05/05/Python-%E5%9F%BA%E7%A1%80/" title="Python 基础"
+        <a href="/pbsc/" title="Python 基础"
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">Python 基础</span>
@@ -402,10 +402,10 @@
     
       
       
-        <a href="/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Python 库管理与使用"
+        <a href="/plib/" title="Python 常用库"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Python 库管理与使用</span>
+          <span class="category-post">Python 常用库</span>
         </a>
       
     
@@ -459,7 +459,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-21T15:54:06+08:00
+                    最后更新于: 2025-07-21T21:25:40+08:00
                   
                   
 
@@ -514,6 +514,19 @@
 
 <h2 id="函数信息"><a href="#函数信息" class="headerlink" title="函数信息"></a>函数信息</h2><ul>
 <li>获取参数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> inspect<br>inspect.signature(fun_name).parameters<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="对象信息"><a href="#对象信息" class="headerlink" title="对象信息"></a>对象信息</h2><ul>
+<li><code>dir(obj)</code>: 返回对象的所有属性和方法名称列表</li>
+<li><code>vas(obj)</code> 或 <code>obj.__dict__</code>: 查看实例自定义属性与值</li>
+<li><code>hasattr(obj, attr)</code>: 检查属性是否存在</li>
+<li><code>getattr(obj, attr)</code>: 获取属性的值</li>
+<li><strong>检查属性是否可调用 (函数&#x2F;方法)</strong><ul>
+<li><code>callable(obj.attr)</code>: 快速区分可调用对象</li>
+<li><code>inspect.ismethod(obj.attr)</code>: 识别绑定方法</li>
+<li><code>inspect.isfunction(obj.attr)</code>: 识别函数与静态方法</li>
+<li><code>type(obj.attr)</code>: 查看类型</li>
+</ul>
+</li>
 </ul>
 <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p>名字 (变量名) 到对象的映射<strong>字典</strong> (标签系统)</p>
 <ul>
@@ -634,6 +647,7 @@
 </ul>
 <h2 id="包的导入"><a href="#包的导入" class="headerlink" title="包的导入"></a>包的导入</h2><p><strong><code>sys.path</code> 是一个 Python 列表, 包含了 Python 释器在导入模块时搜索的路径顺序. 当在 Python 中执行 <code>import</code> 语句时, 解释器会按照 <code>sys.path</code> 中的路径顺序查找要导入的模块</strong></p>
 <ul>
+<li>导入时的运行机制: 直接导入包, 运行 <code>__init__.py</code> 文件, 导入包的子模块时, 还要运行相关子模块的 <code>__init__.py</code> 或者 <code>.py</code> 文件</li>
 <li>相对导入<ul>
 <li>同目录或者子目录直接导入, 跨目录使用前导点 <code>..</code></li>
 <li>不能直接运行, 必须以模块的方式 (<code>-m</code>) 运行, 此时当前工作目录会被添加到 <code>sys.path</code> 且 <code>__package__</code> 被赋值为<strong>父包名</strong></li>
@@ -664,7 +678,6 @@
 <div class="note note-warning">
             <p><strong>字典视图对象</strong></p><p>由 <code>dict.keys(), dict.values() 和 dict.items()</code> 所返回的对象是 <em>视图对象</em>, 提供字典条目的一个动态视图, 当字典改变时, 视图也会改变. 字典视图可被迭代以产生对应的数据, 并支持成员检测</p>
           </div>
-
 
 <h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><ul>
 <li><code>isinstance(object, classinfo)</code><ul>
@@ -748,7 +761,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Python 基础</div>
-      <div>https://zonglin-tian.github.io/2024/05/05/Python-基础/</div>
+      <div>https://zonglin-tian.github.io/pbsc/</div>
     </div>
     <div class="license-meta">
       
@@ -802,8 +815,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/05/Python-%E5%BA%93%E7%AE%A1%E7%90%86%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Python 库管理与使用">
-                        <span class="hidden-mobile">Python 库管理与使用</span>
+                      <a href="/2024/04/29/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" title="Hexo Fluid 博客常用配置">
+                        <span class="hidden-mobile">Hexo Fluid 博客常用配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
