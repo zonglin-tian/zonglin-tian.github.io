@@ -749,7 +749,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -758,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json</loc>
+    <loc>https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json</loc>
     
     <lastmod>2024-04-29</lastmod>
     
@@ -878,13 +878,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Typesetting/</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/Python/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -920,6 +913,13 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/tags/Typesetting/</loc>
+    <lastmod>2025-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/tags/Vim/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -936,13 +936,6 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
-    <lastmod>2025-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -950,14 +943,21 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Software/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
+    <loc>https://zonglin-tian.github.io/categories/Research/</loc>
+    <lastmod>2025-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Software/</loc>
     <lastmod>2025-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
