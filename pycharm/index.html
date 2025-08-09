@@ -19,15 +19,14 @@
     <meta name="description" content="PyCharm 常用配置与高效技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyCharm 配置与技巧">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/05/25/PyCharm-%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/pycharm/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="PyCharm 常用配置与高效技巧">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/pycharm.png">
 <meta property="article:published_time" content="2024-05-25T14:47:09.000Z">
-<meta property="article:modified_time" content="2025-03-30T14:39:32.734Z">
+<meta property="article:modified_time" content="2025-08-09T06:54:53.658Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Writing...">
 <meta property="article:tag" content="PyCharm">
 <meta property="article:tag" content="Custom">
 <meta name="twitter:card" content="summary_large_image">
@@ -285,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          122 字
+          207 字
         
       </span>
     
@@ -296,7 +295,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -346,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-03-30T22:39:32+08:00
+                    最后更新于: 2025-08-09T14:54:53+08:00
                   
                   
 
@@ -359,7 +358,14 @@
                 <h1 id="常用参考文献"><a href="#常用参考文献" class="headerlink" title="常用参考文献"></a>常用参考文献</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/pycharm/working-with-source-code.html">PyCharm 官方文档</a></li>
 </ul>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="自定义代码折叠"><a href="#自定义代码折叠" class="headerlink" title="自定义代码折叠"></a>自定义代码折叠</h2><ul>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><ul>
+<li>图标下载<ul>
+<li>大小: 16*16 或 24*24</li>
+<li>网址: <a target="_blank" rel="noopener" href="https://icon-icons.com/">Free icons</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="自定义代码折叠"><a href="#自定义代码折叠" class="headerlink" title="自定义代码折叠"></a>自定义代码折叠</h2><ul>
 <li>选中需要折叠的代码 → 菜单栏 <code>代码</code> → <code>包围方式</code> → <code>任选其中一个包围方式 [Ctrl + Alt + T]</code></li>
 </ul>
 <h2 id="文件对比"><a href="#文件对比" class="headerlink" title="文件对比"></a>文件对比</h2><ul>
@@ -370,6 +376,17 @@
 </ul>
 <h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><ul>
 <li>HOCON: <code>.conf</code> 文件扩展支持</li>
+</ul>
+<h1 id="Python-调试服务器"><a href="#Python-调试服务器" class="headerlink" title="Python 调试服务器"></a>Python 调试服务器</h1><ul>
+<li>环境配置<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pydevd<br>pip install pydevd_pycharm~=version<br></code></pre></td></tr></table></figure></li>
+<li>编辑配置文件<ul>
+<li>主机名 (IP)</li>
+<li>端口 (PORT)</li>
+<li>路径映射</li>
+<li>勾选: 输出重定向到控制台</li>
+</ul>
+</li>
+<li>复制命令到 Python 程序<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 分号分隔, 方便注释切换</span><br><span class="hljs-keyword">import</span> pydevd_pycharm; pydevd_pycharm.settrace(<span class="hljs-string">&#x27;IP&#x27;</span>, port=PORT, stdoutToServer=<span class="hljs-literal">True</span>, stderrToServer=<span class="hljs-literal">True</span>, suspend=<span class="hljs-literal">False</span>)<br></code></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -404,8 +421,6 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Writing/" class="print-no-link">#Writing...</a>
-      
         <a href="/tags/PyCharm/" class="print-no-link">#PyCharm</a>
       
         <a href="/tags/Custom/" class="print-no-link">#Custom</a>
@@ -421,7 +436,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>PyCharm 配置与技巧</div>
-      <div>https://zonglin-tian.github.io/2024/05/25/PyCharm-配置与技巧/</div>
+      <div>https://zonglin-tian.github.io/pycharm/</div>
     </div>
     <div class="license-meta">
       
