@@ -16,24 +16,22 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="常用正则表达式与通配符">
+    <meta name="description" content="三线性插值 (Trilinear Interpolation)用于三维空间数据插值, 通过对三个维度 $(x, y, z)$ 进行线性插值, 估算出目标点的值, 是双线性插值 (Bilinear Interpolation) 在三维空间的拓展  核心思想: 在三维空间的 8 个邻近点 (立方体的顶点) 之间进行加权平均, 计算目标点的值 步骤:  找到目标点所在的立方体单元 (8 个顶点) 在 $">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式与通配符">
-<meta property="og:url" content="https://zonglin-tian.github.io/regex/index.html">
+<meta property="og:title" content="科研基础知识">
+<meta property="og:url" content="https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="常用正则表达式与通配符">
+<meta property="og:description" content="三线性插值 (Trilinear Interpolation)用于三维空间数据插值, 通过对三个维度 $(x, y, z)$ 进行线性插值, 估算出目标点的值, 是双线性插值 (Bilinear Interpolation) 在三维空间的拓展  核心思想: 在三维空间的 8 个邻近点 (立方体的顶点) 之间进行加权平均, 计算目标点的值 步骤:  找到目标点所在的立方体单元 (8 个顶点) 在 $">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zonglin-tian.github.io/img/index/regex.png">
-<meta property="article:published_time" content="2025-07-02T13:01:42.000Z">
-<meta property="article:modified_time" content="2025-08-11T00:55:48.428Z">
+<meta property="article:published_time" content="2025-08-11T02:50:21.000Z">
+<meta property="article:modified_time" content="2025-08-11T03:06:28.894Z">
 <meta property="article:author" content="Temm">
-<meta property="article:tag" content="Writing...">
+<meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zonglin-tian.github.io/img/index/regex.png">
   
   
   
-  <title>正则表达式与通配符 - Temm&#39;s Zone</title>
+  <title>科研基础知识 - Temm&#39;s Zone</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -257,7 +255,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="正则表达式与通配符"></span>
+            <span id="subtitle" data-typed-text="科研基础知识"></span>
           
         </div>
 
@@ -268,8 +266,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-02 21:01" pubdate>
-          2025年7月2日 晚上
+        <time datetime="2025-08-11 10:50" pubdate>
+          2025年8月11日 上午
         </time>
       </span>
     
@@ -283,7 +281,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          968 字
+          170 字
         
       </span>
     
@@ -294,7 +292,7 @@
         
         
         
-          6 分钟
+          1 分钟
         
       </span>
     
@@ -347,17 +345,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Ubuntu"
-        id="heading-3d945423f8e9496c429a5d8c65b4604f" role="tab" data-toggle="collapse" href="#collapse-3d945423f8e9496c429a5d8c65b4604f"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Research"
+        id="heading-f027f27d0d548351e4d362e9b90678a9" role="tab" data-toggle="collapse" href="#collapse-f027f27d0d548351e4d362e9b90678a9"
         aria-expanded="true"
       >
-        Ubuntu
-        <span class="list-group-count">(9)</span>
+        Research
+        <span class="list-group-count">(11)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-3d945423f8e9496c429a5d8c65b4604f"
-           role="tabpanel" aria-labelledby="heading-3d945423f8e9496c429a5d8c65b4604f">
+      <div class="category-collapse collapse show" id="collapse-f027f27d0d548351e4d362e9b90678a9"
+           role="tabpanel" aria-labelledby="heading-f027f27d0d548351e4d362e9b90678a9">
         
         
           
@@ -366,82 +364,100 @@
     
       
       
-        <a href="/2023/07/22/Install-and-Configure-ZSH-on-Ubuntu-20-04/" title="Install and Configure ZSH on Ubuntu_20.04"
+        <a href="/2024/07/12/Computer-Graphics-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" title="Computer Graphics 学习资源"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Install and Configure ZSH on Ubuntu_20.04</span>
+          <span class="category-post">Computer Graphics 学习资源</span>
         </a>
       
     
       
       
-        <a href="/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/" title="Shell 脚本"
+        <a href="/2024/05/26/WEEK-21-codes-of-irsdf-and-point-light/" title="WEEK 21 codes of irsdf and point light"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Shell 脚本</span>
+          <span class="category-post">WEEK 21 codes of irsdf and point light</span>
         </a>
       
     
       
       
-        <a href="/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/" title="Ubuntu 利器"
+        <a href="/2024/06/02/WEEK-22-Writing-For-TIRPL/" title="WEEK 22 Writing For TIRPL"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 利器</span>
+          <span class="category-post">WEEK 22 Writing For TIRPL</span>
         </a>
       
     
       
       
-        <a href="/ufile/" title="Ubuntu 文件操作"
+        <a href="/2024/06/16/WEEK-24-Come-on/" title="WEEK 24 Come on!"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 文件操作</span>
+          <span class="category-post">WEEK 24 Come on!</span>
         </a>
       
     
       
       
-        <a href="/utext/" title="Ubuntu 文本处理"
+        <a href="/2024/09/03/Week-35/" title="Week 35"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 文本处理</span>
+          <span class="category-post">Week 35</span>
         </a>
       
     
       
       
-        <a href="/uuser/" title="Ubuntu 用户管理"
+        <a href="/2025/02/20/%E4%B8%93%E4%B8%9A%E5%8D%95%E8%AF%8D%E4%B8%8E%E6%9C%AF%E8%AF%AD/" title="专业单词与术语"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 用户管理</span>
+          <span class="category-post">专业单词与术语</span>
         </a>
       
     
       
       
-        <a href="/udisk/" title="Ubuntu 磁盘管理"
+        <a href="/2024/06/04/%E6%89%80%E8%B0%93%E7%9A%84%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E5%88%B0%E5%BA%95%E8%A6%81%E6%80%8E%E4%B9%88%E5%9F%B9%E5%85%BB/" title="所谓的科研能力到底要怎么培养?"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 磁盘管理</span>
+          <span class="category-post">所谓的科研能力到底要怎么培养?</span>
         </a>
       
     
       
       
-        <a href="/usys/" title="Ubuntu 系统管理"
+        <a href="/2024/08/02/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" title="文献阅读笔记"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">Ubuntu 系统管理</span>
+          <span class="category-post">文献阅读笔记</span>
         </a>
       
     
       
       
-        <a href="/regex/" title="正则表达式与通配符"
+        <a href="/2025/08/11/Basic-Knowledge/" title="科研基础知识"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">正则表达式与通配符</span>
+          <span class="category-post">科研基础知识</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/27/%E7%A7%91%E7%A0%94%E6%8A%80%E8%83%BD%E4%B8%8E%E8%B5%84%E6%BA%90/" title="科研技能与资源"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">科研技能与资源</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/27/%E9%97%BB%E9%81%93%E6%9C%89%E5%85%88%E5%90%8E/" title="闻道有先后"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">闻道有先后</span>
         </a>
       
     
@@ -463,166 +479,46 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">正则表达式与通配符</h1>
+            <h1 id="seo-header">科研基础知识</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-08-11T08:55:48+08:00
+                    最后更新于: 2025-08-11T11:06:28+08:00
                   
                   
 
                 
               </p>
             
+            <!-- added by Temm -->
+            
             
               <div class="markdown-body">
                 
-                <h1 id="Shell-引号解析"><a href="#Shell-引号解析" class="headerlink" title="Shell 引号解析"></a>Shell 引号解析</h1><p><strong>理解:</strong></p>
+                <h1 id="三线性插值-Trilinear-Interpolation"><a href="#三线性插值-Trilinear-Interpolation" class="headerlink" title="三线性插值 (Trilinear Interpolation)"></a>三线性插值 (Trilinear Interpolation)</h1><p>用于三维空间数据插值, 通过对三个维度 $(x, y, z)$ 进行线性插值, 估算出目标点的值, 是双线性插值 (Bilinear Interpolation) 在三维空间的拓展</p>
 <ul>
-<li>单引号: 完全不管, 原样输出<ul>
-<li><strong>固定</strong>正则表达式</li>
+<li>核心思想: 在三维空间的 8 个邻近点 (立方体的顶点) 之间进行加权平均, 计算目标点的值</li>
+<li>步骤: <ul>
+<li>找到目标点所在的立方体单元 (8 个顶点)</li>
+<li>在 $X$ 方向线性插值 4 次 (得到 4 个中间值)</li>
+<li>在 $Y$ 方向线性插值 2 次 (得到 2 个中间值)</li>
+<li>在 $Z$ 方向线性插值 1 次 (得到最终目标值)</li>
 </ul>
 </li>
-<li>双引号: 稍微加工, 变量替换, 扩展 <code>$</code>, <code>`</code>, <strong><code>\</code> 转义字符 (<code>$`&quot;\</code>)</strong>, <code>$()</code> , 保护特殊字符 (<code>空格*?单引号</code>)<ul>
-<li>含<strong>变量</strong>的正则表达式</li>
-</ul>
-</li>
-<li>不加引号 (<strong>Shell 截胡</strong>): 过度加工, 替换变量, 拆分空格, 将特殊字符 (<code>*?</code>) 当成通配符匹配文件<ul>
-<li><code>[[ &quot;string&quot; =~ regex  ]]</code> 右侧的 <code>regex</code> 不能加引号, 否则正则符号 (<code>.*</code>) 会变成普通字符</li>
-<li>通配符, 重定向, 管道符</li>
-</ul>
-</li>
-</ul>
-<p><strong>口决:</strong></p>
-<ul>
-<li>有变量? 用双引号</li>
-<li><strong>没变量? 用单引号</strong></li>
-<li><code>[[ =~ ]]</code> 条件测试? 变量别加引号</li>
-<li><strong>永远别完全不加引号</strong></li>
-</ul>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><strong>正则表达式 (Regular Expressions)</strong> 用于<strong>文本内容匹配</strong> (如搜索, 替换字符串), 常见于 <code>grep</code>, <code>sed</code>, <code>awk</code>, <code>vim</code> 等命令</p>
-<ul>
-<li>普通字符: 字母, 数字, 符号匹配本身</li>
-<li><strong>元字符</strong>: 具有特殊含义, 用于构造匹配规则</li>
-</ul>
-<h2 id="基础正则-BRE"><a href="#基础正则-BRE" class="headerlink" title="基础正则 (BRE)"></a>基础正则 (BRE)</h2><ul>
-<li><code>\</code>: 转义符, 匹配特殊字符本身 (<code>&#123;</code>, <code>&#125;</code>, <code>+</code>)</li>
-<li><code>.</code>: 任意单个字符 (除换行符)</li>
-<li>字符集与字符范围<ul>
-<li><code>[]</code>: 匹配括号内任意一个字符 (<code>[0-9]</code>, <code>[a-zA-Z]</code>)</li>
-<li><code>[^]</code> (否定字符集): 匹配不在括号内的字符</li>
-<li>当 <code>-</code> 出现在开头或结尾, <code>^</code> 出现在中间时, 为普通字符</li>
-<li><code>\d</code>: 匹配数字 (<code>\d+</code> 连续数字)</li>
-<li><code>\w</code>: 匹配单词字符 (字母, 数字, 下划线)</li>
-</ul>
-</li>
-<li>边界符<ul>
-<li><code>^</code>: 匹配字符串开始</li>
-<li><code>$</code>: 匹配字符串结束</li>
-</ul>
-</li>
-<li>量词 (重复符号): 用于指定前一个字符或分组重复出现的次数<ul>
-<li><code>?</code>: 前一个字符 0 次或 1 次</li>
-<li><code>*</code>: 前一个字符 0 次或多次 (不包括换行)<ul>
-<li><strong><code>.*</code>: 匹配任意数量字符 (包括零个)</strong></li>
-<li><code>^a.*z$</code>: 匹配以 a 开头, 以 z 结尾的任意字符串 (中间可以是任意字符)</li>
-</ul>
-</li>
-<li><code>+</code>: 前一个字符 1 次或多次</li>
-<li><code>&#123;n,m&#125;</code>: 前一个字符 n 到 m 次<ul>
-<li><code>&#123;n&#125;</code>: 恰好 n 次</li>
-<li><code>&#123;n,&#125;</code>: 至少 n 次</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>(pattern)</code>: 捕获分组</li>
-<li><code>(a|b)</code>: 匹配 <code>a</code> 或 <code>b</code></li>
-</ul>
-<h2 id="扩展正则-ERE"><a href="#扩展正则-ERE" class="headerlink" title="扩展正则 (ERE)"></a>扩展正则 (ERE)</h2><ul>
-<li>元字符无需转义, 易读</li>
-</ul>
-<h2 id="Perl-风格正则-PCRE"><a href="#Perl-风格正则-PCRE" class="headerlink" title="Perl 风格正则 (PCRE)"></a>Perl 风格正则 (PCRE)</h2><ul>
-<li>由 Perl 语言发展而来, 功能最强大, 元字符无需转义</li>
-<li>支持命令:<ul>
-<li><code>grep -P</code></li>
-</ul>
-</li>
-<li><code>\d</code>: 匹配数字</li>
-<li><code>\D</code>: 非数字</li>
-<li><code>\s</code>: 空白字符</li>
-<li><code>\S</code>: 非空白字符</li>
-<li><code>\w</code>: 单词字符 (字母, 数字, 下划线)</li>
-<li><code>\W</code>: 非单词字符 (标点符号, 空格)</li>
-<li><code>\b</code>: 匹配单词边界 (<code>grep -P &quot;\bcat\b&quot;</code> → <code>cat</code>)</li>
-<li>逻辑: <code>|</code> (或)</li>
-</ul>
-<h2 id="支持命令"><a href="#支持命令" class="headerlink" title="支持命令"></a>支持命令</h2><ul>
-<li><code>grep</code>: 文本搜索, 默认使用基础正则<ul>
-<li><code>grep -E</code> 或 <code>egrep</code>: 启用扩展正则</li>
-</ul>
-</li>
-<li><code>sed</code>: 流编辑器, 文本替换&#x2F;处理, 默认使用基础正则<ul>
-<li><code>sed -E</code>: 启用扩展正则</li>
-</ul>
-</li>
-<li><code>awk</code>: 文本处理&#x2F;字段提取, 默认使用<strong>扩展正则</strong></li>
-<li><code>find</code>: 文件查找<ul>
-<li><code>-regex</code>: 使用<strong>扩展正则</strong></li>
-<li><code>-name</code>: 使用<strong>通配符</strong></li>
-</ul>
-</li>
-<li><code>vim</code>: 文本编辑器<ul>
-<li><code>\m</code>: 基础正则</li>
-<li><code>\v</code>: 扩展正则</li>
-</ul>
-</li>
-<li><code>less</code>: 分页查看, 默认使用基础正则</li>
-</ul>
-<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p><strong>通配符 (Wildcards)</strong> 主要用于快速匹配<em><strong>文件名</strong></em>或<em><strong>目录名</strong></em>的特殊字符</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>区分大小写</li>
-<li><code>*</code> 不匹配以 <code>.</code> 开头的隐藏文件 (需显式指定 <code>.*</code>)</li>
-<li>通配符<strong>不需要加单引号</strong>, 加单引号表示禁用通配符, 即为普通字符</li>
-<li>特殊字符需通过 <code>\</code> 转义: <code>^</code>, <code>~</code></li>
-</ul>
-<h2 id="基础通配符"><a href="#基础通配符" class="headerlink" title="基础通配符"></a>基础通配符</h2><ul>
-<li><code>*</code>: 任意数量 (包括零个) 的任意字符<ul>
-<li><code>*.txt</code>: 所有 <code>.txt</code> 文件</li>
-</ul>
-</li>
-<li><code>?</code>: 单个任意字符<ul>
-<li><code>file?.log</code>: <code>file1.log</code>, <code>file2.log</code></li>
-</ul>
-</li>
-<li><code>[]</code>: 括号内任意<strong>一个</strong>字符或范围<ul>
-<li><code>[0-9]</code>, <code>[a-z]</code>, <code>[abc]</code></li>
-<li>扩展: <code>[^/!]</code> (取反)</li>
-</ul>
-</li>
-<li><code>&#123;&#125;</code>: <strong>生成组合</strong> (非匹配, 用于展开)<ul>
-<li><code>&#123;start..end&#125;</code>, <code>&#123;a,b,c&#125;</code> <strong>(不含空格)</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="zsh-扩展通配符"><a href="#zsh-扩展通配符" class="headerlink" title="zsh 扩展通配符"></a>zsh 扩展通配符</h2><ul>
-<li>检查当前与通配符相关的设置: <code>setopt | grep glob</code> (若输出 <code>extendedglob</code> 表示已启用)</li>
-<li>手动启用: <code>setopt extendedglob</code> (永久启用需写入 <code>~/.zshrc</code> 中)</li>
-<li><code>^</code>: 排除模式 (取反)</li>
-<li><code>~</code>: 排除特定模式<ul>
-<li><code>*.txt~backup*</code>: 匹配 <code>.txt</code> 文件但排除含 <code>backup</code> 的文件</li>
-</ul>
-</li>
-<li><code>(x|y)</code>: 匹配 <code>x</code> 或 <code>y</code></li>
+<li>权重因子: $\alpha &#x3D; u - \lfloor u \rfloor$</li>
 </ul>
 
                 
               </div>
             
             <hr/>
+            <!-- added by Temm -->
+            
+            <!-- added by Temm -->
             <div>
-              <div class="post-metas my-3">
+              
+                <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -634,7 +530,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Ubuntu/" class="category-chain-item">Ubuntu</a>
+  <a href="/categories/Research/" class="category-chain-item">Research</a>
   
   
 
@@ -646,23 +542,18 @@
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Writing/" class="print-no-link">#Writing...</a>
-      
-    </div>
-  
 </div>
 
+              
 
               
+                
   
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>正则表达式与通配符</div>
-      <div>https://zonglin-tian.github.io/regex/</div>
+      <div>科研基础知识</div>
+      <div>https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/</div>
     </div>
     <div class="license-meta">
       
@@ -674,7 +565,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月2日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
@@ -700,24 +591,24 @@
   </div>
 
 
+              
+                    
+              
+              
+                
+                
+                
+              
 
               
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/udisk/" title="Ubuntu 磁盘管理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Ubuntu 磁盘管理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/format/" title="常用文件格式">
-                        <span class="hidden-mobile">常用文件格式</span>
+                      <a href="/plib/" title="Python 常用库">
+                        <span class="hidden-mobile">Python 常用库</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -807,6 +698,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -1057,6 +954,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script defer src="/js/leancloud.js" ></script>
 

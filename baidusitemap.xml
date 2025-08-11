@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//latex/</loc>
+    <lastmod>2025-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2025/03/03/Word-%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2025-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/</loc>
+    <lastmod>2025-08-11</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//regex/</loc>
     <lastmod>2025-08-11</lastmod>
   </url>
@@ -73,20 +85,12 @@
     <lastmod>2025-06-15</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io//latex/</loc>
-    <lastmod>2025-06-15</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io//uuser/</loc>
     <lastmod>2025-06-14</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</loc>
     <lastmod>2025-06-08</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2025/03/03/Word-%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
-    <lastmod>2025-05-27</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/</loc>
