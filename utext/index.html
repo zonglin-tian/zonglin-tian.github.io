@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_text.png">
 <meta property="article:published_time" content="2025-05-01T08:30:00.000Z">
-<meta property="article:modified_time" content="2025-07-02T14:18:30.791Z">
+<meta property="article:modified_time" content="2025-08-11T03:27:09.830Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,7 +294,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -468,7 +468,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-02T22:18:30+08:00
+                    最后更新于: 2025-08-11T11:27:09+08:00
                   
                   
 
@@ -536,7 +536,10 @@
 <li><code>less +F log.txt</code> (比 <code>tail -f</code> 更灵活): 实时跟踪查看日志</li>
 </ul>
 </li>
-<li><code>wc</code> (Word Count): <strong>统计行数 (<code>l</code>)</strong>, 单词数 (<code>w</code>), 字节数 (<code>-c</code>), 字符数 (<code>m</code>)</li>
+<li><code>wc</code> (Word Count): <strong>统计行数 (<code>l</code>)</strong>, 单词数 (<code>w</code>), 字节数 (<code>-c</code>), 字符数 (<code>m</code>), 最长行长度 (<code>L</code>)<ul>
+<li><code>grep -o &#39;word&#39; file.txt | wc -l</code>: 统计匹配词的出现次数</li>
+</ul>
+</li>
 <li><code>head</code> &#x2F; <code>tail</code> 查看文件开头或者结尾的若干行 (默认 10 行)<ul>
 <li><code>tail -n 5 log.txt</code>: 实时查看日志的最后 5 行</li>
 </ul>

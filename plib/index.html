@@ -24,8 +24,8 @@
 <meta property="og:description" content="Python 常用库使用笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
-<meta property="article:published_time" content="2025-07-21T13:29:32.587Z">
-<meta property="article:modified_time" content="2025-07-21T13:29:32.587Z">
+<meta property="article:published_time" content="2025-08-22T01:09:37.565Z">
+<meta property="article:modified_time" content="2025-08-22T01:09:37.565Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-21 21:29" pubdate>
-          2025年7月21日 晚上
+        <time datetime="2025-08-22 09:09" pubdate>
+          2025年8月22日 上午
         </time>
       </span>
     
@@ -283,7 +283,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.2k 字
         
       </span>
     
@@ -294,7 +294,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -459,7 +459,20 @@
             
               <div class="markdown-body">
                 
-                <h1 id="ArgumentParser"><a href="#ArgumentParser" class="headerlink" title="ArgumentParser"></a>ArgumentParser</h1><p><code>ArgumentParser</code> 是 Python 标准库 <code>argparse</code> 中的一个类, 用于解析命令行参数, 并自动生成帮助和使用信息: <code>from argparse import ArgumentParser</code></p>
+                <h1 id="imageio"><a href="#imageio" class="headerlink" title="imageio"></a><a target="_blank" rel="noopener" href="https://pypi.org/project/imageio/">imageio</a></h1><p>用于易于读写各种图像数据 Python 库</p>
+<ul>
+<li>安装: <code>pip install imageio</code></li>
+<li>导入: <code>import imageio.v3 as iio</code></li>
+<li>读取 (uint8 array): <code>img = iio.imread(path_to_file)</code></li>
+<li>保存: <code>iio.imwrite(path_to_save, img)</code></li>
+</ul>
+<h1 id="pyexr"><a href="#pyexr" class="headerlink" title="pyexr"></a><a target="_blank" rel="noopener" href="https://pypi.org/project/pyexr/">pyexr</a></h1><p>一个简单的 Python EXR 输入-输出库, 简化 OpenEXR 的使用</p>
+<ul>
+<li>安装: <code>pip install pyexr</code></li>
+<li>读取 <strong>(数值没有做任何处理)</strong>: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># with</span><br><span class="hljs-keyword">with</span> pyexr.<span class="hljs-built_in">open</span>(file.exr) <span class="hljs-keyword">as</span> file:<br>    img = file.get()  <span class="hljs-comment"># (H, W, 3) np.float32 array</span><br><br><span class="hljs-comment"># read</span><br>img = pyexr.read(file.exr)  <span class="hljs-comment"># (H, W, 3) np.float32 array</span><br></code></pre></td></tr></table></figure></li>
+<li>保存: <code>pyexr.write(out.exr, color_array)</code></li>
+</ul>
+<h1 id="ArgumentParser"><a href="#ArgumentParser" class="headerlink" title="ArgumentParser"></a>ArgumentParser</h1><p><code>ArgumentParser</code> 是 Python 标准库 <code>argparse</code> 中的一个类, 用于解析命令行参数, 并自动生成帮助和使用信息: <code>from argparse import ArgumentParser</code></p>
 <h2 id="add-argument-name-or-flags-kwargs"><a href="#add-argument-name-or-flags-kwargs" class="headerlink" title="add_argument(name_or_flags, **kwargs)"></a><code>add_argument(name_or_flags, **kwargs)</code></h2><p><strong>添加命令行参数</strong></p>
 <ul>
 <li><code>name_or_flags</code>: 参数名 (<code>filename</code>) 或选项标志 (<code>-f</code>, <code>--file</code>)<ul>
@@ -621,7 +634,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月21日</div>
+          <div>2025年8月22日</div>
         </div>
       
       
@@ -653,18 +666,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/11/Basic-Knowledge/" title="科研基础知识">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">科研基础知识</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/udisk/" title="Ubuntu 磁盘管理">
-                        <span class="hidden-mobile">Ubuntu 磁盘管理</span>
+                      <a href="/2025/08/11/Basic-Knowledge/" title="科研基础知识">
+                        <span class="hidden-mobile">科研基础知识</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
