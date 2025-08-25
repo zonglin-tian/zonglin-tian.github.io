@@ -866,13 +866,6 @@
 
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zonglin-tian.github.io/tags/Writing/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -880,7 +873,7 @@
   </url>
   
   <url>
-    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
+    <loc>https://zonglin-tian.github.io/tags/Grocery/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -894,21 +887,14 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/tags/WebDesign/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/tags/Python/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -929,6 +915,20 @@
   </url>
   
   <url>
+    <loc>https://zonglin-tian.github.io/tags/PyCharm/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/tags/Custom/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zonglin-tian.github.io/tags/Vim/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -936,13 +936,6 @@
   </url>
   
 
-  
-  <url>
-    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Others/</loc>
@@ -960,6 +953,13 @@
   
   <url>
     <loc>https://zonglin-tian.github.io/categories/Coding/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zonglin-tian.github.io/categories/Life/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
