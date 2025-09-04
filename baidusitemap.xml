@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//docker/</loc>
+    <lastmod>2025-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</loc>
+    <lastmod>2025-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//ssh/</loc>
+    <lastmod>2025-09-03</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//torch/</loc>
     <lastmod>2025-09-02</lastmod>
   </url>
@@ -81,16 +93,8 @@
     <lastmod>2025-06-16</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io//ssh/</loc>
-    <lastmod>2025-06-15</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io//uuser/</loc>
     <lastmod>2025-06-14</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</loc>
-    <lastmod>2025-06-08</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/</loc>
@@ -167,10 +171,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/</loc>
     <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/11/28/Hello-Docker/</loc>
-    <lastmod>2024-11-28</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/14/%E5%BF%83%E7%90%86%E8%BE%85%E5%AF%BC/</loc>
