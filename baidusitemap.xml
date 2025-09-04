@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zonglin-tian.github.io//docker/</loc>
+    <loc>https://zonglin-tian.github.io//vpn/</loc>
     <lastmod>2025-09-04</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/09/24/Ubuntu-%E5%88%A9%E5%99%A8/</loc>
+    <loc>https://zonglin-tian.github.io//usoft/</loc>
+    <lastmod>2025-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//docker/</loc>
     <lastmod>2025-09-04</lastmod>
   </url>
   <url>
