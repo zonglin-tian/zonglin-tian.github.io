@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/vpn.png">
 <meta property="article:published_time" content="2025-09-04T15:31:13.000Z">
-<meta property="article:modified_time" content="2025-09-05T01:28:17.267Z">
+<meta property="article:modified_time" content="2025-09-05T15:46:42.745Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          84 字
+          213 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-09-05T09:28:17+08:00
+                    最后更新于: 2025-09-05T23:46:42+08:00
                   
                   
 
@@ -359,9 +359,9 @@
                 
                 <h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><ul>
 <li>三种环境变量:<ul>
-<li><code>all_proxy</code></li>
-<li><code>http_proxy</code></li>
-<li><code>https_proxy</code></li>
+<li><code>all_proxy/ALL_PROXY</code></li>
+<li><code>http_proxy/HTTP_PROXY</code></li>
+<li><code>https_proxy/HTTPS_PROXY</code></li>
 </ul>
 </li>
 <li>两种代理:<ul>
@@ -369,10 +369,32 @@
 <li><code>socks5[h]://IP:PORT</code></li>
 </ul>
 </li>
+<li>验证代理是否生效:<ul>
+<li><code>curl https://www.google.com</code></li>
+<li><code>curl https://api.ipify.org</code> (IP 查询)</li>
+</ul>
+</li>
 </ul>
 <h1 id="终端使用代理"><a href="#终端使用代理" class="headerlink" title="终端使用代理"></a>终端使用代理</h1><ul>
 <li>Windows<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$env:HTTPS_PROXY</span>=<span class="hljs-string">&quot;socks5://127.0.0.1:20170&quot;</span><br><span class="hljs-variable">$env:HTTP_PROXY</span>=<span class="hljs-string">&quot;socks5://127.0.0.1:20170&quot;</span><br><span class="hljs-variable">$env:ALL_PROXY</span>=<span class="hljs-string">&quot;socks5://127.0.0.1:20170&quot;</span><br></code></pre></td></tr></table></figure></li>
 <li>Ubuntu<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://127.0.0.1:20171&quot;</span><br><span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://127.0.0.1:20171&quot;</span><br><span class="hljs-built_in">export</span> all_proxy=<span class="hljs-string">&quot;http://127.0.0.1:20171&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="V2Ray-客户端"><a href="#V2Ray-客户端" class="headerlink" title="V2Ray 客户端"></a>V2Ray 客户端</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><ul>
+<li>安装: <code>winget install --id v2rayA.v2rayA</code><ul>
+<li>查看安装的包: <code>winget list --id v2rayA.v2rayA</code></li>
+<li>位置: <code>C:\Program Files\v2rayA\v2raya.exe</code></li>
+<li>配置文件与数据: <code>C:\ProgramData\v2rayA\</code> </li>
+<li>V2Ray 核心文件: <code>C:\Program Files\v2rayA\bin\v2ray\</code></li>
+</ul>
+</li>
+<li>卸载: <code>winget uninstall --id v2rayA.v2rayA</code> (配置文件需手动清理)</li>
+<li>查看&#x2F;重启&#x2F;启动&#x2F;停止服务: <code>Get/Restart/Start/Stop-Service v2rayA</code></li>
+<li>GUI 入口: <code>localhost:2017</code></li>
+</ul>
+<h3 id="使用代理"><a href="#使用代理" class="headerlink" title="使用代理"></a>使用代理</h3><ul>
+<li>浏览器: 代理插件</li>
+<li>终端: 配置环境变量</li>
+<li>Windows 全局代理</li>
 </ul>
 
                 
