@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//wter/</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//wins/</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//winit/</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//word/</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//vpn/</loc>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//git/</loc>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//ssh/</loc>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/07/06/Windows-%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
-    <lastmod>2025-09-05</lastmod>
+    <lastmod>2025-09-06</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//usys/</loc>
-    <lastmod>2025-09-05</lastmod>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//git/</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//ssh/</loc>
+    <lastmod>2025-09-06</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//usoft/</loc>
@@ -46,10 +58,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//latex/</loc>
-    <lastmod>2025-08-11</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2025/03/03/Word-%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
     <lastmod>2025-08-11</lastmod>
   </url>
   <url>
@@ -109,10 +117,6 @@
     <lastmod>2025-05-19</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2025/01/07/Windows-Terminal/</loc>
-    <lastmod>2025-04-22</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io/2024/08/02/%E7%BB%99%E6%9E%81%E8%87%B4%E6%88%B4%E4%B8%8A%E7%90%86%E6%99%BA%E7%9A%84%E6%9E%B7%E9%94%81/</loc>
     <lastmod>2025-04-14</lastmod>
   </url>
@@ -146,10 +150,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/05/05/Microsoft-Edge-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2025-03-31</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/23/Win10-%E9%87%8D%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-03-31</lastmod>
   </url>
   <url>

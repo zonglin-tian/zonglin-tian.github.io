@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ssh.png">
 <meta property="article:published_time" content="2024-06-26T00:05:37.000Z">
-<meta property="article:modified_time" content="2025-09-05T15:31:27.572Z">
+<meta property="article:modified_time" content="2025-09-06T02:38:28.602Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-09-05T23:31:27+08:00
+                    最后更新于: 2025-09-06T10:38:28+08:00
                   
                   
 
@@ -358,14 +358,19 @@
               <div class="markdown-body">
                 
                 <h1 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h1><ul>
+<li>测试连通性:<ul>
+<li><code>ping IP</code></li>
+<li><strong><code>telnet IP PORT</code></strong></li>
+</ul>
+</li>
 <li>端口监听: <ul>
 <li>Ubuntu: <code>ss/netstat -tulnp | grep PORT</code></li>
 <li>Windows: <code>netstat -ano | findstr PORT</code></li>
 </ul>
 </li>
-<li>重启 ssh 服务: <ul>
-<li>Ubuntu: <code>sudo systemctl restart sshd</code></li>
-<li>Windows: <code>Restart-Service sshd</code></li>
+<li>ssh 服务管理 (状态&#x2F;重启&#x2F;启动&#x2F;停止): <ul>
+<li>Ubuntu: <code>sudo systemctl status/restart/start/stop sshd</code></li>
+<li>Windows: <code>Get/Restart/Start/Stop-Service sshd</code></li>
 </ul>
 </li>
 <li>关闭后台 ssh 隧道 (<code>-Nf</code>):<ol>
@@ -380,11 +385,11 @@
 </ul>
 <h2 id="终端登陆"><a href="#终端登陆" class="headerlink" title="终端登陆"></a>终端登陆</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
 <li><strong>一般书写顺序</strong><ol>
-<li>连接选项: <code>-i</code>, <code>-p</code>, <code>-J</code>, <code>-L</code></li>
+<li>连接选项: <span class="emp-style"><code>-i</code>, <code>-p</code>, <code>-J</code>, <code>-L</code></span></li>
 <li>交互选项: <code>-t</code> <code>-T</code></li>
+<li><span class="emp-style"><strong>后台运行 (持久化连接): <code>-Nf</code></strong></span></li>
 <li>目标主机: <code>user@host</code></li>
 <li>远程命令: <code>exec zsh -l</code></li>
-<li><span class="emp-style"><strong>后台运行 (持久化连接): <code>-Nf</code></strong></span></li>
 </ol>
 </li>
 <li>常用参数<ul>
@@ -393,12 +398,13 @@
 <li>单引号内: 单引号自身</li>
 </ul>
 </li>
-<li>特殊: <code>I</code> (用户名), <code>V</code> (版本信息)</li>
+<li>特殊: <code>l</code> (用户名), <code>V</code> (版本信息)</li>
 <li>分配终端: <code>t</code> (分配), <code>T</code> (取消), <code>N</code> (不执行命令), <code>f</code> (后台执行)</li>
 <li>显示与输出: <code>q</code> (安静), <code>v or vv</code> (详细 or 调试), <code>G</code> (配置解析)</li>
 <li>配置: <code>-o &quot;key=value&quot;</code>, 临时覆盖 <a href="#%E9%85%8D%E7%BD%AE"><code>config</code></a> 中的参数<ul>
 <li>当值中含有特殊字符时, 使用 <code>\</code> 转义或者单引号嵌套</li>
 <li>可多个 <code>-o</code> 分开书写组合</li>
+<li><code>-F</code> (临时配置文件)</li>
 </ul>
 </li>
 <li><strong>跳转机与端口转发: <code>J</code> (跳转机), <code>W</code> (透明转发), <code>L</code> (本地转发), <code>R</code> (远程转发), <code>D</code> (建立 socks5 代理)</strong></li>

@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-09-05T03:40:23.354Z">
+<meta property="article:modified_time" content="2025-09-06T03:40:33.002Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.8k 字
+          3k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          16 分钟
+          17 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-09-05T11:40:23+08:00
+                    最后更新于: 2025-09-06T11:40:33+08:00
                   
                   
 
@@ -722,6 +722,43 @@
 </ul>
 <h2 id="终端关闭容器"><a href="#终端关闭容器" class="headerlink" title="终端关闭容器"></a>终端关闭容器</h2><ul>
 <li>杀死 <code>sshd</code> 进程: <code>pgrep -f &quot;/usr/sbin/sshd -D&quot; | xargs sudo kill -TERM</code> (模糊匹配, 兼容 VSCode)</li>
+</ul>
+<h1 id="网络管理"><a href="#网络管理" class="headerlink" title="网络管理"></a>网络管理</h1><h2 id="网速测试"><a href="#网速测试" class="headerlink" title="网速测试"></a>网速测试</h2><ul>
+<li>安装 <code>speedtest-cli</code> 包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install sppedtest-cli<br>speedtest-cli [args]<br></code></pre></td></tr></table></figure></li>
+<li>常用参数:<ul>
+<li>帮助信息: <code>--help</code></li>
+<li>列出可用服务器: <code>--list</code></li>
+<li>使用特定服务器测速: <code>--server ID</code></li>
+<li>绑定本地出口 IP (多网卡时指定): <code>--source IP</code></li>
+<li>生成分享链接: <code>--share</code></li>
+<li>使用 HTTPS 连接 (不解析数据): <code>--secure</code> </li>
+<li>显示简化信息 (Ping&#x2F;Download&#x2F;Upload): <code>--simple</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="防火墙-ufw"><a href="#防火墙-ufw" class="headerlink" title="防火墙 ufw"></a>防火墙 <code>ufw</code></h2><ul>
+<li>服务管理 (状态&#x2F;禁止): <code>sudo ufw satusa/disable</code></li>
+<li>放行端口: <code>sudo ufw allow PORT/tcp</code></li>
+</ul>
+<h2 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h2><ul>
+<li><span class="emp-style">IP 地址: <code>ip addr show</code></span><ul>
+<li><code>IPv4/6</code>: <code>-4/6</code> (通过以 <code>2/3xxx</code> 开头)</li>
+</ul>
+</li>
+<li>检查 IPv6 路由: <code>ip -6 route show</code></li>
+<li><strong>测试 IPv6 是否工作:</strong><ul>
+<li><code>ping6 mirrors.tuna.tsinghua.edu.cn</code></li>
+<li><code>curl -6 https://mirrors.tuna.tsinghua.edu.cn</code></li>
+<li><code>ping6 240c::6666</code> (中国电信)</li>
+</ul>
+</li>
+</ul>
+<h2 id="DNS-服务"><a href="#DNS-服务" class="headerlink" title="DNS 服务"></a>DNS 服务</h2><ul>
+<li><span class="emp-style"><strong>检查 DNS 是否响应: <code>host google.com</code></strong></span></li>
+<li>临时修改 (重启后失效): <code>/etc/resolv.conf</code><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini">nameserver 2001:4860:4860::8888  <span class="hljs-comment"># Google IPv6 DNS</span><br></code></pre></td></tr></table></figure></li>
+<li>永久配置: <code>/etc/systemd/resolved.conf</code></li>
+<li>重启服务: <code>sudo systemctl restart systemd-resolved</code> </li>
+<li>查看当前配置: <code>resolvectl status</code></li>
 </ul>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/Dontla/article/details/133911043">Dontla. linux watch命令（定期执行命令，实时显示输出结果）.CSDN</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wbourne/p/16485712.html">王bourne. 多人共用一个Linux用户, 实现Bash配置文件独立. 博客园</a>
