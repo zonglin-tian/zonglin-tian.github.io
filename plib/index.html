@@ -24,8 +24,8 @@
 <meta property="og:description" content="Python 常用库使用笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/python_package.jpg">
-<meta property="article:published_time" content="2025-08-22T01:09:37.565Z">
-<meta property="article:modified_time" content="2025-08-22T01:09:37.565Z">
+<meta property="article:published_time" content="2025-09-06T14:58:44.444Z">
+<meta property="article:modified_time" content="2025-09-06T14:58:44.444Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -269,8 +269,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-22 09:09" pubdate>
-          2025年8月22日 上午
+        <time datetime="2025-09-06 22:58" pubdate>
+          2025年9月6日 晚上
         </time>
       </span>
     
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1.4k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          7 分钟
+          9 分钟
         
       </span>
     
@@ -460,7 +460,55 @@
             
               <div class="markdown-body">
                 
-                <h1 id="imageio"><a href="#imageio" class="headerlink" title="imageio"></a><a target="_blank" rel="noopener" href="https://pypi.org/project/imageio/">imageio</a></h1><p>用于易于读写各种图像数据 Python 库</p>
+                <h1 id="wandb"><a href="#wandb" class="headerlink" title="wandb"></a>wandb</h1><p><a target="_blank" rel="noopener" href="https://wandb.ai/"><strong>wandb (Weight and Biases)</strong></a>: 用于机器学习实验跟踪和可视化的工具和平台, 比 Tensorbard 更方便和智能</p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><ul>
+<li>安装: <code>pip install wandb</code></li>
+<li>登陆帐号 (输入 API key): <ul>
+<li>首次: <code>wandb login</code></li>
+<li>重新登陆: <code>wandb login --relogin</code></li>
+</ul>
+</li>
+<li>离线使用: <ul>
+<li>代码中插入: <code>os.environ[&quot;WANDB_MODE&quot;] = &quot;offline&quot;</code></li>
+<li>训练结束后同步: <code>wandb sync /path/to/dir</code></li>
+</ul>
+</li>
+<li>使用代理:<ul>
+<li><code>os.environ[&quot;HTTP_PROXY&quot;] = &quot;http://127.0.0.1:12345&quot;</code></li>
+<li><code>os.environ[&quot;HTTPS_PROXY&quot;] = &quot;http://127.0.0.1:12345&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="wandb-init"><a href="#wandb-init" class="headerlink" title="wandb.init()"></a>wandb.init()</h2><p>初始化一个实验, 开始记录实验的信息和结果, 常用参数如下:</p>
+<ul>
+<li><code>project</code>: 项目名称</li>
+<li><code>name</code>: 实验名称</li>
+<li><span class="emp-style"><strong><code>dir</code>: 本地存储实验数据和日志的目录路径</strong></span></li>
+<li><code>entity</code>: 团体名称</li>
+<li><code>mode</code>: 数据管理模式<ul>
+<li><code>online</code> (默认): 实验同步</li>
+<li><span class="emp-style"><code>offline</code>: 离线使用</span></li>
+<li><code>disable</code>: 禁用 W&amp;B 的功能 (用于调试)</li>
+</ul>
+</li>
+<li><code>config</code>: 配置参数<ul>
+<li><code>wandb.config.update()</code>: 更新配置参数</li>
+</ul>
+</li>
+<li><code>tag</code>: 标签</li>
+<li><code>note</code>: 实验说明</li>
+</ul>
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<li><code>wandb.log()</code>: 记录实验指标和日志信息</li>
+<li><code>wandb.save()</code>: 保存实验结果和模型文件</li>
+<li><code>wandb.watch()</code>: 监视模型的梯度和参数</li>
+<li><code>wandb.finish()</code>: 结束实验记录</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.wandb.ai/ref/python/sdk/functions/">Python 中常用函数</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.wandb.ai/guides/integrations/pytorch/">PyTorch 集成</a></li>
+</ul>
+<h1 id="imageio"><a href="#imageio" class="headerlink" title="imageio"></a><a target="_blank" rel="noopener" href="https://pypi.org/project/imageio/">imageio</a></h1><p>用于易于读写各种图像数据 Python 库</p>
 <ul>
 <li>安装: <code>pip install imageio</code></li>
 <li>导入: <code>import imageio.v3 as iio</code></li>
@@ -516,7 +564,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<h2 id="Others-1"><a href="#Others-1" class="headerlink" title="Others"></a>Others</h2><ul>
 <li><code>add_argument_group(str)</code>: 在帮助信息中创建分组的参数显示 (逻辑分组, 不影响解析逻辑)</li>
 <li><code>print_help()</code>: 打印帮助信息 (<code>-h</code>)</li>
 </ul>
@@ -635,7 +683,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月22日</div>
+          <div>2025年9月6日</div>
         </div>
       
       
@@ -667,18 +715,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/vpn/" title="系统代理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">系统代理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/11/Basic-Knowledge/" title="科研基础知识">
-                        <span class="hidden-mobile">科研基础知识</span>
+                      <a href="/vpn/" title="系统代理">
+                        <span class="hidden-mobile">系统代理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
