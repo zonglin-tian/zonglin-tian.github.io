@@ -1,3 +1,4 @@
+https://zonglin-tian.github.io/ssh/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/usoft/
 https://zonglin-tian.github.io/wins/
@@ -7,7 +8,6 @@ https://zonglin-tian.github.io/winit/
 https://zonglin-tian.github.io/word/
 https://zonglin-tian.github.io/vpn/
 https://zonglin-tian.github.io/git/
-https://zonglin-tian.github.io/ssh/
 https://zonglin-tian.github.io/docker/
 https://zonglin-tian.github.io/torch/
 https://zonglin-tian.github.io/pycharm/
@@ -98,17 +98,17 @@ https://zonglin-tian.github.io/
 https://zonglin-tian.github.io/tags/Grocery/
 https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/WebDesign/
-https://zonglin-tian.github.io/tags/Typesetting/
 https://zonglin-tian.github.io/tags/Python/
+https://zonglin-tian.github.io/tags/Typesetting/
 https://zonglin-tian.github.io/tags/PyCharm/
 https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
-https://zonglin-tian.github.io/categories/Others/
 https://zonglin-tian.github.io/categories/Research/
-https://zonglin-tian.github.io/categories/Software/
-https://zonglin-tian.github.io/categories/Ubuntu/
+https://zonglin-tian.github.io/categories/Others/
 https://zonglin-tian.github.io/categories/Coding/
+https://zonglin-tian.github.io/categories/Ubuntu/
+https://zonglin-tian.github.io/categories/Software/
 https://zonglin-tian.github.io/categories/Windows/
