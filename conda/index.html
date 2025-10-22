@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/conda.png">
 <meta property="article:published_time" content="2024-06-26T00:41:10.000Z">
-<meta property="article:modified_time" content="2025-07-21T09:23:00.390Z">
+<meta property="article:modified_time" content="2025-10-22T03:16:55.895Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-21T17:23:00+08:00
+                    最后更新于: 2025-10-22T11:16:55+08:00
                   
                   
 
@@ -376,7 +376,11 @@
 <li>包安装频道 (源): <code>conda config --show channels</code></li>
 </ul>
 </li>
+<li>安装包: <code>conda install pkg_name</code><ul>
 <li>以指定 channel 安装包: <code>conda install -c specific_channel pkg_name</code></li>
+<li><strong>强制重新下载包 (不使用缓存): <code>conda install pkg_name --force-reinstall</code></strong></li>
+</ul>
+</li>
 <li>升级包: <code>conda update pkg_name</code><ul>
 <li>更新 conda: <code>conda update conda</code></li>
 </ul>
@@ -488,8 +492,12 @@
 </li>
 </ul>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
-<li>查看配置: <code>pip config list</code></li>
-<li><strong>清理缓存: <code>pip cache purge</code></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看具体缓存的包</span><br>pip cache list<br><span class="hljs-comment"># 清理特定包</span><br>pip cache remove pkg<br><span class="hljs-comment"># 查看缓存位置和内容 (显示的路径可用于清理 wheel 和 http 缓存)</span><br>pip cache info<br><span class="hljs-comment"># 清理缓存的 wheel 文件 (构建好的包)</span><br>pip cache remove --path /path/to/wheels<br><span class="hljs-comment"># 清理 HTTP 缓存 (下载的原始文件)</span><br>pip cache remove --path /path/to/http<br><span class="hljs-comment"># </span><br><br></code></pre></td></tr></table></figure></li>
+<li><strong>不使用缓存安装 (网络测试): <code>pip install pkg_name --no-cache-dir</code></strong></li>
+<li>查看配置: <code>pip config list</code><ul>
+<li>缓存目录: <code>pip cache dir</code></li>
+</ul>
+</li>
+<li><strong>清理缓存: <code>pip cache purge</code></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看具体缓存的包</span><br>pip cache list<br><span class="hljs-comment"># 清理特定包</span><br>pip cache remove pkg<br><span class="hljs-comment"># 查看缓存位置和内容 (显示的路径可用于清理 wheel 和 http 缓存)</span><br>pip cache info<br><span class="hljs-comment"># 清理缓存的 wheel 文件 (构建好的包)</span><br>pip cache remove --path /path/to/wheels<br><span class="hljs-comment"># 清理 HTTP 缓存 (下载的原始文件)</span><br>pip cache remove --path /path/to/http<br></code></pre></td></tr></table></figure></li>
 <li>帮助<ul>
 <li>总: <code>pip --help</code></li>
 <li>特定: <code>pip install --help</code></li>
