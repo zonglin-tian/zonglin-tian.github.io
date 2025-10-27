@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-09-08T12:41:54.739Z">
+<meta property="article:modified_time" content="2025-10-27T12:27:40.020Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          3.2k 字
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-09-08T20:41:54+08:00
+                    最后更新于: 2025-10-27T20:27:40+08:00
                   
                   
 
@@ -491,6 +491,12 @@
 <li>查看网络 scoket 相关信息: <code>netstat/ss -tunap</code> (Listen or Established)</li>
 <li>查看系统服务状态: <code>systemctl status 服务</code> | <code>service 服务 status</code></li>
 <li>查看文件被哪些进程使用: <code>lsof /path/to/file</code> (List Open Files)</li>
+<li>查看系统管理的数据库 <code>getent</code> (Get Entries): <code>getent database [key]</code><ul>
+<li>组&#x2F;帐户信息: <code>passwd/group</code></li>
+<li>主机名和 IP 映射: <code>hosts</code></li>
+<li>网络服务 (端口&#x2F;协议) 定义: <code>services</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="历史命令"><a href="#历史命令" class="headerlink" title="历史命令"></a>历史命令</h2><ul>
 <li>查看历史命令: <code>history</code> (可用 <code>grep</code> 过滤)</li>

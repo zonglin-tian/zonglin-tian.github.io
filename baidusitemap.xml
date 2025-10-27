@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//uuser/</loc>
+    <lastmod>2025-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//usys/</loc>
+    <lastmod>2025-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//ufile/</loc>
+    <lastmod>2025-10-27</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//latex/</loc>
     <lastmod>2025-10-22</lastmod>
   </url>
@@ -10,10 +22,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//conda/</loc>
-    <lastmod>2025-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//uuser/</loc>
     <lastmod>2025-10-22</lastmod>
   </url>
   <url>
@@ -27,10 +35,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2025/02/20/%E4%B8%93%E4%B8%9A%E5%8D%95%E8%AF%8D%E4%B8%8E%E6%9C%AF%E8%AF%AD/</loc>
     <lastmod>2025-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//usys/</loc>
-    <lastmod>2025-09-08</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//wins/</loc>
@@ -87,10 +91,6 @@
   <url>
     <loc>https://zonglin-tian.github.io//udisk/</loc>
     <lastmod>2025-07-11</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//ufile/</loc>
-    <lastmod>2025-07-10</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//debug/</loc>

@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2025-07-10T00:14:11.684Z">
+<meta property="article:modified_time" content="2025-10-27T11:27:42.646Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.7k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          9 分钟
+          10 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-07-10T08:14:11+08:00
+                    最后更新于: 2025-10-27T19:27:42+08:00
                   
                   
 
@@ -519,7 +519,11 @@
 <li><strong>文件夹没有硬链接, 只有软链接</strong>, 使用 <code>ll</code> 命令结果的第二列表示<strong>文件</strong>的硬链接数<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 为 file_name 建立硬链接</span><br><span class="hljs-built_in">ln</span> file_name ln_name<br><span class="hljs-comment"># 为 file_name 建立软链接</span><br><span class="hljs-built_in">ln</span> -s file_name ln_name<br></code></pre></td></tr></table></figure></li>
 <li>硬链接查看方式: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看文件的 inode</span><br><span class="hljs-built_in">ls</span> -il dir_name<br><span class="hljs-comment"># 查找所有 inode_index 的文件</span><br>find dir_name -inum inode_index<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p><code>ls</code> 默认为 <code>ls =&#39;ls --color=auto&#39;</code>, 可通过 <code>alias ls</code> 查看, 其中 <em>–color&#x3D;auto</em> 表示以不同颜色显示不同类型的文件和目录: 目录为蓝色, 可执行文件为绿色, 常规文件为黑色, 符号链接为浅绿色<br>可通过 <code>ls -hl</code> 查看更为详细的信息, 其中第一列第一个字符若为 <em>-</em> 表示常规文件, <em>d</em> 表示目录, <em>l</em> 表示符号链接, 进一步添加 <code>-a</code> 选项查看隐藏文件 (以*.* 开头), 参数 <code>h</code> 表示使用易读的方式显示</p>
+<h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<li>查看文件信息 (修改时间): <code>stat file_name</code></li>
+<li>查看挂载点: <code>findmnt file_name</code></li>
+</ul>
+<h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p><code>ls</code> 默认为 <code>ls =&#39;ls --color=auto&#39;</code>, 可通过 <code>alias ls</code> 查看, 其中 <em>–color&#x3D;auto</em> 表示以不同颜色显示不同类型的文件和目录: 目录为蓝色, 可执行文件为绿色, 常规文件为黑色, 符号链接为浅绿色<br>可通过 <code>ls -hl</code> 查看更为详细的信息, 其中第一列第一个字符若为 <em>-</em> 表示常规文件, <em>d</em> 表示目录, <em>l</em> 表示符号链接, 进一步添加 <code>-a</code> 选项查看隐藏文件 (以*.* 开头), 参数 <code>h</code> 表示使用易读的方式显示</p>
 <h2 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看压缩文件大小</span><br>ll  <span class="hljs-comment"># ls -hl</span><br><span class="hljs-comment"># 查看文件(夹)大小</span><br><span class="hljs-built_in">du</span> -sh file_name<br><span class="hljs-comment"># 查看当前目录下所有子文件(目录)的大小</span><br><span class="hljs-built_in">du</span> -ah --max-depth=1  <span class="hljs-comment"># a 参数表示显示所有文件的大小</span><br><span class="hljs-comment"># 查看当前目录及一级子目录的大小</span><br><span class="hljs-built_in">du</span> -h --max-depth=1<br><span class="hljs-comment"># 查看当前目录的大小</span><br><span class="hljs-built_in">du</span> -sh  <span class="hljs-comment"># du -h --max-depth=0</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>服务器管理常用命令:</strong></p>
@@ -539,10 +543,13 @@
 <li><code>chmod ucd,gcd,ocd file_name</code>: 其中 c 为 <strong>+, -, &#x3D;</strong>, d 为 <strong>w, r, x</strong>的任意组合 (可为空)</li>
 <li><code>chmod acd</code>: 为 <strong>u, g, o</strong> 三者赋予相同权限 <strong>cd</strong></li>
 <li><code>chmod -R mode dir_name</code>: 为目录及其所有文件与子目录设置统一权限模式 <strong>mode</strong></li>
+<li><code>chmod -R g=u dir_name</code>: 将目录及其所有文件与子目录的组权限设置为与所有者权限相同</li>
+<li><code>四位数字</code>: 第一位表示特殊权限, 当不需要特殊权限时, 即 <code>0abc</code> 等同于 <code>abc</code></li>
 </ul>
 <p><strong>实例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> go+rx folder_name <span class="hljs-comment"># 为 Group 和 Others 添加读和执行权限</span><br><span class="hljs-built_in">chmod</span> a+x file_name  <span class="hljs-comment"># 为所有用户添加执行权限</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 为 Group 和 Others 添加读和执行权限</span><br><span class="hljs-built_in">chmod</span> go+rx folder_name<br><span class="hljs-comment"># 为所有用户添加执行权限</span><br><span class="hljs-built_in">chmod</span> a+x file_name<br><span class="hljs-comment"># 文件所有者有所有权限, 组与其它用户有读与执行的权限</span><br><span class="hljs-built_in">chmod</span> u=rwx,g=rx,o=rx file_name<br><span class="hljs-built_in">chmod</span> a=rx,u+w file_name<br><span class="hljs-built_in">chmod</span> 755 file_name<br></code></pre></td></tr></table></figure>
 
+<h2 id="文件所有者-chown"><a href="#文件所有者-chown" class="headerlink" title="文件所有者-chown"></a>文件所有者-chown</h2><p><code>chown</code> 用于设定文件的所有者与所属组</p>
 <h2 id="属性-lsattr"><a href="#属性-lsattr" class="headerlink" title="属性-lsattr"></a>属性-lsattr</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示文件属性</span><br>lsattr file_name<br><span class="hljs-comment"># 显示目录属性</span><br>lsattr -d dir_name<br><span class="hljs-comment"># 显示所有文件和目录的属性</span><br>lsattr -a dir_name<br><span class="hljs-comment"># 增加或减少文件 i(mmutable) 属性 (不可修改, 包括 root)</span><br>chattr +i file_name  <span class="hljs-comment"># 防止文件被修改, 尤其是 /etc 下的文件</span><br>chattr -i file_name<br><span class="hljs-comment"># 使文件只能增加数据, 而不能删除</span><br>chattr +a file_name<br></code></pre></td></tr></table></figure>
 
 
