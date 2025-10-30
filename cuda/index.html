@@ -19,13 +19,13 @@
     <meta name="description" content="辨析 conda 内外安装的 CUDA Toolkit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CUDA Toolkit of Conda and Local">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/10/10/CUDA-Toolkit-of-Conda-and-Local/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/cuda/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="辨析 conda 内外安装的 CUDA Toolkit">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/cuda.png">
 <meta property="article:published_time" content="2024-10-10T06:28:47.000Z">
-<meta property="article:modified_time" content="2025-04-07T02:38:37.075Z">
+<meta property="article:modified_time" content="2025-10-30T12:00:21.136Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-04-07T10:38:37+08:00
+                    最后更新于: 2025-10-30T20:00:21+08:00
                   
                   
 
@@ -409,6 +409,7 @@
 <li>安装显卡驱动与 CUDA Toolkit (假设都为 12.4)</li>
 <li>到<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">官网</a>下载对应的 cuDNN 版本 (比如 v8.9.7) → <code>Local Installer for Linux x86_64 (Tar)</code> → 上传到服务器</li>
 <li>解压缩上面的 <code>.tar.xz</code> 文件并复制相关文件到对应的 CUDA 目录下. 以 <code>/usr/local/cuda-12.4/</code> 为例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 解压缩</span><br>tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz<br><span class="hljs-built_in">cd</span> cudnn-linux-x86_64-8.9.7.29_cuda12-archive<br><span class="hljs-comment"># 复制文件</span><br>sudo <span class="hljs-built_in">cp</span> include/cudnn*.h /usr/local/cuda-12.4/include<br>sudo <span class="hljs-built_in">cp</span> lib/libcudnn* /usr/local/cuda-12.4/lib64<br><span class="hljs-comment"># 为所有用户添加读权限 (可选, 通常都具有读的权限)</span><br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/include/cudnn*.h<br>sudo <span class="hljs-built_in">chmod</span> a+r /usr/local/cuda-12.4/lib64/libcudnn*<br><span class="hljs-comment"># 查看 cuDNN 信息</span><br><span class="hljs-built_in">cat</span> /usr/local/cuda-12.4/include/cudnn_version.h | grep CUDNN_MAJOR -A 2<br></code></pre></td></tr></table></figure></li>
+<li><em>执行 <code>sudo ldconfig</code> 可能提示<strong>文件不是链接</strong> → 删除文件 → 创建软链接</em></li>
 </ul>
 <p><span style="font-size:12pt;font-weight:bold;color:green">注:</span> Windows 安装 cuDNN, 下载相应的 <code>.zip</code> 文件 → 解压缩 → 复制 <code>bin, lib, include</code> 三个文件夹到 <code>CUDA 的安装目录</code></p>
 <h1 id="Ubuntu-显卡驱动更新"><a href="#Ubuntu-显卡驱动更新" class="headerlink" title="Ubuntu 显卡驱动更新"></a>Ubuntu 显卡驱动更新</h1><ul>
@@ -473,7 +474,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>CUDA Toolkit of Conda and Local</div>
-      <div>https://zonglin-tian.github.io/2024/10/10/CUDA-Toolkit-of-Conda-and-Local/</div>
+      <div>https://zonglin-tian.github.io/cuda/</div>
     </div>
     <div class="license-meta">
       

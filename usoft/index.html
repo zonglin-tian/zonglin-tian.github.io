@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_tools.png">
 <meta property="article:published_time" content="2024-09-24T15:25:49.000Z">
-<meta property="article:modified_time" content="2025-10-22T02:42:28.359Z">
+<meta property="article:modified_time" content="2025-10-30T13:20:14.025Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          690 字
+          806 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-10-22T10:42:28+08:00
+                    最后更新于: 2025-10-30T21:20:14+08:00
                   
                   
 
@@ -481,13 +481,27 @@
             
               <div class="markdown-body">
                 
-                <h1 id="SSHFS"><a href="#SSHFS" class="headerlink" title="SSHFS"></a>SSHFS</h1><p>服务器目录本地挂载</p>
+                <h1 id="rclone"><a href="#rclone" class="headerlink" title="rclone"></a>rclone</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>服务器之间文件传输</li>
+<li><strong>路径指定为 <code>remote:path</code></strong></li>
+<li><strong>如果路径不以 <code>/</code> 开头, 表示相对于用户的家目录, 空路径为用户家目录</strong></li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a target="_blank" rel="noopener" href="https://rclone.org/install">安装</a></h2><ul>
+<li>系统: <code>curl https://rclone.org/install.sh | sudo bash</code></li>
+<li>自定义: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># fetch and unpack</span><br>curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip<br>unzip rclone-current-linux-amd64.zip<br><span class="hljs-built_in">cd</span> rclone-*-linux-amd64<br><span class="hljs-comment"># copy binary file</span><br>sudo <span class="hljs-built_in">cp</span> rclone /usr/bin/<br>sudo <span class="hljs-built_in">chown</span> root:root /usr/bin/rclone<br>sudo <span class="hljs-built_in">chmod</span> 755 /usr/bin/rclone<br><span class="hljs-comment"># install manpage</span><br>sudo <span class="hljs-built_in">mkdir</span> -p /usr/local/share/man/man1<br>sudo <span class="hljs-built_in">cp</span> rclone.1 /usr/local/share/man/man1/<br>sudo mandb<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="常用命令-sftp"><a href="#常用命令-sftp" class="headerlink" title="常用命令 (sftp)"></a>常用命令 (<a target="_blank" rel="noopener" href="https://rclone.org/sftp/">sftp</a>)</h2><ul>
+<li><strong>配置: <code>config</code></strong></li>
+<li>复制: <code>copy</code></li>
+<li>查看文件: <code>lsd</code></li>
+</ul>
+<h1 id="SSHFS"><a href="#SSHFS" class="headerlink" title="SSHFS"></a>SSHFS</h1><p>服务器目录本地挂载</p>
 <ul>
 <li>安装: <code>sudo apt install sshfs</code></li>
 <li>挂载: <code>sudo vim /etc/fstab</code><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 添加挂载项</span><br>username@host|IP:/remote/path /mount/dir fuse.sshfs x-systemd.automount,_netdev,<span class="hljs-attr">IdentityFile</span>=/path/id_rsa,uid=UID,gid=GID,allow_other,default_permissions,ServerAliveInterval=<span class="hljs-number">15</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="TMUX"><a href="#TMUX" class="headerlink" title="TMUX"></a>TMUX</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Tmux 用于分离终端与会话, 终端窗口关闭后, 会话仍在后台运行 (即进程守护)</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="root-系统级安装"><a href="#root-系统级安装" class="headerlink" title="root 系统级安装"></a>root 系统级安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install tmux<br></code></pre></td></tr></table></figure>
+<h1 id="TMUX"><a href="#TMUX" class="headerlink" title="TMUX"></a>TMUX</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>Tmux 用于分离终端与会话, 终端窗口关闭后, 会话仍在后台运行 (即进程守护)</p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="root-系统级安装"><a href="#root-系统级安装" class="headerlink" title="root 系统级安装"></a>root 系统级安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install tmux<br></code></pre></td></tr></table></figure>
 
 <h3 id="普通用户源码安装"><a href="#普通用户源码安装" class="headerlink" title="*普通用户源码安装"></a>*普通用户源码安装</h3><ul>
 <li>(源码) 安装依赖 (libevent)</li>
@@ -556,9 +570,9 @@
 <li>进入: <code>prefix + :</code></li>
 <li>面板同步操作: <code>setw sync on/off</code></li>
 </ul>
-<h1 id="Asciinema"><a href="#Asciinema" class="headerlink" title="Asciinema"></a>Asciinema</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>用于录制和分享终端会话, 可以将命令行操作录制为 ASCII 视频格式, 方便记录和分享终端操作过程</p>
+<h1 id="Asciinema"><a href="#Asciinema" class="headerlink" title="Asciinema"></a>Asciinema</h1><h2 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h2><p>用于录制和分享终端会话, 可以将命令行操作录制为 ASCII 视频格式, 方便记录和分享终端操作过程</p>
 <p><em>单词理解</em>: ASCII  + Cinema → Asciinema (ASCII 电影, 即以 ASCII 字符形式记录和展示的终端操作过程)</p>
-<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install asciinema<br></code></pre></td></tr></table></figure>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install asciinema<br></code></pre></td></tr></table></figure>
 
 <h2 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 开始录制 (rec) 终端的输入与输出 (exit 结束录制)</span><br>asciinema rec /path_to_file/file_name.cast<br><span class="hljs-comment"># 即时显示 (cat) 录制的所有内容</span><br>asciinema <span class="hljs-built_in">cat</span> /path_to_file/file_name.cast<br></code></pre></td></tr></table></figure>
 
