@@ -6,7 +6,7 @@
   <link href="https://zonglin-tian.github.io/atom.xml" rel="self"/>
   
   <link href="https://zonglin-tian.github.io/"/>
-  <updated>2025-11-07T08:49:07.203Z</updated>
+  <updated>2025-11-07T12:23:28.223Z</updated>
   <id>https://zonglin-tian.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zonglin-tian.github.io/paint/"/>
     <id>https://zonglin-tian.github.io/paint/</id>
     <published>2025-11-07T08:30:36.000Z</published>
-    <updated>2025-11-07T08:49:07.203Z</updated>
+    <updated>2025-11-07T12:23:28.223Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="PhotoShop-PS"><a href="#PhotoShop-PS" class="headerlink" title="PhotoShop (PS)"></a>PhotoShop (PS)</h1><h2 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h2><ul><li>放大: <code>Alt + 鼠标滚轮</code></li></ul><h2 id="实用操作"><a href="#实用操作" class="headerlink" title="实用操作"></a>实用操作</h2><ul><li>保存&#x2F;载入选区: <code>菜单栏[选择]</code></li><li>描边:<ul><li>右键选区 → 描边</li><li>双击图层缩略图空白位置 → 描边</li><li><code>菜单栏[编辑]</code> → 描边</li></ul></li></ul><h1 id="Visio"><a href="#Visio" class="headerlink" title="Visio"></a>Visio</h1><h2 id="实用操作-1"><a href="#实用操作-1" class="headerlink" title="实用操作"></a>实用操作</h2><ul><li>裁减画布: <code>Ctrl + 鼠标左键</code></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="PhotoShop-PS"><a href="#PhotoShop-PS" class="headerlink" title="PhotoShop (PS)"></a>PhotoShop (PS)</h1><h2 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h2><ul><li>放大: <code>Alt + 鼠标滚轮</code></li></ul><h2 id="实用操作"><a href="#实用操作" class="headerlink" title="实用操作"></a>实用操作</h2><ul><li>保存&#x2F;载入选区: <code>菜单栏[选择]</code></li><li>描边:<ul><li>右键选区 → 描边</li><li>双击图层缩略图空白位置 → 描边</li><li><code>菜单栏[编辑]</code> → 描边</li></ul></li></ul><h1 id="Visio"><a href="#Visio" class="headerlink" title="Visio"></a>Visio</h1><h2 id="实用操作-1"><a href="#实用操作-1" class="headerlink" title="实用操作"></a>实用操作</h2><ul><li>裁减画布: <code>Ctrl + 鼠标左键</code></li></ul><h2 id="文件转-pdf"><a href="#文件转-pdf" class="headerlink" title="文件转 .pdf"></a>文件转 .pdf</h2><ul><li>去除多余的白边 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[强殖装甲凯普. 最简单Visio导出无边框无白边pdf. CSDN](https://blog.csdn.net/qq_38163755/article/details/111690961)">[1]</span></a></sup><ul><li>设计 → 大小 → 适应绘图</li><li>按住 <code>Ctrl</code> → 使用鼠标拖动画布边缘调整画布大小</li></ul></li><li>去除黑边<ul><li>在导出 pdf 时, 点击 <code>选项</code> → 取消勾选 <code>辅助功能文档结构标记</code></li></ul></li></ul><h2 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h2><ul><li>直接复制粘贴: <code>Ctrl + D</code></li><li>常规复制粘贴: <code>Ctrl + C</code> → <code>Ctrl + V</code> (默认在原对象右下角粘贴; 若粘贴前在任意位置点击, 则在点击位置粘贴)</li><li>拖动复制: <code>按住 Ctrl 键</code>, 鼠标左键拖动复制 (若同时按住 <code>Shift</code> 键, 则进行水平或者垂直对齐的复制)</li><li>等距复制: 复制一次之后, 每按一次 <code>F4</code>, 则等距复制一次</li></ul><h2 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h2><ul><li>微小移动: 选中形状之后, 先按住 <code>Shift</code>, 再按方向键进行移动</li></ul><h2 id="形状改变"><a href="#形状改变" class="headerlink" title="形状改变"></a>形状改变</h2><ul><li>[非]等比例改变: 按住 <code>Shift</code>, 再拖动控制点</li></ul><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://blog.csdn.net/qq_38163755/article/details/111690961">强殖装甲凯普. 最简单Visio导出无边框无白边pdf. CSDN</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <summary type="html">常用绘图软件与技巧</summary>
