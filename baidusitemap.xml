@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zonglin-tian.github.io//paint/</loc>
-    <lastmod>2025-11-07</lastmod>
+    <lastmod>2025-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//rsrc/</loc>
+    <lastmod>2025-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//latex/</loc>
+    <lastmod>2025-11-08</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//usys/</loc>
@@ -10,10 +18,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/12/04/Shell-%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2025-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//latex/</loc>
     <lastmod>2025-11-07</lastmod>
   </url>
   <url>
@@ -165,10 +169,6 @@
     <lastmod>2025-03-29</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/07/27/%E7%A7%91%E7%A0%94%E6%8A%80%E8%83%BD%E4%B8%8E%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2025-03-14</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io/2024/07/12/Computer-Graphics-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2025-03-13</lastmod>
   </url>
@@ -217,10 +217,6 @@
     <lastmod>2024-09-04</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/09/03/Week-35/</loc>
-    <lastmod>2024-09-03</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io/2024/08/02/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-08-02</lastmod>
   </url>
@@ -245,19 +241,7 @@
     <lastmod>2024-06-23</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io/2024/06/16/WEEK-24-Come-on/</loc>
-    <lastmod>2024-06-19</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io/2024/06/04/%E6%89%80%E8%B0%93%E7%9A%84%E7%A7%91%E7%A0%94%E8%83%BD%E5%8A%9B%E5%88%B0%E5%BA%95%E8%A6%81%E6%80%8E%E4%B9%88%E5%9F%B9%E5%85%BB/</loc>
-    <lastmod>2024-06-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/06/02/WEEK-22-Writing-For-TIRPL/</loc>
-    <lastmod>2024-06-19</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/26/WEEK-21-codes-of-irsdf-and-point-light/</loc>
     <lastmod>2024-06-19</lastmod>
   </url>
   <url>
