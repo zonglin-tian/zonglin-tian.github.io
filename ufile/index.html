@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_file.png">
 <meta property="article:published_time" content="2024-04-19T12:53:46.000Z">
-<meta property="article:modified_time" content="2025-10-27T11:27:42.646Z">
+<meta property="article:modified_time" content="2025-11-09T00:42:56.553Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          1.8k 字
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-10-27T19:27:42+08:00
+                    最后更新于: 2025-11-09T08:42:56+08:00
                   
                   
 
@@ -484,7 +484,7 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tail 常用参数</span><br>- f: 循环读取 (Ctrl + C 停止显示)<br>- n: 显示尾部行数 (默认10行)<br></code></pre></td></tr></table></figure>
 
-<h1 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h1><h2 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title="tar.gz 文件"></a>tar.gz 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 通用参数说明</span><br>-v: 显示执行过程<br>-z: 通过 gzip 命令处理文件<br>-f: 指定备份文件<br><br><span class="hljs-comment"># 解压缩, -x 还原文件</span><br>tar -xvzf file.tar.gz<br><br><span class="hljs-comment"># 解压缩 tar.xz 文件</span><br>tar -xvf file.tar.xz<br><br><span class="hljs-comment"># 压缩并打包 -c 建立新的备份文件</span><br>tar -cvzf compact_file.tar.gz source_file<br><br><span class="hljs-comment"># 列出压缩文件内容, -t 列出备份文件内容</span><br>tar -tvzf file.tar.gz<br></code></pre></td></tr></table></figure>
+<h1 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h1><h2 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title="tar.gz 文件"></a>tar.gz 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 通用参数说明</span><br>-v: 显示执行过程<br>-z: 通过 gzip 命令处理文件<br>-f: 指定备份文件<br>-C: 指定解压缩的目标目录 (切换到该目录再解压)<br><br><span class="hljs-comment"># 解压缩, -x 还原文件</span><br>tar -xvzf file.tar.gz<br><br><span class="hljs-comment"># 解压缩 tar.xz 文件</span><br>tar -xvf file.tar.xz<br><br><span class="hljs-comment"># 压缩并打包 -c 建立新的备份文件</span><br>tar -cvzf compact_file.tar.gz source_file<br><br><span class="hljs-comment"># 列出压缩文件内容, -t 列出备份文件内容</span><br>tar -tvzf file.tar.gz<br></code></pre></td></tr></table></figure>
 
 <h2 id="zip-文件"><a href="#zip-文件" class="headerlink" title="zip 文件"></a>zip 文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># zip 压缩参数说明</span><br>r: 递归处理文件和文件夹<br>q: 不显示执行过程<br>v: 显示执行过程<br>d: 从压缩文件中删除指定文件<br><br><span class="hljs-comment"># 把 zip_folder 下所有文件和文件夹打包为当前目录下的 zip_file.zip</span><br>zip -qr zip_file.zip zip_folder<br><br><span class="hljs-comment">## 从压缩文件 zip_file.zip 中删除 delete_file</span><br>zip -dv zip_file.zip delete_file<br><br><br><span class="hljs-comment"># (可能要先安装 unzip)</span><br><span class="hljs-comment"># sudo apt install unzip</span><br><br><span class="hljs-comment"># 解压到当前目录</span><br>unzip file.zip<br><br><span class="hljs-comment"># 查看 zip 压缩包含的文件</span><br>unzip -l file.zip<br></code></pre></td></tr></table></figure>
 
