@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//phone/</loc>
+    <lastmod>2025-11-29</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//conda/</loc>
     <lastmod>2025-11-09</lastmod>
   </url>
@@ -259,9 +263,5 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/05/15/%E6%9C%89%E9%82%A3%E4%B9%88%E4%B8%80%E5%88%BB%E8%A7%89%E5%BE%97%E5%87%A0%E6%AF%9B%E9%92%B1%E8%8A%B1%E5%BE%97%E7%89%B9%E5%88%AB%E5%80%BC/</loc>
     <lastmod>2024-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2024/05/05/%E6%89%8B%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-05-26</lastmod>
   </url>
 </urlset> 
