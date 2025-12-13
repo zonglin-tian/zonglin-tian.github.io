@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2024-06-11T05:31:25.000Z">
-<meta property="article:modified_time" content="2025-11-08T17:58:06.321Z">
+<meta property="article:modified_time" content="2025-12-13T07:24:06.651Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Typesetting">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          2.2k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          7 分钟
+          13 分钟
         
       </span>
     
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-11-09T01:58:06+08:00
+                    最后更新于: 2025-12-13T15:24:06+08:00
                   
                   
 
@@ -500,6 +500,50 @@
 </ul>
 </li>
 </ul>
+<h1 id="TikZ"><a href="#TikZ" class="headerlink" title="TikZ"></a>TikZ</h1><h2 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h2><ul>
+<li>TikZ 图是矢量图:<ul>
+<li>由数学曲线计算得到，保留图的几何特征，不因缩放而影响清晰度；</li>
+<li>具有很高的精度，且通常文件很小；</li>
+<li>用来表达一些具有逻辑的示意图，如流程图、数学曲线等。</li>
+</ul>
+</li>
+<li>点阵图：<ul>
+<li>以矩阵形式存储每个像素的色值，缩放和坐标变换会影响清晰度；</li>
+<li>图像采样得到，可以描述极其复杂的图形；%矢量图很难做到时候。</li>
+<li>通常文件较大。</li>
+</ul>
+</li>
+<li>由 Beamer 的作者 Till Tantau 开发<ul>
+<li>PGF 可以精确的绘制复杂的几何图形及各种曲线</li>
+<li>TikZ 是 PGF 的前端，使用时只需调用 tikz 宏包</li>
+</ul>
+</li>
+</ul>
+<h2 id="TikZ-使用"><a href="#TikZ-使用" class="headerlink" title="TikZ 使用"></a>TikZ 使用</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% For help, type: texdoc visualtikz or texdoc tikz</span><br><span class="hljs-comment">% 使用方法: \usepackage&#123;tikz&#125;</span><br><span class="hljs-comment">% 根据需要调用 tikz 扩展: \usetikzlibrary&#123;arrows,backgrounds, ...&#125;</span><br><span class="hljs-comment">% TikZ 基于坐标绘图, 原点在左下角</span><br><span class="hljs-comment">% 每条 TikZ 绘图命令以分号结束</span><br><span class="hljs-comment">% 使用长度或坐标时数字可以带单位 (cm, em, pt, ...)也可不带</span><br><span class="hljs-comment">% 使用 tikz 命令: </span><br>Hello <span class="hljs-keyword">\tikz</span>&#123;<span class="hljs-keyword">\draw</span>(0pt,0pt)--(30pt,6pt);&#125; TikZ<br><span class="hljs-comment">% 使用 tikzpicture 环境: </span><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;[scale=0.8,show background rectangle]<br>    <span class="hljs-keyword">\draw</span>[style=dashed] (2,.5) circle (0.5);<br>    <span class="hljs-keyword">\draw</span>[fill=green] (1,1) ellipse (.5 and 1);<br>    <span class="hljs-keyword">\fill</span>[blue] (0,0) rectangle (1,1);<br><br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="Path-路径"><a href="#Path-路径" class="headerlink" title="Path 路径"></a>Path 路径</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\path</span>[draw]<br>(1,1)--(2,2)--(3,1);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\path</span>[draw,thick]<br>(1,1)--(2,2)--(3,1)--cycle; <br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\path</span>[draw,thick,fill=green!30]<br>(1,1)--(2,2)--(3,1)--cycle;<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\path</span>[fill=green!30]<br>(1,1)--(2,2)--(3,1)--cycle;<br></code></pre></td></tr></table></figure>
+
+<h2 id="Some-figures"><a href="#Some-figures" class="headerlink" title="Some figures"></a>Some figures</h2><h3 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span><br>(1,1)--(2,2)--(3,1)--cycle;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>线型: solid (缺省值), dashed, dotted</li>
+</ul>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span> (0,0) -- (0,3);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span>[dotted] (0,0) -- (0,3);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span>[loosely dotted] (0,0) -- (0,3);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span>[densely dotted] (0,0) -- (0,3);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span>[dashed] (0,0) -- (0,3);<br></code></pre></td></tr></table></figure>
+
+<h3 id="圆-圆心-半径-椭圆-圆心-长半轴-短半轴"><a href="#圆-圆心-半径-椭圆-圆心-长半轴-短半轴" class="headerlink" title="圆 (圆心, 半径), 椭圆 (圆心, 长半轴, 短半轴)"></a>圆 (圆心, 半径), 椭圆 (圆心, 长半轴, 短半轴)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs laatex">\tikz\draw<br>(0,0) circle (10pt);<br>\tikz\draw<br>(0,0) ellipse (20pt and 10pt);<br>%% 矩形 (对角点坐标, 点线绘制)<br>\tikz\draw<br>(0,0) rectangle (2,1);<br>\tikz\draw<br>(0,0)--(2,0)--(2,1)--(0,1)--cycle;<br></code></pre></td></tr></table></figure>
+
+<h3 id="圆弧-起始点-角度范围-半径"><a href="#圆弧-起始点-角度范围-半径" class="headerlink" title="圆弧 (起始点, 角度范围, 半径)"></a>圆弧 (起始点, 角度范围, 半径)</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span><br>(0,0) arc (0:135:1);<br><span class="hljs-comment">%% 椭圆弧 (起始点, 角度范围, 长半轴, 短半轴)</span><br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span><br>(0,0) arc (0:135:1 and 0.5);<br><span class="hljs-comment">%% 抛物线 (顶点, 终点)</span><br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span><br>(0,0) parabola (1,2);<br><span class="hljs-keyword">\tikz</span><span class="hljs-keyword">\draw</span><br>(0,0) parabola bend (1,1) (2,0);<br></code></pre></td></tr></table></figure>
+
+<h2 id="坐标系统"><a href="#坐标系统" class="headerlink" title="坐标系统"></a>坐标系统</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">%% 使用直角坐标 (x,y): (0,1), (0.4cm,5pt)</span><br><span class="hljs-comment">%% 使用极坐标 (θ:r): (30:1cm)</span><br><span class="hljs-comment">%% 使用相对位置</span><br><span class="hljs-comment">%% 一个加号: 从指定点移动</span><br><span class="hljs-comment">%% 两个加号: 从指定点移动, 并把此点作为新的当前点</span><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0)--(90:1cm) arc (90:360:1cm) arc (0:30:1cm)--cycle;<br>    <span class="hljs-keyword">\draw</span> (60:5pt)--+(30:1cm) arc (30:90:1cm)--cycle;<br><br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0)--++(1cm,0cm)--++(0cm,1cm)--++(-1cm,0cm)--cycle;<br>    <br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0)--+(1cm,0cm)--+(1cm,1cm)--+(0cm,1cm)--cycle;<br>    <br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用交点-intersection-of"><a href="#使用交点-intersection-of" class="headerlink" title="使用交点 intersection of"></a>使用交点 intersection of</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0)--(1,1);<br>    <span class="hljs-keyword">\draw</span> (0,1)--(1,0);<br>    <span class="hljs-keyword">\draw</span>[blue] (0,0.5)--(intersection of 0,0--1,1 and 0,1--1,0); <span class="hljs-comment">% 两条线的端点坐标不需要()</span><br>    <br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h2><p>复杂箭头需要用 arrowTikZ 扩展: \usetikzlibrary{arrows})</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span>[-&gt;] (0,0)--(1,1);<br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span>[&lt;-&gt;] (0,0)--(1,1);<br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><br><span class="hljs-comment">%% use extension: \usetikzlibrary&#123;arrows&#125;</span><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span>[thick,-&gt;,&gt;=stealth] (0,0)--(1,1);<br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span>[o-stealth] (0,0)--(1,1);<br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">%% xshift, yshift, shift 移动一定距离 (带单位)</span><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0)--(1,0)[yshift=10pt](0,0)--(1,0);<br>    <br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\fill</span>[blue] (0,0) circle (2pt)<span class="hljs-comment">%</span><br>    [shift=&#123;(5pt,5pt)&#125;] (0,0) circle (2pt)<span class="hljs-comment">%</span><br>    [shift=&#123;(5pt,5pt)&#125;] (0,0) circle (2pt);<br>    <br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br><br><span class="hljs-comment">%% 旋转一定角度: rotate</span><br><span class="hljs-comment">%% 绽放: scale, xscale, yscale</span><br><span class="hljs-comment">%% 倾斜: xslant, yslant</span><br><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\draw</span> (0,0) rectangle (1,1);<br>    <span class="hljs-keyword">\draw</span>[xshift=2cm,rotate=30] (0,0) rectangle (1,1);<br>    <span class="hljs-keyword">\draw</span>[xshift=3cm,xscale=1.5] (0,0) rectangle (1,1);<br>    <span class="hljs-keyword">\draw</span>[xshift=5cm,xslant=1] (0,0) rectangle (1,1);<br><span class="hljs-keyword">\end</span>&#123;tikzpicture&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">%% \coordinate [label=角度: 标注] (标记) at (x,y)</span><br><span class="hljs-keyword">\begin</span>&#123;tikzpicture&#125;<br>    <span class="hljs-keyword">\coordinate</span> [label=-135:<span class="hljs-built_in">$</span>a<span class="hljs-built_in">$</span>] (a) at (0,0);<br>    <span class="hljs-keyword">\coordinate</span> [label=45:<span class="hljs-built_in">$</span>b<span class="hljs-built_in">$</span>] (b) at (2.5,3);<br>    <span class="hljs-keyword">\coordinate</span> [label=0:<span class="hljs-built_in">$</span>u<span class="hljs-built_in">$</span>] (u) at (0.5,-1);<br>    <span class="hljs-keyword">\coordinate</span> [label=180:<span class="hljs-built_in">$</span>v<span class="hljs-built_in">$</span>] (v) at (2,3);<br>    <span class="hljs-keyword">\draw</span> (a)--(b) (u)--(v);<br>    <span class="hljs-keyword">\coordinate</span> [label=-45:<span class="hljs-built_in">$</span>c<span class="hljs-built_in">$</span>] (c) at <span class="hljs-comment">%</span><br>    (intersection of a--b and u--v);<br>    <span class="hljs-keyword">\foreach</span> <span class="hljs-keyword">\p</span> in &#123;a,b,c,u,v&#125; <span class="hljs-keyword">\fill</span><span class="hljs-comment">%</span><br>    [opacity=0.75] (<span class="hljs-keyword">\p</span>) circle (2pt); <span class="hljs-comment">% 不透明度</span><br><span class="hljs-keyword">\end</span>&#123;tikzpicture<br></code></pre></td></tr></table></figure>
+
 <h1 id="期刊模板"><a href="#期刊模板" class="headerlink" title="期刊模板"></a>期刊模板</h1><h2 id="Elsevier"><a href="#Elsevier" class="headerlink" title="Elsevier"></a>Elsevier</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31347869/article/details/128161240">不吃饭就会放大招. Elsevier（爱思唯尔）LaTex 模板详细说明. CSDN</a></li>
 </ul>
