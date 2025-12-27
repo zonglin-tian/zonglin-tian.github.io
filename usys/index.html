@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2025-12-13T07:40:14.471Z">
+<meta property="article:modified_time" content="2025-12-27T09:10:38.328Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          3.6k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          19 分钟
+          21 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-12-13T15:40:14+08:00
+                    最后更新于: 2025-12-27T17:10:38+08:00
                   
                   
 
@@ -755,8 +755,50 @@
 </ol>
 </li>
 </ul>
-<h2 id="终端关闭容器"><a href="#终端关闭容器" class="headerlink" title="终端关闭容器"></a>终端关闭容器</h2><ul>
+<h2 id="终端容器管理"><a href="#终端容器管理" class="headerlink" title="终端容器管理"></a>终端容器管理</h2><ul>
 <li>杀死 <code>sshd</code> 进程: <code>pgrep -f &quot;/usr/sbin/sshd -D&quot; | xargs sudo kill -TERM</code> (模糊匹配, 兼容 VSCode)</li>
+<li><strong>在 <code>admin</code> 容器内通过 <code>squeue</code> 查看作业的 <code>jobID</code> → 通过 <code>scancel jobID</code> 取消任务</strong></li>
+<li>查看节点上所有用户提交的作业 (需要先 ssh 登陆到节点): <code>ls /opt/sothisai/slurm/spool/slurmd/ | grep job</code></li>
+</ul>
+<h2 id="Slurm-集群管理"><a href="#Slurm-集群管理" class="headerlink" title="Slurm 集群管理"></a>Slurm 集群管理</h2><ul>
+<li>ssh 登陆节点 (node):<ul>
+<li><span class="emp-style">分配 zsh: <code>ssh gpu4 -t zsh</code></span></li>
+<li>执行命令: <code>ssh gpu7 nvidia-smi</code></li>
+</ul>
+</li>
+<li>查看集群状态: <code>sinfo</code><ul>
+<li>分区 (PARTITION): 通过指定分区来选择计算节点, <code>*</code> 表示默认分区</li>
+<li>时间限制 (TIMELIMIT): infinite (无限制)</li>
+<li><strong>状态 (STATE): idle (空闲), alloc (完全被分配), mix (部分占用, 仍有可用资源)</strong></li>
+</ul>
+</li>
+<li><strong>查询历史作业: <code>sacct</code></strong><ul>
+<li>作业号 (JobID)</li>
+<li>运行分区 (Partition)</li>
+<li>账户组 (Account)</li>
+<li>状态 (State): COMPLETED (已完成), <strong>RUNNING (运行中)</strong>, FAILED (失败), CANCELED (取消), PENDING (排队中)</li>
+<li><span class="emp-style">查看所有用户[正在运行]的作业: <code>sacct -a [-s r]</code></span></li>
+</ul>
+</li>
+<li>查询作业状态 (运行和排队): <code>squeue</code><ul>
+<li>状态 (ST): R (运行中), PD (排队中), S (挂起) </li>
+<li>指定作业 <code>JodID</code>: <code>-j</code></li>
+<li>指定分区: <code>-p</code></li>
+<li>指定用户: <code>-u</code></li>
+</ul>
+</li>
+<li><span class="emp-style">取消作业: <code>scancel JobID</code></span></li>
+<li><span class="emp-style">查看作业节点等状态: <code>scontrol show ENTITY [ID]</code></span><ul>
+<li>ENTITY: job, node, partition, config</li>
+<li>ID: JobID, node name, partition name</li>
+<li>查看 Slurm 版本: <code>scontrol -V</code></li>
+</ul>
+</li>
+<li>交互式作业提交 (短时间): <code>srun</code><ul>
+<li>打开一个交互终端: <code>srun --job-name=&quot;test&quot; -w gpu4 --pty zsh</code></li>
+</ul>
+</li>
+<li><span class="emp-style">批处理: <code>sbatch</code></span></li>
 </ul>
 <h1 id="网络管理"><a href="#网络管理" class="headerlink" title="网络管理"></a>网络管理</h1><h2 id="网速测试"><a href="#网速测试" class="headerlink" title="网速测试"></a>网速测试</h2><ul>
 <li>安装 <code>speedtest-cli</code> 包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install sppedtest-cli<br>speedtest-cli [args]<br></code></pre></td></tr></table></figure></li>
