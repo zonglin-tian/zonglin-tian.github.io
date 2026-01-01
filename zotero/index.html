@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/zotero.png">
 <meta property="article:published_time" content="2025-12-23T23:58:33.000Z">
-<meta property="article:modified_time" content="2025-12-24T00:16:29.223Z">
+<meta property="article:modified_time" content="2025-12-29T03:20:38.499Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          200 字
+          222 字
         
       </span>
     
@@ -353,7 +353,7 @@
         aria-expanded="true"
       >
         Software
-        <span class="list-group-count">(10)</span>
+        <span class="list-group-count">(9)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -380,15 +380,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Hello Docker</span>
-        </a>
-      
-    
-      
-      
-        <a href="/edge/" title="Microsoft Edge 使用"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">Microsoft Edge 使用</span>
         </a>
       
     
@@ -478,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-12-24T08:16:29+08:00
+                    最后更新于: 2025-12-29T11:20:38+08:00
                   
                   
 
@@ -490,7 +481,12 @@
             
               <div class="markdown-body">
                 
-                <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>编辑</code> → <code>设置</code> → …</p>
+                <h1 id="做笔记"><a href="#做笔记" class="headerlink" title="做笔记"></a>做笔记</h1><ul>
+<li>黄色: 表达借鉴</li>
+<li>红色: 关键内容</li>
+<li>绿色: 生词&#x2F;术语</li>
+</ul>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>编辑</code> → <code>设置</code> → …</p>
 <h2 id="自定义文件名格式"><a href="#自定义文件名格式" class="headerlink" title="自定义文件名格式"></a>自定义文件名格式</h2><ul>
 <li><code>常规</code> → <code>文件重命名</code> → <code>自定义文件名格式</code></li>
 <li>模板: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs zotero">&#123;&#123; if &#123;&#123; authorsCount &gt; 2 &#125;&#125; &#125;&#125;<br>    &#123;&#123; authors max=&quot;1&quot; suffix=&quot; et al_&quot; &#125;&#125;<br>&#123;&#123; else &#125;&#125;<br>    &#123;&#123; authors join=&quot; &amp; &quot; suffix=&quot;_&quot; &#125;&#125;<br>&#123;&#123; endif &#125;&#125;<br><br>&#123;&#123; year suffix=&quot;_&quot; &#125;&#125;<br><br>&#123;&#123; if itemType == &quot;preprint&quot; &#125;&#125;<br>    arXiv<br>&#123;&#123; elseif itemType == &quot;conferencePaper&quot; &#125;&#125;<br>    P<br>&#123;&#123; elseif itemType == &quot;journalArticle&quot; &#125;&#125;<br>    J<br>&#123;&#123; elseif itemType == &quot;book&quot; &#125;&#125;<br>    B<br>&#123;&#123; elseif itemType == &quot;thesis&quot; &#125;&#125;<br>    T<br>&#123;&#123; else &#125;&#125;<br>&#123;&#123; endif &#125;&#125;<br><br>&#123;&#123; if &#123;&#123; shortTitle match=&quot;\S+&quot; &#125;&#125; &#125;&#125;<br>    &#123;&#123; shortTitle case=&quot;hyphen&quot; prefix=&quot;_&quot;&#125;&#125;<br>&#123;&#123; else &#125;&#125;<br>    &#123;&#123; title truncate=&quot;100&quot; case=&quot;hyphen&quot; prefix=&quot;_&quot;&#125;&#125;<br>&#123;&#123; endif &#125;&#125;<br></code></pre></td></tr></table></figure></li>
