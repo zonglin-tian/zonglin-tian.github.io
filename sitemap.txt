@@ -1,8 +1,9 @@
+https://zonglin-tian.github.io/usoft/
 https://zonglin-tian.github.io/udisk/
+https://zonglin-tian.github.io/wsoft/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/2024/08/02/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/
 https://zonglin-tian.github.io/phone/
-https://zonglin-tian.github.io/wsoft/
 https://zonglin-tian.github.io/zsh/
 https://zonglin-tian.github.io/pdv/
 https://zonglin-tian.github.io/zotero/
@@ -21,7 +22,6 @@ https://zonglin-tian.github.io/rsrc/
 https://zonglin-tian.github.io/ufile/
 https://zonglin-tian.github.io/paint/
 https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/
-https://zonglin-tian.github.io/usoft/
 https://zonglin-tian.github.io/cuda/
 https://zonglin-tian.github.io/uuser/
 https://zonglin-tian.github.io/ssh/
@@ -82,8 +82,8 @@ https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajam
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/waifu-tips.json
@@ -93,14 +93,14 @@ https://zonglin-tian.github.io/live2d/demo/login.html
 https://zonglin-tian.github.io/live2d/README.html
 https://zonglin-tian.github.io/
 https://zonglin-tian.github.io/tags/Grocery/
-https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/WebDesign/
+https://zonglin-tian.github.io/tags/Typesetting/
+https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
 https://zonglin-tian.github.io/tags/PyCharm/
 https://zonglin-tian.github.io/tags/Custom/
-https://zonglin-tian.github.io/tags/Typesetting/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
 https://zonglin-tian.github.io/categories/Others/
