@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ssh.png">
 <meta property="article:published_time" content="2024-06-26T00:05:37.000Z">
-<meta property="article:modified_time" content="2025-10-22T02:48:47.993Z">
+<meta property="article:modified_time" content="2026-01-15T09:36:49.680Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2.4k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          9 分钟
+          14 分钟
         
       </span>
     
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-10-22T10:48:47+08:00
+                    最后更新于: 2026-01-15T17:36:49+08:00
                   
                   
 
@@ -358,6 +358,11 @@
               <div class="markdown-body">
                 
                 <h1 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h1><ul>
+<li>查看 ssh 登陆日志 (Linux)<ul>
+<li>Debian&#x2F;Ubuntu: <code>sudo cat /var/log/auth.log | grep sshd</code>   - RHEL&#x2F;CentOS&#x2F;Fedora: <code>sudo cat /var/log/secure | grep sshd</code></li>
+<li>查看 ssh 日志配置: <code>grep SyslogFacility /etc/ssh/sshd_config</code></li>
+</ul>
+</li>
 <li>测试连通性:<ul>
 <li><code>ping IP</code></li>
 <li><strong><code>telnet IP PORT</code></strong></li>
@@ -502,8 +507,107 @@
 <li>Windows: <code>C:\ProgramData\ssh\sshd_config</code></li>
 <li>Ubuntu: <code>/etc/ssh/sshd_config</code></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 允许流量转发, 如 ssh -D</span><br>AllowTcpForwarding <span class="hljs-built_in">yes</span><br><span class="hljs-comment"># 运程转发 (ssh -R) 时, 监听所有接口 (0.0.0.0)</span><br>GatewayPorts <span class="hljs-built_in">yes</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 禁用 root 登陆</span><br>PermitRootLogin no<br><span class="hljs-comment">## 可通过密码或密钥登陆</span><br>PermitRootLogin <span class="hljs-built_in">yes</span><br><span class="hljs-comment">## 仅允许密钥登录 (推荐)</span><br>PermitRootLogin prohibit-password<br><span class="hljs-comment"># 允许流量转发, 如 ssh -D</span><br>AllowTcpForwarding <span class="hljs-built_in">yes</span><br><span class="hljs-comment"># 运程转发 (ssh -R) 时, 监听所有接口 (0.0.0.0)</span><br>GatewayPorts <span class="hljs-built_in">yes</span><br></code></pre></td></tr></table></figure>
 
+<h1 id="PAM-认证"><a href="#PAM-认证" class="headerlink" title="PAM 认证"></a>PAM 认证</h1><ul>
+<li><code>/etc/nsswitch.conf</code>: 定义用户信息查询顺序 (<code>files ldap</code>)</li>
+</ul>
+<h2 id="etc-pam-d-sshd"><a href="#etc-pam-d-sshd" class="headerlink" title="/etc/pam.d/sshd"></a><code>/etc/pam.d/sshd</code></h2><p>Pluggable Authentication Modules (PAM) 配置文件, 控制 ssh 登陆时的认证, 授权和会话管理 (认证框架)</p>
+<ul>
+<li>每行格式: <code>&lt;类型&gt; &lt;控制标志&gt; &lt;模块名称&gt; [模块参数]</code></li>
+<li>A. 4 种类型的模块栈 (按执行顺序)<ul>
+<li><code>auth</code>: 用户身份认证</li>
+<li><code>account</code>: 账户状态检查</li>
+<li><code>passwd</code>: 密码修改</li>
+<li><code>session</code>: 会话管理</li>
+</ul>
+</li>
+<li>B. 控制标志:<ul>
+<li><code>[Mvalue1=Raction1, Mvalue2=Raction2, ...]</code><ul>
+<li><code>Mvalue</code>: default (条件不匹配), ignore (不适用), success (匹配成功)</li>
+<li><code>Raction</code>: 1 (认证失败), ignore (忽略结果), ok (继续认证)</li>
+</ul>
+</li>
+<li><code>required</code>: 必须成功, 失败后仍会<strong>继续</strong>执行其他模块, 但不管后续执行如何, 仍会<strong>拒绝连接</strong></li>
+<li><code>requisite</code>：必须成功, 失败后立即返回</li>
+<li><code>sufficient</code>: 成功则立即通过, 失败 (可忽略) 不影响其他模块</li>
+<li><code>optional</code>: 结果通常被忽略</li>
+<li><code>include</code>: 引入其他配置文件</li>
+</ul>
+</li>
+<li>C. 模块名称:<ul>
+<li><strong><code>pam_succeed_if.so</code>: 基于账户属性进行条件判断, 满足则成功</strong></li>
+<li><code>pam_sepermit.so</code>: 检查 SELinux 上下文是否允许登陆</li>
+<li><strong><code>password-auth</code>: 引入通用密码认证&#x2F;账户规则 (<code>/etc/pam.d/password-auth</code>)</strong></li>
+<li><code>postlogin</code>: 登陆后的额外检查 (<code>/etc/pam.d/postlogin</code>)</li>
+<li><code>pam_nologin.so</code>: 检查 <code>/etc/nologin</code> 是否存在, 禁止非 root 用户登陆</li>
+</ul>
+</li>
+<li>D. 模块参数: <ul>
+<li><code>quiet</code>: 静默所有日志</li>
+<li><code>success_quiet</code>: 静默成功日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="etc-pam-d-password-auth"><a href="#etc-pam-d-password-auth" class="headerlink" title="/etc/pam.d/password-auth"></a><code>/etc/pam.d/password-auth</code></h2><p>集中管理通用的认证规则, 避免在每个服务中重复配置</p>
+<ul>
+<li><code>pam_env.so</code>: 设置用户环境变量</li>
+<li><code>pam_localuser.so</code>: 检查是否是本地用户 (<code>/etc/passwd</code>)</li>
+<li><code>pam_unix.so</code>: 本地用户认证, 检查 <code>/et/passwd</code>, <code>/etc/shadow</code> 是否匹配<ul>
+<li><code>nullok</code>: 允许空密码</li>
+<li><code>try_first_pass</code>: 利用之前输入的密码</li>
+</ul>
+</li>
+<li><code>pam_ldap.so</code>: LDAP 认证, 用于集中式用户管理<ul>
+<li><code>forward_pass</code>: 将用户输入的密码传递给 LDAP 服务器</li>
+</ul>
+</li>
+<li><code>pam_sss.so</code>: 使用 <code>sssd</code> 缓存用户信息, 通常结合 LDAP 服务 (<strong>依赖 <code>/etc/sssd/sssd.conf</code> 配置 LDAP 连接</strong>)</li>
+<li><code>pam_deny.so</code>: 如果前面的模块都未通过, 强制拒绝登陆</li>
+</ul>
+<h1 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP"></a>LDAP</h1><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
+<li>查看 LDAP 进程: <ul>
+<li><code>ps aux | grep [s]lapd</code></li>
+<li><code>systemctl status slapd</code></li>
+</ul>
+</li>
+<li>查询: <code>ldapsearch</code></li>
+<li>参数:<ul>
+<li>简单认证: <code>-x</code></li>
+<li>指定访问人员: <code>-D &quot;cn=guest,dc=sugon,dc=com&quot;</code></li>
+<li>交互输入密码: <code>-W</code></li>
+<li>显式密码: <code>-w &quot;password&quot;</code></li>
+<li>搜索目录: <code>-b &quot;dc=sugon,dc=com&quot;</code></li>
+</ul>
+</li>
+<li>测试连接: <code>ldapsearch -x -D &quot;cn=guest,dc=sugon,dc=com&quot; -w &quot;password&quot; -b &quot;dc=sugon,dc=com&quot; &quot;(uid=tianzonglin)&quot;</code> </li>
+<li>测试匿名查询: <code>ldapsearch -x -b &quot;dc=sugon,dc=com&quot;</code> → <em>Insufficient access</em></li>
+<li>查看 OpenLDAP 的权限配置: <ul>
+<li><code>ldapsearch -Y EXTERNAL -H ldapi:/// -b &quot;cn=config&quot; &quot;(olcAccess=*)&quot; olcAccess</code></li>
+<li><code>cat /etc/openldap/slapd.d/cn\=config/*</code> | grep olcAccess</li>
+</ul>
+</li>
+</ul>
+<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><h3 id="etc-openldap-ldap-conf"><a href="#etc-openldap-ldap-conf" class="headerlink" title="/etc/[openldap/]ldap.conf"></a><code>/etc/[openldap/]ldap.conf</code></h3><p>全局配置文件, 用于定义如何连接 LDAP 服务器</p>
+<ul>
+<li>指定 LDAP 服务器地址和端口: <code>URI ldap://10.10.10.102:389</code></li>
+<li>指定 LDAP 搜索的根目录条目 (Base DN): <code>BASE dc=sugon,dc=com</code></li>
+</ul>
+<h3 id="etc-nslcd-conf"><a href="#etc-nslcd-conf" class="headerlink" title="/etc/nslcd.conf"></a><code>/etc/nslcd.conf</code></h3><p>使用 <code>nss-pam-ldapd</code> 管理的 OpenLDAP 客户端</p>
+<ul>
+<li>查找进程 <strong><code>nslcd</code></strong>: <code>systemctl status nslcd 2&gt;/dev/null || ps aux | grep nslcd</code></li>
+<li>查看日志 <code>nslcd</code>: <code>tail -f /var/log/messages | grep nslcd</code></li>
+<li>重要配置: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs conf"># LDAP 服务器和 Base DN (与 ldap.conf 一致)<br>uri ldap://10.10.10.102:389<br>base dc=sugon,dc=com<br># 绑定账户和密码 (用于查询用户信息)<br>binddn cn=guest,dc=sugon,dc=com<br>bindpw DefinedPassword<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="etc-sssd-sssd-conf"><a href="#etc-sssd-sssd-conf" class="headerlink" title="/etc/sssd/sssd.conf"></a><code>/etc/sssd/sssd.conf</code></h3><p>使用 <code>sssd</code> 管理的 OpenLDAP 客户端</p>
+<ul>
+<li>安装 sssd: <code>sudo apt install sssd sssd-ldap</code></li>
+<li>启动服务: <code>systemctl enable sssd --now</code></li>
+<li>重要配置:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs conf">ldap_uri = ldap://10.10.10.102:389<br>ldap_search_base = dc=sugon,dc=com<br># 绑定账号与密码<br>ldap_bind_dn = cn=guest,dc=sugon,dc=com<br>ldap_bind_pw = your_password<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><ul>
+<li><code>/etc/openldap/slapd.d/cn\=config/</code>: 配置文件目录</li>
+</ul>
 
                 
               </div>

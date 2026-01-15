@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/shell_scripts.png">
 <meta property="article:published_time" content="2024-12-04T01:57:31.000Z">
-<meta property="article:modified_time" content="2025-12-13T06:25:07.262Z">
+<meta property="article:modified_time" content="2026-01-13T07:58:02.674Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          177 字
+          269 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2025-12-13T14:25:07+08:00
+                    最后更新于: 2026-01-13T15:58:02+08:00
                   
                   
 
@@ -500,6 +500,18 @@
 </ul>
 <h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><ul>
 <li>终端使用: <code>for Iteration; do Commands; done</code></li>
+<li>脚本: <ul>
+<li>遍历列表:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> 变量 <span class="hljs-keyword">in</span> 列表<br><span class="hljs-keyword">do</span><br>    循环体<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
+<li>C 风格:   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> ((初始值; 条件; 步进))<br><span class="hljs-keyword">do</span><br>    循环体<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>常见循环列表形式: <ul>
+<li><strong>遍历命令输出: <code>for 变量 in $(命令)</code>: <code>for file in $&#123;ls *.txt&#125;</code></strong></li>
+<li><strong>使用 <code>seq</code> 命令生成数字序列: <code>for i in $(seq 1 5)</code></strong></li>
+<li><strong>使用 <code>&#123;start..end..increment&#125;</code> 生成循环列表: <code>for i in &#123;1..5&#125;</code></strong></li>
+<li>无限循环 <code>for ((;;))</code>: 结合 <code>break</code> 与 <code>continue</code></li>
+</ul>
+</li>
 </ul>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/452686607">Soler索莱尔HO. 一文掌握shell脚本的基本语法. 知乎</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/u012294618/article/details/78427864">Pikachu5808. 释伴：Linux 上的 Shebang 符号(#!). CSDN</a></p>
 
