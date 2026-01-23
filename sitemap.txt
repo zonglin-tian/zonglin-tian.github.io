@@ -1,8 +1,9 @@
+https://zonglin-tian.github.io/shell/
 https://zonglin-tian.github.io/ssh/
-https://zonglin-tian.github.io/uuser/
 https://zonglin-tian.github.io/utext/
 https://zonglin-tian.github.io/usys/
-https://zonglin-tian.github.io/shell/
+https://zonglin-tian.github.io/zsh/
+https://zonglin-tian.github.io/uuser/
 https://zonglin-tian.github.io/pbsc/
 https://zonglin-tian.github.io/torch/
 https://zonglin-tian.github.io/plib/
@@ -11,7 +12,6 @@ https://zonglin-tian.github.io/udisk/
 https://zonglin-tian.github.io/wsoft/
 https://zonglin-tian.github.io/2024/08/02/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/
 https://zonglin-tian.github.io/phone/
-https://zonglin-tian.github.io/zsh/
 https://zonglin-tian.github.io/pdv/
 https://zonglin-tian.github.io/zotero/
 https://zonglin-tian.github.io/wins/
@@ -93,10 +93,10 @@ https://zonglin-tian.github.io/live2d/demo/login.html
 https://zonglin-tian.github.io/live2d/README.html
 https://zonglin-tian.github.io/
 https://zonglin-tian.github.io/tags/Grocery/
-https://zonglin-tian.github.io/tags/Writing/
-https://zonglin-tian.github.io/tags/WebDesign/
 https://zonglin-tian.github.io/tags/Typesetting/
+https://zonglin-tian.github.io/tags/WebDesign/
 https://zonglin-tian.github.io/tags/Python/
+https://zonglin-tian.github.io/tags/Writing/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
 https://zonglin-tian.github.io/tags/PyCharm/
@@ -104,8 +104,8 @@ https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
 https://zonglin-tian.github.io/categories/Others/
-https://zonglin-tian.github.io/categories/Coding/
 https://zonglin-tian.github.io/categories/Software/
+https://zonglin-tian.github.io/categories/Coding/
 https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Windows/
 https://zonglin-tian.github.io/categories/Research/
