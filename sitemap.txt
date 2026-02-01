@@ -93,10 +93,10 @@ https://zonglin-tian.github.io/live2d/demo/login.html
 https://zonglin-tian.github.io/live2d/README.html
 https://zonglin-tian.github.io/
 https://zonglin-tian.github.io/tags/Grocery/
-https://zonglin-tian.github.io/tags/Typesetting/
-https://zonglin-tian.github.io/tags/WebDesign/
-https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/Writing/
+https://zonglin-tian.github.io/tags/WebDesign/
+https://zonglin-tian.github.io/tags/Typesetting/
+https://zonglin-tian.github.io/tags/Python/
 https://zonglin-tian.github.io/tags/AutoHotkey/
 https://zonglin-tian.github.io/tags/Keyboard/
 https://zonglin-tian.github.io/tags/PyCharm/
@@ -104,8 +104,8 @@ https://zonglin-tian.github.io/tags/Custom/
 https://zonglin-tian.github.io/tags/Vim/
 https://zonglin-tian.github.io/categories/Life/
 https://zonglin-tian.github.io/categories/Others/
-https://zonglin-tian.github.io/categories/Software/
 https://zonglin-tian.github.io/categories/Coding/
+https://zonglin-tian.github.io/categories/Software/
 https://zonglin-tian.github.io/categories/Ubuntu/
 https://zonglin-tian.github.io/categories/Windows/
 https://zonglin-tian.github.io/categories/Research/
