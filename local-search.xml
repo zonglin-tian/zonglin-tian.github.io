@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>不经常使用网站</title>
+    <link href="/site/"/>
+    <url>/site/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h1><ul><li>樱花动漫: <ul><li><a href="https://www.yhmc.cc/">https://www.yhmc.cc/</a></li></ul></li></ul><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><ul><li><a href="https://www.ermao.net/blog/telegram/">Telegram 使用教程</a></li><li><a href="https://didipifa.com/">境外手机号购买</a></li><li><a href="https://greasyfork.org/zh-CN">油猴脚本</a></li></ul><h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><ul><li><a href="https://tgapi.tgok.xyz/e32e034e-56b3-476c-bf44-5306cf1146c8/GetHTML">境外手机验证码获取</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Others</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Python 常用库</title>
     <link href="/plib/"/>
     <url>/plib/</url>
@@ -1230,7 +1249,7 @@
     <link href="/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/"/>
     <url>/2024/05/10/%E8%87%AA%E6%84%88-%E6%B8%85%E9%86%92-%E8%87%AA%E5%BE%8B/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-OFKdcnRY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-OFKdcnRY");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note note-success">            <p><strong>希望能早日意识到: 自己真的很好, 因为我永远乐观勇敢. 遇到事会消沉难过, 但我真的很会治愈自己.</strong></p>          </div>        <div id="aplayer-XHidGAQF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":3,"theme":"#3f89c8","music":[{"title":"Trouble I'm","author":"Twinbed","url":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.mp3","pic":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.jpg","lrc":"/music_player/play_list/Trouble-I-Am-In/Trouble-I-Am-In.lrc"}]};  options.element = document.getElementById("aplayer-XHidGAQF");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script><div class="note note-light">            <p style="text-indent:2em">人只活一次, 你怎么舍得让自己短暂的一生是丑陋的, 你怎么舍得让自己短暂的一生只是在往下坠落. 即便是坠落, 也应该具有落日般的华丽吧. 这个世界上只有两种力量, 一种向上的力量, 向光; 一种向下的力量, 叫重力. 如果我们想让自己永葆美丽, 永葆内心的一种健康, 一种清澈, 一种清新, 一种和谐, 我们就要不断地在自己有生之年永不停歇地往上成长, 不断地成长. 唯有 grow up, 才能够抵御住 grow old 的向下的力量. 有一天我们的机体都会坏掉, 都会不怎么听话. 没关系, 让你的精神向着光, 不断地成长, 不断地越来越真, 越来越善, 越来越美丽. 你会慢慢地活成一束光, 谁若接近你就是接近光. 这是人生在世对自己的一种责任和使命啊. </p><p align="right">by 复旦大学 陈果教授</p>          </div>]]></content>
     
     
     <categories>
@@ -1332,7 +1351,7 @@
     <link href="/phone/"/>
     <url>/phone/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="必备软件"><a href="#必备软件" class="headerlink" title="必备软件"></a>必备软件</h1><ul><li>微信阅读</li><li>宜准跑步</li><li>微信</li><li>支付宝</li><li>淘宝</li><li>高德地图</li><li>一键锁屏</li><li>铁路12306</li><li>哔哩哔哩</li><li>酷狗音乐</li><li>中国银行</li><li>X浏览器 (无广告)</li></ul><h1 id="可选软件"><a href="#可选软件" class="headerlink" title="可选软件"></a>可选软件</h1><ul><li>企业微信</li><li>小红书</li><li>携程旅行</li><li>数字心动</li><li>闲鱼</li><li>千牛: 淘宝商铺注册</li><li>向日葵远程控制</li><li>SSRRAY: VPN 连接客户端</li><li>RD Client: Windows 远程桌面连接</li><li>乔安智联: 摄像头查看</li><li>Thunderbird: 邮件统一管理客户端</li><li>GKD: 搞快点 (结合 Shizuku)</li><li>Folo: RSS 阅读工具</li><li>以观书法: 练字</li><li>网易云课堂: 记忆法课程</li><li>Sunri: 体重&#x2F;饮食管理</li></ul><h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul><li>深色模式</li><li>桌面图标整理</li></ul><h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><ul><li>定时开关机</li><li>通知提醒</li><li>振动模式</li></ul><h2 id="通讯配置"><a href="#通讯配置" class="headerlink" title="通讯配置"></a>通讯配置</h2><ul><li>短信&#x2F;电话拦截</li></ul><h2 id="百度输入法华为版"><a href="#百度输入法华为版" class="headerlink" title="百度输入法华为版"></a>百度输入法华为版</h2><ul><li>界面基本设置 (26 键五笔)</li><li><strong>修改短语同步</strong></li><li><strong>dvp 皮肤</strong></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="必备软件"><a href="#必备软件" class="headerlink" title="必备软件"></a>必备软件</h1><ul><li>微信阅读</li><li>宜准跑步</li><li>微信</li><li>支付宝</li><li>淘宝</li><li>高德地图</li><li>一键锁屏</li><li>铁路12306</li><li>哔哩哔哩</li><li>酷狗音乐</li><li>中国银行</li><li>浏览器:<ul><li>X 浏览器 (无广告)</li><li>Via 浏览器 (插件)</li><li>夸克浏览器</li></ul></li><li>科学上网:<ul><li><a href="https://github.com/MetaCubeX/ClashMetaForAndroid">ClashMeta</a></li><li><a href="https://github.com/chen08209/FlClash">FIClash</a></li><li><a href="https://github.com/getsurfboard/surfboard">Surfboard</a></li><li>SSRRAY</li><li><a href="https://sub-web.netlify.app/">订阅地址在线转换</a></li></ul></li></ul><h1 id="可选软件"><a href="#可选软件" class="headerlink" title="可选软件"></a>可选软件</h1><ul><li>企业微信</li><li>小红书</li><li>携程旅行</li><li>数字心动</li><li>闲鱼</li><li>千牛: 淘宝商铺注册</li><li>向日葵远程控制</li><li>RD Client: Windows 远程桌面连接</li><li>乔安智联: 摄像头查看</li><li>Thunderbird: 邮件统一管理客户端</li><li><a href="https://shizuku.rikka.app/zh-hans/guide/setup/">Shizuku</a>: 免 Root 的 Android 系统权限代理工具, 通过 <strong>ADB</strong> 授权, 让普通应用能以更高权限执行操作, 而无需解锁 Root 手机<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 手机开发者模式 → USB 调试</span><br><span class="hljs-comment"># 激活 Shizuku</span><br>adb shell /data/app/moe.shizuku.privileged.api-LDIhyBdhTgmifvb3kMhcuQ==/lib/arm64/libshizuku.so<br></code></pre></td></tr></table></figure></li><li><a href="https://gkd.li/guide/">GKD</a>: 搞快点 (结合 Shizuku)</li><li><a href="https://appops.rikka.app/zh-hans/">AppOps</a>: 精细化权限管理工具 (结合 Shizuku)</li><li>Folo: RSS 阅读工具</li><li>以观书法: 练字</li><li>网易云课堂: 记忆法课程</li><li>Sunri: 体重&#x2F;饮食管理</li></ul><h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul><li>深色模式</li><li>桌面图标整理</li></ul><h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><ul><li>定时开关机</li><li>通知提醒</li><li>振动模式</li></ul><h2 id="通讯配置"><a href="#通讯配置" class="headerlink" title="通讯配置"></a>通讯配置</h2><ul><li>短信&#x2F;电话拦截</li></ul><h2 id="百度输入法华为版"><a href="#百度输入法华为版" class="headerlink" title="百度输入法华为版"></a>百度输入法华为版</h2><ul><li>界面基本设置 (26 键五笔)</li><li><strong>修改短语同步</strong></li><li><strong>dvp 皮肤</strong></li></ul>]]></content>
     
     
     <categories>
