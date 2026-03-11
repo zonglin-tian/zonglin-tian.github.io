@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_tools.png">
 <meta property="article:published_time" content="2024-09-24T15:25:49.000Z">
-<meta property="article:modified_time" content="2026-03-04T14:37:15.659Z">
+<meta property="article:modified_time" content="2026-03-09T12:29:12.082Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          977 字
+          1.2k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-03-04T22:37:15+08:00
+                    最后更新于: 2026-03-09T20:29:12+08:00
                   
                   
 
@@ -481,7 +481,42 @@
             
               <div class="markdown-body">
                 
-                <h1 id="ncdu"><a href="#ncdu" class="headerlink" title="ncdu"></a>ncdu</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+                <h1 id="Squid"><a href="#Squid" class="headerlink" title="Squid"></a>Squid</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>功能齐全的 HTTP 开源代理</li>
+<li>安装: <code>sudo apt install squid</code></li>
+<li>配置文件: <ul>
+<li>基础配置: <code>/etc/squid/squid.conf</code></li>
+<li>加载配置: <code>/etc/squid/conf.d/*.conf</code></li>
+</ul>
+</li>
+<li>查看 HTTP 响应头: <code>curl -x http://IP:port -I http://example.com</code></li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>查看日志: <ul>
+<li>访问: <code>sudo tail -f /var/log/squid/access.log</code></li>
+<li>运行: <code>sudo tail -f /var/log/squid/cache.log</code></li>
+</ul>
+</li>
+<li>状态&#x2F;启动&#x2F;停止&#x2F;重启&#x2F;重载: <ul>
+<li>服务管理: <code>sudo service squid status/start/stop/restart/reload</code></li>
+<li>手动管理 (调试): <code>sudo squid -k check/shutdown/reconfiguere [-f /path/config.conf]</code></li>
+<li>前台运行: <code>sudo squid -N</code></li>
+</ul>
+</li>
+<li>初始化配置的 cache 目录: <code>sudo squid -z</code></li>
+<li>配置文件语法检查: <code>sudo squid -k parse</code></li>
+</ul>
+<h2 id="HTTP-标识字段"><a href="#HTTP-标识字段" class="headerlink" title="HTTP 标识字段"></a>HTTP 标识字段</h2><ul>
+<li>服务器名: <code>visible_hostname Define_Name</code></li>
+<li>服务器标识 ID: <code>reply_header_add X-Proxy-ID Defined_ID</code></li>
+<li>服务器位置: <code>reply_header_add X-Proxy-Location Defined_Location</code></li>
+<li>版本信息: <code>httpd_suppress_version_string on/off</code></li>
+<li>Via 头: <code>via on/off		</code></li>
+</ul>
+<h2 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a>配置示例</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 基本配置文件</span><br>include /etc/squid/conf.d/*<br><br><span class="hljs-comment"># 基本 ACL 定义</span><br>acl proxy_sites dstdomain .youtube.com .google.com .github.com .githubusercontent.com .githubassets.com .github.io<br>acl localnet src 173.0.0.0/16<br>acl SSL_ports port 443<br>acl Safe_ports port 80 443<br><br><span class="hljs-comment"># 网络设置</span><br>dns_v4_first on<br>ignore_unknown_nameservers on<br>http_port 20170<br>http_port 20171<br>http_port 20172<br><br><span class="hljs-comment"># 上游代理配置</span><br>cache_peer 127.0.0.1 parent 7890 0 no-query <span class="hljs-attr">name</span>=myproxy default<br>cache_peer_access myproxy allow proxy_sites<br>cache_peer_access myproxy deny all<br><br><span class="hljs-comment"># 关键路由规则</span><br>never_direct allow proxy_sites<br><span class="hljs-comment"># 强制使用代理, 禁止回退</span><br>always_direct deny all<br><br><span class="hljs-comment"># 访问控制规则</span><br>http_access allow localnet<br>http_access allow proxy_sites<br>http_access deny !Safe_ports<br>http_access deny all<br><br><span class="hljs-comment"># 超时设置 (需要时间单位)</span><br>connect_timeout 5 seconds<br>peer_connect_timeout 3 seconds<br>dead_peer_timeout 5 seconds<br><br><span class="hljs-comment"># 调试设置</span><br>debug_options ALL,2<br>logfile_rotate 0<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="ncdu"><a href="#ncdu" class="headerlink" title="ncdu"></a>ncdu</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>磁盘使用分析</li>
 <li>安装: <code>sudo apt install ncdu</code></li>
 <li>替代工具: <code>gdu</code></li>
@@ -491,7 +526,7 @@
 <li><code>-X</code>: 排除特定目录或文件</li>
 <li><code>--exclude</code>: 排除指定的文件, 目录或<strong>符合特定模式的内容</strong></li>
 </ul>
-<h1 id="rclone"><a href="#rclone" class="headerlink" title="rclone"></a>rclone</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><ul>
+<h1 id="rclone"><a href="#rclone" class="headerlink" title="rclone"></a>rclone</h1><h2 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>服务器之间文件传输</li>
 <li><strong>路径指定为 <code>remote:path</code></strong></li>
 <li><strong>如果路径不以 <code>/</code> 开头, 表示相对于用户的家目录, 空路径为用户家目录</strong></li>
@@ -515,7 +550,7 @@
 <li>安装: <code>sudo apt install sshfs</code></li>
 <li>挂载: <code>sudo vim /etc/fstab</code><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 添加挂载项</span><br>username@host|IP:/remote/path /mount/dir fuse.sshfs x-systemd.automount,_netdev,<span class="hljs-attr">IdentityFile</span>=/path/id_rsa,uid=UID,gid=GID,allow_other,default_permissions,ServerAliveInterval=<span class="hljs-number">15</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="TMUX"><a href="#TMUX" class="headerlink" title="TMUX"></a>TMUX</h1><h2 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h2><p>Tmux 用于分离终端与会话, 终端窗口关闭后, 会话仍在后台运行 (即进程守护)</p>
+<h1 id="TMUX"><a href="#TMUX" class="headerlink" title="TMUX"></a>TMUX</h1><h2 id="概述-3"><a href="#概述-3" class="headerlink" title="概述"></a>概述</h2><p>Tmux 用于分离终端与会话, 终端窗口关闭后, 会话仍在后台运行 (即进程守护)</p>
 <h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="root-系统级安装"><a href="#root-系统级安装" class="headerlink" title="root 系统级安装"></a>root 系统级安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install tmux<br></code></pre></td></tr></table></figure>
 
 <h3 id="普通用户源码安装"><a href="#普通用户源码安装" class="headerlink" title="*普通用户源码安装"></a>*普通用户源码安装</h3><ul>
@@ -588,7 +623,7 @@
 <li>进入: <code>prefix + :</code></li>
 <li>面板同步操作: <code>setw sync on/off</code></li>
 </ul>
-<h1 id="Asciinema"><a href="#Asciinema" class="headerlink" title="Asciinema"></a>Asciinema</h1><h2 id="概述-3"><a href="#概述-3" class="headerlink" title="概述"></a>概述</h2><p>用于录制和分享终端会话, 可以将命令行操作录制为 ASCII 视频格式, 方便记录和分享终端操作过程</p>
+<h1 id="Asciinema"><a href="#Asciinema" class="headerlink" title="Asciinema"></a>Asciinema</h1><h2 id="概述-4"><a href="#概述-4" class="headerlink" title="概述"></a>概述</h2><p>用于录制和分享终端会话, 可以将命令行操作录制为 ASCII 视频格式, 方便记录和分享终端操作过程</p>
 <p><em>单词理解</em>: ASCII  + Cinema → Asciinema (ASCII 电影, 即以 ASCII 字符形式记录和展示的终端操作过程)</p>
 <h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install asciinema<br></code></pre></td></tr></table></figure>
 
