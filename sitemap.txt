@@ -1,10 +1,11 @@
+https://zonglin-tian.github.io/phone/
+https://zonglin-tian.github.io/site/
+https://zonglin-tian.github.io/pycharm/
 https://zonglin-tian.github.io/vim/
 https://zonglin-tian.github.io/wsoft/
 https://zonglin-tian.github.io/conda/
-https://zonglin-tian.github.io/site/
 https://zonglin-tian.github.io/usoft/
 https://zonglin-tian.github.io/vsc/
-https://zonglin-tian.github.io/phone/
 https://zonglin-tian.github.io/shell/
 https://zonglin-tian.github.io/ssh/
 https://zonglin-tian.github.io/utext/
@@ -19,7 +20,6 @@ https://zonglin-tian.github.io/2024/08/02/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E
 https://zonglin-tian.github.io/pdv/
 https://zonglin-tian.github.io/zotero/
 https://zonglin-tian.github.io/wins/
-https://zonglin-tian.github.io/pycharm/
 https://zonglin-tian.github.io/2024/07/31/Numpy-notes/
 https://zonglin-tian.github.io/mark/
 https://zonglin-tian.github.io/latex/
