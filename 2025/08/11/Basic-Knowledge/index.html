@@ -16,15 +16,15 @@
   <meta name="author" content="Temm">
   <meta name="keywords" content="奋斗 自律 完美主义">
   
-    <meta name="description" content="深度学习激活函数 Softplus 函数. CSDN  二元交叉熵损失 (Binary Cross-Entropy Loss, BCE Loss)二分类问题中常用的损失函数, 当数据存在类别不平衡时, 可以通过引入类别权重来调整模型对不同类别的关注程度  标准二元交叉熵损失$$L &#x3D; - \frac{1}{N}\sum_{i&#x3D;1}^N\left[y_i \cdot \log\l">
+    <meta name="description" content="图像评价指标峰值信噪比 (PSNR)两个 $m\times n$ 单色图像 $I$ 和 $K$, 如果一个为另外一个的噪声近似, 那么它们的均方差定义为:$$MSE &#x3D; \frac{1}{mn}\sum_{i&#x3D;0}^{m-1}\sum_{j&#x3D;0}^{n-1}||I(i,j) - K(i,j)||^2.$$峰值信噪比定义为:$$PSNR &#x3D; 10 \cdot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="科研基础知识">
 <meta property="og:url" content="https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
-<meta property="og:description" content="深度学习激活函数 Softplus 函数. CSDN  二元交叉熵损失 (Binary Cross-Entropy Loss, BCE Loss)二分类问题中常用的损失函数, 当数据存在类别不平衡时, 可以通过引入类别权重来调整模型对不同类别的关注程度  标准二元交叉熵损失$$L &#x3D; - \frac{1}{N}\sum_{i&#x3D;1}^N\left[y_i \cdot \log\l">
+<meta property="og:description" content="图像评价指标峰值信噪比 (PSNR)两个 $m\times n$ 单色图像 $I$ 和 $K$, 如果一个为另外一个的噪声近似, 那么它们的均方差定义为:$$MSE &#x3D; \frac{1}{mn}\sum_{i&#x3D;0}^{m-1}\sum_{j&#x3D;0}^{n-1}||I(i,j) - K(i,j)||^2.$$峰值信噪比定义为:$$PSNR &#x3D; 10 \cdot">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-11T02:50:21.000Z">
-<meta property="article:modified_time" content="2026-05-19T23:44:18.690Z">
+<meta property="article:modified_time" content="2026-06-05T12:49:41.559Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -282,7 +282,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          567 字
+          732 字
         
       </span>
     
@@ -293,7 +293,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -449,7 +449,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-05-20T07:44:18+08:00
+                    最后更新于: 2026-06-05T20:49:41+08:00
                   
                   
 
@@ -461,7 +461,12 @@
             
               <div class="markdown-body">
                 
-                <h1 id="深度学习激活函数"><a href="#深度学习激活函数" class="headerlink" title="深度学习激活函数"></a>深度学习激活函数</h1><ul>
+                <h1 id="图像评价指标"><a href="#图像评价指标" class="headerlink" title="图像评价指标"></a>图像评价指标</h1><h2 id="峰值信噪比-PSNR"><a href="#峰值信噪比-PSNR" class="headerlink" title="峰值信噪比 (PSNR)"></a>峰值信噪比 (PSNR)</h2><p>两个 $m\times n$ 单色图像 $I$ 和 $K$, 如果一个为另外一个的噪声近似, 那么它们的均方差定义为:<br>$$<br>MSE &#x3D; \frac{1}{mn}\sum_{i&#x3D;0}^{m-1}\sum_{j&#x3D;0}^{n-1}||I(i,j) - K(i,j)||^2.<br>$$<br><strong>峰值信噪比定义为:</strong><br>$$<br>PSNR &#x3D; 10 \cdot \log_{10}\left(\frac{MAX_I^2}{MSE}\right) &#x3D; 20 \cdot \log_{10}\left(\frac{MAX_I}{\sqrt{MSE}}\right),<br>$$<br>其中, $MAX_I$ 表示图像点颜色的<strong>最大数值</strong>. </p>
+<ul>
+<li>当最大值为 1 时, $\mathbf{PSNR &#x3D; -10 \log_{10} MSE}$. 若要 $PSNR \ge 30$, 则需 $MSE\le 0.001$</li>
+<li><strong>对于 RGB 图像, 先计算每个通道的 $MSE$, 然后取平均, 最后计算 $PSNR$</strong></li>
+</ul>
+<h1 id="深度学习激活函数"><a href="#深度学习激活函数" class="headerlink" title="深度学习激活函数"></a>深度学习激活函数</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/hy592070616/article/details/120623303">Softplus 函数. CSDN</a></li>
 </ul>
 <h1 id="二元交叉熵损失-Binary-Cross-Entropy-Loss-BCE-Loss"><a href="#二元交叉熵损失-Binary-Cross-Entropy-Loss-BCE-Loss" class="headerlink" title="二元交叉熵损失 (Binary Cross-Entropy Loss, BCE Loss)"></a>二元交叉熵损失 (Binary Cross-Entropy Loss, BCE Loss)</h1><p>二分类问题中常用的损失函数, 当数据存在类别不平衡时, 可以通过引入类别权重来调整模型对不同类别的关注程度</p>
