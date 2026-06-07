@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/conda.png">
 <meta property="article:published_time" content="2024-06-26T00:41:10.000Z">
-<meta property="article:modified_time" content="2026-03-17T13:35:22.161Z">
+<meta property="article:modified_time" content="2026-06-07T06:38:12.431Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -345,7 +345,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-03-17T21:35:22+08:00
+                    最后更新于: 2026-06-07T14:38:12+08:00
                   
                   
 
@@ -400,6 +400,13 @@
 <li>删除某项配置下的某项: <code>conda config --remove key sub_key</code></li>
 <li>安全追加列表型配置: <code>conda config --add key value</code></li>
 <li>强制指定单值或完全替换列表: <code>conda config --set key value</code></li>
+<li>环境变量: <code>conda env config vars [-h] &#123;list, set, unset&#125;</code><ul>
+<li>列出已定义: <code>list</code></li>
+<li>定义新的变量: <code>set var=value</code></li>
+<li>取消定义: <code>unset var</code></li>
+<li>文件位置: <code>env_prefix/conda-meta/state</code></li>
+</ul>
+</li>
 </ul>
 <h4 id="文件直接写入"><a href="#文件直接写入" class="headerlink" title="文件直接写入"></a>文件直接写入</h4><p>常用配置示例:</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># basic</span><br><span class="hljs-comment">## 禁用自动激活 base 环境</span><br><span class="hljs-attr">auto_activate_base:</span> <span class="hljs-literal">false</span><br><span class="hljs-comment">## 安装包时显示下载频道地址</span><br><span class="hljs-attr">show_channel_urls:</span> <span class="hljs-literal">true</span><br><span class="hljs-comment"># save</span><br><span class="hljs-comment">## 缓存目录 </span><br><span class="hljs-comment"># pkgs_dirs:</span><br><span class="hljs-comment">#   - /path/to/pkgs_1</span><br><span class="hljs-comment">#   - /path/to/pkgs_2</span><br><span class="hljs-comment"># ## 环境目录</span><br><span class="hljs-comment"># envs_dirs:</span><br><span class="hljs-comment">#   - /path/to/env_1</span><br><span class="hljs-comment">#   - /path/to/env_2</span><br><span class="hljs-comment"># channels</span><br><span class="hljs-comment">## 清华源</span><br><span class="hljs-attr">channels:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</span><br><span class="hljs-comment">#  - conda-forge</span><br><span class="hljs-comment">#  - defaults</span><br><span class="hljs-comment">## 频道别名</span><br><span class="hljs-comment"># custom_channels:</span><br><span class="hljs-comment">#   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="hljs-comment">#   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="hljs-comment">## 优先级模式</span><br><span class="hljs-comment"># channel_priority: strict</span><br></code></pre></td></tr></table></figure>

@@ -1,6 +1,8 @@
-https://zonglin-tian.github.io/shell/
-https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/
+https://zonglin-tian.github.io/color/
 https://zonglin-tian.github.io/pbsc/
+https://zonglin-tian.github.io/shell/
+https://zonglin-tian.github.io/conda/
+https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/pdv/
 https://zonglin-tian.github.io/wins/
@@ -10,7 +12,6 @@ https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/
 https://zonglin-tian.github.io/phone/
 https://zonglin-tian.github.io/pycharm/
 https://zonglin-tian.github.io/vim/
-https://zonglin-tian.github.io/conda/
 https://zonglin-tian.github.io/usoft/
 https://zonglin-tian.github.io/vsc/
 https://zonglin-tian.github.io/ssh/

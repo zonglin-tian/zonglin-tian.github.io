@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zonglin-tian.github.io//shell/</loc>
-    <lastmod>2026-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://zonglin-tian.github.io//color/</loc>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//pbsc/</loc>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//shell/</loc>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//conda/</loc>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/</loc>
     <lastmod>2026-06-05</lastmod>
   </url>
   <url>
@@ -47,10 +55,6 @@
   <url>
     <loc>https://zonglin-tian.github.io//vim/</loc>
     <lastmod>2026-03-30</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//conda/</loc>
-    <lastmod>2026-03-17</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//usoft/</loc>
