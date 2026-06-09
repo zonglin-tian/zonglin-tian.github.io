@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zonglin-tian.github.io//wter/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//usoft/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//wins/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//conda/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//wsoft/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//shell/</loc>
+    <lastmod>2026-06-08</lastmod>
+  </url>
+  <url>
     <loc>https://zonglin-tian.github.io//color/</loc>
     <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//pbsc/</loc>
-    <lastmod>2026-06-07</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//shell/</loc>
-    <lastmod>2026-06-07</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//conda/</loc>
     <lastmod>2026-06-07</lastmod>
   </url>
   <url>
@@ -29,16 +45,8 @@
     <lastmod>2026-05-29</lastmod>
   </url>
   <url>
-    <loc>https://zonglin-tian.github.io//wins/</loc>
-    <lastmod>2026-05-28</lastmod>
-  </url>
-  <url>
     <loc>https://zonglin-tian.github.io//site/</loc>
     <lastmod>2026-05-25</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//wsoft/</loc>
-    <lastmod>2026-05-13</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/</loc>
@@ -55,10 +63,6 @@
   <url>
     <loc>https://zonglin-tian.github.io//vim/</loc>
     <lastmod>2026-03-30</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//usoft/</loc>
-    <lastmod>2026-03-09</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//vsc/</loc>
@@ -110,10 +114,6 @@
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//latex/</loc>
-    <lastmod>2025-12-13</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//wter/</loc>
     <lastmod>2025-12-13</lastmod>
   </url>
   <url>
