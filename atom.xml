@@ -6,7 +6,7 @@
   <link href="https://zonglin-tian.github.io/atom.xml" rel="self"/>
   
   <link href="https://zonglin-tian.github.io/"/>
-  <updated>2026-06-07T08:10:38.710Z</updated>
+  <updated>2026-06-10T14:04:28.508Z</updated>
   <id>https://zonglin-tian.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AutoHotKey 笔记</title>
+    <link href="https://zonglin-tian.github.io/ahk/"/>
+    <id>https://zonglin-tian.github.io/ahk/</id>
+    <published>2026-06-10T13:43:47.000Z</published>
+    <updated>2026-06-10T14:04:28.508Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h1><ul><li>音量与播放<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs AutoHotKey"><span class="hljs-comment">; Shift + 滚轮 切歌</span><br><span class="hljs-title">+WheelUp::</span>Send &#123;Medi<span class="hljs-built_in">a_Prev</span>&#125;  <span class="hljs-comment">; 上一首</span><br><span class="hljs-title">+WheelDown::</span>Send &#123;Medi<span class="hljs-built_in">a_Next</span>&#125;  <span class="hljs-comment">; 下一首</span><br><span class="hljs-title">+MButton::</span>Send &#123;Medi<span class="hljs-built_in">a_Play</span>_Pause&#125;  <span class="hljs-comment">; 暂停/播放</span><br><span class="hljs-comment">; Win + 左右键 调节音量</span><br><span class="hljs-title">!LButton::</span> SoundSet, -<span class="hljs-number">3</span><br><span class="hljs-title">!RButton::</span> SoundSet, +<span class="hljs-number">3</span><br><span class="hljs-title">!MButton::</span> SoundSet, +<span class="hljs-number">1</span>,, Mute<br></code></pre></td></tr></table></figure></li></ul><h1 id="基本用法和语法"><a href="#基本用法和语法" class="headerlink" title="基本用法和语法"></a>基本用法和语法</h1><h2 id="按键列表"><a href="#按键列表" class="headerlink" title="按键列表"></a>按键列表</h2><ul><li>修饰符键<ul><li>Win VS <code>#</code></li><li>Ctrl VS <code>^</code> </li><li>Alt VS <code>!</code></li><li>Shift VS <code>+</code></li><li>左&#x2F;右: <code>L/R</code> VS <code>&lt;/&gt;</code></li></ul></li><li>鼠标<ul><li>左 (主) 键: <code>LButton</code></li><li>右 (副) 键: <code>RButton</code></li><li>中键或滚轮: <code>MButton</code></li></ul></li><li>滚轮<ul><li>向下滚动 (朝向自己): <code>WheelDown</code></li><li>向上滚动 (远离自己): <code>WheelUp</code></li></ul></li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://wyagd001.github.io/zh-cn/docs/Hotkeys.htm">官方文档</a></li></ul>]]></content>
+    
+    
+    <summary type="html">AutoHotKey 赋能极致操作体验</summary>
+    
+    
+    
+    <category term="Software" scheme="https://zonglin-tian.github.io/categories/Software/"/>
+    
+    
+    <category term="Keyboard" scheme="https://zonglin-tian.github.io/tags/Keyboard/"/>
+    
+  </entry>
   
   <entry>
     <title>Color</title>
@@ -118,9 +139,9 @@
     <link href="https://zonglin-tian.github.io/wsoft/"/>
     <id>https://zonglin-tian.github.io/wsoft/</id>
     <published>2025-12-18T01:26:48.000Z</published>
-    <updated>2026-06-09T05:39:28.575Z</updated>
+    <updated>2026-06-09T07:11:55.582Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul><li>打开命令面板: <code>Ctrl + Shift + P</code><ul><li>程序: <code>quit, open, setting</code></li><li>选项卡: <code>tab, close, duplicate, new, next/prev, switch</code></li></ul></li><li>查找: <code>Ctrl + F</code></li><li>新标签: <code>Ctrl + T</code></li><li>从列表中新建: <code>Ctrl + Shift + num</code></li><li>切换标签: <code>Ctrl + Alt + num</code></li><li>关闭标签: <code>Ctrl + W</code></li></ul><h2 id="MPV"><a href="#MPV" class="headerlink" title="MPV"></a><a href="https://mpv.io/">MPV</a></h2><p>极客播放器</p><h2 id="Total-Commander"><a href="#Total-Commander" class="headerlink" title="Total Commander"></a>Total Commander</h2><h3 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h3><ul><li>菜单栏, 主工具栏, 驱动器按钮栏</li><li>显示驱动器列表栏, 剩余空间, 转到根&#x2F;父目录</li><li>文件夹标签, 路径栏, 文件夹历史与常用文件夹按钮</li><li>列标题, 文件窗口</li><li>状态栏, 命令行, 功能键按钮</li></ul><h3 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul><li>创建标签: <code>Ctrl + T</code></li><li>关闭标签页: <code>Ctrl + W</code></li><li>关闭全部未锁定标签页: <code>Ctrl + Shift + W</code></li><li>切换标签页: <code>Ctrl + Tab</code></li><li>切换左右视图: <code>Tab</code></li><li>唤出书签栏: <code>Ctrl + D</code></li><li>切换左&#x2F;右盘符: <code>Alt + F1/F2</code></li><li>重命名: <code>F2</code></li><li>快速查看: <code>F3</code></li><li>用文本编辑器打开: <code>F4</code></li><li>左边目录复制到右边: <code>F5</code></li><li>左边目录移动到右边: <code>F6</code></li><li>新建文件夹: <code>F7</code></li><li>高出搜索框: <code>Ctrl + S</code> → 取消: <code>Esc</code></li><li>全选: <code>Ctrl + +/A</code></li><li>取消全选: <code>Ctrl + -</code></li><li><strong>批量选中: <code>+</code></strong></li><li><strong>取消批量选中: <code>-</code></strong></li><li>打开历史命令: <code>Alt + F8</code></li></ul><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://jishuzhan.net/article/2018557831369768962">tc 中调用 everything</a></li><li><a href="https://www.kafan.cn/edu/56985984.html">教程</a></li></ul><h2 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h2><ul><li>页面横向滚动: <code>Shift + 鼠标滚轮</code></li><li>F12 调试 HTML 代码<ul><li><a href="https://blog.csdn.net/qq_42159062/article/details/105991720">开发工具使用</a></li></ul></li></ul><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul><li>金山打字通: 打字练习</li></ul><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ul><li><a href="/wins/#%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE">常用配置</a></li><li>开机启动项分批次进行 (延迟启动)</li><li>定时开机 (卡机自动重启)</li><li>ThunderBird 文件夹置顶</li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul><li>打开命令面板: <code>Ctrl + Shift + P</code><ul><li>程序: <code>quit, open, setting</code></li><li>选项卡: <code>tab, close, duplicate, new, next/prev, switch</code></li></ul></li><li>查找: <code>Ctrl + F</code></li><li>新标签: <code>Ctrl + T</code></li><li>从列表中新建: <code>Ctrl + Shift + num</code></li><li>切换标签: <code>Ctrl + Alt + num</code></li><li>关闭标签: <code>Ctrl + W</code></li></ul><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://learn.microsoft.com/zh-cn/windows/terminal/customize-settings/actions#tab-management-commands">Windows 终端 中的自定义操作和键绑定</a></li></ul><h2 id="MPV"><a href="#MPV" class="headerlink" title="MPV"></a><a href="https://mpv.io/">MPV</a></h2><p>极客播放器</p><h2 id="Total-Commander"><a href="#Total-Commander" class="headerlink" title="Total Commander"></a>Total Commander</h2><h3 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h3><ul><li>菜单栏, 主工具栏, 驱动器按钮栏</li><li>显示驱动器列表栏, 剩余空间, 转到根&#x2F;父目录</li><li>文件夹标签, 路径栏, 文件夹历史与常用文件夹按钮</li><li>列标题, 文件窗口</li><li>状态栏, 命令行, 功能键按钮</li></ul><h3 id="常用快捷键-1"><a href="#常用快捷键-1" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul><li>创建标签: <code>Ctrl + T</code></li><li>关闭标签页: <code>Ctrl + W</code></li><li>关闭全部未锁定标签页: <code>Ctrl + Shift + W</code></li><li>切换标签页: <code>Ctrl + Tab</code></li><li>切换左右视图: <code>Tab</code></li><li>唤出书签栏: <code>Ctrl + D</code></li><li>切换左&#x2F;右盘符: <code>Alt + F1/F2</code></li><li>重命名: <code>F2</code></li><li>快速查看: <code>F3</code></li><li>用文本编辑器打开: <code>F4</code></li><li>左边目录复制到右边: <code>F5</code></li><li>左边目录移动到右边: <code>F6</code></li><li>新建文件夹: <code>F7</code></li><li>高出搜索框: <code>Ctrl + S</code> → 取消: <code>Esc</code></li><li>全选: <code>Ctrl + +/A</code></li><li>取消全选: <code>Ctrl + -</code></li><li><strong>批量选中: <code>+</code></strong></li><li><strong>取消批量选中: <code>-</code></strong></li><li>打开历史命令: <code>Alt + F8</code></li></ul><h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://jishuzhan.net/article/2018557831369768962">tc 中调用 everything</a></li><li><a href="https://www.kafan.cn/edu/56985984.html">教程</a></li></ul><h2 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h2><ul><li>页面横向滚动: <code>Shift + 鼠标滚轮</code></li><li>F12 调试 HTML 代码<ul><li><a href="https://blog.csdn.net/qq_42159062/article/details/105991720">开发工具使用</a></li></ul></li></ul><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul><li>金山打字通: 打字练习</li></ul><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ul><li><a href="/wins/#%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE">常用配置</a></li><li>开机启动项分批次进行 (延迟启动)</li><li>定时开机 (卡机自动重启)</li><li>ThunderBird 文件夹置顶</li></ul>]]></content>
     
     
     <summary type="html">Windows 好用的软件与个性化配置</summary>
@@ -491,25 +512,6 @@
     
     
     <category term="Python" scheme="https://zonglin-tian.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>科研技能与资源</title>
-    <link href="https://zonglin-tian.github.io/rsrc/"/>
-    <id>https://zonglin-tian.github.io/rsrc/</id>
-    <published>2024-07-27T02:38:19.000Z</published>
-    <updated>2025-11-09T03:35:45.112Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文献查找"><a href="#文献查找" class="headerlink" title="文献查找"></a>文献查找</h1><ul><li>如何判断 arXiv 上的文章是否已经发表?<ul><li>通过 PDF 文件内的注释</li><li>通过 arXiv 页面的 “Comments” 提示</li><li>通过 arXiv 页面的 “Submission history” 的说明</li><li>通过 arXiv 页面提供的 DOI, 访问 <a href="https://dx.doi.org/">resolve doi</a>&#x2F;<a href="https://scholar.google.com/">Google Scholar</a>&#x2F;<a href="https://search.crossref.org/">CrossRef</a> 查找</li></ul></li></ul><h1 id="作图"><a href="#作图" class="headerlink" title="作图"></a>作图</h1><ul><li>图片背景处理: <a href="https://wipe.bg/zh/">Wipe.bg</a></li></ul><h1 id="画表"><a href="#画表" class="headerlink" title="画表"></a>画表</h1><h2 id="excel"><a href="#excel" class="headerlink" title="excel"></a>excel</h2><ul><li>快速填充: <ul><li>双击右下角的小方块 (填充柄)</li><li><strong>选中含公式的单元格及下方目标区域: <code>Ctrl + D</code> 向下填充</strong></li><li>选中含公式的单元格及右侧目标区域: <code>Ctrl + R</code> 向右填充</li></ul></li><li><strong>多区域填充: 按住 <code>Ctrl</code> 选中多个不连续单元格, 在编辑栏输入公式 (以最后一个选中单元格为准) 后按 <code>Ctrl + Enter</code></strong></li></ul><h1 id="文献阅读"><a href="#文献阅读" class="headerlink" title="文献阅读"></a>文献阅读</h1><h2 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h2><ul><li>每天查看最新文章 (研究进展)</li><li>论文的阅读, 可<strong>参考</strong>知乎&#x2F;CSDN 相关解说文章 (成为一种习惯)<ul><li><a href="https://blog.csdn.net/nav/advanced-technology/paper-reading?utm_source=csdn_ai_ada_blog_reply">CSDN 论文阅读专栏</a></li></ul></li><li>BRDF 模型<ul><li>Physically Based Shading at Disney (2012)</li></ul></li><li>(开创性) 方法原理的文章多读, 并要非常熟悉, 甚至能复现代码<ul><li>NeRF</li><li>NeuS</li><li>TensorRF</li><li>3D Gaussian</li><li>Nvdiffrecmc (渲染过程)<ul><li>Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising</li><li>Extracting Triangular 3D Models, Materials, and Lighting From Images</li></ul></li></ul></li><li>写得好的文章多读, 并模仿与写作与表述 (尤其图表, 排版)</li><li>读完论文之后写总结收获 → Blog</li></ul><h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><h2 id="经验-1"><a href="#经验-1" class="headerlink" title="经验"></a>经验</h2><ul><li>做完一个实验, 尽快 (<span class="emp-style red">3 天内</span>) 梳理结果</li><li>对比方法尽可能少做 (<span class="emp-style red">选好 baselines</span>)</li></ul><h1 id="论文写作"><a href="#论文写作" class="headerlink" title="论文写作"></a>论文写作</h1><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><span class="emp-style">建立一个参考文献库文件</span></li><li>写论文时, 参考文献现场引用上</li></ul>]]></content>
-    
-    
-    <summary type="html">科研过程中常用到的软件, 网站, 技能方法</summary>
-    
-    
-    
-    <category term="Research" scheme="https://zonglin-tian.github.io/categories/Research/"/>
-    
     
   </entry>
   
