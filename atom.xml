@@ -6,7 +6,7 @@
   <link href="https://zonglin-tian.github.io/atom.xml" rel="self"/>
   
   <link href="https://zonglin-tian.github.io/"/>
-  <updated>2026-06-10T14:04:28.508Z</updated>
+  <updated>2026-06-17T03:27:53.356Z</updated>
   <id>https://zonglin-tian.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天写一点论文</title>
+    <link href="https://zonglin-tian.github.io/ew/"/>
+    <id>https://zonglin-tian.github.io/ew/</id>
+    <published>2026-06-17T03:11:32.000Z</published>
+    <updated>2026-06-17T03:27:53.356Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+    <summary type="html">每天进步一点点</summary>
+    
+    
+    
+    <category term="Research" scheme="https://zonglin-tian.github.io/categories/Research/"/>
+    
+    
+    <category term="Writing..." scheme="https://zonglin-tian.github.io/tags/Writing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每天阅读一篇论文</title>
+    <link href="https://zonglin-tian.github.io/er/"/>
+    <id>https://zonglin-tian.github.io/er/</id>
+    <published>2026-06-17T03:10:43.000Z</published>
+    <updated>2026-06-17T03:32:10.598Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="2026-年-6-月"><a href="#2026-年-6-月" class="headerlink" title="2026 年 6 月"></a>2026 年 6 月</h1><ul><li>2026-06-17: <ul><li>标题: GS-SVIR: 3D Gaussian Splatting for inverse rendering with spatially varying illumination</li><li>作者: Gaofeng Zhang, Liping Zheng</li><li>机构: Hefei &amp; Anhui University of Technology</li><li>刊物: Computers &amp; Graphics (12 June 2026), CCF-C, SCI 3 区</li><li>核心: 用一组 3D 高斯来建模直接光</li><li>学习程度: 简单了解</li></ul></li></ul>]]></content>
+    
+    
+    <summary type="html">站在巨人的肩膀上看世界</summary>
+    
+    
+    
+    <category term="Research" scheme="https://zonglin-tian.github.io/categories/Research/"/>
+    
+    
+    <category term="Writing..." scheme="https://zonglin-tian.github.io/tags/Writing/"/>
+    
+  </entry>
   
   <entry>
     <title>AutoHotKey 笔记</title>
@@ -470,48 +512,6 @@
     
     <category term="Ubuntu" scheme="https://zonglin-tian.github.io/categories/Ubuntu/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Tensorboard notes</title>
-    <link href="https://zonglin-tian.github.io/tensorboard/"/>
-    <id>https://zonglin-tian.github.io/tensorboard/</id>
-    <published>2024-09-01T12:14:26.000Z</published>
-    <updated>2025-06-22T14:48:19.113Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>在机器学习中, 要改进模型的某些参数, 通常需要对其进行衡量, Tensorboard 用于提供机器学习工作流程期间所需测量和呈现的工具, 能够跟踪实验指标, 呈现模型计算图, 将嵌入向量投影到较低维度的空间. </p><p>Tensorboard 原本是 TensorFlow 的可视化工具, <strong>TensorboardX</strong> 是一个支持 PyTorch 的可视化工具, 而 PyTorch 官方的 <code>torch.utils.tensorboard</code> 是 PyTorch 与 Tensorboard 合作开发的</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install tensorboard  <span class="hljs-comment"># tensorboardx 依赖于 tensorboard</span><br>pip install tensorboardx<br></code></pre></td></tr></table></figure><h1 id="Python-程序"><a href="#Python-程序" class="headerlink" title="Python 程序"></a>Python 程序</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> torch.utils.tensorboard <span class="hljs-keyword">import</span> SummaryWriter<br><span class="hljs-comment"># 或者 from tensorboardx import SummaryWritter</span><br>writer = SummaryWriter(log_dir=os.path.join(save_path, <span class="hljs-string">&#x27;log&#x27;</span>), comment=<span class="hljs-string">&quot;writter_comment&quot;</span>)<br>writer.add_type(tag_name, <span class="hljs-built_in">object</span>, iterations)<br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">type: </span><br><span class="hljs-string">- scalar</span><br><span class="hljs-string">- histogram</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br></code></pre></td></tr></table></figure><h1 id="终端使用"><a href="#终端使用" class="headerlink" title="终端使用"></a>终端使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">tensorboard --logdir=<span class="hljs-string">&quot;path_log&quot;</span><br><span class="hljs-comment"># 在网页中打开: http://localhost:6060/</span><br></code></pre></td></tr></table></figure><h1 id="本地查看服务器-tensorboard-信息"><a href="#本地查看服务器-tensorboard-信息" class="headerlink" title="本地查看服务器 tensorboard 信息"></a>本地查看服务器 tensorboard 信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 本地终端输入</span><br><span class="hljs-comment"># ssh [-p port_num] -L local_num:localhost:6008 user_name@server_ip</span><br>ssh user_name@ip_server_ip -L local_num:localhost:6008<br><span class="hljs-comment"># ssh user_name@server_ip -L localhost:local_num:localhost:6008</span><br><span class="hljs-comment"># 进入远程服务器终端后, 输入</span><br>conda activate env_name<br>tensorboard --logdir=<span class="hljs-string">&quot;log_path&quot;</span> --port=6008<br><span class="hljs-comment"># 在本地浏览器输入: localhost:local_num 即可进入服务器 tensorboard 界面</span><br></code></pre></td></tr></table></figure><p><strong>建议: 远程服务器端口和本地端口保持一致, 可快速点击链接访问</strong></p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a href="https://blog.csdn.net/qq_27155171/article/details/125337697">稚晖君的头号男粉. TensorboardX和Tensorboard的介绍及使用. CSDN</a><br>[2] <a href="https://pytorchbook.cn/chapter4/4.2.2-tensorboardx/">PyTorch 中文手册. 使用Tensorboard在 PyTorch 中进行可视化</a><br>[3] <a href="https://blog.csdn.net/HowieXue/article/details/105412155">HowieXue. 数据可视化：TensorboardX安装及使用（安装测试+实例演示）.CSDN</a><br>[4] <a href="https://zhuanlan.zhihu.com/p/471198169">deephub. TensorBoard最全使用教程：看这篇就够了. 知乎</a><br>[5] <a href="https://blog.csdn.net/qq_41656402/article/details/131123121">柒AII. TensorBoard最全使用教程：看这篇就够了. CSDN</a><br>[6] <a href="https://blog.csdn.net/NooahH/article/details/109739305">NooahH.【Pytorch】利用SSH查看远程服务器上的tensorboard可视化界面. CSDN</a></p>]]></content>
-    
-    
-    <summary type="html">Tensorboard 使用总结</summary>
-    
-    
-    
-    <category term="Coding" scheme="https://zonglin-tian.github.io/categories/Coding/"/>
-    
-    
-    <category term="Python" scheme="https://zonglin-tian.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NumPy notes</title>
-    <link href="https://zonglin-tian.github.io/2024/07/31/Numpy-notes/"/>
-    <id>https://zonglin-tian.github.io/2024/07/31/Numpy-notes/</id>
-    <published>2024-07-31T13:31:06.000Z</published>
-    <updated>2025-12-13T08:02:11.271Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul><li><a href="https://numpy.org/doc/stable/user/whatisnumpy.html">官方英文</a></li><li><a href="https://numpy.org.cn/user/">中文文档</a></li><li><a href="https://cs231n.github.io/python-numpy-tutorial/">Python 与 NumPy</a></li></ul><h1 id="NumPy-介绍"><a href="#NumPy-介绍" class="headerlink" title="NumPy 介绍"></a>NumPy 介绍</h1><ul><li>ndarray: N-dimensional array</li></ul><h1 id="快速入门教程"><a href="#快速入门教程" class="headerlink" title="快速入门教程"></a>快速入门教程</h1><ul><li>花式索引与索引技巧部分较难理解</li></ul><h1 id="NumPy-基础知识"><a href="#NumPy-基础知识" class="headerlink" title="NumPy 基础知识"></a>NumPy 基础知识</h1><h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><ul><li>np.array: 将 Python 中 array-like 结构的数值转换为 ndarray</li><li>np.zeros&#x2F;np.ones: 创建全 0&#x2F;1 ndarray</li><li>np.arange&#x2F;np.linspace: 创建等间隔分布的 ndarray</li></ul><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul><li>转换 Python 数据为 np.float64: <ul><li><code>np.float64(float_var)</code></li><li><code>numpy.array(float_var, dtype=np.float64)</code></li></ul></li><li>修改 NumPy 数据类型: <code>numpy.astype(np.float64)</code></li></ul><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><ul><li>数组索引返回的是原始数据的副本而不是切片获取的视图</li><li>在程序中处理可变数量的索引<ul><li>Python slice() 函数指定切片</li><li>使用 Elipsis 指定省略号</li></ul></li></ul><h2 id="Brodcasting"><a href="#Brodcasting" class="headerlink" title="Brodcasting"></a>Brodcasting</h2><ul><li>一般广播规则: 从<strong>最后一个轴</strong>的尺寸开始比较, 依次向前<ul><li>尺寸相等</li><li>其中一个是 1, 取大尺寸</li></ul></li></ul><h2 id="结构化数组"><a href="#结构化数组" class="headerlink" title="结构化数组"></a>结构化数组</h2><ul><li>数据类型由一系列命名字段组织的简单数据类型组成, 类似于 C 语言中的<code>结构</code></li></ul>]]></content>
-    
-    
-    <summary type="html">NumPy 学习笔记</summary>
-    
-    
-    
-    <category term="Coding" scheme="https://zonglin-tian.github.io/categories/Coding/"/>
-    
-    
-    <category term="Python" scheme="https://zonglin-tian.github.io/tags/Python/"/>
     
   </entry>
   
