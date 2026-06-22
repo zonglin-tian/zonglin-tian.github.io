@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/shell_scripts.png">
 <meta property="article:published_time" content="2024-12-04T01:57:31.000Z">
-<meta property="article:modified_time" content="2026-06-08T07:39:10.985Z">
+<meta property="article:modified_time" content="2026-06-22T03:47:29.323Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          9 分钟
+          11 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-06-08T15:39:10+08:00
+                    最后更新于: 2026-06-22T11:47:29+08:00
                   
                   
 
@@ -579,6 +579,17 @@
 </ul>
 </li>
 </ul>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
+<li>元素之间通常用空格分隔也可用换行分隔增加可读性</li>
+<li>向数组增加元素: <code>array+=(new_ele)</code></li>
+</ul>
+<h2 id="定义与赋值"><a href="#定义与赋值" class="headerlink" title="定义与赋值"></a>定义与赋值</h2><h3 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 声明普通数组</span><br><span class="hljs-built_in">declare</span> -a array<br><span class="hljs-comment"># 一次性赋值</span><br>array=(ele1 ele2 ele3 ...)<br><span class="hljs-comment"># 单个赋值</span><br>array[0]=ele1<br><span class="hljs-comment"># 使用命令输出作为元素</span><br>array=(`<span class="hljs-built_in">cat</span> /etc/passwd`)<br></code></pre></td></tr></table></figure>
+
+<h3 id="关联数组"><a href="#关联数组" class="headerlink" title="关联数组"></a>关联数组</h3><p>自定义数组的索引, 使用更加方便与高效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 声明关联数组</span><br><span class="hljs-built_in">declare</span> -A dict<br><span class="hljs-comment"># 一次性赋值</span><br>dict=([key1]=value1 [key2]=value2 ...)<br><span class="hljs-comment"># 单个赋值</span><br>dict[key1]=value1<br></code></pre></td></tr></table></figure>
+
+<h2 id="引用与遍历"><a href="#引用与遍历" class="headerlink" title="引用与遍历"></a>引用与遍历</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看所有定义的数组</span><br><span class="hljs-built_in">declare</span> -a/A<br><span class="hljs-comment"># 获取特定元素</span><br><span class="hljs-variable">$&#123;array[0]&#125;</span><br><span class="hljs-variable">$&#123;array[key]&#125;</span><br><span class="hljs-comment"># 获取所有元素</span><br><span class="hljs-variable">$&#123;array[@]&#125;</span>  <span class="hljs-comment"># 展开为多个参数</span><br><span class="hljs-variable">$&#123;array[*]&#125;</span>  <span class="hljs-comment"># 所有元素合并为一个字符串</span><br><span class="hljs-comment"># 获取元素个数</span><br><span class="hljs-variable">$&#123;#array[@]&#125;</span><br><span class="hljs-comment"># 获取元素索引</span><br><span class="hljs-variable">$&#123;!array[@]&#125;</span><br><span class="hljs-comment"># 从指定位置开始, 获取 N 个元素</span><br><span class="hljs-variable">$&#123;array[@]:start:N&#125;</span><br></code></pre></td></tr></table></figure>
+
 <h1 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h1><ul>
 <li>Shell 在运行命令<strong>前</strong>, 从左到右解析并设置重定向:<ul>
 <li>处理所有重定向 <code>&gt;, 2&gt;, &lt;</code></li>
@@ -674,6 +685,11 @@
 <td>取消对应的选项</td>
 </tr>
 </tbody></table>
+<h1 id="实用模板"><a href="#实用模板" class="headerlink" title="实用模板"></a>实用模板</h1><h2 id="手动解析参数"><a href="#手动解析参数" class="headerlink" title="手动解析参数"></a>手动解析参数</h2><ul>
+<li><code>shift 2</code>: 删除前两个参数 (<code>$1</code>,<code>$2</code>), 所有参数向左移动两位</li>
+<li><code>shift</code>: 删除第一个参数 (<code>$1</code>), 所有参数向左移动一位</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># 默认值</span><br>scenes=<span class="hljs-string">&quot;juices&quot;</span><br>label=<span class="hljs-string">&quot;clip_sdf&quot;</span><br>is_continue=<span class="hljs-string">&quot;&quot;</span><br>verbose=<span class="hljs-literal">false</span><br><br><span class="hljs-comment"># 显示帮助信息</span><br><span class="hljs-function"><span class="hljs-title">show_help</span></span>() &#123;<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;用法: <span class="hljs-variable">$0</span> [选项]&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;选项:&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;  -s, --scenes VALUE  设置 scenes 值 (默认: juices)&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;  -l, --label VALUE   设置 label 值 (默认: clip_sdf)&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;  -c, --continue      继续训练&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;  -h, --help          显示此帮助信息&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;  -v, --verbose       显示详细信息&quot;</span><br>&#125;<br><br><br><span class="hljs-comment"># 解析参数</span><br><span class="hljs-keyword">while</span> [[ <span class="hljs-variable">$#</span> -gt 0 ]]; <span class="hljs-keyword">do</span><br>    <span class="hljs-keyword">case</span> <span class="hljs-variable">$1</span> <span class="hljs-keyword">in</span><br>        -s|--scenes)<br>            scenes=<span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span>  <span class="hljs-comment"># 获取 -s 后面的值</span><br>            <span class="hljs-built_in">shift</span> 2  <span class="hljs-comment"># 删除 -s 和它的值</span><br>            ;;<br>        -l|--label)<br>            label=<span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span><br>            <span class="hljs-built_in">shift</span> 2<br>            ;;<br>        -c|--<span class="hljs-built_in">continue</span>)<br>            is_continue=<span class="hljs-string">&quot;--is_continue&quot;</span>  <span class="hljs-comment"># 不带值</span><br>            <span class="hljs-built_in">shift</span>  <span class="hljs-comment"># 只移动一位 (-c 不带值)</span><br>            ;;<br>        -v|--verbose)<br>            verbose=<span class="hljs-literal">true</span><br>            <span class="hljs-built_in">shift</span><br>            ;;<br>        -h|--<span class="hljs-built_in">help</span>)<br>            show_help  <span class="hljs-comment"># 封装函数或简单提示</span><br>            <span class="hljs-built_in">exit</span> 0<br>            ;;<br>        *)<br>            <span class="hljs-comment"># 未知参数</span><br>            <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Unknown parameter: <span class="hljs-variable">$1</span>&quot;</span><br>            show_help<br>            <span class="hljs-built_in">exit</span> 1<br>            ;;<br>    <span class="hljs-keyword">esac</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;scenes with value: <span class="hljs-variable">$scenes</span>&quot;</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;label with value: <span class="hljs-variable">$label</span>&quot;</span><br>[ -n <span class="hljs-string">&quot;<span class="hljs-variable">$is_continue</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Continue...&quot;</span><br>[ <span class="hljs-string">&quot;<span class="hljs-variable">$verbose</span>&quot;</span> == <span class="hljs-literal">true</span> ] &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Detailed mode...&quot;</span><br></code></pre></td></tr></table></figure>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/452686607">Soler索莱尔HO. 一文掌握shell脚本的基本语法. 知乎</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/u012294618/article/details/78427864">Pikachu5808. 释伴：Linux 上的 Shebang 符号(#!). CSDN</a></p>
 
                 
