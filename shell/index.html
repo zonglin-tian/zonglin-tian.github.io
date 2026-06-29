@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/shell_scripts.png">
 <meta property="article:published_time" content="2024-12-04T01:57:31.000Z">
-<meta property="article:modified_time" content="2026-06-23T03:22:16.063Z">
+<meta property="article:modified_time" content="2026-06-25T00:58:59.884Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.8k 字
+          2.6k 字
         
       </span>
     
@@ -295,7 +295,7 @@
         
         
         
-          22 分钟
+          15 分钟
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-06-23T11:22:16+08:00
+                    最后更新于: 2026-06-25T08:58:59+08:00
                   
                   
 
@@ -639,142 +639,49 @@
 <li>设定变量为空时的默认值: <code>$&#123;var:-default_value&#125;</code></li>
 <li>获取字串: <code>$&#123;var:ind:num&#125;</code> (从下标 <code>ind</code> 开始, 取 <code>num</code> 个字符)</li>
 <li>删除前后缀  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">file=<span class="hljs-string">&quot;tomcat.tar.gz&quot;</span><br><span class="hljs-comment"># 删除最短后缀 -&gt; tomcat.tar</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;file%.gz&#125;</span>&quot;</span><br><span class="hljs-comment"># 删除最长后缀 -&gt; tomcat</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;file%%.*&#125;</span>&quot;</span><br><span class="hljs-comment"># 删除最短前缀 -&gt; tar.gz</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;file#*.&#125;</span>&quot;</span><br><span class="hljs-comment"># 删除最长前缀 → gz</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;file##*.&#125;</span>&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li>计算长度: <code>$&#123;#str&#125;</code></li>
+<li>计算长度: <code>$</code></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
-<li>元素之间通常用空格分隔也可用换行分隔增加可读性</li>
-<li>向数组增加元素: <code>array+=(new_ele)</code></li>
-</ul>
-<h2 id="定义与赋值"><a href="#定义与赋值" class="headerlink" title="定义与赋值"></a>定义与赋值</h2><h3 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 声明普通数组</span><br><span class="hljs-built_in">declare</span> -a array<br><span class="hljs-comment"># 一次性赋值</span><br>array=(ele1 ele2 ele3 ...)<br><span class="hljs-comment"># 单个赋值</span><br>array[0]=ele1<br><span class="hljs-comment"># 使用命令输出作为元素</span><br>array=(`<span class="hljs-built_in">cat</span> /etc/passwd`)<br></code></pre></td></tr></table></figure>
-
-<h3 id="关联数组"><a href="#关联数组" class="headerlink" title="关联数组"></a>关联数组</h3><p>自定义数组的索引, 使用更加方便与高效</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 声明关联数组</span><br><span class="hljs-built_in">declare</span> -A dict<br><span class="hljs-comment"># 一次性赋值</span><br>dict=([key1]=value1 [key2]=value2 ...)<br><span class="hljs-comment"># 单个赋值</span><br>dict[key1]=value1<br></code></pre></td></tr></table></figure>
-
-<h2 id="引用与遍历"><a href="#引用与遍历" class="headerlink" title="引用与遍历"></a>引用与遍历</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看所有定义的数组</span><br><span class="hljs-built_in">declare</span> -a/A<br><span class="hljs-comment"># 获取特定元素</span><br><span class="hljs-variable">$&#123;array[0]&#125;</span><br><span class="hljs-variable">$&#123;array[key]&#125;</span><br><span class="hljs-comment"># 获取所有元素</span><br><span class="hljs-variable">$&#123;array[@]&#125;</span>  <span class="hljs-comment"># 展开为多个参数</span><br><span class="hljs-variable">$&#123;array[*]&#125;</span>  <span class="hljs-comment"># 所有元素合并为一个字符串</span><br><span class="hljs-comment"># 获取元素个数</span><br><span class="hljs-variable">$&#123;#array[@]&#125;</span><br><span class="hljs-comment"># 获取元素索引</span><br><span class="hljs-variable">$&#123;!array[@]&#125;</span><br><span class="hljs-comment"># 从指定位置开始, 获取 N 个元素</span><br><span class="hljs-variable">$&#123;array[@]:start:N&#125;</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h1><h2 id="test-命令"><a href="#test-命令" class="headerlink" title="test 命令"></a>test 命令</h2><ul>
-<li><code>test</code> 命令允许 <code>if-then</code> 语句中测试不同条件, 而不仅仅是退出状态码</li>
-<li>表达式: <code>test condition</code><ul>
-<li>如果条件成立, 退出并返回状态码 <code>0</code></li>
-<li>如果条件不成立, 退出并返回状态码 <code>1</code></li>
-</ul>
-</li>
-<li>可以使用 <code>[空格condition空格]</code> 来代替 <code>test condition</code> 命令</li>
-<li><code>test</code> 命令可以判断三类条件: 数值比较, 字符串比较, 文件比较</li>
-<li>使用文本代码来表示数值比较</li>
-<li>使用标准数学比较符号来表示字符串比较</li>
-<li>如果不是很确定一个变量的内容, 最好在将其用于数值或字符串比较之前先通过 <code>-n</code> 或 <code>-z</code> 来测试一下变量是否含有值</li>
-</ul>
-<h3 id="数值比较"><a href="#数值比较" class="headerlink" title="数值比较"></a>数值比较</h3><p>数值条件测试可以用在数字 (<strong>仅整数</strong>) 和变量上, 有以下的条件参数:</p>
-<ul>
-<li>等于: <code>-eq</code></li>
-<li>大于或等于: <code>ge</code></li>
-<li>大于: <code>gt</code></li>
-<li>小于或等于: <code>le</code></li>
-<li>小于: <code>lt</code></li>
-<li>不等于: <code>-ne</code></li>
-</ul>
-<h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><p>可用的字符串比较功能:</p>
-<ul>
-<li>相同: <code>=</code></li>
-<li>不同: <code>!=</code></li>
-<li>小 (需要转义): <code>\&lt;</code></li>
-<li>大 (需要转义): <code>\&gt;</code></li>
-<li>长度非 0: <code>-n str</code></li>
-<li>长度为 0 (未定义变量的长度也为 0): <code>-z str</code></li>
-</ul>
-<h3 id="文件比较"><a href="#文件比较" class="headerlink" title="文件比较"></a>文件比较</h3><p>文件比较允许测试 Linux 文件系统上文件和目录的状态, 可用比较符号如下:</p>
-<ul>
-<li>存在且是一个目录: <code>-d file</code><ul>
-<li>将文件写入目录</li>
-<li>准备切换到某个目录</li>
-</ul>
-</li>
-<li>存在: <code>-e file</code> (使用文件或目录前)</li>
-<li>存在且是一个文件: <code>-f file</code></li>
-<li>存在且可读: <code>-r file</code></li>
-<li>存在且非空: <code>-s file</code></li>
-<li>存在且可写: <code>-w file</code></li>
-<li>存在且可执行: <code>-x file</code></li>
-<li>存在且属当前用户: <code>-O file</code></li>
-<li>存在且默认组与当前用户相同: <code>-G file</code></li>
-<li>新: <code>file1 -nt file2</code></li>
-<li>旧: <code>file1 -ot file2</code></li>
-</ul>
-<h2 id="组合表达式"><a href="#组合表达式" class="headerlink" title="组合表达式"></a>组合表达式</h2><p>使用布尔逻辑来组合测试, 有两种布尔运算符可以使用: </p>
-<ul>
-<li>AND: <code>[ condition1 ] &amp;&amp; [ condition2 ]</code></li>
-<li>OR: <code>[ condition1 ] || [ condition2 ]</code></li>
-</ul>
-<h2 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h2><h2 id="双括号"><a href="#双括号" class="headerlink" title="双括号"></a>双括号</h2><p>双括号命令允许在数值比较过程中使用高级数学表达式, 即使用更多的数学表达式, 格式为: <code>((空格expression空格))</code> (可赋值或比较)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">val1=10<br><span class="hljs-keyword">if</span> (( <span class="hljs-variable">$val1</span> ** <span class="hljs-number">2</span> &gt; <span class="hljs-number">90</span> ))  <span class="hljs-comment"># 此时 &gt; 不用转义</span><br><span class="hljs-keyword">then</span> <br>  (( val2 = <span class="hljs-variable">$val1</span> ** <span class="hljs-number">2</span> )) <br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The square of <span class="hljs-variable">$val1</span> is <span class="hljs-variable">$val2</span>&quot;</span> <br><span class="hljs-keyword">fi</span> <br></code></pre></td></tr></table></figure>
-
-<h2 id="双方括号"><a href="#双方括号" class="headerlink" title="双方括号"></a>双方括号</h2><p>双方括号命令允许字符串高级比较 (模式匹配), 格式为: <code>[[空格expression空格]]</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$USER</span> == r* ]]<br></code></pre></td></tr></table></figure>
-
-<h1 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h1><h2 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h2><ul>
-<li>两种格式: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 格式 1</span><br><span class="hljs-keyword">if</span> <span class="hljs-built_in">command</span><br><span class="hljs-keyword">then</span><br>  commands<br><span class="hljs-keyword">fi</span><br><span class="hljs-comment"># 格式 2</span><br><span class="hljs-keyword">if</span> <span class="hljs-built_in">command</span>; <span class="hljs-keyword">then</span><br>  commands<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure></li>
-<li>四种形式: <ul>
-<li><code>if-then-fi</code></li>
-<li><code>if-then-else-fi</code></li>
-<li><code>if-then-elif-then-elif-then-else-fi</code> OR <code>if-then-if-then-fi-fi</code> (嵌套结构)</li>
+<li>获取所有参数:<ul>
+<li>将所有参数当作一个单词保存: <code>$*</code></li>
+<li>将所有参数当作同一字符串中多个独立的单词保存: <code>$@</code> (通常用于 <code>for</code> 循环)</li>
 </ul>
 </li>
 </ul>
-<h2 id="多分支-case"><a href="#多分支-case" class="headerlink" title="多分支 (case)"></a>多分支 (case)</h2><p>适用一个变量可能有多个值的情况 (<code>elif</code> 不断检查同一个变量)</p>
-<ul>
-<li>基本语法<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">case</span> 变量 <span class="hljs-keyword">in</span><br>    模式1)<br>        语句1<br>        ;;<br>    模式2)<br>        语句2<br>        ;;<br>    模式3|模型4)<br>        语句3<br>        ;;<br>    *)<br>        默认语句<br>        ;;<br><span class="hljs-keyword">esac</span><br></code></pre></td></tr></table></figure></li>
-<li><code>case</code> 会按顺序检查每个模式, 第一个匹配的模式会被执行</li>
-<li>通过 <code>|</code> 在一行中分隔出多个模式, <code>*</code> 会捕获所有与已知模式<strong>不匹配</strong>的值</li>
-<li>每个分支需要以 <code>;;</code> 结束 (特殊情况除外)</li>
+<h2 id="移动变量"><a href="#移动变量" class="headerlink" title="移动变量"></a>移动变量</h2><p><code>shift NUM</code> 删除特定数量的参数, 此时会将参数变量向左移动</p>
+<h2 id="处理选项"><a href="#处理选项" class="headerlink" title="处理选项"></a>处理选项</h2><ul>
+<li>选项是跟在单破折号后面的单个字母</li>
+<li>表面上看, 命令行选项也没什么特殊的. 在命令行上, 它们紧跟在脚本名之后, 就跟命令行参数一样. 实际上, 可心像处理命令行参数一样处理命令行选项</li>
+<li>处理简单选项&#x2F;带值的选项: <code>case</code> + <code>shift</code> 命令</li>
+<li>分离参数与选项: 双破折号 <code>--</code>, 前面为选项列表, 后面为命令行参数</li>
+<li>合并选项: <code>getopt</code> 将命令行选项和参数转换成可以在脚本中处理的标准格式<ul>
+<li>格式: <code>getopt optstring parameters</code></li>
+<li><code>optstring</code> 中列出脚本中用到的每个命令行选项字母. 对需要参数值的选项字母后加一个冒号</li>
+<li>格式化命令化参数: <code>set -- $(getopt optstring &quot;$@&quot;)</code></li>
 </ul>
-<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><ul>
-<li>终端使用: <code>for Iteration; do Commands; done</code></li>
-<li>脚本: <ul>
-<li>遍历列表:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> 变量 <span class="hljs-keyword">in</span> 列表<br><span class="hljs-keyword">do</span><br>    循环体<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
-<li>C 风格: <code>for (( i=1; i &lt;= 10; i++ ))</code><ul>
-<li>变量赋值可以有空格</li>
-<li>条件中的变量不以美元符开头</li>
-<li>迭代过程的版式未用 <code>expr</code> 命令格式</li>
-<li>使用多个变量: <code>for (( a=1, b=10; a &lt;= 10; a++, b-- ))</code>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> ((空格初始值; 条件; 步进空格))<br><span class="hljs-keyword">do</span><br>    循环体<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
+</li>
+<li>逐个解析参数: <code>getopts</code><ul>
+<li>格式: <code>getopts optstring variable</code></li>
+<li>将当前参数保存在定义的 <code>variable</code> 变量中</li>
+<li>选项的参数值: <code>$OPTARG</code></li>
+<li>参数位置: <code>$OPTIND</code></li>
+<li>支持参数值中包含空格</li>
 </ul>
 </li>
 </ul>
-</li>
-<li><code>for</code> 与 <code>do</code> 同一行形式: <code>for 变量 in 列表; do</code></li>
-<li>在某个值两边使用双引号时, shell 并不会将双引号当成值的一部分</li>
-<li>列表中的值如果有单引号, 可使用转义字符转义或使用双引号圈起来</li>
-<li>用空格来划分列表中的每个值, 如果单独的数据值中有空格, 必须用双引号将这些值圈起来</li>
-<li>字段分隔符<ul>
-<li>环境变量 <code>IFS</code> (内部字段分隔符) 默认有 <strong>空格</strong>, <strong>制表符</strong>, <strong>换行符</strong>. 如果 shell 在数据中看到了这些字符中的任意一个, 就会假定列表中一个新数据段的开始</li>
-<li>可以根据数据修改 <code>IFS</code> 的值, 使其识别特定字符 (多个分隔符直接串起来)  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 保存原始 IFS</span><br>IFS_OLD=<span class="hljs-variable">$IFS</span><br><span class="hljs-comment"># 指定 IFS</span><br>IFS=$<span class="hljs-string">&#x27;\n&#x27;</span>:;<span class="hljs-string">&quot;  # 将换行符, 冒号, 分号, 双引号作为字段分隔符</span><br><span class="hljs-string"># 使用新的 IFS</span><br><span class="hljs-string"># 恢复 IFS</span><br><span class="hljs-string">IFS=<span class="hljs-variable">$IFS_OLD</span></span><br></code></pre></td></tr></table></figure></li>
+<h2 id="获取用户输入"><a href="#获取用户输入" class="headerlink" title="获取用户输入"></a>获取用户输入</h2><ul>
+<li>基本读取: <code>read -p message variable</code><ul>
+<li><code>read</code> 命令会将提示符后输入的所有数据分配给单个变量. 当指定多个变量时, 输入的每个数据值都会分配给变量列表中的下一个变量. 如果变量数量不够. 剩下的数据就全部分配给最后一个变量</li>
+<li>如果不指定变量 <code>variable</code>, 可以从环境变量 <code>$REPLY</code> 中获取</li>
+<li>超时选项 (<code>-t NUM</code>): 至多等待 NUM 秒, 不管是否有数据, 脚本都必须执行</li>
+<li>隐藏选项 (<code>-s</code>): 避免中输入的数据出现在显示器上</li>
 </ul>
 </li>
-<li>常见循环列表形式: <ul>
-<li>变量定义: <code>list=&quot;a b c d e&quot;; for str in $list</code></li>
-<li>用通配符读取目录: 文件名或路径名中使用通配符, shell 使用文件扩展匹配生成匹配指定通配符的文件名或路径名<ul>
-<li>此时对循环变量的引用最好用双引号圈起来, 以免文件或路径名中包含空格产生错误</li>
-<li>可以在 <code>for</code> 命令中列出多个目录通配符, 将目录查找和列表合并进同一个 <code>for</code> 语句  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">for</span> fie <span class="hljs-keyword">in</span> /home/temm/Temp/*.sh /home/temm/share; <span class="hljs-keyword">do</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><strong>遍历命令输出: <code>for 变量 in $(命令)</code>: <code>for file in $&#123;ls *.txt&#125;</code></strong></li>
-<li><strong>使用 <code>seq</code> 命令生成数字序列: <code>for i in $(seq 1 5)</code></strong></li>
-<li><strong>使用 <code>&#123;start..end..increment&#125;</code> 生成循环列表: <code>for i in &#123;1..5&#125;</code></strong></li>
-<li>无限循环 <code>for ((;;))</code>: 结合 <code>break</code> 与 <code>continue</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><p><code>while</code> 命令可以理解为 <code>if-then</code> 语句和 <code>for</code> 环境的混杂体. <code>while</code> 命令允许定义一个要测试的命令, 它会在每次迭代的一开始测试 <code>test</code> 命令. 如果测试命令返回的是退出状态码 <code>0</code>, 则循环执行一组命令; 如果测试命令返回非零退出状态码, 则停止执行那组命令</p>
-<ul>
-<li>基本格式:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># while test command; do</span><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">test</span> <span class="hljs-built_in">command</span>; <span class="hljs-keyword">do</span><br>    commands<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure></li>
-<li>通常 <code>test command</code> 的退出状态码要随着循环中运行的命令而改变, 如检查循环命令中用到的 shell 变量的值. 如果退出状态码不发生改变, <code>while</code> 循环就将一起不停地进行下去</li>
-<li>使用多个测试命令, 只有最后一个测试命令的退出状态码会被用来决定什么时候结束循环<ul>
-<li>每次迭代所有的测试命令都会被执行, 包括测试命令失败的最后一次迭代</li>
-<li>每个测试命令都出现在单独的一行上  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">while</span> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$var1</span> <br>    [ <span class="hljs-variable">$var1</span> -ge 0 ] <br></code></pre></td></tr></table></figure></li>
+<li>从文件中读取<ul>
+<li>每次调用 <code>read</code> 命令, 会从文件中读取一行文本. 当文件中再没有内容时, 会退出并返回非零退出状态码</li>
+<li>常用形式: 对文件使用 <code>cat</code> 命令, 将结果通过管道直接传给含有 <code>read</code> 命令的 <code>while</code> 命令 (<code>cat file | while read line</code>)</li>
 </ul>
 </li>
 </ul>

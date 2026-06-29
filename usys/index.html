@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_sys.png">
 <meta property="article:published_time" content="2024-05-06T12:58:10.000Z">
-<meta property="article:modified_time" content="2026-06-05T12:17:23.006Z">
+<meta property="article:modified_time" content="2026-06-26T06:58:42.440Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-06-05T20:17:23+08:00
+                    最后更新于: 2026-06-26T14:58:42+08:00
                   
                   
 
@@ -594,8 +594,9 @@
 <li><code>ps -p PID</code>: 查看指定进程号的进程</li>
 <li><code>ps aux --sort=-%key</code>: 按指定 <code>key</code> 降序输出 (cpu: CPU, mem: 内存)</li>
 <li>自定义输出列: <code>ps -eo</code><ul>
-<li>列字段<code>[:宽度]</code>: <code>user/uid</code>, <code>pid/ppid</code>, <code>command</code>, <code>%cpu/%mem</code>, <code>etime/lstart</code>, <code>stat</code></li>
+<li>列字段<code>[:宽度]</code>: <code>user/uid</code>, <code>pid/ppid</code>, <code>command</code>, <code>%cpu/%mem</code>, <code>etime/lstart/start_time</code>, <code>stat</code></li>
 <li>Case 1: <code>ps -eo user:15,pid,command:100,%cpu,%mem,lstart,etime --sort=-etime,user | grep tianzonglin</code></li>
+<li>Case 2: <code>ps -eo uid,user:15,pid,%cpu,%mem,start_time,etime,command:100 --sort=-%cpu,user | awk &#39;NR==1 || $1&gt;=1000&#39;</code></li>
 </ul>
 </li>
 </ul>
