@@ -19,13 +19,13 @@
     <meta name="description" content="NumPy 学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NumPy notes">
-<meta property="og:url" content="https://zonglin-tian.github.io/2024/07/31/Numpy-notes/index.html">
+<meta property="og:url" content="https://zonglin-tian.github.io/numpy/index.html">
 <meta property="og:site_name" content="Temm&#39;s Zone">
 <meta property="og:description" content="NumPy 学习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/numpy.png">
 <meta property="article:published_time" content="2024-07-31T13:31:06.000Z">
-<meta property="article:modified_time" content="2026-07-01T03:31:19.868Z">
+<meta property="article:modified_time" content="2026-07-14T09:32:32.902Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          562 字
+          698 字
         
       </span>
     
@@ -376,7 +376,7 @@
     
       
       
-        <a href="/2024/07/31/Numpy-notes/" title="NumPy notes"
+        <a href="/numpy/" title="NumPy notes"
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">NumPy notes</span>
@@ -460,7 +460,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-07-01T11:31:19+08:00
+                    最后更新于: 2026-07-14T17:32:32+08:00
                   
                   
 
@@ -508,6 +508,13 @@
 <li>浮点数: 使用 <code>linspace</code> 函数 (以元素数量为参数而不是步长)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br>a = np.array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])<br>b = np.zeros((<span class="hljs-number">3</span>, <span class="hljs-number">4</span>), dtype=np.int16)<br>c1 = np.arange(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>)<br>c2 = np.linspace(<span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>)<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
+</ul>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ul>
+<li>数组上的算术运算符按元素 (elementwise 应用)</li>
+<li>矩阵逐元素相乘: <code>*</code>; 矩阵乘积: <code>@</code></li>
+<li>当使用不同类型的数组进行操作时, 结果数组的类型对应于更通用或更精确的类型 (向上转型, upcasting)</li>
+<li>许多一元操作, 都是作为 <code>ndarray</code> 类的<strong>方法</strong>实现</li>
+<li>默认情况下, 无论数组的形状如何, 操作都将数组视为数字<strong>列表</strong>应用. 但是, 可通过指定 <code>axis</code> 参数沿着数组的特定轴应用操作</li>
 </ul>
 <h1 id="NumPy-基础知识"><a href="#NumPy-基础知识" class="headerlink" title="NumPy 基础知识"></a>NumPy 基础知识</h1><h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><ul>
 <li>np.array: 将 Python 中 array-like 结构的数值转换为 ndarray</li>
@@ -592,7 +599,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>NumPy notes</div>
-      <div>https://zonglin-tian.github.io/2024/07/31/Numpy-notes/</div>
+      <div>https://zonglin-tian.github.io/numpy/</div>
     </div>
     <div class="license-meta">
       

@@ -1,4 +1,4 @@
-https://zonglin-tian.github.io/2024/07/31/Numpy-notes/
+https://zonglin-tian.github.io/numpy/
 https://zonglin-tian.github.io/er/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/shell/
