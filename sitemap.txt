@@ -1,4 +1,5 @@
 https://zonglin-tian.github.io/er/
+https://zonglin-tian.github.io/phone/
 https://zonglin-tian.github.io/usys/
 https://zonglin-tian.github.io/udisk/
 https://zonglin-tian.github.io/ufile/
@@ -17,7 +18,6 @@ https://zonglin-tian.github.io/pbsc/
 https://zonglin-tian.github.io/2025/08/11/Basic-Knowledge/
 https://zonglin-tian.github.io/site/
 https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/
-https://zonglin-tian.github.io/phone/
 https://zonglin-tian.github.io/pycharm/
 https://zonglin-tian.github.io/vim/
 https://zonglin-tian.github.io/vsc/
@@ -82,15 +82,15 @@ https://zonglin-tian.github.io/live2d/live2d_api/model/chino/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/README.html
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
-https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
+https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
 https://zonglin-tian.github.io/live2d/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f01.exp.json
 https://zonglin-tian.github.io/live2d/waifu-tips.json
 https://zonglin-tian.github.io/live2d/package.json

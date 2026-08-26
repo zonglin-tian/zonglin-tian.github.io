@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zonglin-tian.github.io//er/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://zonglin-tian.github.io//phone/</loc>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//usys/</loc>
@@ -75,10 +79,6 @@
   <url>
     <loc>https://zonglin-tian.github.io/2024/10/25/Terminal-Python-IPython/</loc>
     <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://zonglin-tian.github.io//phone/</loc>
-    <lastmod>2026-04-23</lastmod>
   </url>
   <url>
     <loc>https://zonglin-tian.github.io//pycharm/</loc>
