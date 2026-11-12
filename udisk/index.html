@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_disk.png">
 <meta property="article:published_time" content="2025-07-10T11:10:48.000Z">
-<meta property="article:modified_time" content="2026-08-18T13:42:59.761Z">
+<meta property="article:modified_time" content="2026-11-12T03:10:59.180Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="奋斗 自律 完美主义">
 <meta name="twitter:card" content="summary_large_image">
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-08-18T21:42:59+08:00
+                    最后更新于: 2026-11-12T11:10:59+08:00
                   
                   
 
@@ -571,14 +571,14 @@
 <ol start="0">
 <li>准备工作<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装 lvm 工具</span><br>sudo apt install lvm2<br><span class="hljs-comment"># 查看 /sda 与 /sdb 的设备名</span><br>lsblk<br></code></pre></td></tr></table></figure></li>
 <li>将 <code>/dev/sdb</code> 初始化为物理卷: <code>sudo pvcreate /dev/sdb</code></li>
-<li>创建物理卷组: <code>sudo vgcreate vg_home /dev/sdb</code></li>
-<li>在卷组中创建逻辑卷: <code>sudo lvcreate -l 100%FREE -n lv_home vg_home</code></li>
-<li>格式化并挂载新逻辑卷: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo mkfs.ext4 /dev/vg_home/lv_home<br>sudo <span class="hljs-built_in">mkdir</span> /mnt/new_home<br>sudo mount /dev/vg_home/lv_home /mnt/new_home<br></code></pre></td></tr></table></figure></li>
+<li>创建物理卷组: <code>sudo vgcreate vg_hdd /dev/sdb</code></li>
+<li>在卷组中创建逻辑卷: <code>sudo lvcreate -l 100%FREE -n lv_home vg_hdd</code></li>
+<li>格式化并挂载新逻辑卷: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo mkfs.ext4 /dev/vg_hdd/lv_home<br>sudo <span class="hljs-built_in">mkdir</span> /mnt/new_home<br>sudo mount /dev/vg_hdd/lv_home /mnt/new_home<br></code></pre></td></tr></table></figure></li>
 <li>同步数据: <code>sudo rsync -axAXHS --partial --info=progress2 /home/ /mnt/new_home/</code></li>
-<li>切换挂载点:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo umount /home<br>sudo umount /mnt/new_home<br>sudo mount /dev/vg_home/lv_home /home<br></code></pre></td></tr></table></figure></li>
-<li>将原 <code>/sda</code> 加入卷组 (扩展卷组)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 如果 /sda 原本不是 PV</span><br>sudo pvcreate /dev/sda<br>sudo vgextend vg_home /dev/sda<br></code></pre></td></tr></table></figure></li>
-<li>扩展逻辑卷:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvextend -l +100%FREE /dev/vg_home/lv_home<br>sudo resize2fs /dev/vg_home/lv_home<br></code></pre></td></tr></table></figure></li>
-<li>永久挂载<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更新 /etc/fstab</span><br>/dev/vg_home/lv_home /home ext4 defaults 0 2<br></code></pre></td></tr></table></figure></li>
+<li>切换挂载点:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo umount /home<br>sudo umount /mnt/new_home<br>sudo mount /dev/vg_hdd/lv_home /home<br></code></pre></td></tr></table></figure></li>
+<li>将原 <code>/sda</code> 加入卷组 (扩展卷组)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 如果 /sda 原本不是 PV</span><br>sudo pvcreate /dev/sda<br>sudo vgextend vg_hdd /dev/sda<br></code></pre></td></tr></table></figure></li>
+<li>扩展逻辑卷:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo lvextend -l +100%FREE /dev/vg_hdd/lv_home<br>sudo resize2fs /dev/vg_hdd/lv_home<br></code></pre></td></tr></table></figure></li>
+<li>永久挂载<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更新 /etc/fstab</span><br>/dev/vg_hdd/lv_home /home ext4 defaults 0 2<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="Case-2-完全使用一块新的独立设备"><a href="#Case-2-完全使用一块新的独立设备" class="headerlink" title="Case 2: 完全使用一块新的独立设备"></a>Case 2: 完全使用一块新的独立设备</h2><ol>
 <li><p>准备新硬盘</p>
