@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zonglin-tian.github.io/img/index/ubuntu_text.png">
 <meta property="article:published_time" content="2025-05-01T08:30:00.000Z">
-<meta property="article:modified_time" content="2026-10-25T03:09:05.618Z">
+<meta property="article:modified_time" content="2026-11-12T14:06:49.986Z">
 <meta property="article:author" content="Temm">
 <meta property="article:tag" content="Writing...">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,7 +284,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2k 字
         
       </span>
     
@@ -469,7 +469,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    最后更新于: 2026-10-25T11:09:05+08:00
+                    最后更新于: 2026-11-12T22:06:49+08:00
                   
                   
 
@@ -498,7 +498,7 @@
 </ul>
 <h1 id="sed-Stream-Editor-流编辑器"><a href="#sed-Stream-Editor-流编辑器" class="headerlink" title="sed (Stream Editor) 流编辑器"></a>sed (Stream Editor) 流编辑器</h1><p>强大的<em>非交互式</em>流编辑器, 主要用于 (逐行) 文本<strong>替换, 删除, 插入和转换</strong>, 支持<em>正则表达式</em>, 尤其适合批量处理文件或管道数据</p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
-<li>应用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># PATH 变量内容各路径独占一行并排序</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span> | sed <span class="hljs-string">&#x27;s/:/\n/g&#x27;</span> | <span class="hljs-built_in">sort</span><br><span class="hljs-comment"># 去除 ANSI 颜色控制码</span><br><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%s&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$log_message</span>&quot;</span> | sed -r <span class="hljs-string">&#x27;s/\x1b\[[0-9;]*m//g&#x27;</span><br></code></pre></td></tr></table></figure></li>
+<li>应用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># PATH 变量内容各路径独占一行并排序</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span> | sed <span class="hljs-string">&#x27;s/:/\n/g&#x27;</span> | <span class="hljs-built_in">sort</span><br><span class="hljs-comment"># 去除 ANSI 颜色控制码</span><br><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%s&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$log_message</span>&quot;</span> | sed -r <span class="hljs-string">&#x27;s/\x1b\[[0-9;]*m//g&#x27;</span><br><span class="hljs-comment"># 将第一行 scene = &#x27;24&#x27; 的数字部分自适应</span><br>sed -E <span class="hljs-string">&quot;1s/^(scene = ).*/\1&#x27;<span class="hljs-variable">$&#123;num&#125;</span>&#x27;/&quot;</span> dtu_scan_womask.py<br></code></pre></td></tr></table></figure></li>
 <li>替换 (<code>s</code>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 全局替换</span><br>sed <span class="hljs-string">&#x27;s/old/new/g&#x27;</span> file.txt<br><span class="hljs-comment"># 替换第 2 个</span><br>sed <span class="hljs-string">&#x27;s/old/new/2&#x27;</span> file.txt<br></code></pre></td></tr></table></figure></li>
 <li>删除 (<code>d</code>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 删除第 3 行</span><br>sed <span class="hljs-string">&#x27;3d&#x27;</span> file.txt<br><span class="hljs-comment"># 删除第 3-5 行, 最后一行用 $ 表示</span><br>sed <span class="hljs-string">&#x27;1,5d&#x27;</span> file.txt<br><span class="hljs-comment"># 删除匹配 &quot;pattern&quot; 的行</span><br>sed <span class="hljs-string">&#x27;/pattern/d&#x27;</span> file.txt<br></code></pre></td></tr></table></figure></li>
 <li>插入&#x2F;追加 (<code>i/a</code>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在第 2 行前插入</span><br>sed <span class="hljs-string">&#x27;2i\插入内容&#x27;</span> file.txt<br><span class="hljs-comment"># 在最后一行后追加</span><br>sed <span class="hljs-string">&#x27;$a\追加内容&#x27;</span> file.txt<br></code></pre></td></tr></table></figure></li>
